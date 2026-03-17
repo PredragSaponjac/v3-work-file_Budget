@@ -100,24 +100,24 @@ def _parse_confidence(raw) -> int:
     # Qualitative mapping (case-insensitive, check start of string)
     s_upper = s.upper()
 
-    # Check for qualitative keywords at start or as standalone
-    # "Very High — ..." or "VERY HIGH"
+    # Check for qualitative keywords at start or as standalone.
+    # ORDER MATTERS: most-specific patterns first (e.g. "MEDIUM-HIGH" before "MEDIUM").
     if s_upper.startswith("VERY HIGH") or s_upper.startswith("EXTREMELY HIGH"):
         return 10
-    elif s_upper.startswith("HIGH"):
-        return 8
     elif s_upper.startswith("MEDIUM-HIGH") or s_upper.startswith("MEDIUM HIGH"):
         return 7
-    elif s_upper.startswith("MEDIUM") or s_upper.startswith("MODERATE"):
-        return 6
     elif s_upper.startswith("MEDIUM-LOW") or s_upper.startswith("MEDIUM LOW"):
         return 5
     elif s_upper.startswith("LOW-MEDIUM") or s_upper.startswith("LOW MEDIUM"):
         return 5
-    elif s_upper.startswith("LOW"):
-        return 4
     elif s_upper.startswith("VERY LOW"):
         return 3
+    elif s_upper.startswith("HIGH"):
+        return 8
+    elif s_upper.startswith("MEDIUM") or s_upper.startswith("MODERATE"):
+        return 6
+    elif s_upper.startswith("LOW"):
+        return 4
 
     # Fallback: search anywhere in the string for keywords
     if "HIGH" in s_upper:

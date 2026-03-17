@@ -2764,3 +2764,57 @@ class TestBudgetCapEnforcement:
             # This demonstrates why we must use cfg.BUDGET_MODE, not a local binding
         finally:
             cfg.BUDGET_MODE = original
+
+
+# ─────────────────────────────────────────────────────────────────────
+# Confidence Parser Tests
+# ─────────────────────────────────────────────────────────────────────
+
+class TestConfidenceParser:
+    """Verify _parse_confidence handles all qualitative labels correctly."""
+
+    def test_high(self):
+        from orca_v20.adapters.stage1_hunter_adapter import _parse_confidence
+        assert _parse_confidence("High") == 8
+
+    def test_medium_high(self):
+        from orca_v20.adapters.stage1_hunter_adapter import _parse_confidence
+        assert _parse_confidence("Medium-High") == 7
+
+    def test_medium(self):
+        from orca_v20.adapters.stage1_hunter_adapter import _parse_confidence
+        assert _parse_confidence("Medium") == 6
+
+    def test_medium_low(self):
+        from orca_v20.adapters.stage1_hunter_adapter import _parse_confidence
+        assert _parse_confidence("Medium-Low") == 5
+
+    def test_low(self):
+        from orca_v20.adapters.stage1_hunter_adapter import _parse_confidence
+        assert _parse_confidence("Low") == 4
+
+    def test_very_high(self):
+        from orca_v20.adapters.stage1_hunter_adapter import _parse_confidence
+        assert _parse_confidence("Very High") == 10
+
+    def test_very_low(self):
+        from orca_v20.adapters.stage1_hunter_adapter import _parse_confidence
+        assert _parse_confidence("Very Low") == 3
+
+    def test_numeric(self):
+        from orca_v20.adapters.stage1_hunter_adapter import _parse_confidence
+        assert _parse_confidence("8") == 8
+        assert _parse_confidence(9) == 9
+
+    def test_with_explanation(self):
+        """R1 sometimes appends explanations after a dash."""
+        from orca_v20.adapters.stage1_hunter_adapter import _parse_confidence
+        assert _parse_confidence("High — catalyst confirmed, strong conviction") == 8
+        assert _parse_confidence("Medium-Low — speculative") == 5
+
+    def test_sort_order_correct(self):
+        """Parsed values sort in the expected order for budget cap."""
+        from orca_v20.adapters.stage1_hunter_adapter import _parse_confidence
+        labels = ["Low", "Medium-Low", "Medium", "Medium-High", "High", "Very High"]
+        values = [_parse_confidence(l) for l in labels]
+        assert values == sorted(values), f"Expected ascending order, got {values}"
