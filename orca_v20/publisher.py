@@ -21,7 +21,7 @@ import os
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
 
-from orca_v20.config import FLAGS, THRESHOLDS
+from orca_v20.config import BUDGET_MODE, FLAGS, THRESHOLDS
 from orca_v20.executive_report import (
     GOOGLE_SHEET_URL,
     format_telegram_report,
@@ -522,6 +522,16 @@ def publish_trades(trades: List[StructuredTrade], ideas: List[IdeaCandidate],
 
     Returns summary dict with counts of what was published where.
     """
+    # ── Budget mode hard guard — publishing cannot leak even if flags are wrong ──
+    if BUDGET_MODE:
+        logger.info("[publisher] BUDGET MODE — all publishing disabled, skipping")
+        return {
+            "telegram_sent": 0, "telegram_failed": 0,
+            "x_posted": 0, "x_filtered": 0, "x_failed": 0,
+            "sheet_rows": 0, "sheet_synced": False,
+            "reports_generated": 0, "report_cost_usd": 0.0,
+            "budget_mode": True,
+        }
     summary = {
         "telegram_sent": 0,
         "telegram_failed": 0,

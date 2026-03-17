@@ -55,16 +55,36 @@ def main() -> None:
                         help="Skip all writes and notifications")
     parser.add_argument("--verbose", action="store_true",
                         help="Debug-level logging")
+    parser.add_argument("--budget", action="store_true",
+                        help="Budget sprint overnight (still premium models, lower budget cap)")
     args = parser.parse_args()
 
     setup_logging(verbose=args.verbose)
+
+    # Budget overnight: still uses premium models (normal RoleRouting)
+    # but with a tighter budget cap. Does NOT set ORCA_BUDGET_MODE
+    # because overnight should use premium models as the teacher.
+    budget_cap = THRESHOLDS.overnight_hard_budget_usd
+    if args.budget:
+        # Use the budget-mode overnight cap if set, otherwise $10 default
+        from orca_v20.config import BUDGET_MODE
+        if BUDGET_MODE:
+            budget_cap = THRESHOLDS.overnight_hard_budget_usd  # already overridden to $10
+        else:
+            budget_cap = 10.0  # explicit CLI override
+        logger.info("=" * 60)
+        logger.info("*** BUDGET SPRINT OVERNIGHT — PREMIUM TEACHER MODE ***")
+        logger.info(f"  Models: PREMIUM (normal routing — NOT cheap)")
+        logger.info(f"  Budget cap: ${budget_cap}")
+        logger.info(f"  Purpose: Review cheap daytime outputs, write teacher artifacts")
+        logger.info("=" * 60)
 
     ctx = RunContext(
         research_mode=ResearchMode.STANDARD,
         source_mode=SourceMode.MINIMAL,
         dry_run=args.dry_run,
         verbose=args.verbose,
-        max_api_cost_usd=THRESHOLDS.overnight_hard_budget_usd,
+        max_api_cost_usd=budget_cap,
     )
 
     now = ctx.as_of_utc
@@ -74,8 +94,35 @@ def main() -> None:
 
     summary = run_overnight(ctx, deep_review=args.deep_review)
 
+    # Write teacher artifacts
+    if args.budget and summary:
+        _write_teacher_artifacts(ctx, summary)
+
     logger.info(f"Overnight complete. Summary: {summary}")
     sys.exit(0)
+
+
+def _write_teacher_artifacts(ctx: RunContext, summary: dict) -> None:
+    """Write overnight teacher artifacts for budget sprint review."""
+    import json
+    from orca_v20.config import PATHS
+
+    artifacts_dir = PATHS.artifacts_dir
+    os.makedirs(artifacts_dir, exist_ok=True)
+
+    prefix = f"{artifacts_dir}/{ctx.market_date}_overnight"
+
+    # Overnight summary
+    with open(f"{prefix}_summary.json", "w") as f:
+        json.dump({
+            "run_id": ctx.run_id,
+            "market_date": ctx.market_date,
+            "timestamp_utc": ctx.as_of_utc.isoformat(),
+            "total_cost_usd": round(ctx.api_cost_usd, 4),
+            "summary": summary,
+        }, f, indent=2, default=str)
+
+    logger.info(f"[teacher] Artifacts written to {artifacts_dir}/")
 
 
 if __name__ == "__main__":

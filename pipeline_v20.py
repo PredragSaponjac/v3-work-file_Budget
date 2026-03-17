@@ -38,7 +38,7 @@ except ImportError:
     pass  # dotenv optional — env vars must be set externally
 
 # ── v20 imports ──────────────────────────────────────────────────────
-from orca_v20.config import FLAGS, PATHS, THRESHOLDS
+from orca_v20.config import BUDGET_MODE, FLAGS, PATHS, THRESHOLDS
 from orca_v20.db_bootstrap import bootstrap_db, get_connection
 from orca_v20.run_context import ResearchMode, RunContext, SourceMode
 from orca_v20.retrieval_state import RetrievalState
@@ -286,9 +286,29 @@ def run_pipeline(ctx: RunContext) -> bool:
         save_run_trace(ctx, success=True, trace_counts=trace)
         return True
 
+    # ── Budget shortlist cap: Stage 2 ──
+    if BUDGET_MODE and len(ideas) > THRESHOLDS.budget_max_stage2_candidates:
+        ideas.sort(key=lambda x: x.confidence, reverse=True)
+        capped = ideas[:THRESHOLDS.budget_max_stage2_candidates]
+        logger.info(
+            f"[budget] Stage 2 cap: {len(ideas)} → {len(capped)} "
+            f"(dropped: {[i.ticker for i in ideas[THRESHOLDS.budget_max_stage2_candidates:]]})"
+        )
+        ideas = capped
+
     # ── Stage 2: Flow Enrichment ──
     ideas = run_stage2(ideas, ctx)
     trace["ideas_after_flow"] = len(ideas)
+
+    # ── Budget shortlist cap: Stage 3 ──
+    if BUDGET_MODE and len(ideas) > THRESHOLDS.budget_max_stage3_candidates:
+        ideas.sort(key=lambda x: x.confidence, reverse=True)
+        capped = ideas[:THRESHOLDS.budget_max_stage3_candidates]
+        logger.info(
+            f"[budget] Stage 3 cap: {len(ideas)} → {len(capped)} "
+            f"(dropped: {[i.ticker for i in ideas[THRESHOLDS.budget_max_stage3_candidates:]]})"
+        )
+        ideas = capped
 
     # ── Stage 3: Catalyst Confirmation ──
     ideas, filtered = run_stage3(ideas, ctx)
@@ -408,10 +428,14 @@ def run_pipeline(ctx: RunContext) -> bool:
     finalize_outcomes(ctx)
 
     # ── Nightly Replay (v20, Phase 5) ──
-    from orca_v20.replay_engine import run_nightly_replay
-    replay_results = run_nightly_replay(ctx)
-    if replay_results:
-        logger.info(f"  Replay: {len(replay_results)} theses replayed")
+    # Budget mode: replay runs ONLY in overnight, never in intraday
+    if not BUDGET_MODE and FLAGS.enable_replay_engine:
+        from orca_v20.replay_engine import run_nightly_replay
+        replay_results = run_nightly_replay(ctx)
+        if replay_results:
+            logger.info(f"  Replay: {len(replay_results)} theses replayed")
+    elif BUDGET_MODE:
+        logger.info("[budget] Replay skipped — runs only in overnight teacher loop")
 
     # ── Thesis Momentum Update (v20) ──
     run_momentum_update(ctx)
@@ -423,18 +447,64 @@ def run_pipeline(ctx: RunContext) -> bool:
     save_run_trace(ctx, success=True, trace_counts=trace)
 
     # ── Router session summary ──
-    from orca_v20.router import log_session_summary
+    from orca_v20.router import log_session_summary, get_session_summary, get_role_costs
     log_session_summary()
+
+    # ── Budget mode: write compact artifacts for overnight review ──
+    if BUDGET_MODE:
+        _write_budget_artifacts(ctx, trace)
 
     logger.info("=" * 60)
     logger.info(f"Pipeline complete — run_id={ctx.run_id}")
-    logger.info(f"  Ideas: {trace['ideas_generated']} → {trace['ideas_after_gates']} after gates")
-    logger.info(f"  Trades: {trace['trades_structured']} structured, {trace['trades_logged']} logged")
+    logger.info(f"  Ideas: {trace['ideas_generated']} → {trace.get('ideas_after_gates', 0)} after gates")
+    logger.info(f"  Trades: {trace.get('trades_structured', 0)} structured, {trace.get('trades_logged', 0)} logged")
     logger.info(f"  API cost: ${ctx.api_cost_usd:.4f}")
     logger.info(f"  Errors: {len(ctx.errors)}")
+    if BUDGET_MODE:
+        logger.info(f"  Budget mode: YES (artifacts in {PATHS.artifacts_dir})")
     logger.info("=" * 60)
 
     return True
+
+
+# ─────────────────────────────────────────────────────────────────────
+# Budget artifact writer
+# ─────────────────────────────────────────────────────────────────────
+
+def _write_budget_artifacts(ctx: RunContext, trace: dict) -> None:
+    """Write compact run artifacts for budget sprint overnight review."""
+    from orca_v20.router import get_session_summary
+    artifacts_dir = PATHS.artifacts_dir
+    os.makedirs(artifacts_dir, exist_ok=True)
+
+    run_ts = ctx.as_of_utc.strftime("%Y%m%dT%H%M%S")
+    prefix = f"{artifacts_dir}/{ctx.market_date}_{run_ts}"
+
+    # 1. Compact run summary
+    summary = {
+        "run_id": ctx.run_id,
+        "market_date": ctx.market_date,
+        "timestamp_utc": ctx.as_of_utc.isoformat(),
+        "budget_mode": True,
+        "total_cost_usd": round(ctx.api_cost_usd, 4),
+        "trace": trace,
+        "errors": ctx.errors,
+        "router_summary": get_session_summary(),
+    }
+    with open(f"{prefix}_run_summary.json", "w") as f:
+        json.dump(summary, f, indent=2, default=str)
+
+    # 2. Cost summary
+    cost = {
+        "run_id": ctx.run_id,
+        "total_cost_usd": round(ctx.api_cost_usd, 4),
+        "max_budget": THRESHOLDS.max_api_cost_per_run,
+        "role_costs": get_session_summary().get("role_costs", {}),
+    }
+    with open(f"{prefix}_cost_summary.json", "w") as f:
+        json.dump(cost, f, indent=2, default=str)
+
+    logger.info(f"[budget] Artifacts written to {artifacts_dir}/")
 
 
 # ─────────────────────────────────────────────────────────────────────
@@ -453,12 +523,33 @@ def parse_args() -> argparse.Namespace:
                         help="Minimal sources (scanner + news only)")
     parser.add_argument("--verbose", action="store_true",
                         help="Debug-level logging")
+    parser.add_argument("--budget", action="store_true",
+                        help="Budget sprint mode (cheap models, no publishing, max data collection)")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
     setup_logging(verbose=args.verbose)
+
+    # ── Budget mode activation ──
+    if args.budget:
+        os.environ["ORCA_BUDGET_MODE"] = "1"
+        # Re-import config to pick up budget overrides
+        import importlib
+        import orca_v20.config
+        importlib.reload(orca_v20.config)
+        from orca_v20.config import BUDGET_MODE, FLAGS, THRESHOLDS, ROUTING
+        logger.info("=" * 60)
+        logger.info("*** BUDGET SPRINT MODE ACTIVE ***")
+        logger.info(f"  Models: {ROUTING.hunter_primary}/{ROUTING.hunter_secondary}/{ROUTING.hunter_tertiary}")
+        logger.info(f"  Publishing: ALL DISABLED")
+        logger.info(f"  Max cost/run: ${THRESHOLDS.max_api_cost_per_run}")
+        logger.info(f"  Stage caps: S2={THRESHOLDS.budget_max_stage2_candidates}, "
+                     f"S3={THRESHOLDS.budget_max_stage3_candidates}, "
+                     f"Struct={THRESHOLDS.budget_max_structured}")
+        logger.info(f"  Replay in intraday: DISABLED")
+        logger.info("=" * 60)
 
     # Build RunContext
     ctx = RunContext(

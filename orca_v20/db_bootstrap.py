@@ -331,6 +331,80 @@ _TABLES = {
         )
     """,
 
+    # --- Budget intelligence log (crown jewel audit layer) ---
+    "budget_intelligence_log": """
+        CREATE TABLE IF NOT EXISTS budget_intelligence_log (
+            id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+            run_id              TEXT NOT NULL,
+            timestamp_utc       TEXT NOT NULL,
+            pipeline_stage      TEXT NOT NULL,
+            role                TEXT NOT NULL,
+            model_used          TEXT NOT NULL,
+            provider            TEXT NOT NULL,
+            ticker              TEXT DEFAULT '',
+            idea_id             TEXT DEFAULT '',
+            thesis_id           TEXT DEFAULT '',
+            prompt_hash         TEXT DEFAULT '',
+            input_tokens        INTEGER DEFAULT 0,
+            output_tokens       INTEGER DEFAULT 0,
+            cost_usd            REAL DEFAULT 0.0,
+            latency_ms          INTEGER DEFAULT 0,
+            raw_output          TEXT NOT NULL DEFAULT '',
+            structured_output   TEXT DEFAULT '',
+            quality_score       REAL DEFAULT 0.0,
+            notes               TEXT DEFAULT ''
+        )
+    """,
+
+    # --- Budget intraday case store (cheap-model snapshots for teacher review) ---
+    "intraday_cases": """
+        CREATE TABLE IF NOT EXISTS intraday_cases (
+            id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+            run_id              TEXT NOT NULL,
+            market_date         TEXT NOT NULL,
+            session_bucket      TEXT DEFAULT '',
+            ticker              TEXT NOT NULL,
+            idea_id             TEXT DEFAULT '',
+            thesis_id           TEXT DEFAULT '',
+            direction           TEXT DEFAULT '',
+            catalyst_text       TEXT DEFAULT '',
+            catalyst_hash       TEXT DEFAULT '',
+            confidence          INTEGER DEFAULT 0,
+            stage_reached       TEXT DEFAULT '',
+            flow_interpretation TEXT DEFAULT '',
+            catalyst_verdict    TEXT DEFAULT '',
+            gate_results_json   TEXT DEFAULT '{}',
+            cheap_model_output  TEXT DEFAULT '',
+            teacher_verdict     TEXT DEFAULT '',
+            teacher_critique    TEXT DEFAULT '',
+            teacher_label       TEXT DEFAULT '',
+            disagreement_flag   INTEGER DEFAULT 0,
+            playbook_tag        TEXT DEFAULT '',
+            created_utc         TEXT NOT NULL,
+            reviewed_utc        TEXT DEFAULT ''
+        )
+    """,
+
+    # --- Teacher feedback (overnight premium writes) ---
+    "teacher_feedback": """
+        CREATE TABLE IF NOT EXISTS teacher_feedback (
+            id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+            case_id             INTEGER,
+            run_id              TEXT NOT NULL,
+            review_date         TEXT NOT NULL,
+            ticker              TEXT NOT NULL,
+            verdict             TEXT DEFAULT '',
+            critique            TEXT DEFAULT '',
+            what_cheap_missed   TEXT DEFAULT '',
+            escalation_suggestion TEXT DEFAULT '',
+            playbook_note       TEXT DEFAULT '',
+            calibration_note    TEXT DEFAULT '',
+            outcome_tag         TEXT DEFAULT '',
+            created_utc         TEXT NOT NULL,
+            FOREIGN KEY (case_id) REFERENCES intraday_cases(id)
+        )
+    """,
+
     # --- Run traces ---
     "run_traces": """
         CREATE TABLE IF NOT EXISTS run_traces (
@@ -391,6 +465,17 @@ _INDEXES = [
     "CREATE INDEX IF NOT EXISTS idx_esl_thesis ON evidence_source_links(thesis_id)",
     "CREATE INDEX IF NOT EXISTS idx_sc_sector ON sector_cache(sector)",
     "CREATE INDEX IF NOT EXISTS idx_sc_source ON sector_cache(source)",
+    # Budget sprint indexes
+    "CREATE INDEX IF NOT EXISTS idx_bil_run ON budget_intelligence_log(run_id)",
+    "CREATE INDEX IF NOT EXISTS idx_bil_role ON budget_intelligence_log(role)",
+    "CREATE INDEX IF NOT EXISTS idx_bil_ticker ON budget_intelligence_log(ticker)",
+    "CREATE INDEX IF NOT EXISTS idx_ic_run ON intraday_cases(run_id)",
+    "CREATE INDEX IF NOT EXISTS idx_ic_date ON intraday_cases(market_date)",
+    "CREATE INDEX IF NOT EXISTS idx_ic_ticker ON intraday_cases(ticker)",
+    "CREATE INDEX IF NOT EXISTS idx_ic_teacher ON intraday_cases(teacher_label)",
+    "CREATE INDEX IF NOT EXISTS idx_tf_case ON teacher_feedback(case_id)",
+    "CREATE INDEX IF NOT EXISTS idx_tf_date ON teacher_feedback(review_date)",
+    "CREATE INDEX IF NOT EXISTS idx_tf_ticker ON teacher_feedback(ticker)",
 ]
 
 

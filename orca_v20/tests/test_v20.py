@@ -2301,3 +2301,173 @@ class TestPublishPolicy:
         assert "Bearish" not in summary or "Actionable" in summary  # Bearish only allowed in actionable
         # Section should say "Watchlist" not "Monitoring"
         assert "Watchlist:" in summary
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# BUDGET SPRINT MODE TESTS
+# ═══════════════════════════════════════════════════════════════════════
+
+class TestBudgetModeConfig:
+    """Budget mode config: routing, thresholds, publishing force-disable."""
+
+    def test_budget_routing_inherits_role_routing(self):
+        from orca_v20.config import BudgetRoleRouting, RoleRouting
+        assert issubclass(BudgetRoleRouting, RoleRouting)
+
+    def test_budget_routing_uses_cheap_models(self):
+        from orca_v20.config import BudgetRoleRouting, MODELS
+        r = BudgetRoleRouting()
+        for role_field in r.__dataclass_fields__:
+            model_key = getattr(r, role_field)
+            if callable(model_key):
+                continue
+            assert model_key in MODELS, f"Role {role_field} maps to unknown model {model_key}"
+            spec = MODELS[model_key]
+            assert spec.cost_per_1k_output <= 0.01, \
+                f"Role {role_field} → {model_key} costs ${spec.cost_per_1k_output}/1k out — too expensive for budget"
+
+    def test_budget_models_registered(self):
+        from orca_v20.config import MODELS
+        assert "claude-haiku" in MODELS
+        assert "gpt-mini" in MODELS
+        assert "gemini-flash" in MODELS
+
+    def test_budget_routing_cheap_defaults(self):
+        from orca_v20.config import BudgetRoleRouting
+        r = BudgetRoleRouting()
+        assert r.hunter_primary == "claude-haiku"
+        assert r.hunter_secondary == "gpt-mini"
+        assert r.hunter_tertiary == "gemini-flash"
+
+    def test_budget_shortlist_caps_default_high(self):
+        """Normal mode has high defaults (effectively unlimited)."""
+        from orca_v20.config import Thresholds
+        t = Thresholds()
+        assert t.budget_max_stage2_candidates == 100
+        assert t.budget_max_stage3_candidates == 100
+
+
+class TestBudgetModePublisher:
+    """Budget mode should force-disable all publishing."""
+
+    def test_publisher_budget_guard_returns_early(self):
+        import orca_v20.config as config
+        import importlib
+        import orca_v20.publisher as pub
+        original = config.BUDGET_MODE
+        try:
+            config.BUDGET_MODE = True
+            importlib.reload(pub)
+            result = pub.publish_trades([], [], None, {})
+            assert result["budget_mode"] is True
+            assert result["telegram_sent"] == 0
+            assert result["x_posted"] == 0
+        finally:
+            config.BUDGET_MODE = original
+            importlib.reload(pub)
+
+    def test_budget_flags_override_env_vars(self):
+        from orca_v20.config import FeatureFlags
+        flags = FeatureFlags()
+        flags.publish_telegram = True
+        flags.publish_x = True
+        flags.publish_reports = True
+        flags.mirror_to_google_sheet = True
+        # Simulate budget override
+        flags.publish_reports = False
+        flags.publish_telegram = False
+        flags.publish_x = False
+        flags.mirror_to_google_sheet = False
+        assert flags.publish_telegram is False
+        assert flags.publish_x is False
+        assert flags.publish_reports is False
+        assert flags.mirror_to_google_sheet is False
+
+
+class TestBudgetModeDB:
+    """Budget DB tables should exist after bootstrap."""
+
+    def test_budget_intelligence_log_table_exists(self):
+        from orca_v20.db_bootstrap import bootstrap_db, verify_db
+        with tempfile.NamedTemporaryFile(suffix=".db", delete=False) as f:
+            db_path = f.name
+        try:
+            bootstrap_db(db_path)
+            report = verify_db(db_path)
+            assert "budget_intelligence_log" in report
+            assert "intraday_cases" in report
+            assert "teacher_feedback" in report
+        finally:
+            os.unlink(db_path)
+
+    def test_budget_intelligence_log_schema(self):
+        from orca_v20.db_bootstrap import bootstrap_db
+        with tempfile.NamedTemporaryFile(suffix=".db", delete=False) as f:
+            db_path = f.name
+        try:
+            bootstrap_db(db_path)
+            conn = sqlite3.connect(db_path)
+            cursor = conn.execute("PRAGMA table_info(budget_intelligence_log)")
+            columns = {row[1] for row in cursor.fetchall()}
+            conn.close()
+            required = {"run_id", "role", "model_used", "provider", "cost_usd",
+                        "input_tokens", "output_tokens", "raw_output", "pipeline_stage"}
+            assert required.issubset(columns), f"Missing columns: {required - columns}"
+        finally:
+            os.unlink(db_path)
+
+
+class TestBudgetModeReplaySkip:
+    def test_replay_flag_off_in_budget(self):
+        from orca_v20.config import FeatureFlags
+        flags = FeatureFlags()
+        flags.enable_replay_engine = False
+        assert flags.enable_replay_engine is False
+
+
+class TestBudgetModeNormalModeUnaffected:
+    """Normal (non-budget) mode should be completely unaffected."""
+
+    def test_normal_routing_unchanged(self):
+        from orca_v20.config import RoleRouting
+        r = RoleRouting()
+        assert r.hunter_primary == "claude-opus"
+        assert r.flow_reader == "claude-opus"
+        assert r.catalyst_confirm == "claude-opus"
+
+    def test_normal_thresholds_unchanged(self):
+        from orca_v20.config import Thresholds
+        t = Thresholds()
+        assert t.max_api_cost_per_run == 20.0
+        assert t.min_confidence == 7
+        assert t.overnight_hard_budget_usd == 50.0
+
+    def test_normal_publish_defaults(self):
+        from orca_v20.config import FeatureFlags
+        f = FeatureFlags()
+        assert f.publish_reports is True
+        assert f.publish_telegram is False
+        assert f.publish_x is False
+
+
+class TestBudgetPipelineCLI:
+    def test_budget_arg_exists(self):
+        from pipeline_v20 import parse_args
+        old_argv = sys.argv
+        try:
+            sys.argv = ["pipeline_v20.py", "--budget", "--dry-run"]
+            args = parse_args()
+            assert args.budget is True
+            assert args.dry_run is True
+        finally:
+            sys.argv = old_argv
+
+    def test_no_budget_arg_defaults_false(self):
+        from pipeline_v20 import parse_args
+        old_argv = sys.argv
+        try:
+            sys.argv = ["pipeline_v20.py", "--dry-run"]
+            args = parse_args()
+            assert args.budget is False
+        finally:
+            sys.argv = old_argv

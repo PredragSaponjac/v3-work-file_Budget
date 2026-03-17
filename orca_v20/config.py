@@ -77,6 +77,36 @@ MODELS: Dict[str, ModelSpec] = {
         cost_per_1k_input=0.001,
         cost_per_1k_output=0.004,
     ),
+
+    # ── Budget-tier models (sprint mode) ──────────────────────────────
+    "claude-haiku": ModelSpec(
+        provider="anthropic",
+        model_id="claude-haiku-4-5-20251001",
+        max_tokens=8192,
+        thinking_budget=0,
+        temperature=0.7,
+        timeout_s=120,
+        cost_per_1k_input=0.0008,
+        cost_per_1k_output=0.004,
+    ),
+    "gpt-mini": ModelSpec(
+        provider="openai",
+        model_id="gpt-4o-mini",
+        max_tokens=8192,
+        temperature=0.5,
+        timeout_s=120,
+        cost_per_1k_input=0.00015,
+        cost_per_1k_output=0.0006,
+    ),
+    "gemini-flash": ModelSpec(
+        provider="google",
+        model_id="gemini-2.0-flash",
+        max_tokens=8192,
+        temperature=0.7,
+        timeout_s=120,
+        cost_per_1k_input=0.0001,
+        cost_per_1k_output=0.0004,
+    ),
 }
 
 
@@ -155,7 +185,48 @@ class RoleRouting:
         return MODELS[model_key]
 
 
-ROUTING = RoleRouting()
+@dataclass
+class BudgetRoleRouting(RoleRouting):
+    """
+    Budget sprint routing — all cheap models for intraday collection.
+
+    Philosophy:
+        Role B (thesis gen, deep reasoning) → claude-haiku (cheapest Anthropic)
+        Role C (independent judge)          → gpt-mini
+        Role A (integration)                → gemini-flash
+        Support/utility                     → gpt-mini or gemini-flash
+
+    Overnight stays on premium models (uses normal RoleRouting).
+    """
+    hunter_primary: str = "claude-haiku"
+    hunter_secondary: str = "gpt-mini"
+    hunter_tertiary: str = "gemini-flash"
+    flow_reader: str = "claude-haiku"
+    catalyst_confirm: str = "claude-haiku"
+    evidence_gate: str = "gpt-mini"
+    thesis_generator: str = "claude-haiku"
+    elite_simulation: str = "gpt-mini"
+    consensus_merge: str = "gemini-flash"
+    validator_a: str = "gpt-mini"
+    validator_b: str = "gemini-flash"
+    review_pass: str = "claude-haiku"
+    surgical_fix: str = "claude-haiku"
+    report_writer: str = "gpt-mini"
+    x_rewriter: str = "gpt-mini"
+    eod_primary: str = "claude-haiku"
+    eod_secondary: str = "gpt-mini"
+    eod_tertiary: str = "gemini-flash"
+    replay_analyst: str = "gpt-mini"
+    cio_briefing: str = "gemini-flash"
+
+
+# ── Budget mode detection ──
+BUDGET_MODE: bool = os.environ.get("ORCA_BUDGET_MODE", "0").lower() in ("1", "true", "yes")
+
+if BUDGET_MODE:
+    ROUTING = BudgetRoleRouting()
+else:
+    ROUTING = RoleRouting()
 
 
 # ─────────────────────────────────────────────────────────────────────
@@ -233,8 +304,29 @@ class Thresholds:
     x_block_illiquid: bool = True               # block illiquid
     x_block_contradicted: bool = True           # block if active contradiction
 
+    # ── Budget sprint shortlist caps ──
+    # Used in budget mode to cap expensive stages and keep cost low.
+    # In normal mode these are effectively unlimited (high defaults).
+    budget_max_stage2_candidates: int = 100     # no cap in normal mode
+    budget_max_stage3_candidates: int = 100     # no cap in normal mode
+    budget_max_structured: int = 100            # no cap in normal mode
+
 
 THRESHOLDS = Thresholds()
+
+# ── Budget mode threshold overrides ──
+# Intentional: keep expensive stage caps TIGHT, log broadly at cheap stages.
+# Do NOT blindly lower quality bars — cap volume into expensive stages instead.
+if BUDGET_MODE:
+    THRESHOLDS.max_api_cost_per_run = 3.0           # $3 max per run (cheap models)
+    THRESHOLDS.max_api_cost_per_month = 80.0         # $80/month budget sprint
+    THRESHOLDS.min_confidence = 6                    # mildly lower → more data, not junk
+    THRESHOLDS.evidence_gate_pass_score = 0.5        # mildly lower → more data through
+    THRESHOLDS.elite_simulation_max_ideas = 2        # tight cap on expensive sim
+    THRESHOLDS.budget_max_stage2_candidates = 4      # tight: only 4 enter flow read
+    THRESHOLDS.budget_max_stage3_candidates = 3      # tight: only 3 enter confirmation
+    THRESHOLDS.budget_max_structured = 2             # tight: max 2 structured trades
+    THRESHOLDS.overnight_hard_budget_usd = 10.0      # $10/night budget (still premium models)
 
 
 # ─────────────────────────────────────────────────────────────────────
@@ -311,6 +403,16 @@ def _apply_env_overrides() -> None:
         FLAGS.mirror_to_google_sheet = True
 
 _apply_env_overrides()
+
+# ── Budget mode FORCE-DISABLE publishing (overrides everything above) ──
+# This runs AFTER env-var overrides so budget mode always wins.
+# Even if someone sets ORCA_PUBLISH_TELEGRAM=1 in a budget workflow, it stays off.
+if BUDGET_MODE:
+    FLAGS.publish_reports = False
+    FLAGS.publish_telegram = False
+    FLAGS.publish_x = False
+    FLAGS.mirror_to_google_sheet = False
+    FLAGS.enable_replay_engine = False   # replay runs ONLY in overnight, not intraday
 
 
 # ─────────────────────────────────────────────────────────────────────
@@ -423,6 +525,16 @@ class Paths:
     @property
     def vix_json(self) -> str:
         return os.path.join(self.project_root, "vix_dislocation.json")
+
+    @property
+    def state_dir(self) -> str:
+        """Persistent state directory for budget sprint (synced via state branch)."""
+        return os.path.join(self.project_root, "state")
+
+    @property
+    def artifacts_dir(self) -> str:
+        """Per-run artifacts for budget sprint (compact summaries, JSONL logs)."""
+        return os.path.join(self.project_root, "artifacts")
 
 
 PATHS = Paths()

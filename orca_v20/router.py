@@ -24,7 +24,7 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
-from orca_v20.config import MODELS, ROUTING, ModelSpec
+from orca_v20.config import BUDGET_MODE, MODELS, ROUTING, ModelSpec
 from orca_v20.run_context import RunContext
 
 logger = logging.getLogger("orca_v20.router")
@@ -184,6 +184,20 @@ def call_model(
         + (f" [retries={response.retries_used}]" if response.retries_used else "")
         + (" [FALLBACK]" if response.fallback_used else "")
     )
+
+    # ── Budget intelligence logging ──
+    if BUDGET_MODE and response.content and not response.content.startswith("["):
+        _log_budget_intelligence(
+            run_id=ctx.run_id,
+            role=role,
+            model_used=response.model_id,
+            provider=response.provider,
+            input_tokens=response.input_tokens,
+            output_tokens=response.output_tokens,
+            cost_usd=response.cost_usd,
+            latency_ms=response.latency_ms,
+            raw_output=response.content[:10000],
+        )
 
     return response
 
@@ -549,6 +563,36 @@ def get_session_summary() -> Dict:
         "provider_health": provider_health,
         "roles_used": len(role_costs),
     }
+
+
+def _log_budget_intelligence(
+    run_id: str, role: str, model_used: str, provider: str,
+    input_tokens: int, output_tokens: int, cost_usd: float,
+    latency_ms: int, raw_output: str, ticker: str = "",
+    idea_id: str = "", thesis_id: str = "", stage: str = "",
+) -> None:
+    """Log every budget-mode model call to budget_intelligence_log for audit."""
+    try:
+        from orca_v20.db_bootstrap import get_connection
+        from datetime import datetime, timezone
+        conn = get_connection()
+        conn.execute("""
+            INSERT INTO budget_intelligence_log
+            (run_id, timestamp_utc, pipeline_stage, role, model_used, provider,
+             ticker, idea_id, thesis_id, input_tokens, output_tokens,
+             cost_usd, latency_ms, raw_output)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (
+            run_id, datetime.now(timezone.utc).isoformat(),
+            stage or role, role, model_used, provider,
+            ticker, idea_id, thesis_id,
+            input_tokens, output_tokens, cost_usd, latency_ms,
+            raw_output,
+        ))
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        logger.debug(f"[budget_log] Failed: {e}")
 
 
 def log_session_summary() -> None:

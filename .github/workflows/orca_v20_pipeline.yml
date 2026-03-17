@@ -10,8 +10,9 @@
 name: ORCA v20 Pipeline
 
 on:
-  schedule:
-    - cron: "30 14 * * 1-5"   # Mon-Fri 14:30 UTC = 9:30 AM CDT
+  # DISABLED during Budget Sprint — re-enable after sprint completes
+  # schedule:
+  #   - cron: "30 14 * * 1-5"   # Mon-Fri 14:30 UTC = 9:30 AM CDT
   workflow_dispatch:
     inputs:
       dry_run:
@@ -114,6 +115,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Pipeline run #${{ github.run_number }} — $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-            git pull --rebase origin master
-            git push origin master
+            git pull --rebase origin main
+            git push origin main
           fi

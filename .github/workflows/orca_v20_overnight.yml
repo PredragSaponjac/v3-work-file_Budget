@@ -11,8 +11,9 @@
 name: ORCA v20 Overnight
 
 on:
-  schedule:
-    - cron: "0 1 * * 2-6"    # Tue-Sat 01:00 UTC = Mon-Fri 8:00 PM CDT
+  # DISABLED during Budget Sprint — re-enable after sprint completes
+  # schedule:
+  #   - cron: "0 1 * * 2-6"    # Tue-Sat 01:00 UTC = Mon-Fri 8:00 PM CDT
   workflow_dispatch:
     inputs:
       deep_review:
@@ -100,6 +101,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Overnight run #${{ github.run_number }} — $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-            git pull --rebase origin master
-            git push origin master
+            git pull --rebase origin main
+            git push origin main
           fi
