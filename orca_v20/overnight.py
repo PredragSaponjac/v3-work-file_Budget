@@ -224,7 +224,7 @@ def _detect_false_negatives(lookback_days: int = 7) -> List[Dict]:
         # Find theses that were rejected or stayed WATCH
         rows = conn.execute("""
             SELECT thesis_id, ticker, idea_direction, catalyst,
-                   initial_confidence, created_utc
+                   initial_confidence, created_utc, expected_horizon
             FROM theses
             WHERE status IN ('DRAFT', 'CLOSED_INVALIDATED', 'CLOSED_EXPIRED')
             AND created_utc >= datetime('now', ?)
@@ -233,11 +233,31 @@ def _detect_false_negatives(lookback_days: int = 7) -> List[Dict]:
         """, (f"-{lookback_days} days",)).fetchall()
         conn.close()
 
+        from orca_v20.horizon import calendar_to_trading_days
+
         false_negatives = []
         for row in rows:
             r = dict(row)
             ticker = r["ticker"]
             start_date = r["created_utc"][:10]
+
+            # Horizon-aware: skip if thesis hasn't had time to play out
+            expected_horizon = r.get("expected_horizon") or "UNKNOWN"
+            horizon_days = THRESHOLDS.horizon_days_map.get(expected_horizon, 10)
+            try:
+                from datetime import datetime as _dt
+                created = _dt.fromisoformat(r["created_utc"].replace("Z", "+00:00"))
+                cal_days = (_dt.now(timezone.utc) - created).days
+                thesis_age_td = calendar_to_trading_days(cal_days)
+            except Exception:
+                thesis_age_td = lookback_days  # fallback: assume enough time
+
+            if thesis_age_td < horizon_days:
+                logger.debug(
+                    f"[false_neg] {ticker}: too early to judge "
+                    f"(age={thesis_age_td}td < horizon={horizon_days}td)"
+                )
+                continue
 
             try:
                 with warnings.catch_warnings():
@@ -330,6 +350,15 @@ def run_layer_1(ctx: RunContext, budget: OvernightBudgetTracker) -> Dict:
         logger.info(f"[overnight L1] Auto-labeled {labeled} theses")
     except Exception as e:
         logger.error(f"[overnight L1] Auto-label failed: {e}")
+
+    # 3b. Compute forward outcomes (multi-window tracking with MFE/MAE)
+    try:
+        from orca_v20.thesis_store import compute_forward_outcomes
+        fwd_count = compute_forward_outcomes(ctx)
+        results["forward_outcomes_computed"] = fwd_count
+        logger.info(f"[overnight L1] Computed {fwd_count} forward outcome windows")
+    except Exception as e:
+        logger.error(f"[overnight L1] Forward outcomes failed: {e}")
 
     # 4. Rules-based replay on recently closed theses (after auto-label)
     try:

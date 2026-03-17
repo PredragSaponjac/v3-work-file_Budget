@@ -122,6 +122,51 @@ def _write_teacher_artifacts(ctx: RunContext, summary: dict) -> None:
             "summary": summary,
         }, f, indent=2, default=str)
 
+    # Horizon outcomes JSONL
+    try:
+        from orca_v20.thesis_store import get_horizon_outcomes
+        from orca_v20.db_bootstrap import get_connection
+        from orca_v20.config import THRESHOLDS
+
+        conn = get_connection()
+        theses = conn.execute("""
+            SELECT thesis_id, ticker, expected_horizon
+            FROM theses
+            WHERE status IN ('ACTIVE', 'DRAFT', 'CLOSED_WIN', 'CLOSED_LOSS',
+                           'CLOSED_EXPIRED', 'CLOSED_INVALIDATED')
+        """).fetchall()
+        conn.close()
+
+        jsonl_path = f"{prefix}_horizon_outcomes.jsonl"
+        with open(jsonl_path, "w") as f:
+            for t in theses:
+                tid = t["thesis_id"]
+                outcomes = get_horizon_outcomes(tid)
+
+                # Per-window outcome records
+                computed_windows = []
+                for o in outcomes:
+                    o["record_type"] = "outcome"
+                    f.write(json.dumps(o, default=str) + "\n")
+                    computed_windows.append(o.get("window_days"))
+
+                # Thesis summary record (computed vs skipped windows)
+                all_windows = THRESHOLDS.forward_outcome_windows
+                skipped = [w for w in all_windows if w not in computed_windows]
+                summary_rec = {
+                    "record_type": "thesis_summary",
+                    "thesis_id": tid,
+                    "ticker": t["ticker"],
+                    "expected_horizon": t["expected_horizon"] or "UNKNOWN",
+                    "windows_computed": sorted(computed_windows),
+                    "windows_skipped": sorted(skipped),
+                }
+                f.write(json.dumps(summary_rec, default=str) + "\n")
+
+        logger.info(f"[teacher] Horizon outcomes JSONL: {jsonl_path}")
+    except Exception as e:
+        logger.warning(f"[teacher] Horizon outcomes JSONL failed: {e}")
+
     logger.info(f"[teacher] Artifacts written to {artifacts_dir}/")
 
 

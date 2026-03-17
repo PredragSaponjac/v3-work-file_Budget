@@ -205,6 +205,49 @@ def _rules_replay(thesis: Dict, trades: List[Dict], snapshots: List[Dict],
                 elif realized_outcome == "LOSS":
                     pnl_actual = -abs(t["max_loss"])
 
+    # MFE / MAE computation
+    mfe_pct = 0.0
+    mae_pct = 0.0
+    if price_data:
+        entry = price_data["start_price"]
+        if entry > 0:
+            if direction == "BULLISH":
+                mfe_pct = round((price_data["high"] - entry) / entry, 4)
+                mae_pct = round((price_data["low"] - entry) / entry, 4)
+            else:
+                mfe_pct = round((entry - price_data["low"]) / entry, 4)
+                mae_pct = round((entry - price_data["high"]) / entry, 4)
+
+    # Horizon-aware timing quality
+    expected_horizon = thesis.get("expected_horizon") or "UNKNOWN"
+    timing_quality = ""
+    try:
+        from orca_v20.horizon import compute_timing_quality, calendar_to_trading_days
+        horizon_days = THRESHOLDS.horizon_days_map.get(expected_horizon, 10)
+        # Compute trading age from created_utc
+        trading_age = 0
+        created_utc = thesis.get("created_utc", "")
+        if created_utc and price_data:
+            try:
+                from datetime import datetime as _dt
+                created = _dt.fromisoformat(created_utc.replace("Z", "+00:00"))
+                cal_days = price_data.get("n_days", 0)
+                trading_age = max(1, cal_days)  # n_days is already trading days from yfinance
+            except Exception:
+                trading_age = price_data.get("n_days", 0)
+
+        directional_return = 0.0
+        if price_data:
+            pct_raw = price_data["pct_change"] / 100.0
+            directional_return = pct_raw if direction == "BULLISH" else -pct_raw
+
+        timing_quality = compute_timing_quality(
+            directional_return, mfe_pct, trading_age,
+            horizon_days, status, expected_horizon,
+        )
+    except Exception as e:
+        logger.debug(f"[replay] Timing quality failed for {thesis_id}: {e}")
+
     # Agent miss report (rules-based)
     agent_miss_parts = []
     if realized_outcome == "LOSS" and confidence_delta < -2:
@@ -230,6 +273,10 @@ def _rules_replay(thesis: Dict, trades: List[Dict], snapshots: List[Dict],
         "pnl_actual": pnl_actual,
         "pnl_counterfactual": None,
         "price_data": price_data,
+        "mfe_pct": mfe_pct,
+        "mae_pct": mae_pct,
+        "expected_horizon": expected_horizon,
+        "timing_quality": timing_quality,
     }
 
 
@@ -338,7 +385,9 @@ def _generate_training_examples(thesis: Dict, replay_result: Dict,
         "input_prompt": (
             f"Assess this catalyst for {ticker}: {thesis.get('catalyst', '')}\n"
             f"Thesis: {thesis.get('thesis_text', '')}\n"
-            f"Direction: {direction}"
+            f"Direction: {direction}\n"
+            f"Expected horizon: {replay_result.get('expected_horizon', 'UNKNOWN')}\n"
+            f"Timing quality: {replay_result.get('timing_quality', '')}"
         ),
         "expected_output": (
             f"Outcome: {outcome}. "

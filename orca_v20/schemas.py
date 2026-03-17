@@ -93,6 +93,37 @@ class GateStatus(str, Enum):
     FAIL = "FAIL"                          # clear evidence of failure
 
 
+class ThesisHorizon(str, Enum):
+    """Expected repricing window for a thesis."""
+    INTRADAY = "INTRADAY"
+    ONE_DAY = "1D"
+    THREE_DAY = "3D"
+    FIVE_DAY = "5D"
+    SEVEN_TO_TEN_DAY = "7_10D"
+    TWO_TO_FOUR_WEEK = "2_4W"
+    UNKNOWN = "UNKNOWN"
+
+
+class TimingQuality(str, Enum):
+    """How well thesis timing matched actual outcome."""
+    CORRECT_AND_TIMELY = "correct_and_timely"
+    CORRECT_BUT_SLOW = "correct_but_slow"
+    CORRECT_THESIS_POOR_TIMING = "correct_thesis_poor_timing"
+    TOO_EARLY_TO_JUDGE = "too_early_to_judge"
+    INVALIDATED_BEFORE_PLAYOUT = "invalidated_before_playout"
+    FAILED_THESIS = "failed_thesis"
+
+
+class HorizonOutcomeLabel(str, Enum):
+    """Thesis lifecycle state with horizon awareness."""
+    TOO_EARLY = "too_early_to_judge"
+    ON_TRACK = "on_track"
+    LATE_BUT_INTACT = "late_but_intact"
+    WORKED = "worked"
+    FAILED = "failed"
+    INVALIDATED = "invalidated"
+
+
 class EvidenceType(str, Enum):
     """Classification of an evidence item."""
     NEWS_ARTICLE = "NEWS_ARTICLE"
@@ -164,6 +195,7 @@ class IdeaCandidate:
     catalyst: str = ""
     catalyst_status: CatalystStatus = CatalystStatus.PENDING
     repricing_window: str = ""         # "1-3 days", "1-2 weeks", etc.
+    expected_horizon: ThesisHorizon = ThesisHorizon.UNKNOWN
 
     # --- confidence ---
     confidence: int = 0                # 1-10 (parsed numeric)
@@ -298,6 +330,7 @@ class Thesis:
     ticker: str = ""
     idea_direction: IdeaDirection = IdeaDirection.BULLISH
     catalyst: str = ""
+    expected_horizon: str = ""       # ThesisHorizon value string
     thesis_text: str = ""
     status: ThesisStatus = ThesisStatus.DRAFT
 
@@ -334,6 +367,22 @@ class ThesisDailySnapshot:
     iv_level: Optional[float] = None
     catalyst_status: CatalystStatus = CatalystStatus.PENDING
     notes: str = ""
+
+
+@dataclass
+class ForwardOutcome:
+    """Multi-window forward return tracking for a single thesis."""
+    thesis_id: str = ""
+    eval_date: str = ""              # YYYY-MM-DD
+    window_days: int = 0             # 1, 3, 5, 10, 20
+    forward_return_pct: float = 0.0  # directional return %
+    mfe_pct: float = 0.0            # max favorable excursion %
+    mae_pct: float = 0.0            # max adverse excursion %
+    thesis_age_days: int = 0
+    expected_horizon: str = ""       # ThesisHorizon value
+    horizon_outcome_label: str = ""  # HorizonOutcomeLabel value
+    timing_quality: str = ""         # TimingQuality value
+    catalyst_intact: bool = True
 
 
 # ─────────────────────────────────────────────────────────────────────

@@ -19,11 +19,13 @@ if _PROJECT_ROOT not in sys.path:
     sys.path.insert(0, _PROJECT_ROOT)
 
 from orca_v20.run_context import RunContext
+from orca_v20.horizon import parse_horizon_from_window
 from orca_v20.schemas import (
     CatalystStatus,
     ConsensusTag,
     IdeaCandidate,
     IdeaDirection,
+    ThesisHorizon,
 )
 
 logger = logging.getLogger("orca_v20.adapters.stage1")
@@ -157,6 +159,7 @@ def normalize_v3_idea(v3_dict: Dict, ctx: RunContext) -> IdeaCandidate:
         catalyst=v3_dict.get("catalyst", ""),
         catalyst_status=CatalystStatus.PENDING,
         repricing_window=v3_dict.get("repricing_window", ""),
+        expected_horizon=parse_horizon_from_window(v3_dict.get("repricing_window", "")),
 
         confidence=_parse_confidence(v3_dict.get("confidence")),
         confidence_raw=str(v3_dict.get("confidence", "") or ""),

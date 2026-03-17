@@ -111,6 +111,19 @@ def run_stage3(
 
     Returns (survivors, filtered_out).
     """
+    # ── Defensive hard cap (belt-and-suspenders) ──
+    import orca_v20.config as _cfg
+    if _cfg.BUDGET_MODE and len(ideas) > _cfg.THRESHOLDS.budget_max_stage3_candidates:
+        cap = _cfg.THRESHOLDS.budget_max_stage3_candidates
+        ideas = list(ideas)  # don't mutate caller's list
+        ideas.sort(key=lambda x: x.confidence, reverse=True)
+        skipped = ideas[cap:]
+        ideas = ideas[:cap]
+        logger.warning(
+            f"[budget][DEFENSIVE] Stage 3 adapter hard cap: processing {cap}, "
+            f"dropping {len(skipped)} ({[i.ticker for i in skipped]})"
+        )
+
     logger.info(f"[run_id={ctx.run_id}] Stage 3: Catalyst confirmation for {len(ideas)} ideas")
 
     survivors = []

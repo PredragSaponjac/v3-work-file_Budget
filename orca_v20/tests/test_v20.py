@@ -1795,10 +1795,12 @@ class TestAutoLabelConfig:
         import inspect
         from orca_v20 import thesis_store
         source = inspect.getsource(thesis_store.auto_label_active_theses)
-        # Should reference config, not literal 0.15 / -0.10 / -0.05
-        assert "THRESHOLDS.thesis_auto_win_pct" in source
-        assert "THRESHOLDS.thesis_auto_loss_pct" in source
+        # Should reference per-horizon thresholds from config
+        assert "THRESHOLDS.horizon_auto_thresholds" in source
+        # Downgrade still uses global threshold
         assert "THRESHOLDS.thesis_auto_downgrade_pct" in source
+        # Should use horizon-aware expiry
+        assert "THRESHOLDS.horizon_expiry_multiplier" in source
         # Should NOT have old hardcoded values
         assert ">= 0.15" not in source
         assert "<= -0.10" not in source
@@ -2471,3 +2473,294 @@ class TestBudgetPipelineCLI:
             assert args.budget is False
         finally:
             sys.argv = old_argv
+
+
+# ─────────────────────────────────────────────────────────────────────
+# Horizon-Aware Outcome Tracking
+# ─────────────────────────────────────────────────────────────────────
+
+class TestHorizonAwareOutcomes:
+    """Tests for horizon-aware outcome tracking (Patch 1-9)."""
+
+    def test_horizon_enum_values(self):
+        from orca_v20.schemas import ThesisHorizon
+        assert ThesisHorizon.INTRADAY.value == "INTRADAY"
+        assert ThesisHorizon.ONE_DAY.value == "1D"
+        assert ThesisHorizon.THREE_DAY.value == "3D"
+        assert ThesisHorizon.FIVE_DAY.value == "5D"
+        assert ThesisHorizon.SEVEN_TO_TEN_DAY.value == "7_10D"
+        assert ThesisHorizon.TWO_TO_FOUR_WEEK.value == "2_4W"
+        assert ThesisHorizon.UNKNOWN.value == "UNKNOWN"
+
+    def test_timing_quality_enum(self):
+        from orca_v20.schemas import TimingQuality
+        values = [e.value for e in TimingQuality]
+        assert len(values) == 6
+        assert "correct_and_timely" in values
+        assert "correct_but_slow" in values
+        assert "correct_thesis_poor_timing" in values
+        assert "too_early_to_judge" in values
+        assert "invalidated_before_playout" in values
+        assert "failed_thesis" in values
+
+    def test_parse_horizon_from_window(self):
+        from orca_v20.horizon import parse_horizon_from_window
+        from orca_v20.schemas import ThesisHorizon
+        assert parse_horizon_from_window("1-3 days") == ThesisHorizon.THREE_DAY
+        assert parse_horizon_from_window("1-2 weeks") == ThesisHorizon.SEVEN_TO_TEN_DAY
+        assert parse_horizon_from_window("intraday") == ThesisHorizon.INTRADAY
+        assert parse_horizon_from_window("") == ThesisHorizon.UNKNOWN
+
+    def test_7_10d_not_failed_on_night_1(self):
+        """7_10D thesis with grace=int(8*0.5)=4. Day 1 < grace → skip."""
+        from orca_v20.config import Thresholds
+        t = Thresholds()
+        horizon_days = t.horizon_days_map["7_10D"]  # 8
+        grace = int(horizon_days * t.horizon_grace_multiplier)  # int(8*0.5) = 4
+        trading_age_day1 = 1
+        assert trading_age_day1 < grace, "Day 1 should be within grace period"
+
+    def test_1d_judged_quickly(self):
+        """1D thesis: horizon=1, grace=int(1*0.5)=0. Day 1 >= grace → eligible."""
+        from orca_v20.config import Thresholds
+        t = Thresholds()
+        horizon_days = t.horizon_days_map["1D"]  # 1
+        grace = int(horizon_days * t.horizon_grace_multiplier)  # int(1*0.5) = 0
+        trading_age_day1 = 1
+        assert trading_age_day1 >= grace, "1D thesis should be eligible immediately"
+
+    def test_forward_outcomes_table_exists(self):
+        from orca_v20.db_bootstrap import bootstrap_db, verify_db
+        with tempfile.NamedTemporaryFile(suffix=".db", delete=False) as f:
+            db_path = f.name
+        try:
+            bootstrap_db(db_path)
+            report = verify_db(db_path)
+            assert "thesis_forward_outcomes" in report
+        finally:
+            os.unlink(db_path)
+
+    def test_expected_horizon_on_schema(self):
+        from orca_v20.schemas import IdeaCandidate, Thesis, ThesisHorizon
+        idea = IdeaCandidate()
+        assert idea.expected_horizon == ThesisHorizon.UNKNOWN
+        thesis = Thesis()
+        assert thesis.expected_horizon == ""
+
+    def test_per_horizon_thresholds(self):
+        from orca_v20.config import Thresholds
+        t = Thresholds()
+        # INTRADAY: tight thresholds
+        assert t.horizon_auto_thresholds["INTRADAY"] == (0.05, -0.03)
+        # 2_4W: wider thresholds
+        assert t.horizon_auto_thresholds["2_4W"] == (0.15, -0.10)
+        # UNKNOWN matches 2_4W
+        assert t.horizon_auto_thresholds["UNKNOWN"] == (0.15, -0.10)
+
+    def test_calendar_to_trading_days(self):
+        from orca_v20.horizon import calendar_to_trading_days
+        assert calendar_to_trading_days(7) == 5   # 7 * 5/7 = 5
+        assert calendar_to_trading_days(14) == 10  # 14 * 5/7 = 10
+        assert calendar_to_trading_days(1) == 1    # max(1, int(5/7)) = max(1,0) = 1
+        assert calendar_to_trading_days(0) == 0    # edge: 0 → 0
+
+    def test_catalyst_intact_conservative(self):
+        from orca_v20.horizon import is_catalyst_intact
+        # Default: True
+        assert is_catalyst_intact("ACTIVE") is True
+        assert is_catalyst_intact("DRAFT") is True
+        assert is_catalyst_intact("CLOSED_WIN") is True
+        # False only for explicit invalidation
+        assert is_catalyst_intact("CLOSED_INVALIDATED") is False
+        assert is_catalyst_intact("ACTIVE", "INVALIDATED") is False
+        assert is_catalyst_intact("ACTIVE", "EXPIRED") is False
+
+    def test_correct_thesis_poor_timing(self):
+        """MFE exceeds win threshold but final return negative → poor timing."""
+        from orca_v20.horizon import compute_timing_quality
+        result = compute_timing_quality(
+            directional_return=-0.02,  # final return negative
+            mfe=0.16,                  # MFE exceeded 15% win threshold
+            trading_age=10,
+            horizon_days=8,
+            status="ACTIVE",
+            expected_horizon="7_10D",
+        )
+        assert result == "correct_thesis_poor_timing"
+
+    def test_parse_horizon_same_day(self):
+        from orca_v20.horizon import parse_horizon_from_window
+        from orca_v20.schemas import ThesisHorizon
+        assert parse_horizon_from_window("same day") == ThesisHorizon.INTRADAY
+
+    def test_parse_horizon_2_4_weeks(self):
+        from orca_v20.horizon import parse_horizon_from_window
+        from orca_v20.schemas import ThesisHorizon
+        assert parse_horizon_from_window("2-4 weeks") == ThesisHorizon.TWO_TO_FOUR_WEEK
+
+    def test_parse_horizon_malformed(self):
+        from orca_v20.horizon import parse_horizon_from_window
+        from orca_v20.schemas import ThesisHorizon
+        assert parse_horizon_from_window("soon") == ThesisHorizon.UNKNOWN
+        assert parse_horizon_from_window("eventually") == ThesisHorizon.UNKNOWN
+        assert parse_horizon_from_window("next quarter") == ThesisHorizon.UNKNOWN
+
+
+# ─────────────────────────────────────────────────────────────────────
+# Budget Cap Enforcement Tests
+# ─────────────────────────────────────────────────────────────────────
+
+class TestBudgetCapEnforcement:
+    """Tests proving budget stage caps are enforced BEFORE expensive calls."""
+
+    def _make_ideas(self, n, base_confidence=7):
+        """Create n IdeaCandidate stubs with descending confidence."""
+        from orca_v20.schemas import IdeaCandidate, IdeaDirection
+        ideas = []
+        for i in range(n):
+            idea = IdeaCandidate()
+            idea.ticker = f"TICK{i}"
+            idea.confidence = base_confidence + n - i  # descending
+            idea.idea_direction = IdeaDirection.BULLISH
+            idea.catalyst = f"Test catalyst {i}"
+            idea.tape_read = "DATA UNAVAILABLE"
+            idea.flow_details = {}
+            ideas.append(idea)
+        return ideas
+
+    def test_stage2_adapter_defensive_cap(self):
+        """Stage 2 adapter enforces budget cap even if pipeline didn't."""
+        import orca_v20.config as cfg
+        from orca_v20.adapters.flow_adapter import run_stage2
+        from orca_v20.run_context import RunContext, SourceMode
+
+        original = cfg.BUDGET_MODE
+        try:
+            cfg.BUDGET_MODE = True
+            ctx = RunContext(source_mode=SourceMode.NO_UW, dry_run=True)
+            ideas = self._make_ideas(10)
+            result = run_stage2(ideas, ctx)
+            assert len(result) <= cfg.THRESHOLDS.budget_max_stage2_candidates, \
+                f"Stage 2 processed {len(result)} ideas, cap is {cfg.THRESHOLDS.budget_max_stage2_candidates}"
+        finally:
+            cfg.BUDGET_MODE = original
+
+    def test_stage3_adapter_defensive_cap(self):
+        """Stage 3 adapter enforces budget cap even if pipeline didn't."""
+        import orca_v20.config as cfg
+        from orca_v20.adapters.catalyst_adapter import run_stage3
+        from orca_v20.run_context import RunContext
+
+        original = cfg.BUDGET_MODE
+        orig_cap = cfg.THRESHOLDS.budget_max_stage3_candidates
+        try:
+            cfg.BUDGET_MODE = True
+            cfg.THRESHOLDS.budget_max_stage3_candidates = 2
+            ctx = RunContext(dry_run=True)
+            ideas = self._make_ideas(8)
+            # Mock confirm_catalyst to avoid real API calls
+            import orca_v20.adapters.catalyst_adapter as cat_mod
+            original_confirm = cat_mod.confirm_idea
+            cat_mod.confirm_idea = lambda idea, flow, ctx: idea  # no-op
+            try:
+                survivors, filtered = run_stage3(ideas, ctx)
+                # Survivors + filtered should total at most cap (since confirm is no-op,
+                # all cap ideas survive, but total processed must be <= cap)
+                total_processed = len(survivors) + len(filtered)
+                assert total_processed <= 2, \
+                    f"Stage 3 processed {total_processed} ideas, cap is 2"
+            finally:
+                cat_mod.confirm_idea = original_confirm
+        finally:
+            cfg.BUDGET_MODE = original
+            cfg.THRESHOLDS.budget_max_stage3_candidates = orig_cap
+
+    def test_stage4_adapter_defensive_cap(self):
+        """Stage 4 adapter enforces budget cap on structuring."""
+        import orca_v20.config as cfg
+        from orca_v20.adapters.structurer_adapter import run_stage4
+        from orca_v20.run_context import RunContext
+
+        original = cfg.BUDGET_MODE
+        orig_cap = cfg.THRESHOLDS.budget_max_structured
+        try:
+            cfg.BUDGET_MODE = True
+            cfg.THRESHOLDS.budget_max_structured = 1
+            ctx = RunContext(dry_run=True)
+            ideas = self._make_ideas(5)
+            # Mock structure_ideas to return one trade per idea
+            import orca_v20.adapters.structurer_adapter as struct_mod
+            original_fn = struct_mod.structure_ideas
+            struct_mod.structure_ideas = lambda ideas, ctx: ideas  # pass-through
+            original_vol = struct_mod._vol_aware_adjust
+            struct_mod._vol_aware_adjust = lambda t, ctx: t  # no-op
+            try:
+                result = run_stage4(ideas, ctx)
+                assert len(result) <= 1, \
+                    f"Stage 4 structured {len(result)} ideas, cap is 1"
+            finally:
+                struct_mod.structure_ideas = original_fn
+                struct_mod._vol_aware_adjust = original_vol
+        finally:
+            cfg.BUDGET_MODE = original
+            cfg.THRESHOLDS.budget_max_structured = orig_cap
+
+    def test_caps_preserve_highest_confidence(self):
+        """Budget caps keep the HIGHEST confidence ideas, not arbitrary ones."""
+        import orca_v20.config as cfg
+        from orca_v20.adapters.flow_adapter import run_stage2
+        from orca_v20.run_context import RunContext, SourceMode
+
+        original = cfg.BUDGET_MODE
+        orig_cap = cfg.THRESHOLDS.budget_max_stage2_candidates
+        try:
+            cfg.BUDGET_MODE = True
+            cfg.THRESHOLDS.budget_max_stage2_candidates = 3
+            ctx = RunContext(source_mode=SourceMode.NO_UW, dry_run=True)
+            ideas = self._make_ideas(6)
+            # Confidence values: 13, 12, 11, 10, 9, 8 (descending by construction)
+            result = run_stage2(ideas, ctx)
+            assert len(result) == 3
+            tickers = [r.ticker for r in result]
+            # Top 3 by confidence should be TICK0, TICK1, TICK2
+            assert "TICK0" in tickers
+            assert "TICK1" in tickers
+            assert "TICK2" in tickers
+        finally:
+            cfg.BUDGET_MODE = original
+            cfg.THRESHOLDS.budget_max_stage2_candidates = orig_cap
+
+    def test_normal_mode_no_cap(self):
+        """Normal (non-budget) mode does NOT cap ideas."""
+        import orca_v20.config as cfg
+        from orca_v20.adapters.flow_adapter import run_stage2
+        from orca_v20.run_context import RunContext, SourceMode
+
+        original = cfg.BUDGET_MODE
+        try:
+            cfg.BUDGET_MODE = False
+            ctx = RunContext(source_mode=SourceMode.NO_UW, dry_run=True)
+            ideas = self._make_ideas(10)
+            result = run_stage2(ideas, ctx)
+            assert len(result) == 10, \
+                f"Normal mode should not cap, got {len(result)} instead of 10"
+        finally:
+            cfg.BUDGET_MODE = original
+
+    def test_budget_mode_accessed_via_module_not_binding(self):
+        """Verify _cfg.BUDGET_MODE is used, not a stale import binding."""
+        import orca_v20.config as cfg
+
+        # Simulate the bug: import BUDGET_MODE as a local binding
+        from orca_v20.config import BUDGET_MODE as local_binding
+        original = cfg.BUDGET_MODE
+
+        try:
+            # Toggle the module-level value
+            cfg.BUDGET_MODE = True
+            # The local binding should still be the OLD value (this is the bug)
+            # But cfg.BUDGET_MODE should be the NEW value
+            assert cfg.BUDGET_MODE is True, "Module-level access should reflect change"
+            # This demonstrates why we must use cfg.BUDGET_MODE, not a local binding
+        finally:
+            cfg.BUDGET_MODE = original

@@ -99,7 +99,23 @@ def enrich_with_flow(idea: IdeaCandidate, ctx: RunContext) -> IdeaCandidate:
 def run_stage2(ideas: List[IdeaCandidate], ctx: RunContext) -> List[IdeaCandidate]:
     """
     Execute Stage 2: Flow enrichment for all ideas.
+
+    Defensive budget cap: even if the caller forgot to trim, this adapter
+    will never process more than budget_max_stage2_candidates in budget mode.
     """
+    import orca_v20.config as _cfg
+
+    # ── Defensive hard cap (belt-and-suspenders) ──
+    if _cfg.BUDGET_MODE and len(ideas) > _cfg.THRESHOLDS.budget_max_stage2_candidates:
+        cap = _cfg.THRESHOLDS.budget_max_stage2_candidates
+        ideas.sort(key=lambda x: x.confidence, reverse=True)
+        skipped = ideas[cap:]
+        ideas = ideas[:cap]
+        logger.warning(
+            f"[budget][DEFENSIVE] Stage 2 adapter hard cap: processing {cap}, "
+            f"dropping {len(skipped)} ({[i.ticker for i in skipped]})"
+        )
+
     logger.info(f"[run_id={ctx.run_id}] Stage 2: Flow enrichment for {len(ideas)} ideas")
 
     enriched = []

@@ -38,7 +38,10 @@ except ImportError:
     pass  # dotenv optional — env vars must be set externally
 
 # ── v20 imports ──────────────────────────────────────────────────────
-from orca_v20.config import BUDGET_MODE, FLAGS, PATHS, THRESHOLDS
+import orca_v20.config as _cfg
+from orca_v20.config import FLAGS, PATHS, THRESHOLDS
+# NOTE: Do NOT import BUDGET_MODE at module level — it binds to the pre-reload
+# value (False). Always access via _cfg.BUDGET_MODE so importlib.reload() works.
 from orca_v20.db_bootstrap import bootstrap_db, get_connection
 from orca_v20.run_context import ResearchMode, RunContext, SourceMode
 from orca_v20.retrieval_state import RetrievalState
@@ -287,28 +290,42 @@ def run_pipeline(ctx: RunContext) -> bool:
         return True
 
     # ── Budget shortlist cap: Stage 2 ──
-    if BUDGET_MODE and len(ideas) > THRESHOLDS.budget_max_stage2_candidates:
+    stage2_total = len(ideas)
+    stage2_skipped = 0
+    if _cfg.BUDGET_MODE and len(ideas) > THRESHOLDS.budget_max_stage2_candidates:
         ideas.sort(key=lambda x: x.confidence, reverse=True)
-        capped = ideas[:THRESHOLDS.budget_max_stage2_candidates]
+        dropped = ideas[THRESHOLDS.budget_max_stage2_candidates:]
+        ideas = ideas[:THRESHOLDS.budget_max_stage2_candidates]
+        stage2_skipped = len(dropped)
         logger.info(
-            f"[budget] Stage 2 cap: {len(ideas)} → {len(capped)} "
-            f"(dropped: {[i.ticker for i in ideas[THRESHOLDS.budget_max_stage2_candidates:]]})"
+            f"[budget] Stage 2 cap ENFORCED: {stage2_total} → {len(ideas)} "
+            f"(skipped {stage2_skipped}: {[i.ticker for i in dropped]})"
         )
-        ideas = capped
+    trace["stage2_cap"] = THRESHOLDS.budget_max_stage2_candidates if _cfg.BUDGET_MODE else None
+    trace["stage2_input_count"] = stage2_total
+    trace["stage2_skipped_count"] = stage2_skipped
+    trace["stage2_processed_count"] = len(ideas)
 
     # ── Stage 2: Flow Enrichment ──
     ideas = run_stage2(ideas, ctx)
     trace["ideas_after_flow"] = len(ideas)
 
     # ── Budget shortlist cap: Stage 3 ──
-    if BUDGET_MODE and len(ideas) > THRESHOLDS.budget_max_stage3_candidates:
+    stage3_total = len(ideas)
+    stage3_skipped = 0
+    if _cfg.BUDGET_MODE and len(ideas) > THRESHOLDS.budget_max_stage3_candidates:
         ideas.sort(key=lambda x: x.confidence, reverse=True)
-        capped = ideas[:THRESHOLDS.budget_max_stage3_candidates]
+        dropped = ideas[THRESHOLDS.budget_max_stage3_candidates:]
+        ideas = ideas[:THRESHOLDS.budget_max_stage3_candidates]
+        stage3_skipped = len(dropped)
         logger.info(
-            f"[budget] Stage 3 cap: {len(ideas)} → {len(capped)} "
-            f"(dropped: {[i.ticker for i in ideas[THRESHOLDS.budget_max_stage3_candidates:]]})"
+            f"[budget] Stage 3 cap ENFORCED: {stage3_total} → {len(ideas)} "
+            f"(skipped {stage3_skipped}: {[i.ticker for i in dropped]})"
         )
-        ideas = capped
+    trace["stage3_cap"] = THRESHOLDS.budget_max_stage3_candidates if _cfg.BUDGET_MODE else None
+    trace["stage3_input_count"] = stage3_total
+    trace["stage3_skipped_count"] = stage3_skipped
+    trace["stage3_processed_count"] = len(ideas)
 
     # ── Stage 3: Catalyst Confirmation ──
     ideas, filtered = run_stage3(ideas, ctx)
@@ -404,6 +421,23 @@ def run_pipeline(ctx: RunContext) -> bool:
         save_run_trace(ctx, success=True, trace_counts=trace)
         return True
 
+    # ── Budget shortlist cap: Stage 4 (structuring) ──
+    stage4_total = len(ideas)
+    stage4_skipped = 0
+    if _cfg.BUDGET_MODE and len(ideas) > THRESHOLDS.budget_max_structured:
+        ideas.sort(key=lambda x: x.confidence, reverse=True)
+        dropped = ideas[THRESHOLDS.budget_max_structured:]
+        ideas = ideas[:THRESHOLDS.budget_max_structured]
+        stage4_skipped = len(dropped)
+        logger.info(
+            f"[budget] Stage 4 cap ENFORCED: {stage4_total} → {len(ideas)} "
+            f"(skipped {stage4_skipped}: {[i.ticker for i in dropped]})"
+        )
+    trace["stage4_cap"] = THRESHOLDS.budget_max_structured if _cfg.BUDGET_MODE else None
+    trace["stage4_input_count"] = stage4_total
+    trace["stage4_skipped_count"] = stage4_skipped
+    trace["stage4_processed_count"] = len(ideas)
+
     # ── Stage 4: Trade Structuring ──
     trades = run_stage4(ideas, ctx)
     trace["trades_structured"] = len(trades)
@@ -429,12 +463,12 @@ def run_pipeline(ctx: RunContext) -> bool:
 
     # ── Nightly Replay (v20, Phase 5) ──
     # Budget mode: replay runs ONLY in overnight, never in intraday
-    if not BUDGET_MODE and FLAGS.enable_replay_engine:
+    if not _cfg.BUDGET_MODE and FLAGS.enable_replay_engine:
         from orca_v20.replay_engine import run_nightly_replay
         replay_results = run_nightly_replay(ctx)
         if replay_results:
             logger.info(f"  Replay: {len(replay_results)} theses replayed")
-    elif BUDGET_MODE:
+    elif _cfg.BUDGET_MODE:
         logger.info("[budget] Replay skipped — runs only in overnight teacher loop")
 
     # ── Thesis Momentum Update (v20) ──
@@ -451,7 +485,7 @@ def run_pipeline(ctx: RunContext) -> bool:
     log_session_summary()
 
     # ── Budget mode: write compact artifacts for overnight review ──
-    if BUDGET_MODE:
+    if _cfg.BUDGET_MODE:
         _write_budget_artifacts(ctx, trace)
 
     logger.info("=" * 60)
@@ -460,7 +494,7 @@ def run_pipeline(ctx: RunContext) -> bool:
     logger.info(f"  Trades: {trace.get('trades_structured', 0)} structured, {trace.get('trades_logged', 0)} logged")
     logger.info(f"  API cost: ${ctx.api_cost_usd:.4f}")
     logger.info(f"  Errors: {len(ctx.errors)}")
-    if BUDGET_MODE:
+    if _cfg.BUDGET_MODE:
         logger.info(f"  Budget mode: YES (artifacts in {PATHS.artifacts_dir})")
     logger.info("=" * 60)
 
@@ -494,12 +528,32 @@ def _write_budget_artifacts(ctx: RunContext, trace: dict) -> None:
     with open(f"{prefix}_run_summary.json", "w") as f:
         json.dump(summary, f, indent=2, default=str)
 
-    # 2. Cost summary
+    # 2. Cost summary (includes stage cap enforcement counts)
     cost = {
         "run_id": ctx.run_id,
         "total_cost_usd": round(ctx.api_cost_usd, 4),
         "max_budget": THRESHOLDS.max_api_cost_per_run,
         "role_costs": get_session_summary().get("role_costs", {}),
+        "stage_caps": {
+            "stage2": {
+                "cap": trace.get("stage2_cap"),
+                "input": trace.get("stage2_input_count", 0),
+                "processed": trace.get("stage2_processed_count", 0),
+                "skipped": trace.get("stage2_skipped_count", 0),
+            },
+            "stage3": {
+                "cap": trace.get("stage3_cap"),
+                "input": trace.get("stage3_input_count", 0),
+                "processed": trace.get("stage3_processed_count", 0),
+                "skipped": trace.get("stage3_skipped_count", 0),
+            },
+            "stage4": {
+                "cap": trace.get("stage4_cap"),
+                "input": trace.get("stage4_input_count", 0),
+                "processed": trace.get("stage4_processed_count", 0),
+                "skipped": trace.get("stage4_skipped_count", 0),
+            },
+        },
     }
     with open(f"{prefix}_cost_summary.json", "w") as f:
         json.dump(cost, f, indent=2, default=str)
@@ -535,19 +589,20 @@ def main() -> None:
     # ── Budget mode activation ──
     if args.budget:
         os.environ["ORCA_BUDGET_MODE"] = "1"
-        # Re-import config to pick up budget overrides
+        # Reload config module so BUDGET_MODE, THRESHOLDS, ROUTING pick up overrides.
+        # We access via _cfg (module ref) throughout run_pipeline() to avoid stale bindings.
         import importlib
-        import orca_v20.config
-        importlib.reload(orca_v20.config)
-        from orca_v20.config import BUDGET_MODE, FLAGS, THRESHOLDS, ROUTING
+        importlib.reload(_cfg)
+        from orca_v20.config import ROUTING
         logger.info("=" * 60)
         logger.info("*** BUDGET SPRINT MODE ACTIVE ***")
+        logger.info(f"  BUDGET_MODE={_cfg.BUDGET_MODE}")
         logger.info(f"  Models: {ROUTING.hunter_primary}/{ROUTING.hunter_secondary}/{ROUTING.hunter_tertiary}")
         logger.info(f"  Publishing: ALL DISABLED")
-        logger.info(f"  Max cost/run: ${THRESHOLDS.max_api_cost_per_run}")
-        logger.info(f"  Stage caps: S2={THRESHOLDS.budget_max_stage2_candidates}, "
-                     f"S3={THRESHOLDS.budget_max_stage3_candidates}, "
-                     f"Struct={THRESHOLDS.budget_max_structured}")
+        logger.info(f"  Max cost/run: ${_cfg.THRESHOLDS.max_api_cost_per_run}")
+        logger.info(f"  Stage caps: S2={_cfg.THRESHOLDS.budget_max_stage2_candidates}, "
+                     f"S3={_cfg.THRESHOLDS.budget_max_stage3_candidates}, "
+                     f"Struct={_cfg.THRESHOLDS.budget_max_structured}")
         logger.info(f"  Replay in intraday: DISABLED")
         logger.info("=" * 60)
 

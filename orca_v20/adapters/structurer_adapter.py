@@ -225,6 +225,19 @@ def run_stage4(ideas: List[IdeaCandidate], ctx: RunContext) -> List[StructuredTr
     """
     Execute Stage 4/5: Trade structuring for all confirmed ideas.
     """
+    # ── Defensive hard cap (belt-and-suspenders) ──
+    import orca_v20.config as _cfg
+    if _cfg.BUDGET_MODE and len(ideas) > _cfg.THRESHOLDS.budget_max_structured:
+        cap = _cfg.THRESHOLDS.budget_max_structured
+        ideas = list(ideas)
+        ideas.sort(key=lambda x: x.confidence, reverse=True)
+        skipped = ideas[cap:]
+        ideas = ideas[:cap]
+        logger.warning(
+            f"[budget][DEFENSIVE] Stage 4 adapter hard cap: structuring {cap}, "
+            f"dropping {len(skipped)} ({[i.ticker for i in skipped]})"
+        )
+
     logger.info(f"[run_id={ctx.run_id}] Stage 4: Structuring {len(ideas)} ideas")
 
     trades = structure_ideas(ideas, ctx)

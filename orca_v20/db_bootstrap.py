@@ -66,6 +66,26 @@ _TABLES = {
         )
     """,
 
+    # --- Forward outcomes (horizon-aware tracking) ---
+    "thesis_forward_outcomes": """
+        CREATE TABLE IF NOT EXISTS thesis_forward_outcomes (
+            id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+            thesis_id           TEXT NOT NULL,
+            eval_date           TEXT NOT NULL,
+            window_days         INTEGER NOT NULL,
+            forward_return_pct  REAL,
+            mfe_pct             REAL,
+            mae_pct             REAL,
+            thesis_age_days     INTEGER,
+            expected_horizon    TEXT DEFAULT 'UNKNOWN',
+            horizon_outcome_label TEXT DEFAULT '',
+            timing_quality      TEXT DEFAULT '',
+            catalyst_intact     INTEGER DEFAULT 1,
+            created_utc         TEXT NOT NULL,
+            UNIQUE(thesis_id, eval_date, window_days)
+        )
+    """,
+
     # --- Evidence persistence ---
     "evidence_packs": """
         CREATE TABLE IF NOT EXISTS evidence_packs (
@@ -465,6 +485,10 @@ _INDEXES = [
     "CREATE INDEX IF NOT EXISTS idx_esl_thesis ON evidence_source_links(thesis_id)",
     "CREATE INDEX IF NOT EXISTS idx_sc_sector ON sector_cache(sector)",
     "CREATE INDEX IF NOT EXISTS idx_sc_source ON sector_cache(source)",
+    # Forward outcomes indexes
+    "CREATE INDEX IF NOT EXISTS idx_tfo_thesis ON thesis_forward_outcomes(thesis_id)",
+    "CREATE INDEX IF NOT EXISTS idx_tfo_eval ON thesis_forward_outcomes(eval_date)",
+    "CREATE INDEX IF NOT EXISTS idx_tfo_horizon ON thesis_forward_outcomes(expected_horizon)",
     # Budget sprint indexes
     "CREATE INDEX IF NOT EXISTS idx_bil_run ON budget_intelligence_log(run_id)",
     "CREATE INDEX IF NOT EXISTS idx_bil_role ON budget_intelligence_log(role)",
@@ -482,6 +506,25 @@ _INDEXES = [
 # ─────────────────────────────────────────────────────────────────────
 # Bootstrap function
 # ─────────────────────────────────────────────────────────────────────
+
+def _run_migrations(conn) -> None:
+    """
+    Run ALTER TABLE migrations for columns added after initial schema.
+    Safe to re-run — silently ignores already-existing columns.
+    """
+    migrations = [
+        ("theses", "expected_horizon", "TEXT DEFAULT 'UNKNOWN'"),
+        ("intraday_cases", "expected_horizon", "TEXT DEFAULT 'UNKNOWN'"),
+    ]
+    for table, column, col_def in migrations:
+        try:
+            conn.execute(f"ALTER TABLE {table} ADD COLUMN {column} {col_def}")
+            conn.commit()
+            logger.info(f"  Migration: added {table}.{column}")
+        except Exception:
+            # Column already exists — expected on subsequent runs
+            pass
+
 
 def bootstrap_db(db_path: Optional[str] = None) -> str:
     """
@@ -513,6 +556,9 @@ def bootstrap_db(db_path: Optional[str] = None) -> str:
         cursor.execute(idx_sql)
 
     conn.commit()
+
+    # Run column migrations (safe to re-run — ignores already-existing columns)
+    _run_migrations(conn)
 
     # Verify all tables exist
     cursor.execute("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name")

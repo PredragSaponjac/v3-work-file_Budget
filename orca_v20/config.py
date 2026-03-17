@@ -7,7 +7,7 @@ No config is scattered across modules.
 
 import os
 from dataclasses import dataclass, field
-from typing import Dict, Optional
+from typing import Dict, List, Optional
 
 
 # ─────────────────────────────────────────────────────────────────────
@@ -296,6 +296,22 @@ class Thresholds:
     thesis_auto_win_pct: float = 0.15          # +15% directional move → CLOSED_WIN
     thesis_auto_loss_pct: float = -0.10        # -10% directional move → CLOSED_LOSS
     thesis_auto_downgrade_pct: float = -0.05   # -5% move → confidence downgrade by 2
+
+    # ── Horizon-aware outcome tracking (all values in TRADING days) ──
+    horizon_days_map: Dict[str, int] = field(default_factory=lambda: {
+        "INTRADAY": 1, "1D": 1, "3D": 3, "5D": 5,
+        "7_10D": 8, "2_4W": 20, "UNKNOWN": 10,
+    })
+    # Per-horizon auto-label thresholds: {horizon: (win_pct, loss_pct)}
+    horizon_auto_thresholds: Dict[str, tuple] = field(default_factory=lambda: {
+        "INTRADAY": (0.05, -0.03), "1D": (0.05, -0.04),
+        "3D": (0.08, -0.06), "5D": (0.10, -0.08),
+        "7_10D": (0.12, -0.10), "2_4W": (0.15, -0.10),
+        "UNKNOWN": (0.15, -0.10),
+    })
+    forward_outcome_windows: List[int] = field(default_factory=lambda: [1, 3, 5, 10, 20])
+    horizon_grace_multiplier: float = 0.5  # don't judge until trading_age >= horizon_days * this
+    horizon_expiry_multiplier: float = 2.0  # auto-expire thesis after trading_age > horizon * this
 
     # ── X publishing filter thresholds ──
     x_min_confidence: int = 8                   # only post if confidence >= 8

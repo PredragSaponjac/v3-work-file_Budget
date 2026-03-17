@@ -256,14 +256,19 @@ def persist_thesis(idea: IdeaCandidate, ctx: RunContext) -> None:
     try:
         now = datetime.now(timezone.utc).isoformat()
         conn = get_connection()
+        # Resolve expected_horizon: use idea field if available, else UNKNOWN
+        horizon_val = "UNKNOWN"
+        if hasattr(idea, 'expected_horizon') and idea.expected_horizon:
+            horizon_val = idea.expected_horizon.value if hasattr(idea.expected_horizon, 'value') else str(idea.expected_horizon)
+
         conn.execute("""
             INSERT OR IGNORE INTO theses (
                 thesis_id, ticker, idea_direction, catalyst, thesis_text,
                 status, created_run_id, created_utc,
                 last_updated_run_id, last_updated_utc,
                 current_confidence, confidence_slope, times_seen,
-                invalidation_trigger
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                invalidation_trigger, expected_horizon
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
             idea.thesis_id,
             idea.ticker,
@@ -279,6 +284,7 @@ def persist_thesis(idea: IdeaCandidate, ctx: RunContext) -> None:
             0.0,
             1,
             idea.invalidation,
+            horizon_val,
         ))
         conn.commit()
         conn.close()
@@ -405,10 +411,12 @@ def auto_label_active_theses(ctx: RunContext) -> int:
     try:
         conn = get_connection()
 
+        from orca_v20.horizon import calendar_to_trading_days
+
         # Get all active theses with their most recent snapshot
         rows = conn.execute("""
             SELECT t.thesis_id, t.ticker, t.idea_direction, t.current_confidence,
-                   t.invalidation_trigger,
+                   t.invalidation_trigger, t.expected_horizon, t.created_utc,
                    s.underlying_price as entry_price, s.snapshot_date
             FROM theses t
             LEFT JOIN thesis_daily_snapshots s ON t.thesis_id = s.thesis_id
@@ -427,7 +435,11 @@ def auto_label_active_theses(ctx: RunContext) -> int:
                     "confidence": r["current_confidence"],
                     "entry_price": r["entry_price"],
                     "invalidation": r["invalidation_trigger"] or "",
+                    "expected_horizon": r["expected_horizon"] or "UNKNOWN",
+                    "created_utc": r["created_utc"] or "",
                 }
+
+        now_dt = datetime.now(timezone.utc)
 
         for tid, info in thesis_entries.items():
             current_price = _fetch_underlying_price(info["ticker"])
@@ -443,23 +455,62 @@ def auto_label_active_theses(ctx: RunContext) -> int:
             direction = info["direction"]
             directional_move = pct_move if direction == "BULLISH" else -pct_move
 
-            # Auto-close WIN: configurable % move in thesis direction
-            if directional_move >= THRESHOLDS.thesis_auto_win_pct:
+            # ── Horizon-aware logic ──
+            expected_horizon = info["expected_horizon"]
+            horizon_days = THRESHOLDS.horizon_days_map.get(expected_horizon, 10)
+
+            # Compute thesis age in trading days
+            trading_age = 0
+            if info["created_utc"]:
+                try:
+                    created = datetime.fromisoformat(info["created_utc"].replace("Z", "+00:00"))
+                    cal_days = (now_dt - created).days
+                    trading_age = calendar_to_trading_days(cal_days)
+                except Exception:
+                    pass
+
+            # Grace period: don't auto-label if too early (except UNKNOWN)
+            grace = int(horizon_days * THRESHOLDS.horizon_grace_multiplier)
+            if expected_horizon != "UNKNOWN" and trading_age < grace:
+                logger.debug(
+                    f"  [{info['ticker']}] Thesis {tid} too early to judge "
+                    f"(age={trading_age}td < grace={grace}td, horizon={expected_horizon})"
+                )
+                continue
+
+            # Per-horizon thresholds
+            h_thresholds = THRESHOLDS.horizon_auto_thresholds.get(
+                expected_horizon,
+                THRESHOLDS.horizon_auto_thresholds.get("UNKNOWN", (0.15, -0.10)),
+            )
+            win_pct, loss_pct = h_thresholds
+
+            # Auto-close WIN: per-horizon % move in thesis direction
+            if directional_move >= win_pct:
                 close_thesis(tid, ThesisStatus.CLOSED_WIN,
                             f"Auto-labeled: {directional_move*100:.1f}% move in thesis direction "
-                            f"(entry={entry}, current={current_price})")
+                            f"(entry={entry}, current={current_price}, horizon={expected_horizon})")
                 labeled += 1
                 continue
 
-            # Auto-close LOSS: configurable % move against thesis direction
-            if directional_move <= THRESHOLDS.thesis_auto_loss_pct:
+            # Auto-close LOSS: per-horizon % move against thesis direction
+            if directional_move <= loss_pct:
                 close_thesis(tid, ThesisStatus.CLOSED_LOSS,
                             f"Auto-labeled: {directional_move*100:.1f}% move against thesis "
-                            f"(entry={entry}, current={current_price})")
+                            f"(entry={entry}, current={current_price}, horizon={expected_horizon})")
                 labeled += 1
                 continue
 
-            # Confidence downgrade: configurable % against direction
+            # Horizon expiry: auto-expire if thesis exceeded horizon * expiry_multiplier
+            expiry_limit = int(horizon_days * THRESHOLDS.horizon_expiry_multiplier)
+            if trading_age > expiry_limit:
+                close_thesis(tid, ThesisStatus.CLOSED_EXPIRED,
+                            f"Horizon expired: trading_age={trading_age} > {expiry_limit} "
+                            f"(horizon={expected_horizon}, {horizon_days}td × {THRESHOLDS.horizon_expiry_multiplier})")
+                labeled += 1
+                continue
+
+            # Confidence downgrade: global threshold (unchanged)
             if directional_move <= THRESHOLDS.thesis_auto_downgrade_pct and info["confidence"] > 3:
                 new_conf = max(1, info["confidence"] - 2)
                 conn.execute("""
@@ -612,6 +663,201 @@ def get_confidence_trajectory(lookback_days: int = 14) -> List[Dict]:
 
     except Exception as e:
         logger.error(f"Failed to compute confidence trajectories: {e}")
+        return []
+
+
+def compute_forward_outcomes(ctx: RunContext) -> int:
+    """
+    Compute multi-window forward outcomes for all active/recently-closed theses.
+
+    For each thesis with stored daily snapshots:
+        - Reads thesis_daily_snapshots (stored prices first)
+        - Falls back to yfinance ONLY if snapshot coverage is insufficient
+        - Computes directional return, MFE, MAE for each window [1, 3, 5, 10, 20]
+        - Assigns HorizonOutcomeLabel and TimingQuality
+        - Writes/upserts thesis_forward_outcomes table
+
+    Returns count of forward outcome records written.
+    """
+    from orca_v20.horizon import (
+        calendar_to_trading_days, compute_timing_quality, is_catalyst_intact,
+    )
+    from orca_v20.schemas import HorizonOutcomeLabel
+
+    if not FLAGS.enable_thesis_persistence or ctx.dry_run:
+        return 0
+
+    written = 0
+    eval_date = ctx.market_date or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    try:
+        conn = get_connection()
+
+        # Get all active + recently-closed theses
+        theses_rows = conn.execute("""
+            SELECT thesis_id, ticker, idea_direction, status, created_utc,
+                   expected_horizon, invalidation_trigger
+            FROM theses
+            WHERE status IN ('ACTIVE', 'DRAFT', 'CLOSED_WIN', 'CLOSED_LOSS',
+                           'CLOSED_EXPIRED', 'CLOSED_INVALIDATED')
+        """).fetchall()
+
+        now_dt = datetime.now(timezone.utc)
+
+        for t in theses_rows:
+            tid = t["thesis_id"]
+            direction = t["idea_direction"]
+            expected_horizon = t["expected_horizon"] or "UNKNOWN"
+            horizon_days = THRESHOLDS.horizon_days_map.get(expected_horizon, 10)
+            thesis_status = t["status"] or ""
+            catalyst_status = ""  # could be enriched from snapshots if needed
+            invalidation = t["invalidation_trigger"] or ""
+
+            # Compute thesis age in trading days
+            trading_age = 0
+            if t["created_utc"]:
+                try:
+                    created = datetime.fromisoformat(
+                        t["created_utc"].replace("Z", "+00:00")
+                    )
+                    cal_days = (now_dt - created).days
+                    trading_age = calendar_to_trading_days(cal_days)
+                except Exception:
+                    pass
+
+            # Get stored daily snapshots (prices)
+            snapshots = conn.execute("""
+                SELECT snapshot_date, underlying_price, catalyst_status
+                FROM thesis_daily_snapshots
+                WHERE thesis_id = ? AND underlying_price IS NOT NULL
+                ORDER BY snapshot_date ASC
+            """, (tid,)).fetchall()
+
+            if not snapshots or len(snapshots) < 2:
+                continue
+
+            entry_price = snapshots[0]["underlying_price"]
+            if not entry_price or entry_price <= 0:
+                continue
+
+            # Get latest catalyst_status from snapshots
+            last_snap = snapshots[-1]
+            if last_snap["catalyst_status"]:
+                catalyst_status = last_snap["catalyst_status"]
+
+            prices = [s["underlying_price"] for s in snapshots if s["underlying_price"]]
+
+            for window in THRESHOLDS.forward_outcome_windows:
+                # Skip if insufficient data for this window
+                if len(prices) < window + 1:
+                    logger.debug(
+                        f"[forward] {tid} window={window}D skipped — "
+                        f"only {len(prices)} snapshots available"
+                    )
+                    continue
+
+                # Get prices up to window
+                window_prices = prices[:window + 1]
+                end_price = window_prices[-1]
+
+                # Directional return
+                raw_return = (end_price - entry_price) / entry_price
+                directional_return = raw_return if direction == "BULLISH" else -raw_return
+
+                # MFE / MAE (directional)
+                if direction == "BULLISH":
+                    mfe = (max(window_prices) - entry_price) / entry_price
+                    mae = (min(window_prices) - entry_price) / entry_price
+                else:
+                    mfe = (entry_price - min(window_prices)) / entry_price
+                    mae = (entry_price - max(window_prices)) / entry_price
+
+                # Timing quality
+                tq = compute_timing_quality(
+                    directional_return, mfe, trading_age,
+                    horizon_days, thesis_status, expected_horizon,
+                )
+
+                # Catalyst intact
+                cat_intact = is_catalyst_intact(thesis_status, catalyst_status)
+
+                # Horizon outcome label
+                grace = int(horizon_days * THRESHOLDS.horizon_grace_multiplier)
+                h_thresholds = THRESHOLDS.horizon_auto_thresholds.get(
+                    expected_horizon, (0.15, -0.10),
+                )
+                win_pct, loss_pct = h_thresholds
+
+                if thesis_status == "CLOSED_INVALIDATED":
+                    outcome_label = HorizonOutcomeLabel.INVALIDATED.value
+                elif trading_age < grace:
+                    outcome_label = HorizonOutcomeLabel.TOO_EARLY.value
+                elif directional_return >= win_pct:
+                    outcome_label = HorizonOutcomeLabel.WORKED.value
+                elif directional_return <= loss_pct:
+                    outcome_label = HorizonOutcomeLabel.FAILED.value
+                elif trading_age > horizon_days and cat_intact:
+                    outcome_label = HorizonOutcomeLabel.LATE_BUT_INTACT.value
+                elif trading_age <= horizon_days:
+                    outcome_label = HorizonOutcomeLabel.ON_TRACK.value
+                else:
+                    outcome_label = HorizonOutcomeLabel.TOO_EARLY.value
+
+                # Write/upsert
+                conn.execute("""
+                    INSERT OR REPLACE INTO thesis_forward_outcomes (
+                        thesis_id, eval_date, window_days,
+                        forward_return_pct, mfe_pct, mae_pct,
+                        thesis_age_days, expected_horizon,
+                        horizon_outcome_label, timing_quality,
+                        catalyst_intact, created_utc
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (
+                    tid, eval_date, window,
+                    round(directional_return, 6),
+                    round(mfe, 6),
+                    round(mae, 6),
+                    trading_age, expected_horizon,
+                    outcome_label, tq,
+                    1 if cat_intact else 0,
+                    datetime.now(timezone.utc).isoformat(),
+                ))
+                written += 1
+
+        conn.commit()
+        conn.close()
+
+        if written > 0:
+            logger.info(f"[forward_outcomes] Computed {written} forward outcome records")
+        return written
+
+    except Exception as e:
+        logger.error(f"Failed to compute forward outcomes: {e}")
+        return 0
+
+
+def get_horizon_outcomes(thesis_id: str) -> List[Dict]:
+    """
+    Get all forward outcome records for a thesis, ordered by window_days.
+
+    Returns list of dicts with all thesis_forward_outcomes columns.
+    """
+    try:
+        conn = get_connection()
+        rows = conn.execute("""
+            SELECT thesis_id, eval_date, window_days,
+                   forward_return_pct, mfe_pct, mae_pct,
+                   thesis_age_days, expected_horizon,
+                   horizon_outcome_label, timing_quality,
+                   catalyst_intact, created_utc
+            FROM thesis_forward_outcomes
+            WHERE thesis_id = ?
+            ORDER BY eval_date DESC, window_days ASC
+        """, (thesis_id,)).fetchall()
+        conn.close()
+        return [dict(r) for r in rows]
+    except Exception as e:
+        logger.error(f"Failed to get horizon outcomes for {thesis_id}: {e}")
         return []
 
 
