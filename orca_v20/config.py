@@ -1,0 +1,453 @@
+"""
+ORCA v20 — Central configuration.
+
+All tunables, model routing, thresholds, and feature flags live here.
+No config is scattered across modules.
+"""
+
+import os
+from dataclasses import dataclass, field
+from typing import Dict, Optional
+
+
+# ─────────────────────────────────────────────────────────────────────
+# Model routing
+# ─────────────────────────────────────────────────────────────────────
+
+@dataclass
+class ModelSpec:
+    """Specification for a single LLM endpoint."""
+    provider: str          # "anthropic", "openai", "google"
+    model_id: str          # e.g. "claude-opus-4-0-20250514", "gpt-5.4-thinking"
+    max_tokens: int = 16384
+    thinking_budget: int = 0        # 0 = no extended thinking
+    temperature: float = 1.0        # required 1.0 for extended thinking
+    timeout_s: int = 300
+    cost_per_1k_input: float = 0.0  # for budget tracking
+    cost_per_1k_output: float = 0.0
+
+
+# --- Model registry ---
+
+MODELS: Dict[str, ModelSpec] = {
+    # Anthropic
+    "claude-opus": ModelSpec(
+        provider="anthropic",
+        model_id="claude-opus-4-0-20250514",
+        max_tokens=16384,
+        thinking_budget=10000,
+        temperature=1.0,
+        cost_per_1k_input=0.015,
+        cost_per_1k_output=0.075,
+    ),
+    "claude-sonnet": ModelSpec(
+        provider="anthropic",
+        model_id="claude-sonnet-4-20250514",
+        max_tokens=8192,
+        thinking_budget=0,
+        temperature=0.7,
+        cost_per_1k_input=0.003,
+        cost_per_1k_output=0.015,
+    ),
+
+    # OpenAI
+    "gpt-thinking": ModelSpec(
+        provider="openai",
+        model_id="gpt-5.4-thinking",
+        max_tokens=16384,
+        temperature=1.0,
+        cost_per_1k_input=0.005,
+        cost_per_1k_output=0.015,
+    ),
+    "gpt-fast": ModelSpec(
+        provider="openai",
+        model_id="gpt-5.4",
+        max_tokens=8192,
+        temperature=0.5,
+        cost_per_1k_input=0.002,
+        cost_per_1k_output=0.006,
+    ),
+
+    # Google
+    "gemini-pro": ModelSpec(
+        provider="google",
+        model_id="gemini-3.1-pro-preview",
+        max_tokens=8192,
+        temperature=0.7,
+        cost_per_1k_input=0.001,
+        cost_per_1k_output=0.004,
+    ),
+}
+
+
+# --- Role-to-model mapping ---
+# Each pipeline role can be independently routed to any registered model.
+
+@dataclass
+class RoleRouting:
+    """
+    Maps pipeline roles to model keys from MODELS registry.
+
+    Authoritative routing principle (Phase 4):
+        Role A / CIO integrator       → gemini-pro   (synthesis, integration)
+        Role B / thesis gen + breaker  → claude-opus  (deep reasoning, adversarial)
+        Role C / final judge           → gpt-thinking (independent judgment)
+        Support / guided agents        → claude-sonnet (cost-efficient reasoning)
+        Extraction / tagging helpers   → gpt-fast     (cheap, fast)
+
+    Quality-first on thesis formation and judgment.
+    Cost-first on extraction and utilities.
+    """
+
+    # Stage 1: Catalyst hunting — 3 independent models (Role B primary)
+    hunter_primary: str = "claude-opus"      # Role B: thesis generator
+    hunter_secondary: str = "gpt-thinking"   # Role C: independent judge
+    hunter_tertiary: str = "gemini-pro"      # Role A: integration view
+
+    # Stage 2: Flow interpretation — deep reading (Role B)
+    flow_reader: str = "claude-opus"
+
+    # Stage 3: Catalyst confirmation — deep reasoning (Role B)
+    catalyst_confirm: str = "claude-opus"
+
+    # Evidence gate — utility/extraction (cost-first)
+    evidence_gate: str = "claude-sonnet"
+
+    # Thesis generation — alpha-bearing (Role B, quality-first)
+    thesis_generator: str = "claude-opus"
+
+    # Elite agent simulation — support agents (cost-efficient)
+    elite_simulation: str = "claude-sonnet"
+
+    # Consensus merge — integration (Role A)
+    consensus_merge: str = "gemini-pro"
+
+    # Validation passes — utility (cost-first)
+    validator_a: str = "gpt-fast"
+    validator_b: str = "gemini-pro"
+
+    # Review / QA — quality (Role B)
+    review_pass: str = "claude-opus"
+    surgical_fix: str = "claude-opus"
+
+    # Reporting — utility (cost-first)
+    report_writer: str = "claude-sonnet"
+    x_rewriter: str = "claude-sonnet"
+
+    # EOD review — multi-model (quality-first)
+    eod_primary: str = "claude-opus"         # Role B
+    eod_secondary: str = "gpt-fast"          # utility
+    eod_tertiary: str = "gemini-pro"         # Role A
+
+    # Replay engine — analysis (cost-efficient)
+    replay_analyst: str = "claude-sonnet"
+
+    # CIO briefing — synthesis/integration (Role A)
+    cio_briefing: str = "gemini-pro"
+
+    def get_model(self, role: str) -> ModelSpec:
+        """Resolve a role name to its ModelSpec."""
+        model_key = getattr(self, role, None)
+        if model_key is None:
+            raise ValueError(f"Unknown role: {role}")
+        if model_key not in MODELS:
+            raise ValueError(f"Role '{role}' maps to unknown model '{model_key}'")
+        return MODELS[model_key]
+
+
+ROUTING = RoleRouting()
+
+
+# ─────────────────────────────────────────────────────────────────────
+# Pipeline thresholds
+# ─────────────────────────────────────────────────────────────────────
+
+@dataclass
+class Thresholds:
+    """All numeric thresholds in one place."""
+
+    # Confidence gates
+    min_confidence: int = 7
+    overflow_confidence: int = 9       # required for overflow slots
+
+    # IV/HV thresholds (from legacy)
+    iv_rank_sell: float = 0.65
+    iv_rank_buy: float = 0.25
+    ivhv_overpriced: float = 1.20
+    ivhv_underpriced: float = 0.80
+
+    # Position limits
+    max_positions: int = 10
+    overflow_slots: int = 5
+    hard_cap: int = 15
+    max_dte: int = 45
+
+    # Evidence gate (new in v20)
+    min_evidence_sources: int = 2      # at least 2 independent source types
+    min_evidence_freshness_hours: int = 72  # evidence must be < 72h old
+    evidence_gate_pass_score: float = 0.6
+
+    # Thesis matching (new in v20)
+    thesis_match_threshold: float = 0.80   # cosine similarity for "same thesis"
+    thesis_stale_days: int = 30            # auto-close after 30 days inactive
+
+    # Quant gate (new in v20)
+    min_analog_count: int = 3
+    min_analog_win_rate: float = 0.55
+    max_correlation_to_spy: float = 0.85   # reject if too correlated
+
+    # Sizing (new in v20)
+    kelly_fraction: float = 0.25           # quarter-Kelly
+    max_single_position_pct: float = 0.10  # 10% of portfolio
+    min_liquidity_oi: int = 500            # min open interest
+
+    # Daemon rules (new in v20)
+    max_drawdown_pct: float = 0.15         # 15% portfolio drawdown = halt
+    max_consecutive_losses: int = 5
+    correlation_kill_threshold: float = 0.90
+
+    # Elite simulation cost control (Phase 4)
+    elite_simulation_max_ideas: int = 3    # max ideas entering full 15-agent sim
+    elite_shortlist_min_confidence: int = 5  # confidence floor for simulation entry
+
+    # Cost
+    max_api_cost_per_run: float = 20.0
+    max_api_cost_per_month: float = 150.0
+
+    # ── Overnight learning budget (Operator Activation) ──
+    overnight_hard_budget_usd: float = 50.0     # HARD ceiling per night
+    overnight_soft_budget_usd: float = 0.0      # 0 = disabled during warm-up
+    overnight_warmup_days: int = 14             # days in LEARNING_ACCELERATION mode
+    overnight_replay_lookback_days: int = 14    # replay theses closed in last N days
+    overnight_false_negative_lookback: int = 7  # days to check rejected ideas
+
+    # ── Auto-label thresholds (thesis outcome labeling) ──
+    thesis_auto_win_pct: float = 0.15          # +15% directional move → CLOSED_WIN
+    thesis_auto_loss_pct: float = -0.10        # -10% directional move → CLOSED_LOSS
+    thesis_auto_downgrade_pct: float = -0.05   # -5% move → confidence downgrade by 2
+
+    # ── X publishing filter thresholds ──
+    x_min_confidence: int = 8                   # only post if confidence >= 8
+    x_require_actionable: bool = True           # must be ACTIONABLE bucket
+    x_block_capacity_constrained: bool = True   # block capacity_constrained
+    x_block_illiquid: bool = True               # block illiquid
+    x_block_contradicted: bool = True           # block if active contradiction
+
+
+THRESHOLDS = Thresholds()
+
+
+# ─────────────────────────────────────────────────────────────────────
+# Feature flags (toggle v20 modules on/off)
+# ─────────────────────────────────────────────────────────────────────
+
+@dataclass
+class FeatureFlags:
+    """
+    Feature toggles for gradual v20 rollout.
+    Start with everything OFF, enable one-by-one as modules are built.
+    """
+    # Phase 2 — adapters wrap legacy
+    use_v20_pipeline: bool = True          # master switch
+
+    # Legacy mirroring — OFF by default, enable explicitly when ready
+    mirror_to_v3_trade_log: bool = False   # call trade_logger.log_trades()
+
+    # ── Operator Activation: publishing channels ──
+    # A6: Defaults OFF for safety. Enable via env vars or config for live runs.
+    # Live workflow sets: ORCA_PUBLISH_REPORTS=1, ORCA_PUBLISH_TELEGRAM=1, etc.
+    publish_reports: bool = True           # master switch for report generation (LLM executive reports)
+    publish_telegram: bool = False         # send Telegram alerts
+    publish_x: bool = False               # send X (Twitter) posts (filtered)
+    mirror_to_google_sheet: bool = False   # sync trades to Google Sheet
+
+    # Phase 3 — new modules (ON = implemented and active)
+    enable_evidence_gate: bool = True
+    enable_thesis_persistence: bool = True
+    enable_thesis_momentum: bool = True
+    enable_replay_engine: bool = True            # Phase 5: activated
+    enable_institutional_pressure: bool = True   # Phase 3B: yfinance public data
+    enable_memory_retrieval: bool = True
+    enable_elite_simulation: bool = True         # Phase 3B: router LLM calls (sonnet)
+    enable_quant_gate: bool = True               # Phase 3B: yfinance market data
+    enable_causal_gate: bool = True              # heuristic fallback works offline
+    enable_factor_gate: bool = True              # Phase 3B: yfinance market data
+    enable_sizing: bool = True
+    enable_execution_impact: bool = True         # Phase 3B: yfinance option chains
+    enable_daemon_rules: bool = True
+
+    # Source adapters (source layer upgrade)
+    enable_google_trends: bool = True         # Tier 2: attention/acceleration
+    enable_nws: bool = True                   # Tier 1: official weather alerts
+    enable_eia: bool = True                   # Tier 1: official energy data (EIA_API_KEY required)
+    enable_gdelt: bool = True                 # Tier 2: broad news discovery
+    enable_x_whitelist: bool = True           # Tier 3: optional domain-expert enrichment
+
+    # Marine / Shipping source adapters
+    enable_noaa_ports: bool = True            # Tier 1: NOAA CO-OPS port conditions (public, no auth)
+    enable_aisstream: bool = True             # Tier 2: AIS vessel tracking (AISSTREAM_API_KEY required)
+    enable_navcen: bool = False               # Stub: NAIS requires USCG auth, disabled by default
+
+    # Phase 4 — stubs (future)
+    enable_topological_engine: bool = False
+    enable_world_model: bool = False
+    enable_telemetry: bool = False
+    enable_nowcast: bool = False
+
+
+FLAGS = FeatureFlags()
+
+# ── Env-var overrides for publish flags (live workflows set these) ──
+def _apply_env_overrides() -> None:
+    """Allow env vars to opt-in to publishing for live runs."""
+    _bool_env = lambda key: os.environ.get(key, "").lower() in ("1", "true", "yes")
+    if _bool_env("ORCA_PUBLISH_REPORTS"):
+        FLAGS.publish_reports = True
+    if _bool_env("ORCA_PUBLISH_TELEGRAM"):
+        FLAGS.publish_telegram = True
+    if _bool_env("ORCA_PUBLISH_X"):
+        FLAGS.publish_x = True
+    if _bool_env("ORCA_MIRROR_SHEET"):
+        FLAGS.mirror_to_google_sheet = True
+
+_apply_env_overrides()
+
+
+# ─────────────────────────────────────────────────────────────────────
+# Source adapter config
+# ─────────────────────────────────────────────────────────────────────
+
+@dataclass
+class SourceConfig:
+    """Configuration for source adapters."""
+    # Google Trends
+    google_trends_rss_url: str = "https://trends.google.com/trending/rss?geo=US"
+    google_trends_poll_minutes: int = 60
+
+    # EIA — key from environment only (EIA_API_KEY)
+    eia_api_key_env: str = "EIA_API_KEY"  # env var name, NOT the key itself
+
+    # X whitelist
+    x_ingest_enabled: bool = True          # separate from x_publish_enabled
+    x_whitelist_handles: Dict = field(default_factory=lambda: {
+        "weather": ["ryanhallyall", "RyanMaue", "WeatherProf"],
+        "oil_energy": ["OilStockTrader", "DB_WTI", "tradingcrudeoil"],
+    })
+
+    # GDELT
+    gdelt_default_queries: list = field(default_factory=lambda: [
+        "oil price surge",
+        "natural gas supply disruption",
+        "hurricane energy infrastructure",
+        "sanctions energy",
+        "airline fuel costs",
+        "shipping disruption",
+        "commodity supply shock",
+    ])
+
+    # NWS
+    nws_regions_of_interest: list = field(default_factory=lambda: [
+        "TX", "LA", "OK", "ND", "CA", "FL",
+    ])
+
+    # ── Marine / Shipping ──
+    aisstream_api_key_env: str = "AISSTREAM_API_KEY"  # env var name, NOT the key itself
+    aisstream_snapshot_duration_sec: int = 60          # seconds to collect AIS positions
+
+    marine_bounding_boxes: Dict = field(default_factory=lambda: {
+        "hormuz": [[24.5, 55.5], [27.5, 57.0]],
+        "persian_gulf": [[24.0, 49.0], [30.0, 55.0]],
+        "houston_galveston": [[28.8, -95.5], [29.9, -94.0]],
+        "corpus_christi": [[27.4, -97.3], [27.9, -96.8]],
+        "calcasieu_cameron": [[29.6, -93.5], [29.9, -93.2]],
+        "sabine_pass": [[29.6, -93.8], [29.9, -93.5]],
+    })
+
+    noaa_ports_stations: Dict = field(default_factory=lambda: {
+        "houston_galveston": [
+            {"id": "8771341", "name": "Galveston Bay Entrance"},
+            {"id": "8770475", "name": "Port Arthur"},
+        ],
+        "corpus_christi": [
+            {"id": "8775241", "name": "Aransas Pass"},
+        ],
+        "louisiana": [
+            {"id": "8768094", "name": "Calcasieu Pass"},
+            {"id": "8764227", "name": "LAWMA Pilottown"},
+        ],
+    })
+
+    noaa_ports_products: list = field(default_factory=lambda: [
+        "water_level", "wind", "air_pressure",
+    ])
+
+
+SOURCES = SourceConfig()
+
+
+# ─────────────────────────────────────────────────────────────────────
+# Paths
+# ─────────────────────────────────────────────────────────────────────
+
+@dataclass
+class Paths:
+    """All filesystem paths."""
+    project_root: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    @property
+    def v20_db(self) -> str:
+        return os.path.join(self.project_root, "orca_v20.db")
+
+    @property
+    def v3_trade_db(self) -> str:
+        """READ ONLY — never write to this from v20."""
+        return os.path.join(self.project_root, "orca_v3_trades.db")
+
+    @property
+    def iv_history_db(self) -> str:
+        """READ ONLY — shared IV data."""
+        return os.path.join(self.project_root, "orca_iv_history.db")
+
+    @property
+    def orca_results_dir(self) -> str:
+        return os.path.join(self.project_root, "orca_results")
+
+    @property
+    def prompts_v20_dir(self) -> str:
+        return os.path.join(self.project_root, "prompts", "v20")
+
+    @property
+    def regime_json(self) -> str:
+        return os.path.join(self.project_root, "regime_prediction.json")
+
+    @property
+    def vix_json(self) -> str:
+        return os.path.join(self.project_root, "vix_dislocation.json")
+
+
+PATHS = Paths()
+
+
+# ─────────────────────────────────────────────────────────────────────
+# Scheduling (Operator Activation)
+# ─────────────────────────────────────────────────────────────────────
+
+@dataclass
+class ScheduleConfig:
+    """Cron-ready scheduling defaults (America/Chicago)."""
+    timezone: str = "America/Chicago"
+
+    # Main pipeline: Mon-Fri 9:30 AM CT
+    main_cron: str = "30 9 * * 1-5"
+    main_command: str = "PYTHONIOENCODING=utf-8 python pipeline_v20.py --verbose"
+
+    # Nightly learning: every night 8:00 PM CT
+    nightly_cron: str = "0 20 * * *"
+    nightly_command: str = "PYTHONIOENCODING=utf-8 python overnight_v20.py --verbose"
+
+    # Weekly deep review: Sunday 6:00 PM CT
+    weekly_cron: str = "0 18 * * 0"
+    weekly_command: str = "PYTHONIOENCODING=utf-8 python overnight_v20.py --deep-review --verbose"
+
+
+SCHEDULE = ScheduleConfig()

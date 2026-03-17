@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+scan_output.txt
+uw_cache/
+*.db
+event-vol-bot
