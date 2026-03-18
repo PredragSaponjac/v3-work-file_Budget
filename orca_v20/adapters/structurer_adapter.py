@@ -199,17 +199,26 @@ def _vol_aware_adjust(trade: StructuredTrade, ctx: RunContext) -> StructuredTrad
             TradeExpressionType.BUY_PUT,
         )
         if naked_long:
-            # Upgrade to spread
-            if trade.idea_direction.value == "BULLISH":
-                trade.trade_expression_type = TradeExpressionType.BUY_CALL_SPREAD
-                trade.strategy_label = "Bull Call Spread (vol-adjusted)"
+            # FIX #7: Only upgrade to spread if strike_2 is available.
+            # If strike_2 is NULL, a spread record would be invalid (missing
+            # the second leg).  Keep the original naked type instead.
+            if trade.strike_2 is not None:
+                # Upgrade to spread
+                if trade.idea_direction.value == "BULLISH":
+                    trade.trade_expression_type = TradeExpressionType.BUY_CALL_SPREAD
+                    trade.strategy_label = "Bull Call Spread (vol-adjusted)"
+                else:
+                    trade.trade_expression_type = TradeExpressionType.BUY_PUT_SPREAD
+                    trade.strategy_label = "Bear Put Spread (vol-adjusted)"
+                logger.info(
+                    f"  [{trade.ticker}] Vol-adjusted: {expression.value} → "
+                    f"{trade.trade_expression_type.value} (IV/HV={iv_hv:.2f})"
+                )
             else:
-                trade.trade_expression_type = TradeExpressionType.BUY_PUT_SPREAD
-                trade.strategy_label = "Bear Put Spread (vol-adjusted)"
-            logger.info(
-                f"  [{trade.ticker}] Vol-adjusted: {expression.value} → "
-                f"{trade.trade_expression_type.value} (IV/HV={iv_hv:.2f})"
-            )
+                logger.warning(
+                    f"  [{trade.ticker}] Vol-adjust would upgrade {expression.value} to spread "
+                    f"but strike_2 is NULL — keeping naked type (IV/HV={iv_hv:.2f})"
+                )
 
     # Very high IV (>2.0) + near OPEX/FOMC: prefer credit structures
     is_event_near = getattr(ctx, "is_opex_week", False) or getattr(ctx, "is_fomc_week", False)
@@ -221,16 +230,24 @@ def _vol_aware_adjust(trade: StructuredTrade, ctx: RunContext) -> StructuredTrad
             TradeExpressionType.BUY_PUT,
         )
         if expression in debit_types:
-            if trade.idea_direction.value == "BULLISH":
-                trade.trade_expression_type = TradeExpressionType.SELL_PUT_SPREAD
-                trade.strategy_label = "Bull Put Spread (event-vol-adjusted)"
+            # FIX #7: Guard — credit spreads also require strike_2
+            if trade.strike_2 is not None:
+                if trade.idea_direction.value == "BULLISH":
+                    trade.trade_expression_type = TradeExpressionType.SELL_PUT_SPREAD
+                    trade.strategy_label = "Bull Put Spread (event-vol-adjusted)"
+                else:
+                    trade.trade_expression_type = TradeExpressionType.SELL_CALL_SPREAD
+                    trade.strategy_label = "Bear Call Spread (event-vol-adjusted)"
+                logger.info(
+                    f"  [{trade.ticker}] Event-vol-adjusted → "
+                    f"{trade.trade_expression_type.value} (IV/HV={iv_hv:.2f}, event_near)"
+                )
             else:
-                trade.trade_expression_type = TradeExpressionType.SELL_CALL_SPREAD
-                trade.strategy_label = "Bear Call Spread (event-vol-adjusted)"
-            logger.info(
-                f"  [{trade.ticker}] Event-vol-adjusted → "
-                f"{trade.trade_expression_type.value} (IV/HV={iv_hv:.2f}, event_near)"
-            )
+                logger.warning(
+                    f"  [{trade.ticker}] Event-vol-adjust would upgrade to credit spread "
+                    f"but strike_2 is NULL — keeping {trade.trade_expression_type.value} "
+                    f"(IV/HV={iv_hv:.2f}, event_near)"
+                )
 
     return trade
 

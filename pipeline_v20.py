@@ -453,12 +453,26 @@ def run_pipeline(ctx: RunContext) -> bool:
     trades = size_all(trades, ctx)
     trades = assess_all(trades, ctx)
 
+    # ── FIX #8: Filter ideas to only those that were successfully structured.
+    #    Stage 4 can drop ideas (no options chain, structurer failure, etc.)
+    #    but the `ideas` list still contains all pre-Stage-4 ideas.  Passing
+    #    unstructured ideas to the v3 logger creates ghost rows with NULL
+    #    strikes/expiry.  Only keep ideas whose ticker matched a trade.
+    structured_tickers = {t.ticker.upper() for t in trades}
+    structured_ideas = [i for i in ideas if i.ticker.upper() in structured_tickers]
+    if len(structured_ideas) < len(ideas):
+        dropped_tickers = [i.ticker for i in ideas if i.ticker.upper() not in structured_tickers]
+        logger.info(
+            f"[FIX #8] Filtered {len(ideas) - len(structured_ideas)} unstructured idea(s) "
+            f"before logger: {dropped_tickers}"
+        )
+
     # ── Stage 6: Logging ──
-    logged_count = run_stage6(trades, ideas, ctx)
+    logged_count = run_stage6(trades, structured_ideas, ctx)
     trace["trades_logged"] = logged_count
 
     # ── Stage 7: Reporting + Publishing ──
-    run_stage7(trades, ideas, ctx, trace=trace)
+    run_stage7(trades, structured_ideas, ctx, trace=trace)
 
     # ── B1: Automated thesis outcome labeling via price watcher ──
     auto_labeled = auto_label_active_theses(ctx)
