@@ -57,7 +57,7 @@ CONFIDENCE_MAP = {
 
 # Model for report generation — use Claude Sonnet for cost efficiency
 # (the prompt is purely editorial, doesn't need Opus reasoning)
-REPORT_MODEL = "claude-sonnet-4-20250514"
+REPORT_MODEL = "claude-sonnet-4-6"
 REPORT_MAX_TOKENS = 2000
 
 

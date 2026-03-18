@@ -18,7 +18,7 @@ from typing import Dict, List, Optional
 class ModelSpec:
     """Specification for a single LLM endpoint."""
     provider: str          # "anthropic", "openai", "google"
-    model_id: str          # e.g. "claude-opus-4-0-20250514", "gpt-5.4-thinking"
+    model_id: str          # e.g. "claude-opus-4-6", "gpt-5.4-thinking"
     max_tokens: int = 16384
     thinking_budget: int = 0        # 0 = no extended thinking
     temperature: float = 1.0        # required 1.0 for extended thinking
@@ -33,7 +33,7 @@ MODELS: Dict[str, ModelSpec] = {
     # Anthropic
     "claude-opus": ModelSpec(
         provider="anthropic",
-        model_id="claude-opus-4-0-20250514",
+        model_id="claude-opus-4-6",
         max_tokens=16384,
         thinking_budget=10000,
         temperature=1.0,
@@ -42,7 +42,7 @@ MODELS: Dict[str, ModelSpec] = {
     ),
     "claude-sonnet": ModelSpec(
         provider="anthropic",
-        model_id="claude-sonnet-4-20250514",
+        model_id="claude-sonnet-4-6",
         max_tokens=8192,
         thinking_budget=0,
         temperature=0.7,
