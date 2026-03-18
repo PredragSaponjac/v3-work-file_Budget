@@ -586,11 +586,15 @@ def finalize_outcomes(ctx: RunContext) -> int:
     if not FLAGS.enable_thesis_persistence:
         return 0
 
+    conn = None
     try:
         conn = get_connection()
 
-        # Find trades that have been closed (win/loss) but their
-        # linked thesis is still ACTIVE or DRAFT
+        # FIX: Read ALL data first, close connection, THEN call close_thesis.
+        # The old code held conn open while calling close_thesis() which opens
+        # its own connection — risking SQLITE_BUSY with overlapping connections.
+
+        # Find trades that have been closed but thesis is still ACTIVE
         rows = conn.execute("""
             SELECT DISTINCT e.thesis_id, e.status as trade_status
             FROM etp_records e
@@ -598,13 +602,22 @@ def finalize_outcomes(ctx: RunContext) -> int:
             WHERE e.status IN ('CLOSED_WIN', 'CLOSED_LOSS', 'CLOSED_EXPIRED')
             AND t.status IN ('DRAFT', 'ACTIVE')
         """).fetchall()
+        trade_closures = [(r["thesis_id"], r["trade_status"]) for r in rows]
 
+        # Also find stale theses
+        stale_rows = conn.execute("""
+            SELECT thesis_id FROM theses
+            WHERE status IN ('DRAFT', 'ACTIVE')
+            AND julianday('now') - julianday(last_updated_utc) > ?
+        """, (THRESHOLDS.thesis_stale_days,)).fetchall()
+        stale_ids = [r["thesis_id"] for r in stale_rows]
+
+        conn.close()
+        conn = None  # mark closed
+
+        # Now process closures without holding a connection
         finalized = 0
-        for r in rows:
-            thesis_id = r["thesis_id"]
-            trade_status = r["trade_status"]
-
-            # Map trade status → thesis status
+        for thesis_id, trade_status in trade_closures:
             if trade_status == "CLOSED_WIN":
                 thesis_status = ThesisStatus.CLOSED_WIN
                 reason = "Trade closed at profit target"
@@ -618,19 +631,10 @@ def finalize_outcomes(ctx: RunContext) -> int:
             close_thesis(thesis_id, thesis_status, reason)
             finalized += 1
 
-        # Also close stale theses (no activity for thesis_stale_days)
-        stale_rows = conn.execute("""
-            SELECT thesis_id FROM theses
-            WHERE status IN ('DRAFT', 'ACTIVE')
-            AND julianday('now') - julianday(last_updated_utc) > ?
-        """, (THRESHOLDS.thesis_stale_days,)).fetchall()
-
-        for r in stale_rows:
-            close_thesis(r["thesis_id"], ThesisStatus.CLOSED_EXPIRED,
+        for thesis_id in stale_ids:
+            close_thesis(thesis_id, ThesisStatus.CLOSED_EXPIRED,
                         f"Stale after {THRESHOLDS.thesis_stale_days} days inactive")
             finalized += 1
-
-        conn.close()
 
         if finalized > 0:
             logger.info(f"[thesis_store] Finalized {finalized} thesis outcomes")
@@ -639,6 +643,12 @@ def finalize_outcomes(ctx: RunContext) -> int:
     except Exception as e:
         logger.error(f"Failed to finalize thesis outcomes: {e}")
         return 0
+    finally:
+        if conn:
+            try:
+                conn.close()
+            except Exception:
+                pass
 
 
 def get_confidence_trajectory(lookback_days: int = 14) -> List[Dict]:

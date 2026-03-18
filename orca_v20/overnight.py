@@ -169,37 +169,67 @@ def _enqueue_replay_job(thesis_id: str, ticker: str, layer: int,
 
 
 def _update_replay_job(thesis_id: str, status: str,
-                        result_json: str = "") -> None:
-    """Update status of a replay job."""
+                        result_json: str = "", layer: int = None) -> None:
+    """Update status of a replay job.
+
+    FIX: Added layer filter. Without it, a thesis with both L2 and L3 jobs
+    could have the wrong layer's job updated (whichever row comes first).
+    """
     try:
         conn = get_connection()
-        conn.execute("""
-            UPDATE replay_job_queue
-            SET status = ?, result_json = ?, updated_utc = ?
-            WHERE thesis_id = ? AND status IN (?, ?)
-        """, (
-            status, result_json,
-            datetime.now(timezone.utc).isoformat(),
-            thesis_id,
-            ReplayJobStatus.PENDING, ReplayJobStatus.RUNNING,
-        ))
+        if layer is not None:
+            conn.execute("""
+                UPDATE replay_job_queue
+                SET status = ?, result_json = ?, updated_utc = ?
+                WHERE thesis_id = ? AND layer = ? AND status IN (?, ?)
+            """, (
+                status, result_json,
+                datetime.now(timezone.utc).isoformat(),
+                thesis_id, layer,
+                ReplayJobStatus.PENDING, ReplayJobStatus.RUNNING,
+            ))
+        else:
+            conn.execute("""
+                UPDATE replay_job_queue
+                SET status = ?, result_json = ?, updated_utc = ?
+                WHERE thesis_id = ? AND status IN (?, ?)
+            """, (
+                status, result_json,
+                datetime.now(timezone.utc).isoformat(),
+                thesis_id,
+                ReplayJobStatus.PENDING, ReplayJobStatus.RUNNING,
+            ))
         conn.commit()
         conn.close()
     except Exception as e:
         logger.debug(f"[queue] Failed to update {thesis_id}: {e}")
 
 
-def _get_pending_jobs(layer: int) -> List[Dict]:
-    """Get pending/deferred jobs for a specific layer."""
+def _get_pending_jobs(layer: int, include_deferred: bool = True) -> List[Dict]:
+    """Get pending jobs for a specific layer.
+
+    FIX: Added include_deferred flag. The post-loop cleanup should only
+    fetch PENDING (not DEFERRED_BUDGET) to avoid double-counting jobs
+    that were already deferred inside the loop.
+    """
     try:
         conn = get_connection()
-        rows = conn.execute("""
-            SELECT thesis_id, ticker, layer, priority, reason
-            FROM replay_job_queue
-            WHERE (status = ? OR status = ?)
-            AND layer = ?
-            ORDER BY priority DESC, created_utc ASC
-        """, (ReplayJobStatus.PENDING, ReplayJobStatus.DEFERRED_BUDGET, layer)).fetchall()
+        if include_deferred:
+            rows = conn.execute("""
+                SELECT thesis_id, ticker, layer, priority, reason
+                FROM replay_job_queue
+                WHERE (status = ? OR status = ?)
+                AND layer = ?
+                ORDER BY priority DESC, created_utc ASC
+            """, (ReplayJobStatus.PENDING, ReplayJobStatus.DEFERRED_BUDGET, layer)).fetchall()
+        else:
+            rows = conn.execute("""
+                SELECT thesis_id, ticker, layer, priority, reason
+                FROM replay_job_queue
+                WHERE status = ?
+                AND layer = ?
+                ORDER BY priority DESC, created_utc ASC
+            """, (ReplayJobStatus.PENDING, layer)).fetchall()
         conn.close()
         return [dict(r) for r in rows]
     except Exception as e:
@@ -443,13 +473,13 @@ def run_layer_2(ctx: RunContext, budget: OvernightBudgetTracker) -> Dict:
         # Budget check
         if not budget.can_afford(LAYER_2_ESTIMATED_COST):
             logger.info(f"[overnight L2] Budget exhausted — deferring remaining {len(jobs) - results['processed']} jobs")
-            _update_replay_job(job["thesis_id"], ReplayJobStatus.DEFERRED_BUDGET)
+            _update_replay_job(job["thesis_id"], ReplayJobStatus.DEFERRED_BUDGET, layer=job.get("layer"))
             results["deferred"] += 1
             budget.items_deferred += 1
             continue
 
         # Run premium replay
-        _update_replay_job(job["thesis_id"], ReplayJobStatus.RUNNING)
+        _update_replay_job(job["thesis_id"], ReplayJobStatus.RUNNING, layer=job.get("layer"))
 
         try:
             conn = get_connection()
@@ -473,16 +503,17 @@ def run_layer_2(ctx: RunContext, budget: OvernightBudgetTracker) -> Dict:
                 budget.items_escalated += 1
 
                 _update_replay_job(job["thesis_id"], ReplayJobStatus.COMPLETED,
-                                    json.dumps(result.get("counterfactual_verdict", "")))
+                                    json.dumps(result.get("counterfactual_verdict", "")),
+                                    layer=job.get("layer"))
 
         except Exception as e:
             logger.error(f"[overnight L2] {job['ticker']} failed: {e}")
-            _update_replay_job(job["thesis_id"], ReplayJobStatus.FAILED)
+            _update_replay_job(job["thesis_id"], ReplayJobStatus.FAILED, layer=job.get("layer"))
 
     # Defer all remaining pending L2 jobs
-    remaining = _get_pending_jobs(layer=2)
+    remaining = _get_pending_jobs(layer=2, include_deferred=False)
     for job in remaining:
-        _update_replay_job(job["thesis_id"], ReplayJobStatus.DEFERRED_BUDGET)
+        _update_replay_job(job["thesis_id"], ReplayJobStatus.DEFERRED_BUDGET, layer=job.get("layer"))
         results["deferred"] += 1
         budget.items_deferred += 1
 
@@ -514,12 +545,12 @@ def run_layer_3(ctx: RunContext, budget: OvernightBudgetTracker) -> Dict:
     for job in jobs:
         if not budget.can_afford(LAYER_3_ESTIMATED_COST):
             logger.info(f"[overnight L3] Budget exhausted — deferring {job['ticker']}")
-            _update_replay_job(job["thesis_id"], ReplayJobStatus.DEFERRED_BUDGET)
+            _update_replay_job(job["thesis_id"], ReplayJobStatus.DEFERRED_BUDGET, layer=job.get("layer"))
             results["deferred"] += 1
             budget.items_deferred += 1
             continue
 
-        _update_replay_job(job["thesis_id"], ReplayJobStatus.RUNNING)
+        _update_replay_job(job["thesis_id"], ReplayJobStatus.RUNNING, layer=job.get("layer"))
 
         try:
             # Premium analysis using the more expensive model
@@ -533,7 +564,7 @@ def run_layer_3(ctx: RunContext, budget: OvernightBudgetTracker) -> Dict:
             conn.close()
 
             if not thesis_row:
-                _update_replay_job(job["thesis_id"], ReplayJobStatus.FAILED)
+                _update_replay_job(job["thesis_id"], ReplayJobStatus.FAILED, layer=job.get("layer"))
                 continue
 
             thesis = dict(thesis_row)
@@ -576,12 +607,12 @@ Format as JSON with keys: pattern, pipeline_change, new_signals, severity."""
 
         except Exception as e:
             logger.error(f"[overnight L3] {job['ticker']} failed: {e}")
-            _update_replay_job(job["thesis_id"], ReplayJobStatus.FAILED)
+            _update_replay_job(job["thesis_id"], ReplayJobStatus.FAILED, layer=job.get("layer"))
 
     # Defer remaining
-    remaining = _get_pending_jobs(layer=3)
+    remaining = _get_pending_jobs(layer=3, include_deferred=False)
     for job in remaining:
-        _update_replay_job(job["thesis_id"], ReplayJobStatus.DEFERRED_BUDGET)
+        _update_replay_job(job["thesis_id"], ReplayJobStatus.DEFERRED_BUDGET, layer=job.get("layer"))
         results["deferred"] += 1
         budget.items_deferred += 1
 
@@ -624,7 +655,7 @@ def run_overnight(ctx: RunContext, deep_review: bool = False) -> Dict:
         # Defer ALL L2 jobs
         jobs = _get_pending_jobs(layer=2)
         for job in jobs:
-            _update_replay_job(job["thesis_id"], ReplayJobStatus.DEFERRED_BUDGET)
+            _update_replay_job(job["thesis_id"], ReplayJobStatus.DEFERRED_BUDGET, layer=job.get("layer"))
             l2_results["deferred"] += 1
 
     # Layer 3: premium escalation (budget-gated, deep_review expands scope)
@@ -635,7 +666,7 @@ def run_overnight(ctx: RunContext, deep_review: bool = False) -> Dict:
     else:
         jobs = _get_pending_jobs(layer=3)
         for job in jobs:
-            _update_replay_job(job["thesis_id"], ReplayJobStatus.DEFERRED_BUDGET)
+            _update_replay_job(job["thesis_id"], ReplayJobStatus.DEFERRED_BUDGET, layer=job.get("layer"))
             l3_results["deferred"] += 1
 
     # Final budget persist

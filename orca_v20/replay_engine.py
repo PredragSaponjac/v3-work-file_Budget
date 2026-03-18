@@ -516,7 +516,7 @@ def _persist_replay(replay_id: str, thesis: Dict, result: Dict,
             result["replay_mode"],
             result["original_verdict"],
             result["realized_outcome"],
-            result.get("counterfactual_verdict", ""),
+            result.get("hindsight_verdict", result.get("counterfactual_verdict", "")),  # FIX: was duplicating counterfactual
             result.get("counterfactual_verdict", ""),
             result.get("what_we_missed", ""),
             json.dumps(result.get("missed_signal_candidates", [])),

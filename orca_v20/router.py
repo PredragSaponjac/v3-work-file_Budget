@@ -24,8 +24,10 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
-import orca_v20.config as _cfg  # for BUDGET_MODE (must be late-bound)
-from orca_v20.config import MODELS, ROUTING, ModelSpec
+import orca_v20.config as _cfg  # ALL config reads must be late-bound
+# FIX: Do NOT import MODELS/ROUTING at module level — they become stale
+# after importlib.reload(config) in budget mode. Read via _cfg.* at call time.
+from orca_v20.config import ModelSpec
 from orca_v20.run_context import RunContext
 
 logger = logging.getLogger("orca_v20.router")
@@ -131,7 +133,7 @@ def call_model(
 
     Phase 4 hardened: retries + fallback + role-level cost tracking.
     """
-    spec = ROUTING.get_model(role)
+    spec = _cfg.ROUTING.get_model(role)  # late-bound: sees budget routing after reload
 
     # Budget check
     if ctx.is_over_budget():
@@ -167,8 +169,8 @@ def call_model(
             if not _is_provider_healthy(fb_provider):
                 continue
             fb_model_key = _FALLBACK_MODELS.get(fb_provider)
-            if fb_model_key and fb_model_key in MODELS:
-                fb_spec = MODELS[fb_model_key]
+            if fb_model_key and fb_model_key in _cfg.MODELS:
+                fb_spec = _cfg.MODELS[fb_model_key]
                 logger.warning(
                     f"[{role}] Primary {spec.provider} failed — "
                     f"falling back to {fb_provider}/{fb_spec.model_id}"
@@ -524,14 +526,14 @@ def estimate_cost(spec: ModelSpec, input_tokens: int, output_tokens: int) -> flo
 
 def list_available_models() -> Dict[str, str]:
     """Return {key: provider/model_id} for all registered models."""
-    return {k: f"{v.provider}/{v.model_id}" for k, v in MODELS.items()}
+    return {k: f"{v.provider}/{v.model_id}" for k, v in _cfg.MODELS.items()}
 
 
 def list_role_assignments() -> Dict[str, str]:
     """Return {role: model_key} for current routing."""
     return {
-        field: getattr(ROUTING, field)
-        for field in ROUTING.__dataclass_fields__
+        field: getattr(_cfg.ROUTING, field)
+        for field in _cfg.ROUTING.__dataclass_fields__
     }
 
 

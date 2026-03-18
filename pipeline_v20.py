@@ -197,6 +197,7 @@ def save_run_trace(ctx: RunContext, success: bool, trace_counts: dict) -> None:
         logger.info("[trace] DRY RUN — skipping trace write")
         return
 
+    conn = None
     try:
         conn = get_connection()
         conn.execute("""
@@ -228,10 +229,15 @@ def save_run_trace(ctx: RunContext, success: bool, trace_counts: dict) -> None:
             int(success),
         ))
         conn.commit()
-        conn.close()
         logger.info(f"[trace] Run trace saved: {ctx.run_id}")
     except Exception as e:
         logger.error(f"[trace] Failed to save run trace: {e}")
+    finally:
+        if conn:
+            try:
+                conn.close()
+            except Exception:
+                pass
 
 
 # ─────────────────────────────────────────────────────────────────────
@@ -343,7 +349,7 @@ def run_pipeline(ctx: RunContext) -> bool:
 
     # ── Thesis Matching (v20) — only match ideas that passed evidence ──
     ideas = run_thesis_matching(ideas, ctx)
-    trace["ideas_after_gates"] = len(ideas)
+    trace["ideas_after_evidence_gate"] = len(ideas)  # FIX: separate key, don't overwrite
 
     if not ideas:
         logger.info("All ideas failed evidence gate — pipeline complete")
