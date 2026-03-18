@@ -115,6 +115,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          # Clean working tree before switching branches
+          git stash --include-untracked 2>/dev/null || git checkout -- . 2>/dev/null || true
+          git clean -fd 2>/dev/null || true
+
           if git ls-remote --heads origin state | grep -q state; then
             echo "[state] Checking out existing state branch..."
             git checkout state
