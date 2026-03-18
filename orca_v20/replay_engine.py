@@ -258,6 +258,26 @@ def _rules_replay(thesis: Dict, trades: List[Dict], snapshots: List[Dict],
         agent_miss_parts.append(f"Missed contradictions: {'; '.join(missed_contradictions)}")
     agent_miss_report = " | ".join(agent_miss_parts) if agent_miss_parts else "No critical agent misses detected"
 
+    # Enrich with multi-window forward outcomes from thesis_forward_outcomes
+    # (computed by overnight L1 compute_forward_outcomes). These provide richer
+    # MFE/MAE data at windows [1, 3, 5, 10, 20] than the single-snapshot
+    # computation above.
+    forward_outcomes = []
+    try:
+        from orca_v20.thesis_store import get_horizon_outcomes
+        forward_outcomes = get_horizon_outcomes(thesis_id)
+        if forward_outcomes:
+            # Use the best multi-window MFE/MAE if available
+            best_window = max(forward_outcomes, key=lambda x: x.get("window_days", 0))
+            if best_window.get("mfe_pct") is not None:
+                mfe_pct = best_window["mfe_pct"]
+            if best_window.get("mae_pct") is not None:
+                mae_pct = best_window["mae_pct"]
+            if best_window.get("timing_quality"):
+                timing_quality = best_window["timing_quality"]
+    except Exception as e:
+        logger.debug(f"[replay] Forward outcomes lookup failed for {thesis_id}: {e}")
+
     return {
         "thesis_id": thesis_id,
         "ticker": ticker,
@@ -277,6 +297,7 @@ def _rules_replay(thesis: Dict, trades: List[Dict], snapshots: List[Dict],
         "mae_pct": mae_pct,
         "expected_horizon": expected_horizon,
         "timing_quality": timing_quality,
+        "forward_outcomes": forward_outcomes,
     }
 
 
@@ -379,6 +400,20 @@ def _generate_training_examples(thesis: Dict, replay_result: Dict,
     direction = thesis.get("idea_direction", "BULLISH")
     outcome = replay_result["realized_outcome"]
 
+    # Build multi-window outcome summary for training context
+    fwd_summary = ""
+    fwd_outcomes = replay_result.get("forward_outcomes", [])
+    if fwd_outcomes:
+        parts = []
+        for fo in fwd_outcomes:
+            w = fo.get("window_days", "?")
+            ret = fo.get("forward_return_pct", 0)
+            mfe = fo.get("mfe_pct", 0)
+            mae = fo.get("mae_pct", 0)
+            label = fo.get("horizon_outcome_label", "")
+            parts.append(f"{w}D: ret={ret:.1%} mfe={mfe:.1%} mae={mae:.1%} [{label}]")
+        fwd_summary = "\nForward outcomes: " + " | ".join(parts)
+
     # Example 1: Catalyst assessment (was the catalyst read correct?)
     examples.append({
         "example_id": uuid.uuid4().hex[:12],
@@ -388,6 +423,7 @@ def _generate_training_examples(thesis: Dict, replay_result: Dict,
             f"Direction: {direction}\n"
             f"Expected horizon: {replay_result.get('expected_horizon', 'UNKNOWN')}\n"
             f"Timing quality: {replay_result.get('timing_quality', '')}"
+            f"{fwd_summary}"
         ),
         "expected_output": (
             f"Outcome: {outcome}. "

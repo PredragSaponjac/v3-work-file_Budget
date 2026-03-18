@@ -747,13 +747,28 @@ def compute_forward_outcomes(ctx: RunContext) -> int:
 
             prices = [s["underlying_price"] for s in snapshots if s["underlying_price"]]
 
+            # If snapshots are sparse, try to fill with yfinance history
+            max_window = max(THRESHOLDS.forward_outcome_windows)
+            if len(prices) < max_window + 1 and trading_age >= 2:
+                try:
+                    import yfinance as yf
+                    ticker_obj = yf.Ticker(t["ticker"])
+                    hist = ticker_obj.history(period=f"{max_window + 5}d")
+                    if len(hist) >= 2:
+                        yf_prices = hist["Close"].tolist()
+                        if len(yf_prices) > len(prices):
+                            prices = yf_prices
+                            entry_price = prices[0]
+                            logger.debug(
+                                f"[forward] {tid} extended with yfinance: "
+                                f"{len(prices)} prices (was {len(snapshots)} snapshots)"
+                            )
+                except Exception as e:
+                    logger.debug(f"[forward] {tid} yfinance fallback failed: {e}")
+
             for window in THRESHOLDS.forward_outcome_windows:
                 # Skip if insufficient data for this window
                 if len(prices) < window + 1:
-                    logger.debug(
-                        f"[forward] {tid} window={window}D skipped — "
-                        f"only {len(prices)} snapshots available"
-                    )
                     continue
 
                 # Get prices up to window
