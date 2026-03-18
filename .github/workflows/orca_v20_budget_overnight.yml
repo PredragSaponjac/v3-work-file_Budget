@@ -102,30 +102,39 @@ jobs:
         if: success()
         run: |
           mkdir -p /tmp/orca-state
-          cp orca_v20.db /tmp/orca-state/ 2>/dev/null || true
-          cp -r state/ /tmp/orca-state/state/ 2>/dev/null || true
-          cp -r artifacts/ /tmp/orca-state/artifacts/ 2>/dev/null || true
+          cp orca_v20.db /tmp/orca-state/ 2>/dev/null && echo "[state] saved orca_v20.db" || echo "[state] no orca_v20.db"
+          cp -r state/ /tmp/orca-state/state/ 2>/dev/null && echo "[state] saved state/" || echo "[state] no state/ dir"
+          cp -r artifacts/ /tmp/orca-state/artifacts/ 2>/dev/null && echo "[state] saved artifacts/" || echo "[state] no artifacts/"
+          ls -la /tmp/orca-state/
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           if git ls-remote --heads origin state | grep -q state; then
+            echo "[state] Checking out existing state branch..."
             git checkout state
             git pull origin state
           else
+            echo "[state] Creating orphan state branch (first run)..."
             git checkout --orphan state
             git rm -rf . 2>/dev/null || true
             echo "# ORCA v20 Budget Sprint State" > README.md
+            echo "This branch stores persistent state for budget sprint runs." >> README.md
+            echo "Do NOT merge this into main." >> README.md
           fi
 
-          cp /tmp/orca-state/orca_v20.db . 2>/dev/null || true
-          cp -r /tmp/orca-state/state/ . 2>/dev/null || true
-          cp -r /tmp/orca-state/artifacts/ . 2>/dev/null || true
+          cp /tmp/orca-state/orca_v20.db . 2>/dev/null && echo "[state] restored orca_v20.db" || echo "[state] no db to restore"
+          cp -r /tmp/orca-state/state/ . 2>/dev/null && echo "[state] restored state/" || true
+          cp -r /tmp/orca-state/artifacts/ . 2>/dev/null && echo "[state] restored artifacts/" || true
 
-          git add orca_v20.db state/ artifacts/ README.md 2>/dev/null || true
+          git add -A
+          echo "[state] Staged files:"
+          git diff --cached --stat || true
+
           if git diff --cached --quiet; then
-            echo "No state changes to commit"
+            echo "[state] No state changes to commit"
           else
             git commit -m "Budget overnight #${{ github.run_number }} — $(date -u +%Y-%m-%dT%H:%M:%SZ)"
             git push origin state
+            echo "[state] Pushed to state branch"
           fi
