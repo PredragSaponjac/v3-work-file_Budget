@@ -337,11 +337,12 @@ def run_pipeline(ctx: RunContext) -> bool:
         save_run_trace(ctx, success=True, trace_counts=trace)
         return True
 
-    # ── Thesis Matching (v20) ──
-    ideas = run_thesis_matching(ideas, ctx)
-
-    # ── Evidence Gate (v20) ──
+    # ── Evidence Gate (v20) — run BEFORE thesis matching so that
+    #    rejected ideas don't inflate times_seen counters on theses ──
     ideas, evidence_failed = run_evidence_gate(ideas, ctx)
+
+    # ── Thesis Matching (v20) — only match ideas that passed evidence ──
+    ideas = run_thesis_matching(ideas, ctx)
     trace["ideas_after_gates"] = len(ideas)
 
     if not ideas:

@@ -108,7 +108,7 @@ def run_stage2(ideas: List[IdeaCandidate], ctx: RunContext) -> List[IdeaCandidat
     # ── Defensive hard cap (belt-and-suspenders) ──
     if _cfg.BUDGET_MODE and len(ideas) > _cfg.THRESHOLDS.budget_max_stage2_candidates:
         cap = _cfg.THRESHOLDS.budget_max_stage2_candidates
-        ideas.sort(key=lambda x: x.confidence, reverse=True)
+        ideas = sorted(ideas, key=lambda x: x.confidence, reverse=True)  # copy, don't mutate
         skipped = ideas[cap:]
         ideas = ideas[:cap]
         logger.warning(

@@ -97,6 +97,15 @@ def _parse_confidence(raw) -> int:
     if numeric >= 1:
         return min(numeric, 10)
 
+    # Try regex patterns: "7 out of 10", "Confidence: 8", "8/10"
+    import re
+    m = re.search(r'(\d+)\s*(?:out of|/)\s*10', s)
+    if m:
+        return min(int(m.group(1)), 10)
+    m = re.search(r'[Cc]onfidence[:\s]+(\d+)', s)
+    if m:
+        return min(int(m.group(1)), 10)
+
     # Qualitative mapping (case-insensitive, check start of string)
     s_upper = s.upper()
 
@@ -128,6 +137,7 @@ def _parse_confidence(raw) -> int:
         return 4
 
     # Nothing matched — default to 5 (neutral, not 0)
+    logger.warning(f"[confidence] Could not parse '{s[:60]}' — defaulting to 5")
     return 5
 
 

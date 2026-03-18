@@ -101,6 +101,13 @@ def structure_ideas(ideas: List[IdeaCandidate], ctx: RunContext) -> List[Structu
         ctx.add_error("stage4_structure", str(e))
         structured_dicts = v3_dicts
 
+    # Detect partial structurer failures
+    if len(structured_dicts) < len(v3_dicts):
+        logger.warning(
+            f"[Stage 4] Structurer returned {len(structured_dicts)}/{len(v3_dicts)} "
+            f"trades — {len(v3_dicts) - len(structured_dicts)} ideas lost silently"
+        )
+
     # Map to v20 StructuredTrade objects
     trades = []
     for i, sd in enumerate(structured_dicts):

@@ -428,16 +428,24 @@ def auto_label_active_theses(ctx: RunContext) -> int:
         thesis_entries = {}
         for r in rows:
             tid = r["thesis_id"]
-            if tid not in thesis_entries and r["entry_price"] is not None:
-                thesis_entries[tid] = {
-                    "ticker": r["ticker"],
-                    "direction": r["idea_direction"],
-                    "confidence": r["current_confidence"],
-                    "entry_price": r["entry_price"],
-                    "invalidation": r["invalidation_trigger"] or "",
-                    "expected_horizon": r["expected_horizon"] or "UNKNOWN",
-                    "created_utc": r["created_utc"] or "",
-                }
+            if tid not in thesis_entries:
+                entry_price = r["entry_price"]
+                # If no snapshot entry price, try to fetch current price as fallback
+                # so the thesis doesn't become a ghost (never auto-labeled)
+                if entry_price is None:
+                    entry_price = _fetch_underlying_price(r["ticker"])
+                    if entry_price:
+                        logger.info(f"[auto-label] {tid} had no snapshot — using live price ${entry_price:.2f} as entry")
+                if entry_price is not None and entry_price > 0:
+                    thesis_entries[tid] = {
+                        "ticker": r["ticker"],
+                        "direction": r["idea_direction"],
+                        "confidence": r["current_confidence"],
+                        "entry_price": entry_price,
+                        "invalidation": r["invalidation_trigger"] or "",
+                        "expected_horizon": r["expected_horizon"] or "UNKNOWN",
+                        "created_utc": r["created_utc"] or "",
+                    }
 
         now_dt = datetime.now(timezone.utc)
 
