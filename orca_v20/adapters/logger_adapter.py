@@ -45,6 +45,7 @@ def _log_trade_v20(trade: StructuredTrade, ctx: RunContext) -> bool:
                 confidence, confidence_raw, urgency, urgency_raw,
                 consensus_tag,
                 report_framing, report_label,
+                expected_horizon,
                 status, created_utc
             ) VALUES (
                 ?, ?, ?, ?,
@@ -58,6 +59,7 @@ def _log_trade_v20(trade: StructuredTrade, ctx: RunContext) -> bool:
                 ?, ?, ?, ?,
                 ?,
                 ?, ?,
+                ?,
                 ?, ?
             )
         """, (
@@ -73,6 +75,7 @@ def _log_trade_v20(trade: StructuredTrade, ctx: RunContext) -> bool:
             trade.urgency, trade.urgency_raw,
             trade.consensus_tag.value,
             trade.report_framing, trade.report_label,
+            getattr(trade, 'expected_horizon', 'UNKNOWN') or 'UNKNOWN',
             "OPEN", datetime.now(timezone.utc).isoformat(),
         ))
 

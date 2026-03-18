@@ -146,6 +146,7 @@ def structure_ideas(ideas: List[IdeaCandidate], ctx: RunContext) -> List[Structu
             urgency=idea.urgency,
             urgency_raw=idea.urgency_raw,
             consensus_tag=idea.consensus_tag,
+            expected_horizon=idea.expected_horizon.value if hasattr(idea.expected_horizon, 'value') else str(idea.expected_horizon),
 
             report_framing=sd.get("report_framing"),
             report_label=sd.get("report_label"),

@@ -33,7 +33,7 @@ logger = logging.getLogger("orca_v20.replay_engine")
 # DB queries
 # ─────────────────────────────────────────────────────────────────────
 
-def _get_closed_theses(lookback_days: int = 7) -> List[Dict]:
+def _get_closed_theses(lookback_days: int = 14) -> List[Dict]:
     """Query theses closed in the last N days that haven't been replayed yet."""
     try:
         conn = get_connection()
@@ -567,7 +567,7 @@ def run_nightly_replay(ctx: RunContext) -> List[Dict]:
         logger.info("[replay_engine] Disabled (FLAGS.enable_replay_engine=False)")
         return []
 
-    closed = _get_closed_theses(lookback_days=7)
+    closed = _get_closed_theses(lookback_days=14)
     if not closed:
         logger.info("[replay_engine] No unreplayed closed theses found")
         return []

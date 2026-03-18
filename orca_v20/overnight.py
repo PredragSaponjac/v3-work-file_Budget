@@ -153,7 +153,7 @@ def _enqueue_replay_job(thesis_id: str, ticker: str, layer: int,
     try:
         conn = get_connection()
         conn.execute("""
-            INSERT OR IGNORE INTO replay_job_queue (
+            INSERT OR REPLACE INTO replay_job_queue (
                 thesis_id, ticker, layer, priority, reason,
                 status, created_utc
             ) VALUES (?, ?, ?, ?, ?, ?, ?)
@@ -323,7 +323,18 @@ def run_layer_1(ctx: RunContext, budget: OvernightBudgetTracker) -> Dict:
         "queue_generated": 0,
     }
 
-    # 1. Thesis momentum update
+    # 1. Auto-label active theses FIRST — closes theses so momentum captures
+    #    the final pre-closure state, and closed theses enter the replay queue.
+    try:
+        from orca_v20.thesis_store import auto_label_active_theses
+        labeled = auto_label_active_theses(ctx)
+        results["auto_labeled"] = labeled
+        logger.info(f"[overnight L1] Auto-labeled {labeled} theses")
+    except Exception as e:
+        logger.error(f"[overnight L1] Auto-label failed: {e}")
+
+    # 2. Thesis momentum update (runs AFTER auto-label so it captures
+    #    the final confidence state including any just-closed theses)
     try:
         from orca_v20.thesis_momentum import run_momentum_update
         run_momentum_update(ctx)
@@ -332,7 +343,7 @@ def run_layer_1(ctx: RunContext, budget: OvernightBudgetTracker) -> Dict:
     except Exception as e:
         logger.error(f"[overnight L1] Momentum update failed: {e}")
 
-    # 2. Monitor rule checks
+    # 3. Monitor rule checks
     try:
         from orca_v20.daemon_rules import check_portfolio_health, update_rules
         update_rules(ctx)
@@ -340,16 +351,6 @@ def run_layer_1(ctx: RunContext, budget: OvernightBudgetTracker) -> Dict:
         logger.info("[overnight L1] Monitor rules updated")
     except Exception as e:
         logger.error(f"[overnight L1] Rule update failed: {e}")
-
-    # 3. Auto-label active theses (MUST run before replay — closes theses so
-    #    they enter the same-night replay queue via WHERE status LIKE 'CLOSED_%')
-    try:
-        from orca_v20.thesis_store import auto_label_active_theses
-        labeled = auto_label_active_theses(ctx)
-        results["auto_labeled"] = labeled
-        logger.info(f"[overnight L1] Auto-labeled {labeled} theses")
-    except Exception as e:
-        logger.error(f"[overnight L1] Auto-label failed: {e}")
 
     # 3b. Compute forward outcomes (multi-window tracking with MFE/MAE)
     try:

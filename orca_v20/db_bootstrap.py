@@ -62,7 +62,7 @@ _TABLES = {
             catalyst_status     TEXT DEFAULT 'PENDING',
             notes               TEXT DEFAULT '',
             FOREIGN KEY (thesis_id) REFERENCES theses(thesis_id),
-            UNIQUE(thesis_id, snapshot_date)
+            UNIQUE(thesis_id, snapshot_date, run_id)
         )
     """,
 
@@ -140,6 +140,7 @@ _TABLES = {
             consensus_tag       TEXT DEFAULT 'SINGLE',
             report_framing      TEXT,
             report_label        TEXT,
+            expected_horizon    TEXT DEFAULT 'UNKNOWN',
             status              TEXT DEFAULT 'OPEN',
             created_utc         TEXT NOT NULL
         )
@@ -515,6 +516,7 @@ def _run_migrations(conn) -> None:
     migrations = [
         ("theses", "expected_horizon", "TEXT DEFAULT 'UNKNOWN'"),
         ("intraday_cases", "expected_horizon", "TEXT DEFAULT 'UNKNOWN'"),
+        ("etp_records", "expected_horizon", "TEXT DEFAULT 'UNKNOWN'"),
     ]
     for table, column, col_def in migrations:
         try:
