@@ -353,6 +353,17 @@ def run_layer_1(ctx: RunContext, budget: OvernightBudgetTracker) -> Dict:
         "queue_generated": 0,
     }
 
+    # 0. FIX: finalize_outcomes MUST run before auto-label and replay.
+    #    Without this, thesis_forward_outcomes table has stale/missing data,
+    #    and replay's horizon-aware timing quality is computed on incomplete info.
+    try:
+        from orca_v20.thesis_store import finalize_outcomes
+        fin_count = finalize_outcomes(ctx)
+        results["finalized_outcomes"] = fin_count
+        logger.info(f"[overnight L1] Finalized {fin_count} thesis outcomes")
+    except Exception as e:
+        logger.error(f"[overnight L1] finalize_outcomes failed: {e}")
+
     # 1. Auto-label active theses FIRST — closes theses so momentum captures
     #    the final pre-closure state, and closed theses enter the replay queue.
     try:

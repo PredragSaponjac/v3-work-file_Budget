@@ -188,6 +188,11 @@ def match_to_existing(idea: IdeaCandidate, ctx: RunContext) -> IdeaCandidate:
         best_thesis = None
 
         for thesis in existing:
+            # FIX: Only match theses with the same direction — cosine similarity
+            # alone could merge a BULLISH idea into a BEARISH thesis on the same ticker.
+            if thesis.idea_direction != idea.idea_direction:
+                continue
+
             thesis_text = f"{thesis.ticker} {thesis.catalyst} {thesis.thesis_text}"
             thesis_tokens = _tokenize(thesis_text)
             thesis_vec = _build_tfidf_vector(thesis_tokens, idf_weights)
@@ -827,7 +832,10 @@ def compute_forward_outcomes(ctx: RunContext) -> int:
                                 pass  # fallback: use all prices
                         if len(yf_prices) > len(prices):
                             prices = yf_prices
-                            entry_price = prices[0]
+                            # FIX: Do NOT overwrite entry_price with yfinance's first price.
+                            # The DB snapshot entry_price is the true price at thesis creation;
+                            # yfinance history may start earlier (e.g. 25 days ago).
+                            # entry_price is kept from snapshots[0]["underlying_price"] above.
                             logger.debug(
                                 f"[forward] {tid} extended with yfinance: "
                                 f"{len(prices)} prices (was {len(snapshots)} snapshots)"

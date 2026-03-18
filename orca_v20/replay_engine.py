@@ -42,7 +42,8 @@ def _get_closed_theses(lookback_days: int = 14) -> List[Dict]:
                    t.idea_direction, t.status, t.invalidated_reason,
                    t.created_run_id, t.created_utc, t.last_updated_utc,
                    t.initial_confidence, t.current_confidence,
-                   t.times_seen, t.invalidation_trigger
+                   t.times_seen, t.invalidation_trigger,
+                   t.expected_horizon  -- FIX: was missing; replay_thesis needs it for horizon-aware timing
             FROM theses t
             WHERE t.status LIKE 'CLOSED_%'
             AND t.last_updated_utc >= datetime('now', ?)
@@ -588,6 +589,23 @@ def replay_thesis(thesis: Dict, ctx: RunContext) -> Optional[Dict]:
         f"outcome={result['realized_outcome']}, delta={result['confidence_delta']}, "
         f"examples={n_persisted}"
     )
+
+    # FIX: Populate memory_cases table so analog retrieval has data.
+    # store_case was never called after replay — memory_cases stayed empty.
+    try:
+        from orca_v20.memory_store import store_case
+        store_case(
+            thesis_id=thesis_id,
+            ticker=ticker,
+            catalyst_type=thesis.get("catalyst", ""),
+            setup_summary=thesis.get("thesis_text", "")[:500],
+            outcome=result["realized_outcome"],
+            pnl_pct=result.get("pnl_actual", 0.0) or 0.0,
+            key_lesson=result.get("what_we_missed", ""),
+            ctx=ctx,
+        )
+    except Exception as e:
+        logger.debug(f"  [{ticker}] Memory store failed (non-fatal): {e}")
 
     return result
 

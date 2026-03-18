@@ -601,6 +601,12 @@ def main() -> None:
         import importlib
         importlib.reload(_cfg)
         from orca_v20.config import ROUTING
+        # FIX: Re-bind module-level THRESHOLDS/FLAGS/PATHS after reload so budget
+        # caps ($3) aren't stale from the pre-reload values ($20).
+        global THRESHOLDS, FLAGS, PATHS
+        THRESHOLDS = _cfg.THRESHOLDS
+        FLAGS = _cfg.FLAGS
+        PATHS = _cfg.PATHS
         logger.info("=" * 60)
         logger.info("*** BUDGET SPRINT MODE ACTIVE ***")
         logger.info(f"  BUDGET_MODE={_cfg.BUDGET_MODE}")
