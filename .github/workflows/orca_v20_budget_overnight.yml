@@ -9,8 +9,9 @@
 name: ORCA v20 Budget Overnight
 
 on:
-  schedule:
-    - cron: "0 1 * * 2-6"    # Tue-Sat 01:00 UTC = Mon-Fri 8:00 PM CDT
+  # DISABLED — switched to Manual mode to reduce API costs
+  # schedule:
+  #   - cron: "0 1 * * 2-6"    # Tue-Sat 01:00 UTC = Mon-Fri 8:00 PM CDT
   workflow_dispatch:
     inputs:
       deep_review:

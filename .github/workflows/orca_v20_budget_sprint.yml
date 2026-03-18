@@ -11,10 +11,11 @@
 name: ORCA v20 Budget Sprint
 
 on:
-  schedule:
-    - cron: "0 15 * * 1-5"    # 10:00 AM CDT
-    - cron: "0 18 * * 1-5"    # 1:00 PM CDT
-    - cron: "30 20 * * 1-5"   # 3:30 PM CDT
+  # DISABLED — switched to Manual mode to reduce API costs
+  # schedule:
+  #   - cron: "0 15 * * 1-5"    # 10:00 AM CDT
+  #   - cron: "0 18 * * 1-5"    # 1:00 PM CDT
+  #   - cron: "30 20 * * 1-5"   # 3:30 PM CDT
   workflow_dispatch:
     inputs:
       dry_run:
