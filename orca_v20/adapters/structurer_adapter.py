@@ -78,7 +78,8 @@ def structure_ideas(ideas: List[IdeaCandidate], ctx: RunContext) -> List[Structu
 
     # Build v3 dict copies for structurer (it mutates in-place)
     v3_dicts = []
-    idea_map = {}  # index -> IdeaCandidate
+    idea_by_ticker = {}  # ticker -> IdeaCandidate (for matching)
+    idea_by_index = {}   # index -> IdeaCandidate (fallback)
     for i, idea in enumerate(ideas):
         v3_dict = dict(idea._v3_raw) if idea._v3_raw else {
             "ticker": idea.ticker,
@@ -86,7 +87,8 @@ def structure_ideas(ideas: List[IdeaCandidate], ctx: RunContext) -> List[Structu
             "repricing_window": idea.repricing_window,
         }
         v3_dicts.append(v3_dict)
-        idea_map[i] = idea
+        idea_by_ticker[idea.ticker.upper()] = idea
+        idea_by_index[i] = idea
 
     # Call v3 structurer
     try:
@@ -108,11 +110,15 @@ def structure_ideas(ideas: List[IdeaCandidate], ctx: RunContext) -> List[Structu
             f"trades — {len(v3_dicts) - len(structured_dicts)} ideas lost silently"
         )
 
-    # Map to v20 StructuredTrade objects
+    # Map to v20 StructuredTrade objects — match by ticker, fall back to index
     trades = []
     for i, sd in enumerate(structured_dicts):
-        idea = idea_map.get(i)
+        sd_ticker = (sd.get("ticker") or "").upper()
+        idea = idea_by_ticker.get(sd_ticker) if sd_ticker else None
         if idea is None:
+            idea = idea_by_index.get(i)
+        if idea is None:
+            logger.warning(f"[Stage 4] Could not match structured trade #{i} (ticker={sd_ticker}) to any idea — skipping")
             continue
 
         # Read strategy_type (v3 adds this key during structuring)

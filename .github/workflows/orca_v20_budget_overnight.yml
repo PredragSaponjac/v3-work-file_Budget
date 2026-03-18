@@ -99,10 +99,15 @@ jobs:
           retention-days: 21
 
       - name: Persist state to state branch
-        if: success()
+        if: always()
         run: |
+          # WAL checkpoint: flush all data to main DB file before copying
+          python3 -c "import sqlite3; c=sqlite3.connect('orca_v20.db'); c.execute('PRAGMA wal_checkpoint(TRUNCATE)'); c.close()" 2>/dev/null || true
+
           mkdir -p /tmp/orca-state
           cp orca_v20.db /tmp/orca-state/ 2>/dev/null && echo "[state] saved orca_v20.db" || echo "[state] no orca_v20.db"
+          cp orca_v20.db-wal /tmp/orca-state/ 2>/dev/null || true
+          cp orca_v20.db-shm /tmp/orca-state/ 2>/dev/null || true
           cp -r state/ /tmp/orca-state/state/ 2>/dev/null && echo "[state] saved state/" || echo "[state] no state/ dir"
           cp -r artifacts/ /tmp/orca-state/artifacts/ 2>/dev/null && echo "[state] saved artifacts/" || echo "[state] no artifacts/"
           ls -la /tmp/orca-state/
@@ -124,10 +129,13 @@ jobs:
           fi
 
           cp /tmp/orca-state/orca_v20.db . 2>/dev/null && echo "[state] restored orca_v20.db" || echo "[state] no db to restore"
+          cp /tmp/orca-state/orca_v20.db-wal . 2>/dev/null || true
+          cp /tmp/orca-state/orca_v20.db-shm . 2>/dev/null || true
           cp -r /tmp/orca-state/state/ . 2>/dev/null && echo "[state] restored state/" || true
           cp -r /tmp/orca-state/artifacts/ . 2>/dev/null && echo "[state] restored artifacts/" || true
 
           git add -A
+          git add orca_v20.db-wal orca_v20.db-shm 2>/dev/null || true
           echo "[state] Staged files:"
           git diff --cached --stat || true
 

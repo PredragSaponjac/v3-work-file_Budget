@@ -364,8 +364,15 @@ def run_layer_1(ctx: RunContext, budget: OvernightBudgetTracker) -> Dict:
     # 4. Rules-based replay on recently closed theses (after auto-label)
     try:
         from orca_v20.replay_engine import run_nightly_replay
+        cost_before_replay = ctx.api_cost_usd
         replay_results = run_nightly_replay(ctx)
         results["replays_rules"] = len(replay_results)
+
+        # Track L1 replay LLM cost in the budget tracker
+        l1_replay_cost = ctx.api_cost_usd - cost_before_replay
+        if l1_replay_cost > 0:
+            budget.add_cost(l1_replay_cost, role="replay_l1")
+            logger.info(f"[overnight L1] Replay LLM cost: ${l1_replay_cost:.4f}")
 
         # Queue significant misses for Layer 2/3
         for r in replay_results:

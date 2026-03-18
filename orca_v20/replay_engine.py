@@ -579,9 +579,9 @@ def replay_thesis(thesis: Dict, ctx: RunContext) -> Optional[Dict]:
     result["training_examples_generated"] = len(examples)
     result["replay_id"] = replay_id
 
-    # Persist
+    # Persist — replay_run FIRST (training_examples has FK to replay_runs)
+    _persist_replay(replay_id, thesis, result, len(examples), ctx)
     n_persisted = _persist_training_examples(examples, ctx)
-    _persist_replay(replay_id, thesis, result, n_persisted, ctx)
 
     logger.info(
         f"  [{ticker}] Replay complete: {result['replay_mode']}, "

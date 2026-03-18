@@ -310,6 +310,7 @@ class StructuredTrade:
     urgency: int = 0
     urgency_raw: str = ""              # original v3 string for audit
     consensus_tag: ConsensusTag = ConsensusTag.SINGLE
+    expected_horizon: str = ""         # ThesisHorizon value string
 
     # --- report framing ---
     report_framing: Optional[str] = None

@@ -62,7 +62,7 @@ _TABLES = {
             catalyst_status     TEXT DEFAULT 'PENDING',
             notes               TEXT DEFAULT '',
             FOREIGN KEY (thesis_id) REFERENCES theses(thesis_id),
-            UNIQUE(thesis_id, snapshot_date, run_id)
+            UNIQUE(thesis_id, snapshot_date)
         )
     """,
 
@@ -527,6 +527,44 @@ def _run_migrations(conn) -> None:
             # Column already exists — expected on subsequent runs
             pass
 
+    # Migration: fix snapshot UNIQUE constraint (remove run_id from constraint)
+    # Check if the old constraint includes run_id by inspecting the schema
+    try:
+        row = conn.execute(
+            "SELECT sql FROM sqlite_master WHERE type='table' AND name='thesis_daily_snapshots'"
+        ).fetchone()
+        if row and row[0] and "UNIQUE(thesis_id, snapshot_date, run_id)" in row[0]:
+            logger.info("  Migration: rebuilding thesis_daily_snapshots UNIQUE constraint (dropping run_id)")
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS thesis_daily_snapshots_new (
+                    id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+                    thesis_id           TEXT NOT NULL,
+                    snapshot_date       TEXT NOT NULL,
+                    run_id              TEXT NOT NULL,
+                    confidence          INTEGER NOT NULL,
+                    underlying_price    REAL,
+                    iv_level            REAL,
+                    catalyst_status     TEXT DEFAULT 'PENDING',
+                    notes               TEXT DEFAULT '',
+                    FOREIGN KEY (thesis_id) REFERENCES theses(thesis_id),
+                    UNIQUE(thesis_id, snapshot_date)
+                )
+            """)
+            conn.execute("""
+                INSERT OR REPLACE INTO thesis_daily_snapshots_new
+                    (id, thesis_id, snapshot_date, run_id, confidence,
+                     underlying_price, iv_level, catalyst_status, notes)
+                SELECT id, thesis_id, snapshot_date, run_id, confidence,
+                       underlying_price, iv_level, catalyst_status, notes
+                FROM thesis_daily_snapshots
+            """)
+            conn.execute("DROP TABLE thesis_daily_snapshots")
+            conn.execute("ALTER TABLE thesis_daily_snapshots_new RENAME TO thesis_daily_snapshots")
+            conn.commit()
+            logger.info("  Migration: thesis_daily_snapshots UNIQUE constraint fixed")
+    except Exception as e:
+        logger.debug(f"  Migration: snapshot UNIQUE constraint check skipped: {e}")
+
 
 def bootstrap_db(db_path: Optional[str] = None) -> str:
     """
@@ -588,6 +626,21 @@ def get_connection(db_path: Optional[str] = None) -> sqlite3.Connection:
     conn.execute("PRAGMA foreign_keys=ON")
     conn.row_factory = sqlite3.Row
     return conn
+
+
+def checkpoint_wal(db_path: Optional[str] = None) -> None:
+    """
+    Force a WAL checkpoint (TRUNCATE mode) so all data is flushed to the
+    main DB file.  Call before git-committing the .db file.
+    """
+    if db_path is None:
+        db_path = PATHS.v20_db
+    if not os.path.exists(db_path):
+        return
+    conn = sqlite3.connect(db_path)
+    conn.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+    conn.close()
+    logger.info(f"WAL checkpoint (TRUNCATE) completed for {db_path}")
 
 
 def verify_db(db_path: Optional[str] = None) -> dict:

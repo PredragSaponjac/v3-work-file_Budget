@@ -132,7 +132,7 @@ def _compute_freshness(items: List[EvidenceItem], now: Optional[datetime] = None
             ages.append(age)
 
     if not ages:
-        return 999.0, 999.0, 999.0  # no timestamps → very stale
+        return -1.0, -1.0, -1.0  # no timestamps → unknown (not stale)
 
     ages.sort()
     freshest = ages[0]
@@ -383,11 +383,17 @@ def _score_evidence(items: List[EvidenceItem]) -> Tuple[float, List[str]]:
     # 5. Freshness check (A2)
     freshest_h, oldest_h, median_h = _compute_freshness(items)
     max_fresh = THRESHOLDS.min_evidence_freshness_hours
-    if freshest_h > max_fresh:
+    # Skip freshness check when no timestamps are available (freshest_h == -1)
+    # This prevents MINIMAL mode from being blocked on freshness alone
+    if freshest_h >= 0 and freshest_h > max_fresh:
         failures.append(f"stale_evidence: freshest={freshest_h:.1f}h > {max_fresh}h threshold")
 
     # Freshness score: 1.0 if very fresh, decays toward 0 as age approaches threshold
-    freshness_score = max(0.0, 1.0 - (freshest_h / max(max_fresh, 1)))
+    # If no timestamps available, assume neutral (0.5) instead of penalizing
+    if freshest_h < 0:
+        freshness_score = 0.5
+    else:
+        freshness_score = max(0.0, 1.0 - (freshest_h / max(max_fresh, 1)))
 
     # Composite score (5 dimensions now)
     score = (

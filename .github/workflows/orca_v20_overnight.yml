@@ -92,8 +92,11 @@ jobs:
           retention-days: 14
 
       - name: Commit updated DB (if changed)
-        if: success()
+        if: always()
         run: |
+          # WAL checkpoint: flush all data to main DB file before committing
+          python3 -c "import sqlite3; c=sqlite3.connect('orca_v20.db'); c.execute('PRAGMA wal_checkpoint(TRUNCATE)'); c.close()" 2>/dev/null || true
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add orca_v20.db 2>/dev/null || true

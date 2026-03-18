@@ -141,11 +141,12 @@ def get_active_theses(ticker: Optional[str] = None) -> List[Thesis]:
                 ticker=r["ticker"],
                 idea_direction=IdeaDirection(r["idea_direction"]),
                 catalyst=r["catalyst"] or "",
+                expected_horizon=r["expected_horizon"] or "UNKNOWN",
                 thesis_text=r["thesis_text"] or "",
                 status=ThesisStatus(r["status"]),
                 created_run_id=r["created_run_id"] or "",
                 created_utc=r["created_utc"] or "",
-                initial_confidence=r["current_confidence"] or 0,
+                initial_confidence=r["initial_confidence"] or 0,
                 current_confidence=r["current_confidence"] or 0,
                 confidence_slope=r["confidence_slope"] or 0.0,
                 times_seen=r["times_seen"] or 1,
@@ -266,9 +267,9 @@ def persist_thesis(idea: IdeaCandidate, ctx: RunContext) -> None:
                 thesis_id, ticker, idea_direction, catalyst, thesis_text,
                 status, created_run_id, created_utc,
                 last_updated_run_id, last_updated_utc,
-                current_confidence, confidence_slope, times_seen,
+                initial_confidence, current_confidence, confidence_slope, times_seen,
                 invalidation_trigger, expected_horizon
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
             idea.thesis_id,
             idea.ticker,
@@ -280,6 +281,7 @@ def persist_thesis(idea: IdeaCandidate, ctx: RunContext) -> None:
             now,
             ctx.run_id,
             now,
+            idea.confidence,
             idea.confidence,
             0.0,
             1,
@@ -408,6 +410,7 @@ def auto_label_active_theses(ctx: RunContext) -> int:
         return 0
 
     labeled = 0
+    conn = None
     try:
         conn = get_connection()
 
@@ -448,6 +451,31 @@ def auto_label_active_theses(ctx: RunContext) -> int:
                     }
 
         now_dt = datetime.now(timezone.utc)
+
+        # Fix #8: Ghost thesis detection — close theses that have no valid
+        # snapshot (all NULLs) after THRESHOLDS.thesis_stale_days days
+        ghost_rows = conn.execute("""
+            SELECT t.thesis_id, t.ticker, t.created_utc
+            FROM theses t
+            WHERE t.status IN ('ACTIVE', 'DRAFT')
+            AND t.thesis_id NOT IN (
+                SELECT DISTINCT s.thesis_id
+                FROM thesis_daily_snapshots s
+                WHERE s.underlying_price IS NOT NULL
+            )
+            AND julianday('now') - julianday(t.created_utc) > ?
+        """, (THRESHOLDS.thesis_stale_days,)).fetchall()
+
+        for gr in ghost_rows:
+            close_thesis(
+                gr["thesis_id"], ThesisStatus.CLOSED_EXPIRED,
+                f"Ghost thesis: no valid price snapshot after {THRESHOLDS.thesis_stale_days} days"
+            )
+            labeled += 1
+            logger.info(
+                f"[auto-label] Ghost thesis {gr['thesis_id']} ({gr['ticker']}) closed — "
+                f"no valid snapshot after {THRESHOLDS.thesis_stale_days} days"
+            )
 
         for tid, info in thesis_entries.items():
             current_price = _fetch_underlying_price(info["ticker"])
@@ -532,8 +560,6 @@ def auto_label_active_theses(ctx: RunContext) -> int:
                     f"(move={directional_move*100:.1f}%)"
                 )
 
-        conn.close()
-
         if labeled > 0:
             logger.info(f"[auto_label] Auto-labeled {labeled} thesis outcomes")
         return labeled
@@ -541,6 +567,12 @@ def auto_label_active_theses(ctx: RunContext) -> int:
     except Exception as e:
         logger.error(f"Failed to auto-label theses: {e}")
         return 0
+    finally:
+        if conn is not None:
+            try:
+                conn.close()
+            except Exception:
+                pass
 
 
 def finalize_outcomes(ctx: RunContext) -> int:
@@ -741,6 +773,14 @@ def compute_forward_outcomes(ctx: RunContext) -> int:
                 ORDER BY snapshot_date ASC
             """, (tid,)).fetchall()
 
+            # Deduplicate snapshots by date (keep last per date, since budget
+            # mode may produce multiple snapshots per day from different sprints)
+            seen_dates = {}
+            for s in snapshots:
+                seen_dates[s["snapshot_date"]] = s
+            snapshots = list(seen_dates.values())
+            snapshots.sort(key=lambda s: s["snapshot_date"])
+
             if not snapshots or len(snapshots) < 2:
                 continue
 
@@ -764,6 +804,17 @@ def compute_forward_outcomes(ctx: RunContext) -> int:
                     hist = ticker_obj.history(period=f"{max_window + 5}d")
                     if len(hist) >= 2:
                         yf_prices = hist["Close"].tolist()
+                        # Fix 15: filter to only dates >= thesis creation date
+                        thesis_created_date = (t["created_utc"] or "")[:10]
+                        if thesis_created_date and hasattr(hist.index, '__iter__'):
+                            try:
+                                yf_dates = [d.strftime("%Y-%m-%d") for d in hist.index]
+                                yf_prices = [
+                                    p for d, p in zip(yf_dates, yf_prices)
+                                    if d >= thesis_created_date
+                                ]
+                            except Exception:
+                                pass  # fallback: use all prices
                         if len(yf_prices) > len(prices):
                             prices = yf_prices
                             entry_price = prices[0]

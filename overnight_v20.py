@@ -67,8 +67,8 @@ def main() -> None:
     budget_cap = THRESHOLDS.overnight_hard_budget_usd
     if args.budget:
         # Use the budget-mode overnight cap if set, otherwise $10 default
-        from orca_v20.config import BUDGET_MODE
-        if BUDGET_MODE:
+        import orca_v20.config as _cfg
+        if _cfg.BUDGET_MODE:
             budget_cap = THRESHOLDS.overnight_hard_budget_usd  # already overridden to $10
         else:
             budget_cap = 10.0  # explicit CLI override

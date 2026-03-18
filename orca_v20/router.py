@@ -24,7 +24,8 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
-from orca_v20.config import BUDGET_MODE, MODELS, ROUTING, ModelSpec
+import orca_v20.config as _cfg  # for BUDGET_MODE (must be late-bound)
+from orca_v20.config import MODELS, ROUTING, ModelSpec
 from orca_v20.run_context import RunContext
 
 logger = logging.getLogger("orca_v20.router")
@@ -151,8 +152,16 @@ def call_model(
         temperature, max_tokens, thinking_budget, json_mode, role
     )
 
-    # If primary failed, try fallback chain
-    if response.content.startswith("[") and "error" in response.content.lower():
+    # If primary failed, try fallback chain.
+    # Detect failure by checking for error marker prefix OR empty content.
+    _primary_failed = (
+        (response.content.startswith("[") and ("error" in response.content.lower()
+                                               or "skipped" in response.content.lower()
+                                               or "not installed" in response.content.lower()
+                                               or "no " in response.content.lower()))
+        or not response.content.strip()
+    )
+    if _primary_failed:
         fallback_providers = _FALLBACK_CHAINS.get(spec.provider, [])
         for fb_provider in fallback_providers:
             if not _is_provider_healthy(fb_provider):
@@ -186,7 +195,7 @@ def call_model(
     )
 
     # ── Budget intelligence logging ──
-    if BUDGET_MODE and response.content and not response.content.startswith("["):
+    if _cfg.BUDGET_MODE and response.content and not response.content.startswith("["):
         _log_budget_intelligence(
             run_id=ctx.run_id,
             role=role,
