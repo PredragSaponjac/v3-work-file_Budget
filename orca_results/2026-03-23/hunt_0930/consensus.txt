@@ -1,0 +1,70 @@
+ORCA V3 CONSENSUS — 2026-03-23 Hunt 09:30 AM CT
+==================================================
+
+MODELS: Claude Opus | Gemini | GPT-4o
+PROMPT: r1_master_v5_3_manual.txt (Open Hunt, no packet)
+
+==================================================
+CONSENSUS MATRIX
+==================================================
+
+Ticker  | Claude      | Gemini          | GPT             | Overlap
+--------|-------------|-----------------|-----------------|--------
+CF      | Watchlist   | Watchlist (Med)  | —               | 2/3
+AES     | —           | Accepted (High)  | —               | 1/3
+RYTM    | —           | Accepted (High)  | —               | 1/3
+AAL     | —           | —                | Accepted (Med)  | 1/3
+CENX    | —           | —                | Watchlist (Med)  | 1/3
+
+==================================================
+RANKED IDEAS (by consensus strength + confidence)
+==================================================
+
+#1 — CF Industries (CF) — BULLISH — Watchlist
+    Consensus: 2/3 models (Claude + Gemini)
+    Catalyst: Hormuz closure → nitrogen supply shock → urea +30%
+    Hard date: USDA Prospective Plantings March 31
+    Key risk: Already ran 88%, DOJ antitrust, ceasefire hopes
+    Status: Needs R2 tape verification
+
+#2 — AES Corporation (AES) — BULLISH — Accepted
+    Consensus: 1/3 (Gemini only) but HIGH confidence
+    Catalyst: NVIDIA AI factory press release — peers VST +4-6%, CEG +2.7%, AES +0.1%
+    Evidence: Same press release, same partnership, clean peer divergence
+    Key risk: AES role may be immaterial vs legacy portfolio
+    Status: Cleanest underreaction evidence of all 5 ideas
+
+#3 — Rhythm Pharma (RYTM) — BULLISH — Accepted
+    Consensus: 1/3 (Gemini only) but HIGH confidence
+    Catalyst: FDA approval of IMCIVREE for acquired HO (March 19)
+    Evidence: Stock DOWN 3% on positive catalyst + analyst PT upgrades
+    Key risk: Slow commercial ramp, EMANATE trial miss overhang
+    Status: Classic "sell the news" mispricing
+
+#4 — American Airlines (AAL) — BEARISH — Accepted
+    Consensus: 1/3 (GPT only) MEDIUM confidence
+    Catalyst: Fuel shock — Jefferies: 35% profit hit for AAL vs 5-10% peers
+    Evidence: AAL rallied with peers despite worst fuel sensitivity
+    Key risk: Demand strength + fare pass-through may offset
+    Status: Needs R2 tape separation from sector beta
+
+#5 — Century Aluminum (CENX) — BULLISH — Watchlist
+    Consensus: 1/3 (GPT only) MEDIUM confidence
+    Catalyst: Gulf aluminium disruption → 4-year high prices
+    Evidence: CENX down 1.5% despite record premiums
+    Key risk: Power costs may overwhelm pricing tailwind
+    Status: Needs R2 verification
+
+==================================================
+CORRELATION WARNING
+==================================================
+CF, AAL, CENX all share root catalyst: Iran-war / Strait of Hormuz
+These are NOT independent bets — sizing accordingly if trading multiple.
+AES and RYTM are uncorrelated to each other and to the Hormuz cluster.
+
+==================================================
+NEXT STEPS
+==================================================
+- 1:00 PM CT: Fresh R1 hunt (all 3 models)
+- 3:00 PM CT: Final R1 hunt (all 3 models)
+- 8:00 PM CT: Teacher reviews all hunts, evaluates thesis persistence

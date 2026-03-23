@@ -1,0 +1,79 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: Model-built
+Ticker: AAL
+Company: American Airlines Group Inc.
+Direction: Bearish
+Live / Emerging Catalyst: Iran-war fuel shock is still active, and AAL remains an unhedged U.S. carrier with the worst documented profit sensitivity among the large-network peers.
+Catalyst Status: Active
+Catalyst Event Date: March 17, 2026.
+Market Visibility Date: March 17, 2026.
+Hard-Date Status: No Hard Date
+Next Earnings Date: Data unavailable — verify in R2
+Source quality: Mixed
+Why this company is the cleanest expression: Reuters cited Jefferies saying a 5% fuel-cost uptick could lower Delta and United 2026 earnings by 5%-10% but could cut American's profit by about 35%.
+What already moved: Jet fuel prices rose 15% in a week by March 6, Gulf Coast spot hit $4.12/gallon, by March 17 jet fuel jumped more than 50% since late-February strikes.
+What has already repriced in this stock (and approximate magnitude): AAL gained between 3% and 4% on March 17 alongside U.S. airline peers as demand optimism lifted the group.
+What has not repriced enough: The name-specific downside from AAL's higher fuel sensitivity and weaker profit cushion has not been separated from sector-wide "demand can offset fuel" narrative.
+Expected tactical payoff range (% move): Data unavailable — verify in R2
+Thesis (2-4 sentences max): The market is rewarding U.S. airlines for resilient spring demand, but AAL is not the same exposure as Delta or United. Reuters/Jefferies explicitly singled out American as materially more vulnerable to fuel inflation. If fuel stays elevated, peer-like valuation behavior looks too generous.
+Transmission type and why lag exists: Transport-fuel shock -> airline margin squeeze; lag exists because investors emphasize demand resilience over differentiating by fuel sensitivity.
+Why the market may still be late: American rallied with the group even though documented earnings sensitivity is materially worse than Delta's and United's.
+Counter-thesis / best bear case against this setup: American raised Q1 revenue outlook to >10%, demand strength extending into April/May, fare increases may successfully pass through fuel costs.
+Evidence of delayed or incomplete pricing: AAL rose 3%-4% with peers on March 17 even though Jefferies flagged 35% profit hit for AAL vs 5-10% for peers.
+Extension / continuation read: Data unavailable — verify in R2
+Historical transmission check: American has already lagged Delta and United on profitability, increasing odds a cost shock transmits more sharply.
+Public positioning confirmation: Data unavailable — verify in R2
+Practical tradability: Strong
+Expected repricing window: 1-4 weeks
+Why this is actionable now: Catalyst is live, economic damage measurable, stock still behaving sector-beta-like instead of AAL-specific.
+Main invalidation: Clear evidence AAL can pass through fuel inflation without losing demand.
+Crowding risk: Medium
+Confidence: Medium
+Key uncertainties for R2 verification: Fuel price duration, April/May booking elasticity, fare recovery vs fuel sensitivity, next earnings date.
+Known idiosyncratic risks: Labor pressure, governance noise, operational reliability issues.
+Source support caveat: Underreaction call supported by documented peer-relative fuel sensitivity vs sector-wide equity behavior.
+Key sources relied upon: Reuters (March 6, March 1, March 17, March 20, February 12, 2026).
+Correlation Warning: Moderate
+Shared root catalyst: Iran-war / Strait-of-Hormuz energy shock
+Why these are correlated rather than independent: This idea and IDEA #2 are both downstream of the same Middle East supply-disruption regime with opposite economic sign.
+
+IDEA #2
+Tier: R2 Verification Watchlist
+Packet origin: Model-built
+Ticker: CENX
+Company: Century Aluminum Co.
+Direction: Bullish
+Live / Emerging Catalyst: Gulf aluminium supply disruption pushed aluminium to four-year highs and U.S. physical premiums to records.
+Catalyst Status: Active
+Catalyst Event Date: March 19, 2026.
+Market Visibility Date: March 19, 2026.
+Hard-Date Status: No Hard Date
+Next Earnings Date: Data unavailable — verify in R2
+Source quality: Mixed
+Why this company is the cleanest expression: Century is the largest U.S. primary aluminium producer, smelting nearly 60% of the country's primary aluminum, with explicit EBITDA leverage to metal pricing and regional premiums.
+What already moved: Aluminium at $3,545.50/ton (four-year high); U.S. Midwest premiums at $2,400/ton; ~570,000 tons annual Gulf capacity disrupted.
+What has already repriced in this stock (and approximate magnitude): CENX was down about 1.5% on March 23.
+What has not repriced enough: Century's near-term earnings leverage to record U.S. primary-metal premiums and tighter Western aluminium supply chain.
+Expected tactical payoff range (% move): Data unavailable — verify in R2
+Thesis (2-4 sentences max): This is the cleanest U.S.-listed primary aluminium beneficiary of a live physical-market shock. Gulf disruptions tightened Western supply, pushed premiums sharply higher, and Century's Q1 outlook says improved pricing should lift EBITDA to $215-$235M. Missing piece is harder proof that equity has underreacted over a fuller tape window.
+Transmission type and why lag exists: Physical metal supply shock -> higher LME/Midwest premiums -> stronger realizations for dominant U.S. producer; lag may exist because investors remember power costs can overwhelm premium environment.
+Why the market may still be late: Commodity/premium moves are extreme yet stock not behaving like a scarcity winner.
+Counter-thesis / best bear case against this setup: Extreme U.S. premiums not enough to save Hawesville smelter because power economics remain brutal; physical squeeze may not translate to equity upside.
+Evidence of delayed or incomplete pricing: Pricing unverified — flag for R2
+Extension / continuation read: Data unavailable — verify in R2
+Historical transmission check: Glencore cut its Century stake after an 80% tariff-driven rally, showing CENX sensitivity to U.S. aluminium pricing regimes.
+Public positioning confirmation: Data unavailable — verify in R2
+Practical tradability: Strong
+Expected repricing window: 1-6 weeks
+Why this is actionable now: Physical market shock is real, company linkage is direct, Century has explicit near-term earnings sensitivity.
+Main invalidation: Rapid de-escalation normalizing Gulf flows and premiums, or power-cost drag overwhelming pricing gains.
+Crowding risk: Medium
+Confidence: Medium
+Key uncertainties for R2 verification: Multi-session tape confirmation, realized premium pass-through, hedge profile, Q1 earnings date, power-cost drag.
+Known idiosyncratic risks: Power-cost competition with data centers, permanent Hawesville closure, Iceland equipment failure.
+Source support caveat: Bullish linkage well supported but delayed-pricing proof insufficient for Tier 1.
+Key sources relied upon: Reuters (March 19, 17, 4, 2026); Century Aluminum Q4 2025 Results (Feb 19, 2026); Reuters (Feb 18, 2026); Reuters/LSEG quote data (March 23, 2026).
+Correlation Warning: Moderate
+Shared root catalyst: Iran-war / Strait-of-Hormuz energy and materials shock
+Why these are correlated rather than independent: Both downstream of same regional supply-disruption regime; IDEA #1 hurt by higher fuel, IDEA #2 benefits from tighter metal supply.

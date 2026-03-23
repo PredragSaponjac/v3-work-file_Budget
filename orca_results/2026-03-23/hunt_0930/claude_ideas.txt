@@ -1,0 +1,39 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: Model-built
+Ticker: CF
+Company: CF Industries Holdings, Inc.
+Direction: Bullish
+Live / Emerging Catalyst: Strait of Hormuz closure has stranded ~35% of global seaborne urea and phosphate supply since early March 2026. Iranian strikes damaged Qatar's Ras Laffan (world's largest single-site urea producer), knocking 17% of Qatar's LNG capacity offline for 3-5 years — LNG being the critical feedstock for nitrogen fertilizer synthesis. NOLA urea benchmark has surged ~30% to $550/ton, with global spot reported as high as $680/ton. The Northern Hemisphere spring planting window is now active, meaning the shortage cannot be retroactively resolved even if the Strait reopens. USDA Prospective Plantings report due March 31, 2026 will quantify the corn-to-soybean acreage shift forced by nitrogen scarcity.
+Catalyst Status: Active
+Catalyst Event Date: Hormuz closure began ~March 2-4, 2026; Qatar Ras Laffan LNG infrastructure damage confirmed March 2; further damage confirmed March 19 (17% capacity, 3-5 year repair). USDA Prospective Plantings: March 31, 2026.
+Market Visibility Date: March 2, 2026 (initial); escalating since with each infrastructure damage confirmation.
+Hard-Date Status: Hard Date (USDA Prospective Plantings March 31, 2026)
+Next Earnings Date: May 6, 2026
+Source quality: Mixed
+Why this company is the cleanest expression: CF Industries is a pure-play North American nitrogen fertilizer producer. Approximately 82% of its base product is nitrogen. All production assets are in the U.S., Canada, and UK — entirely insulated from Persian Gulf supply disruption. CF uses low-cost North American Henry Hub natural gas as feedstock while selling into a global market now starved for supply.
+What already moved: NOLA urea benchmark surged ~30% to $550/ton (spot up to $680/ton). European TTF gas benchmarks nearly doubled above €60/MWh. Global seaborne nitrogen trade has contracted ~35%. CF's own stock rallied to an all-time high of $137.44 by mid-March.
+What has already repriced in this stock (and approximate magnitude): CF rose from approximately $73 at year-end 2025 to an ATH of $137.44 by ~March 12, a gain of approximately 88%. It has since pulled back approximately 14-15% to ~$117 as of March 23, 2026.
+What has not repriced enough: The pullback from $137 to $117 coincided with urea prices continuing to surge (30%+ and climbing) and the nitrogen shortage intensifying, not resolving.
+Expected tactical payoff range (% move): Data unavailable — verify in R2
+Thesis (2-4 sentences max): CF Industries is the purest North American nitrogen play benefiting from the most severe global fertilizer supply disruption since the 2022 Russia-Ukraine crisis. The Hormuz closure has stranded ~35% of global seaborne urea supply during the critical spring planting window, sending urea prices to multi-year highs. CF's ~14% pullback from its March ATH creates a potential dislocation between worsening nitrogen fundamentals and a stock repricing lower on macro noise and DOJ overhang.
+Transmission type and why lag exists: Direct commodity-to-producer transmission. The pullback appears driven by three transient factors: (1) general equity market weakness; (2) DOJ antitrust investigation; (3) ceasefire hopes.
+Why the market may still be late: Ceasefire does not undo the 3-5 year damage to Qatar's nitrogen feedstock infrastructure. The spring planting window is biologically fixed.
+Counter-thesis / best bear case against this setup: DOJ antitrust investigation could structurally impair CF's margin advantage. If ceasefire opens Strait rapidly, crisis premium deflates. Stock at $117 already above analyst consensus (~$101-106).
+Evidence of delayed or incomplete pricing: Pricing unverified — flag for R2
+Extension / continuation read: CF rose ~88% from year-end 2025 to its March ATH and has pulled back ~14-15%.
+Historical transmission check: In the 2022 Russia-Ukraine fertilizer crisis, CF rallied from ~$70 to ~$113 then pulled back before continuation.
+Public positioning confirmation: Data unavailable — verify in R2
+Practical tradability: Strong
+Expected repricing window: 1-3 weeks (anchored by USDA Prospective Plantings March 31)
+Why this is actionable now: 14% pullback from ATH creates favorable entry. USDA hard date 8 days away.
+Main invalidation: Rapid ceasefire + DOJ enforcement action.
+Crowding risk: Medium
+Confidence: Low
+Key uncertainties for R2 verification: Current price action drivers, hedging book, DOJ timeline, institutional positioning, options structure.
+Known idiosyncratic risks: DOJ antitrust investigation; UK operations energy cost exposure.
+Source support caveat: Model-built packet. Underreaction thesis is inferential.
+Key sources relied upon: Reuters, CNBC, Carnegie Endowment, Atlantic Council, Investing.com, FinancialContent/MarketMinute, Schwab weekly outlook, Wikipedia.
+Correlation Warning: None
+Shared root catalyst: None
+Why these are correlated rather than independent: None
