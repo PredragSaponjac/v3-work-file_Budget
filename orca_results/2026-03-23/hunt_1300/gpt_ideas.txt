@@ -1,0 +1,51 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: Model-built
+Ticker: AAL
+Company: American Airlines Group Inc.
+Direction: Bearish
+Live / Emerging Catalyst: Iran-war fuel shock remains active. AAL has worst documented fuel sensitivity among large U.S. carriers.
+Catalyst Status: Active
+Catalyst Event Date: March 17, 2026
+Market Visibility Date: March 17, 2026
+Hard-Date Status: No Hard Date
+Next Earnings Date: Data unavailable — verify in R2
+Source quality: Mixed
+Why this company is the cleanest expression: Jefferies: 5% fuel-cost increase could cut AAL profit by ~35% vs 5-10% for Delta/United.
+What already moved: Jet fuel up ~50% since late Feb. AAL disclosed $400M quarterly fuel hit.
+What has already repriced in this stock (and approximate magnitude): Data unavailable — verify in R2
+What has not repriced enough: Market pricing demand resilience, underweighting AAL's peer-relative fuel exposure.
+Expected tactical payoff range (% move): Data unavailable — verify in R2
+Thesis: AAL is cleanest bearish airline expression of fuel-shock regime. Even after Monday's oil plunge, Goldman raised March-April Brent forecast to $110 seeing extended disruption risk.
+Counter-thesis: U.S. carriers successfully pushing fare increases, analysts raised 2026 earnings estimates. If oil retreats and fares hold, market may be right.
+Evidence of delayed or incomplete pricing: AAL gained on March 17 despite disclosing $400M fuel hit and Jefferies flagging 35% profit sensitivity.
+Practical tradability: Strong
+Expected repricing window: Days to 3 weeks
+Confidence: Medium
+Correlation Warning: Moderate — same Hormuz root catalyst as IDEA #2.
+
+IDEA #2
+Tier: R2 Verification Watchlist
+Packet origin: Model-built
+Ticker: CENX
+Company: Century Aluminum Co.
+Direction: Bullish
+Live / Emerging Catalyst: Gulf aluminium supply disruption pushed aluminium to four-year highs and U.S. premiums to records.
+Catalyst Status: Active
+Catalyst Event Date: March 19, 2026
+Market Visibility Date: March 19, 2026
+Hard-Date Status: No Hard Date
+Next Earnings Date: Data unavailable — verify in R2
+Source quality: Mixed
+Why this company is the cleanest expression: Century is largest U.S. primary aluminium producer, smelting ~60% of U.S. primary aluminum. Q1 EBITDA guided higher on improved pricing.
+What already moved: Aluminium at $3,545.50/ton (4-year high), U.S. Midwest premiums at $2,400/ton, ~570,000 tons Gulf capacity disrupted.
+What has already repriced in this stock (and approximate magnitude): CENX down ~0.7% on March 23.
+What has not repriced enough: Equity not capitalizing record premiums and Century's explicit EBITDA leverage.
+Expected tactical payoff range (% move): Data unavailable — verify in R2
+Thesis: Cleanest U.S. primary aluminium beneficiary of live physical-market shock. Reuters documented real squeeze, Century's guidance already embeds positive pricing leverage.
+Counter-thesis: Power economics forced Hawesville shutdown despite tariff support. Energy costs may overwhelm metal-price tailwind.
+Evidence of delayed or incomplete pricing: Pricing unverified — flag for R2
+Practical tradability: Strong
+Expected repricing window: 1-6 weeks
+Confidence: Medium
+Correlation Warning: Moderate — same Hormuz root catalyst as IDEA #1.

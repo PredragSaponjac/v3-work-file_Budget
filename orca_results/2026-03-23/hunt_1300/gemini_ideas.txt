@@ -1,0 +1,51 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: Model-built
+Ticker: DAL
+Company: Delta Air Lines, Inc.
+Direction: Bearish
+Live / Emerging Catalyst: Iran officially denied U.S. claims of bilateral peace negotiations, invalidating the core premise of today's massive risk-on airline rally.
+Catalyst Status: Active
+Catalyst Event Date: March 23, 2026
+Market Visibility Date: March 23, 2026
+Hard-Date Status: No Hard Date
+Next Earnings Date: Data unavailable — verify in R2
+Source quality: Primary
+Why this company is the cleanest expression: Delta surged nearly 4% today explicitly because the market believed the Middle East conflict was ending.
+What already moved: Brent crude crashed ~8% and S&P 500 rallied ~2% on Trump's peace talk claims.
+What has already repriced in this stock (and approximate magnitude): DAL shares surged 3.75% to $65.81.
+What has not repriced enough: Iran's explicit, official denial meaning geopolitical risk to oil supplies remains fully active.
+Expected tactical payoff range (% move): Data unavailable — verify in R2
+Thesis: Trump triggered a massive relief rally by claiming U.S.-Iran peace talks. Iran's foreign ministry explicitly denied these claims. Algorithms priced the U.S. headline while ignoring the Iranian denial. DAL set up for sharp reversion.
+Counter-thesis: U.S. postponed military strikes for five days, guaranteeing temporary reprieve in fuel disruptions justifying near-term relief rally.
+Evidence of delayed or incomplete pricing: DAL rallied 3.75% on peace claims while Iran denied the news, yet shares held gains through close.
+Practical tradability: Strong
+Expected repricing window: Days to 1 week
+Confidence: High
+Correlation Warning: Highly correlated with IDEA #2 (LMT).
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: Model-built
+Ticker: LMT
+Company: Lockheed Martin Corp.
+Direction: Bullish
+Live / Emerging Catalyst: Iran's official denial of U.S. peace talks, refuting premise of today's defense sector sell-off.
+Catalyst Status: Active
+Catalyst Event Date: March 23, 2026
+Market Visibility Date: March 23, 2026
+Hard-Date Status: No Hard Date
+Next Earnings Date: Data unavailable — verify in R2
+Source quality: Primary
+Why this company is the cleanest expression: Lockheed Martin is a premier U.S. defense prime actively sold off as market incorrectly priced in end to Middle East conflict.
+What already moved: S&P 500 surged ~1.5%, crude crashed ~8% on Trump's peace claims driving risk-on rotation out of defense.
+What has already repriced in this stock (and approximate magnitude): LMT fell to $624.87, down ~0.4% at close after being down over 1.5% intraday.
+What has not repriced enough: Iran's categorical denial reinstates geopolitical threat environment supporting defense valuations.
+Expected tactical payoff range (% move): Data unavailable — verify in R2
+Thesis: Defense stocks sold off as algorithms unwound geopolitical risk premiums on Trump's peace claims. Iran denied any discussions. Market priced U.S. headline while ignoring Iranian refutation. LMT to reclaim geopolitical premium.
+Counter-thesis: LMT already rallied 34% YTD. Sell-off may be profit taking, not peace-related.
+Evidence of delayed or incomplete pricing: LMT closed down while Iran denied peace talks, failing to reverse losses.
+Practical tradability: Strong
+Expected repricing window: Days to 1 week
+Confidence: High
+Correlation Warning: Highly correlated with IDEA #1 (DAL).

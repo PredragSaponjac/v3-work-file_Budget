@@ -1,0 +1,78 @@
+ORCA V3 CONSENSUS — 2026-03-23 Hunt 01:00 PM CT
+==================================================
+
+MODELS: Claude Opus | Gemini | GPT-4o
+PROMPT: r1_master_v5_3_manual.txt (Open Hunt, no packet)
+
+==================================================
+CONSENSUS MATRIX
+==================================================
+
+Ticker  | Claude          | Gemini          | GPT             | Overlap
+--------|-----------------|-----------------|-----------------|--------
+DAL     | —               | Accepted (High)  | —               | 1/3
+LMT     | —               | Accepted (High)  | —               | 1/3
+AAL     | —               | —                | Accepted (Med)  | 1/3
+CENX    | —               | —                | Watchlist (Med)  | 1/3
+LNG     | Watchlist (Med)  | —               | —               | 1/3
+
+==================================================
+THEMATIC CONSENSUS
+==================================================
+
+BEARISH AIRLINES (DAL + AAL): 2/3 models found bearish airline plays
+  - Gemini: DAL (Iran denial invalidates peace rally)
+  - GPT: AAL (worst fuel sensitivity among peers)
+  - Thematic agreement on "short airlines" even though different tickers
+
+IRAN DENIAL TRADE (DAL + LMT): Gemini's paired trade
+  - Short DAL (fake peace winner) + Long LMT (fake peace loser)
+  - Same catalyst, opposite expressions
+  - Highly correlated — both depend on Iran denial holding
+
+STRUCTURAL SUPPLY SHOCK (LNG + CENX): Claude + GPT
+  - Claude: LNG (Qatar Ras Laffan damage = ceasefire-proof)
+  - GPT: CENX (Gulf aluminium squeeze)
+  - Both structural, not just cyclical
+
+==================================================
+RANKED IDEAS
+==================================================
+
+#1 — DAL (Bearish) — Accepted — Gemini only but HIGH confidence
+    Catalyst: Iran denied peace talks, rally is based on false premise
+    Edge: Same-day divergence, clean evidence
+    Risk: 5-day strike pause may justify temporary relief
+
+#2 — AAL (Bearish) — Accepted — GPT (repeat from AM)
+    Catalyst: 35% profit hit vs 5-10% for peers, Goldman raised Brent forecast
+    Edge: Quantified peer-relative sensitivity
+    Risk: Fare pass-through may offset
+
+#3 — LMT (Bullish) — Accepted — Gemini only but HIGH confidence
+    Catalyst: Defense sold off on fake peace, Iran denied talks
+    Edge: Paired with DAL short for hedged expression
+    Risk: Already up 34% YTD, may be profit taking
+
+#4 — LNG (Bullish) — Watchlist — Claude only, MEDIUM confidence
+    Catalyst: Qatar 17% LNG capacity offline 3-5 years (ceasefire-proof)
+    Edge: Structural, not cyclical — most differentiated idea of the day
+    Risk: Already up 45% YTD, 94% contracted limits near-term spot benefit
+
+#5 — CENX (Bullish) — Watchlist — GPT only, MEDIUM confidence
+    Catalyst: Record aluminum premiums, CENX is 60% of U.S. primary production
+    Edge: Direct EBITDA leverage to premiums
+    Risk: Power costs may overwhelm
+
+==================================================
+CORRELATION WARNING
+==================================================
+DAL, AAL, LMT, LNG, CENX — ALL share root catalyst: Iran-war / Hormuz
+These are NOT independent bets. The entire PM hunt is one macro theme.
+Morning ideas AES and RYTM remain the only uncorrelated ideas today.
+
+==================================================
+NEXT STEPS
+==================================================
+- 3:00 PM CT: Final R1 hunt (all 3 models)
+- 8:00 PM CT: Teacher reviews all hunts

@@ -1,0 +1,26 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: Model-built
+Ticker: LNG
+Company: Cheniere Energy, Inc.
+Direction: Bullish
+Live / Emerging Catalyst: Iran's missile strikes on Qatar's Ras Laffan LNG terminal (March 19, 2026) knocked out an estimated 17% of Qatar's LNG export capacity with a 3-to-5-year repair timeline.
+Catalyst Status: Recently Triggered
+Catalyst Event Date: March 19, 2026
+Market Visibility Date: March 19, 2026
+Hard-Date Status: No Hard Date
+Next Earnings Date: May 7, 2026 (estimated)
+Source quality: Mixed
+Why this company is the cleanest expression: Cheniere is the largest U.S. LNG exporter, operating Sabine Pass and Corpus Christi terminals with capacity exceeding 51 million metric tons per annum.
+What already moved: European TTF nearly doubled to over €60/MWh. Asian LNG spot prices rose ~88%. QatarEnergy declared force majeure. Cheniere hit 52-week high of $299.49.
+What has already repriced in this stock (and approximate magnitude): LNG up ~44.9% YTD and 11.8% over past week. Pulled back to ~$281 on March 23.
+What has not repriced enough: Market conflating cyclical Hormuz premium (reversible) with structural Qatar Ras Laffan capacity loss (3-5 year repair, ceasefire-independent).
+Expected tactical payoff range (% move): Data unavailable — verify in R2
+Thesis: Iran's physical destruction of 17% of Qatar's LNG export capacity is structural, not cyclical. Even in full ceasefire, this capacity remains offline 3-5 years. Cheniere is primary beneficiary. PEG of 0.16 suggests multi-year earnings uplift not yet embedded.
+Transmission type and why lag exists: Direct supply substitution. Market may be pricing entire energy premium as cyclical/reversible when material portion is structural.
+Counter-thesis: If ceasefire materializes, cyclical premium collapses. 94% long-term contracts mean spot moves have limited near-term impact. Stock already up 45% YTD.
+Evidence of delayed or incomplete pricing: Pricing unverified — flag for R2
+Practical tradability: Strong
+Expected repricing window: 1-6 weeks cyclical; Q2-Q3 2026 structural
+Confidence: Medium
+Key sources: Reuters, Bloomberg, CNBC, BMO Capital Markets, Morgan Stanley upgrade (March 23).
