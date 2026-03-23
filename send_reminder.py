@@ -72,7 +72,7 @@ def build_reminder(session_key):
         f"\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n"
         f"<i>{session['note']}</i>\n\n"
         f"<b>STEP 1: Paste prompt into 3 AI desktops</b>\n"
-        f"Open: <code>prompts/r1_master_v5_3.txt</code>\n\n"
+        f"Open: <code>prompts/r1_master_v5_3_manual.txt</code>\n\n"
         f"Paste into:\n"
         f"  1\ufe0f\u20e3 Claude desktop \u2192 save as <code>claude_ideas.txt</code>\n"
         f"  2\ufe0f\u20e3 ChatGPT \u2192 save as <code>gpt_ideas.txt</code>\n"
