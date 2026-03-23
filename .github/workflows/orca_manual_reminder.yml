@@ -1,0 +1,57 @@
+name: ORCA Manual Reminder
+
+on:
+  schedule:
+    # Mon-Fri 9:30 AM CT (CDT=UTC-5) = 14:30 UTC
+    - cron: '30 14 * * 1-5'
+    # Mon-Fri 1:00 PM CT (CDT=UTC-5) = 18:00 UTC
+    - cron: '0 18 * * 1-5'
+    # Mon-Fri 3:00 PM CT (CDT=UTC-5) = 20:00 UTC
+    - cron: '0 20 * * 1-5'
+
+  workflow_dispatch:
+    inputs:
+      session:
+        description: 'Session: morning, midday, afternoon'
+        required: false
+        default: 'morning'
+        type: string
+
+jobs:
+  send-reminder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests python-dotenv
+
+      - name: Determine session from cron
+        id: session
+        run: |
+          if [ -n "${{ github.event.inputs.session }}" ]; then
+            echo "session=${{ github.event.inputs.session }}" >> $GITHUB_OUTPUT
+          else
+            HOUR=$(date -u +%H)
+            if [ "$HOUR" = "14" ]; then
+              echo "session=morning" >> $GITHUB_OUTPUT
+            elif [ "$HOUR" = "18" ]; then
+              echo "session=midday" >> $GITHUB_OUTPUT
+            else
+              echo "session=afternoon" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Send Telegram reminder
+        env:
+          SPY_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python send_reminder.py --session ${{ steps.session.outputs.session }}
