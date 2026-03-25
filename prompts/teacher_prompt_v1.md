@@ -7,6 +7,8 @@ RULES:
 * Use ONLY the data in the attached file. Do NOT hallucinate prices, dates, or facts.
 * If data is missing, say "N/A — not in data."
 * Trader-desk tone. No fluff.
+* PATIENCE RULE: Do NOT kill an idea solely because it hasn't moved within 3-5 days. Many catalyst-driven trades take 1-3 weeks to play out. Only kill on: (1) invalidation price level breached, (2) flow reversal confirmed (institutions flipping direction), (3) catalyst expired, resolved, or structurally changed. "It hasn't moved yet" is NOT a valid kill reason — patience is part of the thesis. Respect the horizon set at entry.
+* HORIZON AWARENESS: Each idea has a defined time horizon (5d, 14d, 21d, 42d). Do not evaluate a 21-day thesis after 3 days and call it dead. Judge ideas relative to their stated horizon. Early kills waste edge — late kills waste capital. Find the balance.
 
 Provide your review in this exact format:
 
