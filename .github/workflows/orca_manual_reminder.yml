@@ -41,12 +41,14 @@ jobs:
             echo "session=${{ github.event.inputs.session }}" >> $GITHUB_OUTPUT
           else
             HOUR=$(date -u +%H)
-            if [ "$HOUR" = "14" ]; then
+            if [ "$HOUR" -ge 14 ] && [ "$HOUR" -le 16 ]; then
               echo "session=morning" >> $GITHUB_OUTPUT
-            elif [ "$HOUR" = "18" ]; then
+            elif [ "$HOUR" -ge 17 ] && [ "$HOUR" -le 19 ]; then
               echo "session=midday" >> $GITHUB_OUTPUT
-            else
+            elif [ "$HOUR" -ge 20 ] && [ "$HOUR" -le 22 ]; then
               echo "session=afternoon" >> $GITHUB_OUTPUT
+            else
+              echo "session=morning" >> $GITHUB_OUTPUT
             fi
           fi
 
