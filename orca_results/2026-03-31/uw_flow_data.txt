@@ -1,0 +1,384 @@
+===== CENX =====
+=== UW FLOW DATA: CENX ===
+
+--- MULTI-DAY FLOW ALERTS (9 sessions, 21 alerts) ---
+  Daily alert count: 03-11=3, 03-12=4, 03-13=1, 03-19=2, 03-20=2, 03-30=3, 03-31=4 (building)
+  Largest: $0.3M LowHistoricVolumeFloor PUT $50 exp 2026-06-18 | $0.2M RepeatedHitsAscendingFill CALL $50 exp 2026-03-20 | $0.1M RepeatedHits PUT $55 exp 2026-04-17
+  Composition: 71% calls, 29% puts | 3 sweeps, 0 blocks
+  Side concentration: 73% ask-side (accumulation bias)
+  Total premium: $1.0M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 337 → 1,612 → 308 → 1,517 → 4,470 (11.1x increase)
+  Put volume: 155 → 96 → 66 → 2,657 → 3,131
+  Call/put ratio: 2.2 → 16.8 → 4.7 → 0.6 → 1.4 (bullish shift)
+  Ask-side share: 39% → 12% → 60% → 40% → 47% 
+  Net premium: positive 4 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 120 prints) ---
+  Total notional: $72.0M
+  Daily: 03-24 $15.6M, 03-25 $3.2M, 03-26 $14.1M, 03-27 $25.9M, 03-30 $13.1M
+  Price clustering: 65% of prints in $49.05-$54.83 range
+  Repeated levels: $49.65 (7x), $48.4 (7x), $50.19 (6x)
+
+--- LIT FLOW SUMMARY (5 sessions, 158 trades) ---
+  Total notional: $122.0M
+  Daily: 03-24 $30.4M, 03-25 $10.0M, 03-26 $23.9M, 03-27 $9.9M, 03-30 $47.8M
+  Buy-side: 72% (demand bias)
+
+=== END UW FLOW DATA: CENX ===
+
+===== CVX =====
+=== UW FLOW DATA: CVX ===
+
+--- MULTI-DAY FLOW ALERTS (14 sessions, 200 alerts) ---
+  Daily alert count: 03-23=15, 03-24=16, 03-25=11, 03-26=19, 03-27=25, 03-30=12, 03-31=9 (steady)
+  Largest: $9.5M RepeatedHits CALL $200 exp 2026-05-15 | $6.1M RepeatedHits CALL $200 exp 2026-04-17 | $1.6M RepeatedHitsDescendingFill PUT $190 exp 2026-05-15
+  Composition: 66% calls, 34% puts | 41 sweeps, 0 blocks
+  Side concentration: 69% bid-side (distribution bias)
+  Total premium: $45.2M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 23,931 → 32,394 → 51,462 → 34,041 → 41,129 (stable)
+  Put volume: 32,724 → 17,269 → 30,022 → 19,744 → 27,444
+  Call/put ratio: 0.7 → 1.9 → 1.7 → 1.7 → 1.5 (bearish shift)
+  Ask-side share: 44% → 52% → 47% → 43% → 46% 
+  Net premium: positive 5 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $385.4M
+  Daily: 03-24 $65.2M, 03-25 $42.1M, 03-26 $142.9M, 03-27 $59.1M, 03-30 $76.0M
+  Price clustering: 52% of prints in $205.86-$210.85 range
+  Repeated levels: $205.15 (48x), $211.15 (43x), $207.79 (42x)
+
+--- LIT FLOW SUMMARY (5 sessions, 250 trades) ---
+  Total notional: $50.5M
+  Daily: 03-24 $10.0M, 03-25 $8.2M, 03-26 $10.0M, 03-27 $10.2M, 03-30 $12.0M
+  Buy-side: 59% (demand bias)
+
+=== END UW FLOW DATA: CVX ===
+
+===== CCL =====
+=== UW FLOW DATA: CCL ===
+
+--- MULTI-DAY FLOW ALERTS (10 sessions, 200 alerts) ---
+  Daily alert count: 03-23=27, 03-24=12, 03-25=17, 03-26=29, 03-27=30, 03-30=23, 03-31=15 (building)
+  Largest: $0.6M RepeatedHitsAscendingFill CALL $28 exp 2026-04-17 | $0.3M RepeatedHitsAscendingFill PUT $24 exp 2026-04-17 | $0.3M RepeatedHits PUT $22 exp 2026-07-17
+  Composition: 45% calls, 55% puts | 32 sweeps, 0 blocks
+  Side concentration: 61% ask-side (accumulation bias)
+  Total premium: $11.2M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 29,444 → 69,496 → 79,893 → 36,815 → 42,199 (stable)
+  Put volume: 26,552 → 35,273 → 89,631 → 29,200 → 28,862
+  Call/put ratio: 1.1 → 2.0 → 0.9 → 1.3 → 1.5 (bullish shift)
+  Ask-side share: 35% → 56% → 46% → 46% → 56% (accumulation accelerating)
+  Net premium: positive 6 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $150.9M
+  Daily: 03-24 $54.3M, 03-25 $14.7M, 03-26 $11.7M, 03-27 $29.6M, 03-30 $40.6M
+  Price clustering: 49% of prints in $24.14-$25.70 range
+  Repeated levels: $23.96 (20x), $24.19 (20x), $25.28 (20x)
+
+--- LIT FLOW SUMMARY (5 sessions, 45 trades) ---
+  Total notional: $7.1M
+  Daily: 03-24 $0.6M, 03-25 $1.1M, 03-26 $1.8M, 03-27 $3.0M, 03-30 $0.6M
+  Sell-side: 56% (supply bias)
+
+=== END UW FLOW DATA: CCL ===
+
+===== SLB =====
+=== UW FLOW DATA: SLB ===
+
+--- MULTI-DAY FLOW ALERTS (19 sessions, 131 alerts) ---
+  Daily alert count: 03-23=15, 03-24=14, 03-25=4, 03-26=3, 03-27=3, 03-30=6, 03-31=11 (steady)
+  Largest: $0.8M RepeatedHits CALL $50 exp 2026-04-17 | $0.8M RepeatedHits CALL $60 exp 2026-09-18 | $0.6M RepeatedHitsDescendingFill PUT $50 exp 2026-03-27
+  Composition: 55% calls, 45% puts | 25 sweeps, 0 blocks
+  Side concentration: balanced
+  Total premium: $18.8M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 29,025 → 15,866 → 21,906 → 15,497 → 11,298 (1.6x increase)
+  Put volume: 12,633 → 7,890 → 7,419 → 7,902 → 32,270
+  Call/put ratio: 2.3 → 2.0 → 3.0 → 2.0 → 0.4 (bearish shift)
+  Ask-side share: 56% → 67% → 49% → 48% → 57% (accumulation accelerating)
+  Net premium: positive 6 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $305.5M
+  Daily: 03-24 $43.8M, 03-25 $23.4M, 03-26 $23.2M, 03-27 $129.4M, 03-30 $85.6M
+  Price clustering: 60% of prints in $50.97-$52.95 range
+  Repeated levels: $50.51 (43x), $51.53 (41x), $53.5 (37x)
+
+--- LIT FLOW SUMMARY (5 sessions, 58 trades) ---
+  Total notional: $13.8M
+  Daily: 03-24 $0.1M, 03-25 $8.2M, 03-26 $1.4M, 03-27 $3.1M, 03-30 $0.9M
+  Buy-side: 60% (demand bias)
+
+=== END UW FLOW DATA: SLB ===
+
+===== GAP =====
+=== UW FLOW DATA: GAP ===
+
+--- MULTI-DAY FLOW ALERTS (20 sessions, 85 alerts) ---
+  Daily alert count: 03-23=2, 03-24=2, 03-25=3, 03-26=3, 03-27=3, 03-30=1, 03-31=2 (fading)
+  Largest: $0.5M RepeatedHits PUT $26 exp 2026-04-17 | $0.4M RepeatedHitsAscendingFill PUT $22 exp 2026-04-17 | $0.2M RepeatedHits PUT $25 exp 2026-03-20
+  Composition: 49% calls, 51% puts | 16 sweeps, 0 blocks
+  Side concentration: balanced
+  Total premium: $4.2M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 2,484 → 2,456 → 3,211 → 2,012 → 2,528 (0.3x, declining)
+  Put volume: 2,545 → 6,718 → 4,221 → 1,714 → 3,230
+  Call/put ratio: 1.0 → 0.4 → 0.8 → 1.2 → 0.8 (bearish shift)
+  Ask-side share: 54% → 49% → 68% → 50% → 38% (distribution)
+  Net premium: positive 4 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 184 prints) ---
+  Total notional: $76.2M
+  Daily: 03-24 $23.9M, 03-25 $11.4M, 03-26 $10.6M, 03-27 $9.0M, 03-30 $21.2M
+  Price clustering: 60% of prints in $24.15-$25.38 range
+  Repeated levels: $25.07 (10x), $23.83 (9x), $23.93 (9x)
+
+=== END UW FLOW DATA: GAP ===
+
+===== OXM =====
+=== UW FLOW DATA: OXM ===
+
+--- MULTI-DAY FLOW ALERTS (4 sessions, 19 alerts) ---
+  Daily alert count: 03-11=2, 03-12=3, 03-13=4, 03-17=10 (building)
+  Largest: $0.1M RepeatedHits PUT $40 exp 2026-03-20 | $0.1M RepeatedHits PUT $40 exp 2026-03-20 | $0.0M RepeatedHits PUT $40 exp 2026-03-20
+  Composition: 0% calls, 100% puts | 0 sweeps, 0 blocks
+  Side concentration: 85% ask-side (accumulation bias)
+  Total premium: $0.5M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 12 → 225 → 156 → 14 → 72 (4.5x increase)
+  Put volume: 95 → 249 → 274 → 82 → 113
+  Call/put ratio: 0.1 → 0.9 → 0.6 → 0.2 → 0.6 (bullish shift)
+  Ask-side share: 19% → 36% → 48% → 34% → 22% (distribution)
+  Net premium: positive 3 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 13 prints) ---
+  Total notional: $1.7M
+  Daily: 03-24 $0.4M, 03-25 $0.2M, 03-26 $0.1M, 03-27 $0.8M, 03-30 $0.1M
+  Price clustering: 62% of prints in $33.17-$36.43 range
+  Repeated levels: $36.8 (2x), $32.97 (2x)
+
+--- LIT FLOW SUMMARY (1 sessions, 1 trades) ---
+  Total notional: $0.2M
+  Daily: 03-25 $0.2M
+  Buy-side: 100% (demand bias)
+
+=== END UW FLOW DATA: OXM ===
+
+===== ALK =====
+=== UW FLOW DATA: ALK ===
+
+--- MULTI-DAY FLOW ALERTS (19 sessions, 78 alerts) ---
+  Daily alert count: 03-20=1, 03-24=7, 03-25=9, 03-26=4, 03-27=1, 03-30=2, 03-31=6 (steady)
+  Largest: $0.5M SweepsFollowedByFloor PUT $42.5 exp 2026-04-17 | $0.2M RepeatedHits CALL $42.5 exp 2026-04-17 | $0.2M RepeatedHitsDescendingFill PUT $42.5 exp 2026-04-17
+  Composition: 40% calls, 60% puts | 7 sweeps, 0 blocks
+  Side concentration: 77% ask-side (accumulation bias)
+  Total premium: $3.6M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 1,238 → 1,981 → 1,753 → 5,063 → 3,202 (1.9x increase)
+  Put volume: 2,095 → 911 → 2,350 → 5,143 → 1,418
+  Call/put ratio: 0.6 → 2.2 → 0.7 → 1.0 → 2.3 (bullish shift)
+  Ask-side share: 53% → 33% → 54% → 38% → 56% (accumulation accelerating)
+  Net premium: positive 5 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 232 prints) ---
+  Total notional: $57.1M
+  Daily: 03-24 $15.2M, 03-25 $10.8M, 03-26 $7.1M, 03-27 $13.2M, 03-30 $10.8M
+  Price clustering: 67% of prints in $35.34-$39.36 range
+  Repeated levels: $36.16 (9x), $34.19 (8x), $39.28 (5x)
+
+--- LIT FLOW SUMMARY (5 sessions, 11 trades) ---
+  Total notional: $1.6M
+  Daily: 03-24 $0.2M, 03-25 $0.5M, 03-26 $0.3M, 03-27 $0.2M, 03-30 $0.4M
+  Buy-side: 66% (demand bias)
+
+=== END UW FLOW DATA: ALK ===
+
+===== S =====
+=== UW FLOW DATA: S ===
+
+--- MULTI-DAY FLOW ALERTS (16 sessions, 64 alerts) ---
+  Daily alert count: 03-19=2, 03-20=5, 03-24=1, 03-25=2, 03-26=2, 03-27=9, 03-30=2 (fading)
+  Largest: $1.7M RepeatedHits CALL $15 exp 2026-09-18 | $0.6M RepeatedHits CALL $15 exp 2026-09-18 | $0.4M RepeatedHits CALL $15 exp 2026-09-18
+  Composition: 75% calls, 25% puts | 6 sweeps, 0 blocks
+  Side concentration: 73% bid-side (distribution bias)
+  Total premium: $4.9M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 3,946 → 1,956 → 19,958 → 9,499 → 1,657 (stable)
+  Put volume: 569 → 320 → 12,086 → 1,001 → 931
+  Call/put ratio: 6.9 → 6.1 → 1.7 → 9.5 → 1.8 (bearish shift)
+  Ask-side share: 52% → 37% → 36% → 71% → 40% (distribution)
+  Net premium: positive 1 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 171 prints) ---
+  Total notional: $45.7M
+  Daily: 03-24 $5.7M, 03-25 $8.2M, 03-26 $4.6M, 03-27 $16.2M, 03-30 $11.1M
+  Price clustering: 56% of prints in $12.63-$13.44 range
+  Repeated levels: $12.61 (10x), $13.4 (10x), $13.36 (10x)
+
+--- LIT FLOW SUMMARY (1 sessions, 1 trades) ---
+  Total notional: $0.1M
+  Daily: 03-25 $0.1M
+  Buy-side: 100% (demand bias)
+
+=== END UW FLOW DATA: S ===
+
+===== LNG =====
+=== UW FLOW DATA: LNG ===
+
+--- MULTI-DAY FLOW ALERTS (21 sessions, 165 alerts) ---
+  Daily alert count: 03-23=2, 03-24=6, 03-25=2, 03-26=2, 03-27=19, 03-30=3, 03-31=5 (building)
+  Largest: $1.1M RepeatedHits CALL $290 exp 2027-01-15 | $0.7M RepeatedHits CALL $250 exp 2026-04-17 | $0.5M RepeatedHits CALL $305 exp 2026-04-02
+  Composition: 67% calls, 33% puts | 27 sweeps, 0 blocks
+  Side concentration: 57% ask-side (accumulation bias)
+  Total premium: $20.2M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 9,013 → 7,853 → 10,851 → 7,673 → 8,200 (0.6x, declining)
+  Put volume: 5,281 → 4,943 → 10,878 → 5,193 → 4,381
+  Call/put ratio: 1.7 → 1.6 → 1.0 → 1.5 → 1.9 (bearish shift)
+  Ask-side share: 46% → 48% → 49% → 51% → 57% (accumulation accelerating)
+  Net premium: positive 8 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $76.0M
+  Daily: 03-24 $14.9M, 03-25 $13.5M, 03-26 $18.4M, 03-27 $13.5M, 03-30 $15.7M
+  Price clustering: 61% of prints in $287.74-$296.17 range
+  Repeated levels: $293.64 (23x), $294.58 (23x), $284.39 (18x)
+
+--- LIT FLOW SUMMARY (5 sessions, 220 trades) ---
+  Total notional: $38.9M
+  Daily: 03-24 $8.6M, 03-25 $8.1M, 03-26 $7.1M, 03-27 $11.2M, 03-30 $3.9M
+  Side: balanced (52% buy)
+
+=== END UW FLOW DATA: LNG ===
+
+===== CF =====
+=== UW FLOW DATA: CF ===
+
+--- MULTI-DAY FLOW ALERTS (13 sessions, 200 alerts) ---
+  Daily alert count: 03-23=18, 03-24=6, 03-25=11, 03-26=3, 03-27=18, 03-30=17, 03-31=21 (steady)
+  Largest: $0.5M RepeatedHitsAscendingFill CALL $130 exp 2026-03-27 | $0.4M FloorTradeLargeCap PUT $125 exp 2026-04-17 | $0.4M RepeatedHits CALL $110 exp 2026-03-20
+  Composition: 70% calls, 30% puts | 34 sweeps, 0 blocks
+  Side concentration: 55% ask-side (accumulation bias)
+  Total premium: $11.1M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 4,227 → 11,665 → 15,221 → 17,196 → 9,615 (0.4x, declining)
+  Put volume: 3,480 → 3,058 → 7,262 → 3,715 → 8,556
+  Call/put ratio: 1.2 → 3.8 → 2.1 → 4.6 → 1.1 (bearish shift)
+  Ask-side share: 48% → 50% → 46% → 49% → 55% 
+  Net premium: positive 5 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $229.8M
+  Daily: 03-24 $48.0M, 03-25 $58.1M, 03-26 $28.0M, 03-27 $29.9M, 03-30 $65.8M
+  Price clustering: 58% of prints in $127.24-$136.50 range
+  Repeated levels: $137.6 (27x), $126.92 (20x), $132.56 (19x)
+
+--- LIT FLOW SUMMARY (5 sessions, 91 trades) ---
+  Total notional: $17.6M
+  Daily: 03-24 $2.5M, 03-25 $1.5M, 03-26 $1.7M, 03-27 $0.8M, 03-30 $11.0M
+  Buy-side: 66% (demand bias)
+
+=== END UW FLOW DATA: CF ===
+
+===== EQT =====
+=== UW FLOW DATA: EQT ===
+
+--- MULTI-DAY FLOW ALERTS (22 sessions, 182 alerts) ---
+  Daily alert count: 03-23=7, 03-24=9, 03-25=2, 03-26=5, 03-27=3, 03-30=11, 03-31=4 (steady)
+  Largest: $7.5M FloorTradeLargeCap CALL $70 exp 2028-01-21 | $2.2M LowHistoricVolumeFloor PUT $47 exp 2027-01-15 | $1.0M RepeatedHitsDescendingFill CALL $75 exp 2027-01-15
+  Composition: 66% calls, 34% puts | 31 sweeps, 0 blocks
+  Side concentration: 65% bid-side (distribution bias)
+  Total premium: $19.9M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 5,411 → 6,554 → 7,644 → 11,332 → 5,969 (0.6x, declining)
+  Put volume: 6,886 → 1,309 → 3,464 → 6,121 → 4,374
+  Call/put ratio: 0.8 → 5.0 → 2.2 → 1.9 → 1.4 
+  Ask-side share: 70% → 39% → 48% → 59% → 47% 
+  Net premium: positive 3 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $327.1M
+  Daily: 03-24 $104.8M, 03-25 $92.9M, 03-26 $64.2M, 03-27 $45.7M, 03-30 $19.5M
+  Price clustering: 67% of prints in $65.25-$67.78 range
+  Repeated levels: $65.33 (23x), $64.44 (22x), $67.55 (20x)
+
+--- LIT FLOW SUMMARY (4 sessions, 20 trades) ---
+  Total notional: $3.0M
+  Daily: 03-24 $0.4M, 03-25 $1.0M, 03-26 $1.2M, 03-30 $0.3M
+  Sell-side: 59% (supply bias)
+
+=== END UW FLOW DATA: EQT ===
+
+===== NTR =====
+=== UW FLOW DATA: NTR ===
+
+--- MULTI-DAY FLOW ALERTS (21 sessions, 147 alerts) ---
+  Daily alert count: 03-23=6, 03-24=6, 03-25=4, 03-26=7, 03-27=7, 03-30=2, 03-31=13 (fading)
+  Largest: $0.3M RepeatedHits CALL $80 exp 2027-01-15 | $0.3M RepeatedHitsAscendingFill CALL $90 exp 2028-01-21 | $0.3M RepeatedHitsAscendingFill CALL $80 exp 2026-03-20
+  Composition: 94% calls, 6% puts | 22 sweeps, 0 blocks
+  Side concentration: balanced
+  Total premium: $8.7M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 4,112 → 10,966 → 6,964 → 7,398 → 9,055 (stable)
+  Put volume: 1,475 → 1,518 → 1,923 → 768 → 1,005
+  Call/put ratio: 2.8 → 7.2 → 3.6 → 9.6 → 9.0 (bullish shift)
+  Ask-side share: 45% → 38% → 58% → 56% → 48% 
+  Net premium: positive 6 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $157.2M
+  Daily: 03-24 $27.4M, 03-25 $29.8M, 03-26 $60.5M, 03-27 $15.9M, 03-30 $23.6M
+  Price clustering: 70% of prints in $74.65-$77.11 range
+  Repeated levels: $76.82 (12x), $73.69 (11x), $76.75 (11x)
+
+--- LIT FLOW SUMMARY (5 sessions, 27 trades) ---
+  Total notional: $4.2M
+  Daily: 03-24 $0.6M, 03-25 $1.7M, 03-26 $0.9M, 03-27 $0.7M, 03-30 $0.3M
+  Side: balanced (50% buy)
+
+=== END UW FLOW DATA: NTR ===
+
+===== FANG =====
+=== UW FLOW DATA: FANG ===
+
+--- MULTI-DAY FLOW ALERTS (16 sessions, 43 alerts) ---
+  Daily alert count: 03-20=2, 03-24=1, 03-25=3, 03-26=1, 03-27=1, 03-30=1, 03-31=1 (fading)
+  Largest: $0.9M RepeatedHits CALL $190 exp 2026-06-18 | $0.4M RepeatedHits CALL $180 exp 2026-03-20 | $0.2M RepeatedHitsAscendingFill PUT $170 exp 2026-03-20
+  Composition: 84% calls, 16% puts | 4 sweeps, 0 blocks
+  Side concentration: 69% ask-side (accumulation bias)
+  Total premium: $4.3M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 2,086 → 2,048 → 3,610 → 2,570 → 1,556 (0.6x, declining)
+  Put volume: 889 → 1,226 → 1,163 → 755 → 465
+  Call/put ratio: 2.3 → 1.7 → 3.1 → 3.4 → 3.3 (bullish shift)
+  Ask-side share: 58% → 52% → 47% → 35% → 45% (distribution)
+  Net premium: positive 4 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $256.0M
+  Daily: 03-24 $26.8M, 03-25 $13.2M, 03-26 $35.2M, 03-27 $148.9M, 03-30 $31.9M
+  Price clustering: 42% of prints in $196.48-$201.60 range
+  Repeated levels: $201.84 (43x), $198.65 (24x), $197.06 (21x)
+
+--- LIT FLOW SUMMARY (5 sessions, 250 trades) ---
+  Total notional: $189.5M
+  Daily: 03-24 $29.7M, 03-25 $32.3M, 03-26 $48.1M, 03-27 $60.5M, 03-30 $18.8M
+  Sell-side: 73% (supply bias)
+
+=== END UW FLOW DATA: FANG ===
