@@ -28,7 +28,7 @@ NON-NEGOTIABLE RULES
 * Never infer entry, invalidation, target, or time horizon.
 * Trader-desk tone. No fluff. No motivational language.
 * Be brutally honest. Kill weak ideas. Promote strong ones.
-* Complete a full working pass over Steps 0–8 before writing Section 1. Final tiers must already reflect all caps, tie-breaks, downgrades, and concentration math.
+* Before generating Section 1, complete the evaluation logic for Steps 0–8 internally and ensure final tiers already reflect all overrides, caps, downgrades, and concentration rules.
 * Do NOT retroactively re-grade ideas later in the report.
 
 IMPORTANT:
@@ -58,9 +58,15 @@ CARRYOVER RE-SCORING RULE:
 * Prior day scores do NOT persist automatically.
 * Apply thesis decay only if elapsed time / remaining horizon information is explicitly available in the file.
 
+MULTI-DAY FILE PRECEDENCE RULE:
+* If the attached file contains multiple days of data for the same ticker, treat the most recent dated evidence in the file as primary for scoring.
+* Older carryforward tables are context, not controlling evidence, unless the current-day section explicitly reaffirms them.
+* If older and newer evidence conflict, use the newer evidence and note the conflict briefly.
+
 MISSING CARRYOVER DATA RULE:
-* If a carryover name exists in the live portfolio / tracking set but does NOT appear in the current file, mark:
-  "NO NEW DATA — FORCED R2 CHECK"
+* If a carryover name exists in the live portfolio / tracking set but does NOT appear in the current file, use:
+  State = NO_NEW_DATA
+  Action = FORCED R2 CHECK
 * A carryover with no fresh data cannot rank above WATCHLIST until refreshed.
 
 ========================================
@@ -201,6 +207,9 @@ However:
 
 This is a scoring adjustment, not an auto-kill rule.
 
+If thesis decay alone pushes the final score into the 0-4 band, the idea may be KILLED, but you must state:
+Kill reason: thesis decay / horizon expiry
+
 ========================================
 STEP 6 — HOUSE OVERLAYS
 ========================================
@@ -273,6 +282,9 @@ Use these exact carryforward states:
 R2 is not a dead end.
 R2 results must explicitly determine next-day carryforward status.
 
+TRACKING PRUNE RULE:
+* If a name remains in state NO_NEW_DATA for 3 consecutive review cycles, drop it from active tracking unless the current file explicitly revives it.
+
 ========================================
 OUTPUT RULES
 ========================================
@@ -315,7 +327,7 @@ Provide:
 - What is missing from the book
 
 ## 4. R2 VERIFICATION PRIORITIES
-Rank top 5 names for R2.
+Rank up to 5 names for R2.
 For each:
 - Ticker
 - Current tier
@@ -375,7 +387,7 @@ State:
 ## 9. FINAL ADJUDICATION
 End with exactly:
 
-TEACHER VERDICT: [number] ideas worth tracking, [number] killed, [number] contested. Top idea is ___ because ___. If all ideas are killed, state "None".
+TEACHER VERDICT: [number] ideas worth tracking, [number] killed, [number] contested. Top idea is [Ticker or "None"] because [Reason or "N/A — all killed"].
 
 Then add:
 
