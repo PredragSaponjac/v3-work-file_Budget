@@ -1,0 +1,33 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Primary
+Ticker | Company | Direction: RCKT | Rocket Pharmaceuticals | Bullish
+Catalyst: FDA accelerated approval of KRESLADI and the simultaneous issuance of a monetizable Rare Pediatric Disease Priority Review Voucher (PRV).
+Catalyst timing: March 27, 2026 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Cleanest expression: Rocket Pharmaceuticals is the direct recipient and sole owner of the newly issued PRV, holding it "in hand" with an explicitly stated intent to monetize the asset.
+What already moved: The open-market value of Priority Review Vouchers has been firmly established at $200M+ (Fortress Biotech's subsidiary closed a PRV sale for $205M on March 30, 2026, and Jazz Pharmaceuticals sold one for $200M in January 2026).
+Evidence of lag: Tabular and narrative market data from Zacks Investment Research explicitly show that despite being awarded a highly liquid asset worth ~$200M, RCKT stock plummeted 20% on the day of the announcement, compressing its total market cap to approximately $409 million.
+Thesis: On March 27, 2026, the FDA granted accelerated approval for Rocket's KRESLADI, triggering the immediate issuance of a PRV which management intends to monetize. The market reacted almost exclusively to the drug's tiny commercial TAM (an "ultra-rare" disease with single-digit annual patients), punishing the stock with a massive "sell-the-news" drop. In doing so, it completely mispriced the immediate, non-dilutive $200M+ cash value of the PRV itself, which represents roughly half of RCKT's entire depressed market cap. This creates a massive, unrecognized valuation floor that should force a rapid upside repricing as analysts update their balance sheet models and the company formally announces the voucher's sale.
+Counter-thesis: Rocket's explicitly reported cash balance of $188.9M is only projected to fund operations into Q2 2027 (per MarketBeat), which may lead the market to correctly assume that the $200M PRV proceeds will simply be consumed as operating runway to fund its broader pipeline rather than generating accretive equity value.
+R2 flags: Confirm current quarterly cash burn velocity; verify status and timeline of active PRV monetization discussions; assess risk of near-term PRV market saturation lowering the ultimate sale price.
+Key sources: Rocket Pharmaceuticals Press Release (March 27, 2026); Fortress Biotech Press Release (March 30, 2026); Zacks Investment Research ("RCKT Stock Down Despite FDA Nod"); MarketBeat.
++5
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: IPI | Intrepid Potash, Inc. | Bearish
+Catalyst: The closure of the Strait of Hormuz driving a massive price spike in nitrogen and ammonia fertilizers, while bypassing potash.
+Catalyst timing: Late February / March 2026 | Status: Active
+Repricing window: days to 3 weeks
+Cleanest expression: Intrepid Potash is the largest U.S. producer of potash, a fertilizer whose supply chain is structurally insulated from the Persian Gulf and has explicitly not participated in the Hormuz-driven price spike.
+What already moved: Nitrogen fertilizer markets (urea and ammonia) spiked over 28% within three weeks due to production concentration in the Persian Gulf.
+Evidence of lag: AAII market data confirms IPI shares surged over 25% over the past month, closing at $46.54 on March 27, incorrectly moving in tandem with nitrogen producers despite farmdoc daily explicitly stating "potash has been the exception" to the fertilizer price spikes.
+Thesis: The late-February 2026 closure of the Strait of Hormuz triggered a massive >28% spike in urea and ammonia prices due to their production concentration in the affected region. In response, the market indiscriminately bid up all agricultural input stocks, sending pure-play potash producer IPI up over 25% on sector momentum. However, agricultural commodity data explicitly confirms that "potash has been the exception" to the price spike. IPI is currently trading on a false sympathy rally disconnected from its actual product economics, and the equity should reprice lower as the market differentiates between genuine nitrogen beneficiaries and unaffected potash producers.
+Counter-thesis: As noted in the Capital Press, surging nitrogen prices may cause farmers to "plant fewer acres of corn and more acres of forage crops that take less fertilizer", fundamentally altering their overall nutrient application and indirectly increasing demand for domestic potash alternatives, structurally supporting IPI's rally.
+R2 flags: Verify if any minor nitrogen co-products exist within IPI's portfolio; confirm retail potash pricing trends at the farm-gate level.
+Key sources: farmdoc daily ("Strait of Hormuz Closure and Fertilizer Supply Risks for U.S. Agriculture"); CBC News ("Sask. is a potash and agriculture giant. So why is conflict in the Middle East a problem for farmers?"); Capital Press ("War pushes up fertilizer, fuel prices for spring plantings"); AAII (Historical Stock Quote).
++3

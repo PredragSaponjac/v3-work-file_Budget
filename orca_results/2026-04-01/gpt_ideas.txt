@@ -1,0 +1,32 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: ALK | Alaska Air Group | Bearish
+Catalyst: Alaska Air cut its first-quarter outlook after saying Iran-war-driven fuel prices are expected to average $2.9 to $3.0 per gallon and create an incremental earnings-per-share hit of at least $0.70.
+Catalyst timing: March 30, 2026 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Cleanest expression: Alaska is a clean listed expression because management explicitly quantified the hit, Reuters separately reported Alaska may have a harder time cushioning fuel-cost shocks than better-buffered peers, and Alaska's CEO said a $1 increase in jet fuel prices adds roughly $100 million in monthly cost.
+What already moved: Brent has soared about 58% in March, and Alaska now expects a first-quarter adjusted loss of $1.5 to $2.0 per share versus its prior $0.5 to $1.5 range.
+Evidence of lag: Reuters reported Alaska shares were only down 1.1% in premarket trading after that guide-down.
+Thesis: The catalyst is no longer hypothetical: Alaska pre-announced a materially worse quarter and tied it directly to fuel inflation from the Iran war. The stock reaction Reuters cited looks small relative to a 58% Brent spike, a quantified $0.70 EPS hit, and the structural fact that Alaska is less protected than Delta's refinery-backed model. If jet fuel stays elevated into April, estimates and sentiment can still reset lower from here.
+Counter-thesis: Alaska also said forward bookings for the next 90 days are up more than 25% year over year and that it is well positioned for its seasonally strongest quarter, so investors may treat the first-quarter hit as temporary if fuel eases.
+R2 flags: Weaker Mexico and Hawaii demand affecting about 30% of capacity complicates a pure fuel-readthrough; verify whether post-open price action and analyst estimate cuts confirm the underreaction; check any route, fare, or supply adjustments that could offset fuel pressure.
+Key sources: Reuters, March 30, 2026, "Alaska Air signals bigger first-quarter loss as fuel costs surge"; Reuters, March 6, 2026, "US airlines no longer hedge fuel costs. That could hurt margins if Iran conflict lingers"; Reuters, March 25, 2026, "Delta Air Lines' refinery bet looks more valuable in jet fuel squeeze."
+
+IDEA #2
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: LYB | LyondellBasell | Bullish
+Catalyst: Iran-war disruption has tightened petrochemical markets, with polyethylene up nearly 37%, polypropylene up more than 38%, and Asia naphtha margins above $400 per ton from about $108 before the conflict; Reuters described North America as the most cost-advantaged region because U.S. plastics are largely made from natural-gas feedstocks.
+Catalyst timing: Data unavailable -- verify in R2 | Status: Active
+Repricing window: days to 3 weeks
+Cleanest expression: LYB is the cleanest listed expression in the Reuters evidence because its CFO explicitly said polyethylene and polypropylene prices and oxyfuels linked to crude had risen significantly since the conflict began and that April order books were the strongest in several months.
+What already moved: Reuters reported polyethylene and polypropylene pricing jumped sharply, Asia naphtha margins blew out, and peers including Dow and Celanese were raising prices as the shock fed through the chain.
+Evidence of lag: Pricing unverified -- flag for R2
+Thesis: This is a clean transmission setup: Middle East disruption tightens globally traded petrochemicals, while North American gas-based producers sit on the advantaged cost curve. LYB has direct product exposure and contemporaneous management confirmation that pricing and order books improved as the shock developed. If the equity has not yet fully capitalized the margin expansion implied by those moves, the next few weeks could bring catch-up repricing.
+Counter-thesis: The price spike may prove temporary if the conflict cools, and Reuters also noted Europe remains squeezed, so LYB's broader footprint could dilute the benefit unless the stronger pricing persists long enough to reach realized earnings.
+R2 flags: Verify the stock's response versus the polymer and margin moves; check North America exposure versus Europe drag; confirm how much of the current pricing spike is contractual versus spot; confirm order-book strength translated into estimate revisions.
+Key sources: Reuters, March 26, 2026, "Iran war boosts plastics prices, squeezes Europe's industry, rewards US producers."
+Correlation note: Shared root catalyst with IDEA #1 is the Iran-war energy and transport disruption; these are correlated expressions of the same commodity shock rather than independent catalysts.
