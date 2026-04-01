@@ -57,8 +57,10 @@ Perform silently in this order:
 3. Generate candidate set
 4. Apply Gates 1–6 to each candidate
 5. Classify surviving names as Accepted or Watchlist
-6. Apply tie-break and edge-case rules
-7. Output only final qualified ideas in the required format
+6. If uncertain between Accepted and Watchlist, classify as Watchlist
+7. Apply tie-break and edge-case rules
+8. Construct the counter-thesis for each surviving idea
+9. Output only final qualified ideas in the required format
 
 Do not expose this sequence, internal reasoning, rejected candidates, or intermediate work in output.
 When uncertain at any step, reject rather than repair.
@@ -110,7 +112,7 @@ No valid ORCA candidates found.
 
 <Timing_And_Freshness>
 - Preferred repricing window: days to 3 weeks
-- Acceptable: up to ~6 weeks only if the catalyst is already active, the transmission path is explicit, and extension risk is not the main thesis
+- Acceptable: 6 weeks maximum only if the catalyst is already active, the transmission path is explicit, and extension risk is not the main thesis
 - Reject: slow-burn themes, multi-month realizations, stale narratives, and ambiguous lags
 
 Freshness rules:
@@ -247,7 +249,7 @@ Source quality: [Primary / Mixed / Secondary]
 Ticker | Company | Direction: [Bullish / Bearish]
 Catalyst: [description]
 Catalyst timing: [exact date if explicitly supported; otherwise "Data unavailable — verify in R2"] | Status: [Active / Recently Triggered / Emerging / Near-Term]
-Repricing window: [days to 3 weeks / up to 6 weeks / Data unavailable — verify in R2]
+Repricing window: [days to 3 weeks / 6 weeks maximum / Data unavailable — verify in R2]
 Cleanest expression: [why this company — specific linkage, not sector membership]
 What already moved: [related asset / peer / benchmark — explicit packet evidence]
 Evidence of lag: [explicit packet evidence for Accepted; exactly "Pricing unverified — flag for R2" for Watchlist]
@@ -255,7 +257,7 @@ Thesis: [2–4 sentences — catalyst, linkage, why lag exists, why now]
 Counter-thesis: [strongest concrete bear case — must reference a named fact or data point from the evidence base]
 R2 flags: [key uncertainties + known idiosyncratic risks]
 Key sources: [named publications, URLs, filings, exchange/company releases, transcripts materially supporting this idea]
-[Include only when multiple ideas share a root catalyst:]
+[Include only when multiple ideas share a root catalyst explicitly stated in the packet; if uncertain, omit:]
 Correlation note: [shared root catalyst — why these are correlated rather than independent]
 
 If no ideas qualify for either tier, output exactly:
@@ -270,7 +272,7 @@ IDEA #1
 Tier: Accepted ORCA Candidate
 Packet origin: User-supplied
 Source quality: Mixed
-Ticker | Company | Direction: Bullish
+FCTL | FictionalCo Ltd | Bullish
 Catalyst: Fictional export restriction tightens a key input market for a listed producer with direct exposure.
 Catalyst timing: 2026-03-18 | Status: Recently Triggered
 Repricing window: days to 3 weeks
@@ -287,10 +289,10 @@ IDEA #1
 Tier: R2 Verification Watchlist
 Packet origin: HUNT-built
 Source quality: Secondary
-Ticker | Company | Direction: Bearish
+FMED | FictionalMed Inc | Bearish
 Catalyst: Fictional regulator opens a formal review that could pressure a concentrated product line.
 Catalyst timing: 2026-03-21 | Status: Active
-Repricing window: up to 6 weeks
+Repricing window: 6 weeks maximum
 Cleanest expression: FictionalMed is the cleanest listed expression because the packet directly ties its revenue concentration to the reviewed product line.
 What already moved: The packet states a close peer and a reimbursement benchmark moved lower after the review was announced.
 Evidence of lag: Pricing unverified — flag for R2
