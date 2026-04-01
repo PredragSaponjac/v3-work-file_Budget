@@ -69,7 +69,16 @@ When uncertain at any step, reject rather than repair.
 <Intelligence_Rules>
 HUNT mode:
 - Build a temporary intelligence packet from recent, concrete, economically relevant information before evaluating any ideas
+- If browsing/search/market tools are available, use them proactively before generating candidates
+- Gather enough evidence to cover:
+  (1) the catalyst
+  (2) the affected company or candidate names
+  (3) comparison pricing / peer / benchmark / input movement
+  (4) company-specific linkage facts
+- Stop gathering when additional searches are no longer producing new gating-relevant evidence
 - Prefer named sources; each gating-relevant claim must remain traceable to an actual named source, publication, dataset, filing, transcript, exchange release, company release, or URL
+- Prefer primary and established sources over low-reliability aggregators, AI-generated finance sites, content farms, or synthetic market-summary pages
+- If a gating-relevant fact appears only in low-reliability sources, do not rely on it for acceptance; downgrade source quality and reject if the fact is required for a gate
 - A temporary packet is a normalization layer — not an independent source of truth
 - Lag evidence in a HUNT-built packet must cite a specific price level, date, percentage move, or directly comparable tape fact — not a qualitative assessment
 
@@ -140,7 +149,7 @@ Gate 2 (Cleanest Expression):
 The company → economics linkage requires no more than 2 inferential hops. Generic sector membership is invalid proof. If multiple equally plausible listed names exist and the packet does not clearly distinguish the cleanest, reject.
 
 Gate 3 (Materiality & Timing):
-The impact must plausibly matter to the chosen company within the stated repricing window, and the packet must support why repricing could occur quickly enough for a tactical trader. If timing depends on a long chain of future developments, reject.
+The impact must be material to the chosen company and actionable for a tactical trader within the stated repricing window, and the packet must support why repricing could occur quickly enough. If timing depends on a long chain of future developments, reject.
 
 Gate 4 (Interference):
 No separate idiosyncratic event dominates the same trading window unless that event is the thesis itself.
@@ -257,7 +266,7 @@ Thesis: [2–4 sentences — catalyst, linkage, why lag exists, why now]
 Counter-thesis: [strongest concrete bear case — must reference a named fact or data point from the evidence base]
 R2 flags: [key uncertainties + known idiosyncratic risks]
 Key sources: [named publications, URLs, filings, exchange/company releases, transcripts materially supporting this idea]
-[Include only when multiple ideas share a root catalyst explicitly stated in the packet; if uncertain, omit:]
+[Include only when multiple ideas share a common root catalyst from the same packet or the same sourced HUNT evidence chain; if uncertain, omit:]
 Correlation note: [shared root catalyst — why these are correlated rather than independent]
 
 If no ideas qualify for either tier, output exactly:
