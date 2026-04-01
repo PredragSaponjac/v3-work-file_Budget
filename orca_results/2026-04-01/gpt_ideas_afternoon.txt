@@ -1,0 +1,15 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: NVO | Novo Nordisk | Bearish
+Catalyst: The FDA approved Eli Lilly's Foundayo on April 1, and Lilly says it is the only GLP-1 weight-loss pill that can be taken any time of day without food or water restrictions, with U.S. shipping starting April 6; at the same time, Novo is already discounting Wegovy in the U.S. subscription channel and Reuters reported it cut Ozempic and Wegovy prices again in India on March 31.
+Catalyst timing: 2026-04-01 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Cleanest expression: Novo is the clearest listed counterparty because it already sells oral Wegovy in the U.S., Reuters says Foundayo directly intensifies competition with Novo, and Lilly's convenience edge targets the same oral GLP-1 adoption pool Novo is trying to build.
+What already moved: Lilly rose 3.8% on the approval and Reuters said other obesity-drug developers also gained on the news, while Novo had launched new U.S. Wegovy subscription discounts one day earlier.
+Evidence of lag: NVO ADRs were down only 0.7% on April 1, versus Lilly's 3.8% rise, despite the approval converting a known competitive threat into an approved, near-immediate commercial launch with a usability edge over Novo's pill.
+Thesis: This is not just another obesity-drug headline. The catalyst turned Lilly from pending approval into an approved oral rival that ships on April 6 and removes the food-and-water restriction that makes Novo's oral regimen less convenient. Novo is already discounting Wegovy in the U.S. and cutting prices in India, so margin defense appears active before Lilly's launch; with NVO only down 0.7% on the day, the tape looks muted relative to a fresh catalyst that can pressure both share and pricing in the oral GLP-1 lane.
+Counter-thesis: Reuters also notes oral GLP-1 pills may still account for only about 20% of the market by 2030, and Novo's existing discounting could mean some competitive pressure is already being absorbed through pricing rather than left entirely for the equity to discover.
+R2 flags: Verify current oral Wegovy prescription trajectory, gross-to-net impact from the March 31 subscription changes, whether Copenhagen-listed Novo reacted more sharply than the ADR, and whether Lilly's April 6 launch volumes trigger near-term consensus cuts.
+Key sources: FDA press announcement on Foundayo approval; Lilly investor release on Foundayo launch and dosing convenience; Reuters on Lilly approval and market reaction; Reuters on Novo's March 31 U.S. subscription discounts and India price cuts.
