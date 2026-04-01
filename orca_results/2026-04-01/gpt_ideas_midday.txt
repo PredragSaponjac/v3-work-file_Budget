@@ -1,0 +1,15 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: TNK | Teekay Tankers Ltd. | Bullish
+Catalyst: U.S. Gulf Coast crude tanker tightness has intensified as Asian and European refiners replace disrupted Middle East supply, driving a sharp spike in Suezmax and Aframax earnings.
+Catalyst timing: 2026-04-01 | Status: Active.
+Repricing window: days to 3 weeks.
+Cleanest expression: Teekay is a relatively clean listed read-through because its latest company disclosures show a fleet of 34 double-hull tankers including 15 Suezmax and 18 Aframax/LR2 vessels, and those vessels are typically employed through a mix of spot trading and short- or medium-term fixed-rate charters, which ties it directly to the exact rate buckets Reuters says are under the most pressure.
+What already moved: Reuters reports Suezmax and Aframax earnings above $300,000 per day versus a recent roughly $60,000 average, with U.S. Gulf Coast availability down about 40-45% for Suezmaxes and 70% for Aframaxes since earlier in the year.
+Evidence of lag: Pricing unverified — flag for R2
+Thesis: The catalyst is real, fresh, and economically direct: the Strait of Hormuz disruption has pushed buyers toward U.S., Brazilian, and West African crude, and Reuters says that flow shift is now crushing availability and exploding spot earnings specifically for Suezmax and Aframax classes. Teekay is a cleaner tactical expression than more diversified tanker peers because its disclosed fleet is concentrated in those exact classes and it retains spot-market exposure. The setup is interesting because the operating transmission path is short, but the stock-side underreaction still needs proper verification before this can be upgraded.
+Counter-thesis: This may already be priced or may fade quickly if the disruption eases: Reuters has also reported tanker-insurance support efforts and de-escalation hopes, both of which could unwind today's extreme freight tightness before equity estimates fully re-rate.
+R2 flags: Verify TNK's stock reaction from the March 3-April 1 conflict window versus spot-rate moves; verify spot versus fixed-charter exposure on the relevant vessels; verify whether peers such as FRO or INSW offered a cleaner or earlier pricing response.
+Key sources: Reuters, "US Gulf Coast tanker market tightens as Asia seeks to replace lost supply"; Reuters, "Iran war puts Middle East Dubai oil benchmark under stress"; Reuters, "Trump orders oil tanker insurance support"; Reuters, "Europe's STOXX 600 jumps over 2% on Middle East de-escalation hopes"; Teekay Tankers fleet and annual-report disclosures.

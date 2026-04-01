@@ -1,0 +1,33 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: COHR | Coherent Corp | Bearish
+Catalyst: Lumentum (LITE) unveiled "Project Vanguard," a $3.8 billion capital expenditure plan to build domestic InP wafer fabs, revealing the massive new capital requirements to maintain a technological edge in AI optics.
+Catalyst timing: 2026-03-26 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Cleanest expression: Coherent is explicitly identified by the HUNT-built packet as Lumentum's "primary rival" in the advanced optical transceiver market, meaning it faces the exact same structural requirement to invest billions in domestic manufacturing to remain competitive.
+What already moved: Lumentum (LITE) shares plunged 11.37% as the market digested the severe Free Cash Flow (FCF) deficit and massive capital intensity required by the US-based fab buildout.
+Evidence of lag: The packet explicitly notes that Coherent (COHR) shares only dipped 4.2% in sympathy on the day of the announcement, failing to fully reflect the identical margin and capex pressures it will likely face.
+Thesis: Lumentum's $3.8 billion "Project Vanguard" announcement laid bare the new, highly expensive "entry fee" for optical manufacturers: multi-billion dollar domestic fabs to satisfy AI demand and reshoring mandates. Investors correctly punished LITE with an 11% plunge for the massive capital expenditure requirements and impending FCF deficits. Coherent, Lumentum's primary rival, will face the exact same structural pressure to invest billions to keep pace, yet its stock only dipped 4.2% in sympathy. The market has demonstrably not fully repriced Coherent for the imminent multi-billion dollar capex cycle and margin compression it must now undertake to remain competitive with Lumentum's vertically integrated domestic push.
+Counter-thesis: Coherent may already possess sufficient manufacturing scale, potentially through its recent joint breakthrough with Tower Semiconductor or its existing 6-inch indium phosphide wafer advantage, allowing it to avoid matching Lumentum's massive new capex commitments.
+R2 flags: Verify Coherent's current US-based manufacturing footprint, free cash flow projections, and any upcoming management commentary on capex responses to Lumentum's buildout.
+Key sources: Chronicle Journal (FinancialContent); MLQ.ai
++1
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Secondary
+Ticker | Company | Direction: KTB | Kontoor Brands Inc. | Bearish
+Catalyst: The closure of the Strait of Hormuz triggered a severe global supply chain shock, disrupting major consumer goods shipping lanes from Asia and surging freight and insurance costs.
+Catalyst timing: 2026-02-28 | Status: Active
+Repricing window: days to 3 weeks
+Cleanest expression: Kontoor Brands is explicitly named by the HUNT-built packet as having direct exposure to the blockade due to sourcing more than 60% of its total apparel output from affected Asian regions (Bangladesh, Vietnam, India, Pakistan).
+What already moved: Four major container shipping lines suspended transits, and war risk premiums on hull insurance surged to as high as 1.5% of hull value.
+Evidence of lag: Direct tabular price data shows KTB shares remained resilient throughout March, closing at $68.16 on March 31 (near its 52-week high), failing to reflect the bearish supply chain shock.
+Thesis: A historic geopolitical shipping blockade has caused transit costs, insurance premiums, and freight surcharges to skyrocket across critical Asian trade routes. Kontoor Brands sources over 60% of its apparel from these exact affected corridors, meaning the freight surcharges will be reflected directly in its cost of goods. Despite aggressively rising input and freight costs that will directly hit its margins, KTB shares have remained resilient through late March. The market is ignoring the immediate margin threat to Kontoor's bottom line, presenting a clear mispricing before the freight crush hits upcoming earnings guidance.
+Counter-thesis: Kontoor Brands' recent record-breaking 2025 revenue performance and successful integration of the higher-margin Helly Hansen brand may generate enough operational momentum and pricing power to offset the rising supply chain costs.
+R2 flags: Verify the precise percentage of COGS exposed to the affected freight lanes, current inventory buffers, and management's near-term pricing power.
+Key sources: The Motley Fool; Forbes; TIKR
++1
