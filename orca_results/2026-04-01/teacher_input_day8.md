@@ -119,7 +119,20 @@ Counter-thesis: Citi cut PT to $425. DDR5 spot prices down 6%. TurboQuant may re
 
 ## SECTION 3: UW FLOW DATA
 
-[No UW flow data collected today — manual mode]
+See attached file: uw_flow_data.txt (12,171 chars, 10 tickers)
+Tickers covered: RCKT, IPI, FRO, ALK, LYB, COHR, KTB, TNK, NVO, MU
+
+Key flow highlights (from UW data):
+- **RCKT**: 100% calls, ask-side accelerating (80%), tiny premium ($0.2M) — bullish but illiquid
+- **IPI**: 14 alerts, balanced call/put — no strong directional signal
+- **FRO**: 53 alerts — check call/put composition for direction confirmation
+- **ALK**: 76 alerts — carryforward from Day 6, flow was confirmed bearish
+- **LYB**: 192 alerts — heavy activity, needs direction analysis
+- **COHR**: 200 alerts, 250 DP prints, 209 lit flow — very active, check direction
+- **KTB**: 1 alert only — ILLIQUID (teacher killed this Day 6 for same reason)
+- **TNK**: 10 alerts — thin
+- **NVO**: 200 alerts, 250 DP, 57 lit flow — heavy institutional activity
+- **MU**: 200 alerts, 250 DP, 250 lit flow — massive activity, check direction
 
 ---
 
