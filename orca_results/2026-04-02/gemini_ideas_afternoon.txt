@@ -1,0 +1,40 @@
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: DHT | DHT Holdings, Inc. | Bullish
+Catalyst: On April 2, 2026, the US President explicitly reversed course on Iran peace signals, promising to hit Iran "extremely hard" over the next 2-3 weeks and extending the closure of the Strait of Hormuz.
+Catalyst timing: April 2, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Breakout and daily close above the 52-week high of $20.55.
+Invalidation condition: Reopening of the Strait of Hormuz to normal tanker traffic, or a collapse in Gulf Coast spot freight rates back toward historical averages.
+Target / repricing path: Repricing toward multi-year highs as the company's time-charter coverage locks in the 5x spot rate expansion.
+Horizon / time stop: 3 to 4 weeks
+Cleanest expression: DHT is a pure-play crude tanker owner actively capitalizing on the tightened export market, directly benefiting as Asian and European buyers scramble for US Gulf Coast replacement barrels amid Middle East supply cuts.
+What already moved: Gulf Coast VLCC availability halved, and spot freight rates for Suezmax/Aframax surged 500% from an average of $60,000 to upwards of $300,000 per day.
+Evidence of lag: Despite physical spot rates surging 5x, the gathered evidence explicitly shows DHT shares closed at $18.11 and traded near $18.76 on April 2, remaining roughly 9% below their 52-week high of $20.55.
+Thesis: The Strait of Hormuz closure has structurally disrupted the global oil supply chain, cratering tanker availability along the US Gulf Coast and sending day rates soaring 500% to $300k/day. While the physical tanker market has violently repriced this scarcity, tanker equities like DHT have lagged, trading below their 52-week highs because equity investors assumed a quick ceasefire. As the market digests that the war is extending following today's political reversal, the equity should catch up to the physical rate environment.
+Counter-thesis: The crude futures market remains backwardated and expects a peace deal by mid-year, meaning the market views the rate spike as highly transient and is unwilling to capitalize it into equity valuations.
+R2 flags: Verify current spot VLCC rate quotes, track US Gulf Coast export volumes, and check insider selling at elevated levels.
+Key sources: Charles Schwab; U.S. Energy Information Administration (EIA); Marine Link
+
+IDEA #3
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: MOS | The Mosaic Company | Bearish
+Catalyst: QatarEnergy set a record April 2026 sulphur contract price of $570/tonne (and ADNOC at $600/tonne) due to the effective closure of the Strait of Hormuz to commercial shipping.
+Catalyst timing: April 1, 2026 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Breakdown below the 50-day moving average and failure to hold the $25.00 support level.
+Invalidation condition: The Strait of Hormuz reopens quickly to Western shipping, collapsing sulphur premiums, or global phosphate end-product prices surge enough to fully offset the record input costs.
+Target / repricing path: Reversal of the YTD sector-sympathy rally, targeting a return toward pre-conflict baseline levels as margin reality sets in.
+Horizon / time stop: 3 to 4 weeks
+Cleanest expression: Mosaic is heavily dependent on sulphur as a key raw material for its phosphate production, exposing it directly to this specific input cost spike, unlike insulated pure-nitrogen producers.
+What already moved: QatarEnergy and ADNOC explicitly raised April 2026 sulphur prices to record highs ($570-$600/tonne). Pure-play nitrogen peers like CF Industries surged nearly 60% YTD on fertilizer supply shocks.
+Evidence of lag: Despite the specific headwind to its phosphate margins, Barchart explicitly notes MOS shares are "lagging the rest of the industry, with an approximately 18% YTD gain" and are still "bouncing between the 50-day and 200-day moving averages," retaining a sympathetic premium.
+Thesis: The effective closure of the Strait of Hormuz has stranded Middle East exports, causing April 2026 sulphur contract prices to hit a record $570-$600 per tonne. Because sulphur is a primary input for Mosaic's phosphate business, this shock creates a severe margin squeeze. However, Mosaic shares are still up ~18% year-to-date, rallying sympathetically with the broader "Hormuz boosts fertilizers" narrative alongside insulated nitrogen peers. The stock has not yet decoupled to reflect the specific, direct cost-of-goods-sold damage it will sustain from record sulphur prices, setting up a clean bearish repricing.
+Counter-thesis: The market may be correctly anticipating that Mosaic can fully absorb the input costs because global demand for phosphate remains strong and rising wholesale phosphate prices are occurring simultaneously.
+R2 flags: Verify current phosphate-to-sulphur margin spread, exact sulphur contract exposure, Q1 earnings date, and short borrow availability.
+Key sources: Discovery Alert; Barchart; Zacks Investment Research
+Correlation note: DHT and MOS share the same root macro catalyst (the US-Iran conflict and Strait of Hormuz closure). DHT is a bullish expression of the resulting tanker capacity squeeze, while MOS is a bearish expression of the resulting input cost (sulphur) spike.

@@ -1,0 +1,39 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: JBHT | J.B. Hunt Transport Services | Bearish
+Catalyst: The Iran-war energy shock has pushed U.S. diesel sharply higher and Reuters reports the spike is delaying the trucking recovery while squeezing profits and cash flow across the industry.
+Catalyst timing: 2026-03-27 | Status: Active.
+Repricing window: 1 to 3 weeks.
+Entry trigger: Failed bounce after any relief in oil/diesel headlines, or a breakdown from the first consolidation after a fuel-price spike.
+Invalidation condition: Clear de-escalation that meaningfully reverses diesel, or evidence that surcharges / pricing power are offsetting the cost shock better than feared.
+Target / repricing path: Catch-up lower toward a more explicit fuel-stress pricing of transport names if diesel continues pressing toward record territory.
+Horizon / time stop: 5 to 15 trading days unless fuel stress eases sooner.
+Cleanest expression: Reuters' company profile shows J.B. Hunt is a trucking/intermodal operator, which is a cleaner direct expression of U.S. over-the-road fuel stress than broader industrial or logistics conglomerates.
+What already moved: Reuters says diesel prices are up about 50% from the war shock and could break records within weeks.
+Evidence of lag: Pricing unverified — flag for R2.
+Thesis: The catalyst is fresh, real, and economically direct: fuel is one of the fastest transmission channels into trucking margins, and Reuters is already describing broad industry stress. J.B. Hunt is a cleaner listed expression than a diversified shipper or broker. I do not have packet-grade proof that JBHT itself has underreacted versus the fuel move, so this stays Watchlist rather than Accepted.
+Counter-thesis: J.B. Hunt has previously offset pressure with cost cuts and mix, and transport names can rally quickly if oil retreats on ceasefire headlines.
+R2 flags: Verify actual stock reaction since March 27, fuel surcharge pass-through, intermodal vs truckload sensitivity, and nearby earnings/interference window.
+Key sources: Reuters trucking/diesel analysis; Reuters JBHT company page.
+
+IDEA #2
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: TK | Teekay Corp. | Bullish
+Catalyst: Reuters reports U.S. Gulf Coast tanker markets have tightened sharply as buyers replace lost Middle East supply, with Suezmax and Aframax earnings jumping above $300,000/day from around $60,000 average levels.
+Catalyst timing: 2026-04-01 | Status: Active.
+Repricing window: days to 2 weeks.
+Entry trigger: Hold of the first pullback after rate headlines, or renewed upside if freight/risk-premium headlines continue and the stock has not already fully caught up.
+Invalidation condition: Clear reopening/de-risking of Hormuz or evidence that spot-rate spikes are reversing too quickly to matter for equity repricing.
+Target / repricing path: Catch-up toward the spot tanker-rate move, especially if mid-sized crude tanker exposure remains the relevant lane.
+Horizon / time stop: 3 to 10 trading days unless freight conditions normalize sooner.
+Cleanest expression: Reuters' company profile says Teekay operates mid-sized tankers including Suezmax and Aframax vessels, which matches the exact freight segments cited in the April 1 tanker squeeze story more closely than a broad energy complex name.
+What already moved: Reuters says Suezmax/Aframax day-rates exploded and vessel availability collapsed; Reuters also reported earlier that tanker shipping costs and shipping/tanker stocks rose as the conflict escalated.
+Evidence of lag: Pricing unverified — flag for R2.
+Thesis: This is the cleanest bullish second-order expression I found on the rerun. The catalyst is fresh, the transmission path is explicit, and the company's vessel mix lines up with the exact market segment where Reuters says economics have gone vertical. But Reuters also notes tanker stocks had already risen earlier in the conflict, and I do not have clean packet-grade evidence that TK specifically still lags the freight move today, so it cannot be Accepted.
+Counter-thesis: Tanker equities may already discount much of the rate shock, and any diplomatic de-escalation could hit spot rates faster than equities can re-rate higher.
+R2 flags: Verify TK/TNK price response since April 1, spot-vs-charter earnings sensitivity, exact entity exposure, and whether the equity already absorbed the freight move.
+Key sources: Reuters tanker-rate analysis; Reuters Teekay profile; Reuters market-impact coverage.
