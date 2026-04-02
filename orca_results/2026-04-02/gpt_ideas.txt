@@ -1,0 +1,37 @@
+IDEA #1
+
+Tier: R2 Verification Watchlist
+
+Packet origin: HUNT-built
+
+Source quality: Mixed.
+
+Ticker | Company | Direction: ALK | Alaska Air Group | Bearish.
+
+Catalyst: Alaska Air widened its first-quarter loss outlook on March 30 after saying Iran-war-driven fuel prices and weaker demand in parts of its network were pressuring results.
+
+Catalyst timing: 2026-03-30 | Status: Recently Triggered.
+
+Repricing window: days to 3 weeks.
+
+Entry trigger: Data unavailable — verify in R2.
+
+Invalidation condition: Data unavailable — verify in R2.
+
+Target / repricing path: Data unavailable — verify in R2.
+
+Horizon / time stop: Pre-earnings window ending with Alaska's April 20, 2026 after-market results filing.
+
+Cleanest expression: This is company-specific rather than sector-generic. Alaska itself preannounced the larger loss, quantified the fuel-cost hit, and identified demand weakness in markets that together represent about 30% of capacity, so the thesis does not depend on choosing among multiple equally plausible airline names.
+
+What already moved: Brent crude had risen about 58% in March, and Reuters reported some jet-fuel prices had doubled since the start of the conflict, establishing the benchmark move that should pressure unhedged airlines.
+
+Evidence of lag: Reuters reported that Alaska widened its adjusted Q1 loss range to $1.5-$2.0 per share from $0.50-$1.50, including at least a $0.7 EPS hit from fuel, while the shares were only down 1.1% in premarket trading on March 30.
+
+Thesis: The catalyst is live and company-specific: Alaska has already told the market that the fuel shock and weaker demand in parts of its network are worsening Q1 results. The economic linkage is direct because Reuters also noted Alaska and JetBlue serve highly competitive domestic markets and take in less premium revenue, making Alaska less able to cushion a sustained fuel shock than stronger peers like Delta. The lag evidence is the muted initial stock reaction relative to a materially worse loss range and a quantified fuel hit. The window is tactical because the company will have to validate or disprove that warning by April 20-21.
+
+Counter-thesis: Alaska also said corporate demand remained strong, with forward bookings over the next 90 days up more than 25% year over year, and said it was well positioned for its seasonally strongest quarter, so the market may decide the fuel shock is temporary and partly offset by resilient revenue.
+
+R2 flags: Verify whether today's additional decline to about $35.81 has already closed the lag; ground actual execution levels; check how much of the weakness in Puerto Vallarta and Hawaii is transient; and make sure the April 20-21 earnings event does not overwhelm the catalyst-lag setup.
+
+Key sources: Reuters, "Alaska Air signals bigger first-quarter loss as fuel costs surge" (March 30, 2026); Alaska Air Group press release, "Alaska Air Group announces webcast of first quarter 2026 financial results" (March 31, 2026); Reuters, "US airlines no longer hedge fuel costs. That could hurt margins if Iran conflict lingers" (March 6, 2026); Reuters, "Airline shares battered, airfares surge as Iran war pushes oil above $100" (March 9, 2026).
