@@ -1,0 +1,40 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: MOS | The Mosaic Company | Bullish
+Catalyst: The effective closure of the Strait of Hormuz has severely disrupted global natural gas and fertilizer supply routes, sending global urea and potash prices soaring ahead of the spring planting season.
+Catalyst timing: February 28, 2026 to April 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock holds relative support near the $26.50 level and breaks out of its recent consolidation pattern with volume.
+Invalidation condition: A sudden reopening of the Strait of Hormuz or a diplomatic ceasefire causing global fertilizer prices to rapidly collapse.
+Target / repricing path: Catch-up rotation toward the $30+ level to close the massive relative performance gap with its direct peers.
+Horizon / time stop: 3 to 4 weeks (capturing the Northern Hemisphere spring planting window).
+Cleanest expression: As a leading North American producer of crop nutrients (potash and phosphate) that also sells some urea-ammonium nitrate, Mosaic is a direct listed beneficiary of the massive war-fueled fertilizer price inflation cycle.
+What already moved: Zacks Investment Research explicitly notes that peer CF Industries surged 59% over the past 3 months to hit an all-time high, while Nutrien (NTR) jumped 20% to a 3-year high.
+Evidence of lag: Zacks explicitly reports that Mosaic has gained only 6.7% over the exact same 3-month period, drastically underperforming its surging peers despite its exposure to the same crop nutrient inflation cycle.
+Thesis: A massive geopolitical supply shock in the Strait of Hormuz has choked off global fertilizer feedstocks, sending prices soaring. The market aggressively priced this into pure-play nitrogen producer CF Industries, which skyrocketed 59% to an all-time high, while peer Nutrien jumped 20%. However, The Mosaic Company (MOS) has drastically lagged this peer rally, gaining only 6.7% over the same period despite its own exposure to urea-ammonium nitrate and the broader agricultural inflation cycle. This massive performance divergence offers a clean delayed-reaction catch-up trade as capital rotates into laggards within the surging agricultural sector.
+Counter-thesis: Seeking Alpha notes that Mosaic produces mostly other types of fertilizer (potash and phosphate) rather than pure nitrogen, meaning its margin profile may not scale as violently as CF Industries' in a nitrogen-specific supply shock.
+R2 flags: Verify precise product mix (urea vs potash margin impact) and upcoming Q1 earnings date interference.
+Key sources: Zacks Investment Research ("CF Stock Rallies 59% in 3 Months"); Seeking Alpha ("CF Industries hits record high, topping S&P 500 for second straight day on war-fueled surge")
+
+IDEA #2
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Secondary
+Ticker | Company | Direction: AMCR | Amcor Plc | Bearish
+Catalyst: The ongoing Strait of Hormuz blockade has triggered severe naphtha and chemical feedstock shortages, causing global polymer and resin prices to surge 35-70%.
+Catalyst timing: March to April 2026 | Status: Active
+Repricing window: 6 weeks maximum
+Entry trigger: Data unavailable — verify in R2
+Invalidation condition: Data unavailable — verify in R2
+Target / repricing path: Data unavailable — verify in R2
+Horizon / time stop: Data unavailable — verify in R2
+Cleanest expression: Amcor is a leading global manufacturer of plastic packaging, directly dependent on polymers and resins (like polyethylene and polypropylene) as primary raw materials, making it highly sensitive to the massive unhedged input cost inflation currently disrupting the plastics market.
+What already moved: Syntex America and ChemAnalyst explicitly report that global polymer prices have surged 35-70% since the war began, with major producers like Dow implementing aggressive $0.30/lb price hikes on polyethylene.
+Evidence of lag: Pricing unverified — flag for R2
+Thesis: The ongoing Strait of Hormuz blockade has severely choked off chemical feedstocks, causing polymer and resin prices to skyrocket by 35-70% over the past four weeks. While upstream chemical producers have surged or implemented aggressive price hikes, downstream packagers face an acute margin squeeze as raw material costs explode. Amcor is a highly exposed direct consumer of these materials. The broader market appears overly focused on upstream energy and fertilizer impacts, leaving the impending margin compression on downstream plastic packaging manufacturers unpriced. Because exact stock price lag data and a specified execution structure are absent from the gathered evidence, this is a clean R2 verification candidate.
+Counter-thesis: The ICIS Insight report notes that many monthly polymer negotiations concluded just before the conflict began, suggesting Amcor may be temporarily insulated by locked-in pricing contracts, reducing the scope for immediate margin compression.
+R2 flags: Verify Amcor's current hedging profile for resin costs, contract pass-through lag times, and actual recent stock performance compared to the S&P 500.
+Key sources: Syntex America ("Hormuz Crisis Week 4: Oil Corrects Below $100... Polymer Prices Keep Climbing"); ChemAnalyst ("US PU Resin Market Turns Bullish on Supply Tightness"); ICIS ("INSIGHT: Secondary impacts of Middle East conflict could reshape Europe recycled polymer markets")
+Correlation note: Shares a root catalyst with IDEA #1. Both ideas are direct economic consequences of the April 2026 Strait of Hormuz closure — MOS reflects the upstream fertilizer supply shock, while AMCR reflects the downstream petrochemical margin squeeze.

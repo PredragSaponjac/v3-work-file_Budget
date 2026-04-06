@@ -1,0 +1,39 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: NVO | Novo Nordisk A/S | Bearish
+Catalyst: Eli Lilly won U.S. FDA approval for its oral obesity pill Foundayo and launched it on April 6 at $149/month cash-pay via LillyDirect, creating a fresh direct competition event against Novo's oral Wegovy and injectables.
+Catalyst timing: April 1, 2026 | Status: Recently Triggered.
+Repricing window: days to 3 weeks.
+Entry trigger: Data unavailable — verify in R2.
+Invalidation condition: Data unavailable — verify in R2.
+Target / repricing path: Data unavailable — verify in R2.
+Horizon / time stop: Data unavailable — verify in R2.
+Cleanest expression: Novo is the named incumbent rival directly exposed to the oral-GLP-1 competitive shift Reuters described, and Novo's own Wegovy pill requires empty-stomach morning dosing with a 30-minute wait before food, unlike Foundayo's anytime/no-fasting profile.
+What already moved: Lilly shares rose 6% on the approval, while Reuters framed the event as the next competitive battle in obesity pills.
+Evidence of lag: Reuters said Novo's shares dipped only slightly on the same approval.
+Thesis: This is a direct rival-response setup, not a sector sympathy trade. Reuters reported that Foundayo's approval and April 6 launch put Lilly into direct competition with Novo, while the convenience profile favors Lilly's pill versus Novo's fasting-dependent oral Wegovy. Reuters also reported growing patient demand for pills because of convenience and cost, which raises the chance that the initial mild move in Novo under-reflects near-term competitive pressure on the oral segment and sentiment around Novo's obesity franchise.
+Counter-thesis: Reuters also reported that pills are not expected to replace injectables entirely, and oral Wegovy showed about 14% weight loss versus Foundayo's 12% to 15%; Novo also already has an approved U.S. Wegovy pill, so the competitive threat may prove less one-sided than the convenience narrative implies.
+R2 flags: Need verified prescription/take-rate data after the April 6 launch, payor coverage and cash-pay uptake, evidence on whether convenience outweighs efficacy/tolerability in real use, and monitoring into Novo's next results on May 6, 2026.
+Key sources: Reuters, "Lilly's weight-loss pill wins US approval, sets up next battle with rival Novo Nordisk" (April 1, 2026); Reuters, "Americans want weight-loss pills for cost and convenience" (April 6, 2026); Novo Nordisk Wegovy pill dosing page; Novo Nordisk financial results calendar.
+
+IDEA #2
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: RCKT | Rocket Pharmaceuticals, Inc. | Bullish
+Catalyst: Rocket won U.S. FDA approval for KRESLADI, the first approved gene therapy for severe LAD-I, and the FDA also granted a Rare Pediatric Disease Priority Review Voucher that Rocket said it may monetize.
+Catalyst timing: March 26, 2026 | Status: Recently Triggered.
+Repricing window: days to 3 weeks.
+Entry trigger: Data unavailable — verify in R2.
+Invalidation condition: Data unavailable — verify in R2.
+Target / repricing path: Data unavailable — verify in R2.
+Horizon / time stop: Data unavailable — verify in R2.
+Cleanest expression: This is a 0-hop company-specific catalyst because the approval, launch path, and voucher all attach directly to Rocket's own asset and balance-sheet optionality rather than to a peer or sector proxy.
+What already moved: Reuters reported Rocket shares initially rose more than 10% on the approval news before reversing.
+Evidence of lag: Reuters reported the stock then fell more than 15% on the day despite the approval and voucher, and Wedbush called the reaction "unwarranted."
+Thesis: The market reaction appears to have focused on commercialization friction while discounting two immediate positives: first approval in a fatal pediatric disease with no previously approved therapy, and a newly issued, potentially monetizable priority review voucher. The setup stays fresh because the Federal Register notice on April 2 confirmed voucher issuance after the approval, so the evidence base now includes both the approved product and the voucher as live, traceable assets while the stock remains depressed from the selloff.
+Counter-thesis: Reuters also reported real near-term commercialization frictions: Rocket plans only a limited phased launch beginning in Q4 2026 at a small number of specialized centers, pricing is still undisclosed, reimbursement discussions are ongoing, and analysts flagged limited patient reach plus management's non-aggressive marketing posture.
+R2 flags: Need verified voucher monetization timing/value, reimbursement progress, launch-center cadence, pricing disclosure, and any financing overhang before the next expected earnings window in May 2026.
+Key sources: Rocket Pharmaceuticals investor release on KRESLADI approval; FDA press announcement on KRESLADI approval; Federal Register notice of voucher issuance; Reuters, "Rocket Pharma shares fall despite FDA nod for childhood disorder treatment" (March 27, 2026).
