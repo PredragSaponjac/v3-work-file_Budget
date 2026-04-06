@@ -1,0 +1,19 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: DHT | DHT Holdings Inc | Bullish
+Catalyst: The April 1 freight shock tied to the Iran-war disruption is still active: Reuters reported U.S. Gulf tanker availability dropped sharply, VLCC availability halved to 10 vessels from 20 since March 1, and the west-to-east cargo shift drove an "unprecedented" freight surge; Reuters then reported on April 6 that U.S. crude premiums hit record highs as Asia and Europe competed for replacement barrels.
+Catalyst timing: 2026-04-01 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Reclaim and hold above the April 6 intraday high near $18.95 after the relative-lag setup versus tanker peers; otherwise no entry.
+Invalidation condition: Loss of the April 6 intraday low near $18.27, or evidence that the Hormuz dislocation is easing quickly enough to unwind the tanker-rate shock.
+Target / repricing path: Partial catch-up toward the stronger crude-tanker peer response if VLCC tightness persists, with DHT closing the April 2 relative-performance gap versus FRO, NAT, and INSW.
+Horizon / time stop: 1 to 3 weeks, or earlier if the freight shock fades or the lag closes.
+Cleanest expression: DHT is the cleanest listed expression because Reuters describes it as an independent crude-oil tanker company whose fleet consists only of VLCCs, while Reuters' April 1 freight report says the west-to-east cargo shift started with VLCCs to Asia and Gulf Coast VLCC availability halved. That is a tighter linkage than diversified tanker peers such as Frontline or International Seaways.
+What already moved: Reuters reported Suezmax and Aframax earnings surged to as much as $300,000 per day from an average $60,000 over the prior five months, VLCC availability halved on the Gulf Coast, and U.S. crude export premiums reached record highs by April 6. Tanker peers also reacted more strongly on April 2: Frontline +5.08%, Nordic American Tankers +7.33%, and International Seaways +4.30%.
+Evidence of lag: DHT was only +3.07% on April 2, lagging Frontline's +5.08%, Nordic American's +7.33%, and International Seaways' +4.30%, and it was trading at $18.47 on April 6 rather than extending sharply despite the freight dislocation still being active.
+Thesis: The catalyst is real, fresh, and still transmitting: Iran-war disruption has rerouted crude flows, tightened Gulf Coast tanker supply, and pushed freight and crude-export pricing sharply higher. DHT is a pure VLCC operator, and Reuters' freight reporting explicitly says the west-to-east shift began with VLCCs while VLCC availability halved. Yet DHT underperformed the immediate crude-tanker peer response on April 2 and has not meaningfully extended since, leaving a clean near-term catch-up setup if the dislocation persists for even another week or two.
+Counter-thesis: DHT's own March 30 strategic fleet update said its new VLCC DHT Gazelle will start a five- to seven-year time-charter contract, and the company says fleet employment combines market exposure with fixed-income contracts, so DHT may capture less of the spot-rate spike than traders assume.
+R2 flags: Verify exact current spot-vs-time-charter exposure across the fleet, Q2 spot-rate capture sensitivity, next scheduled earnings date, and whether any fast Hormuz reopening changes the freight curve before price catch-up completes.
+Key sources: Reuters, "US Gulf Coast tanker market tightens as Asia seeks to replace lost supply" (April 1, 2026); Reuters, "US crude premiums climb to record levels as Asia, Europe compete for supply" (April 6, 2026); Reuters DHT company profile/LSEG market data; DHT Holdings investor relations press release, "Strategic Fleet Update" (March 30, 2026).

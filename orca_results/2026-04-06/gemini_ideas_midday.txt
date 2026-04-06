@@ -1,0 +1,39 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: DAL | Delta Air Lines, Inc. | Bullish
+Catalyst: Global jet fuel prices surged 95% due to the ongoing Middle East conflict and Strait of Hormuz disruptions, creating a massive cost shock for the airline industry.
+Catalyst timing: Late March / Early April 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock holds the early April lows and begins relative outperformance against unhedged peers ahead of the upcoming earnings report
+Invalidation condition: A diplomatic ceasefire reopens the Strait of Hormuz and crashes crude prices, or Delta pre-announces weak Q1 bookings that overwhelm its margin advantage
+Target / repricing path: Re-rating toward pre-shock relative valuation multiples against AAL and UAL as the market digests the fundamental divergence in fuel costs
+Horizon / time stop: 2 to 4 weeks (through the April 8, 2026 earnings report and subsequent analyst revisions)
+Cleanest expression: Delta uniquely owns the Monroe Energy refinery in Pennsylvania, providing a massive, direct operational physical hedge against the spiking finished petroleum "crack spread" that is devastating its unhedged competitors.
+What already moved: The gathered evidence explicitly notes that jet fuel prices doubled, and unhedged peers American Airlines (AAL) and United Airlines (UAL) fell 6.5% and 6.6% respectively on April 2.
+Evidence of lag: The evidence explicitly states that on April 2, DAL shares fell 4.6%, dropping even more than the broader US Global Jets ETF (which declined 4.1%) and selling off in sympathy with the sector despite Delta's unique structural refinery protection.
+Thesis: A geopolitical supply shock has driven jet fuel prices to punishing levels, devastating the margin outlook for unhedged carriers. Delta is uniquely insulated by its ownership of the Monroe Energy refinery, which directly hedges the crack spread costs penalizing its competitors. However, the market treated Delta as a generic airline, dropping the stock 4.6% in sympathy with unhedged peers that fell ~6.5%. This indiscriminate sell-off misprices Delta's margin durability, setting up a relative catch-up trade as its upcoming April 8 earnings report exposes the fundamental divergence from the rest of the sector.
+Counter-thesis: The Monroe refinery only hedges the crack spread, not the underlying rise in raw crude oil itself, and the broader macro impact of surging oil prices could trigger consumer travel demand destruction that harms all carriers regardless of fuel efficiency.
+R2 flags: Verify current refinery utilization rates, exact crack spread savings, consumer forward-booking trends, and any potential hub congestion metrics.
+Key sources: Invezz ("Rising jet fuel costs from Iran conflict threaten US airline profits"); BNN Bloomberg ("U.S. stocks and oil prices flip-flop ahead of Trump's deadline to bomb Iranian power plants"); Bitget News ("Delta's premium fares could already reflect their full value as rising fuel costs challenge its advantage")
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: GT | The Goodyear Tire & Rubber Company | Bullish
+Catalyst: The U.S. government is preparing to launch the CAPE automated system by mid-April 2026 to refund up to $170 billion in illegal IEEPA tariffs that were struck down by the Supreme Court in February.
+Catalyst timing: Mid-April 2026 | Status: Near-Term
+Repricing window: days to 3 weeks
+Entry trigger: Stock holds the $6.65 level and breaks above the recent consolidation zone on elevated volume, signaling market rotation into direct-refund beneficiaries
+Invalidation condition: The U.S. Treasury successfully delays the CAPE system launch or imposes administrative hurdles that block near-term disbursements to active plaintiffs
+Target / repricing path: Structural re-rating back toward the $8.00+ level as analysts begin modeling the exact cash windfall onto the balance sheet
+Horizon / time stop: 3 to 6 weeks, or exit if the refund mechanism is formally suspended by the administration
+Cleanest expression: Goodyear is explicitly named in the gathered evidence as an active plaintiff with a case already filed in the U.S. Court of International Trade to claim refunds; given its depressed market cap under $2 billion, a proportional cash refund is highly material compared to mega-cap peers.
+What already moved: The evidence explicitly notes that import-heavy mega-cap retailers like Costco, Walmart, and Amazon were immediately highlighted by analysts and bid up as major winners of the Supreme Court tariff ruling.
+Evidence of lag: Despite being an explicitly named plaintiff exposed to the imminent refund pool, early April 2026 market data shows GT shares remaining beaten down near $6.76, down roughly 24% over the past 3 months with no structural upward repricing to reflect the impending cash windfall.
+Thesis: The Supreme Court's nullification of IEEPA tariffs has forced the government to launch the CAPE automated refund system in mid-April to disburse roughly $170 billion. While analysts and the broader market immediately bid up mega-cap retailers like Costco and Walmart on the margin relief narrative, they have ignored the direct balance-sheet windfall for smaller, active plaintiffs. Goodyear is explicitly named in the litigation, yet the stock remains down 24% over the last 3 months. As the market digests the reality of literal refund checks being processed in the coming weeks, GT should reprice aggressively given its low valuation base and direct legal standing.
+Counter-thesis: The U.S. Treasury faces a severe funding burden to pay out the $170 billion and may aggressively litigate individual claims or delay the CAPE disbursements, preventing GT from realizing any near-term cash infusion.
+R2 flags: Verify the exact estimated size of GT's tariff refund claim, assess near-term debt maturities, and check if any replacement tariffs threaten its core operations.
+Key sources: Kavout ("What's Driving the $166 Billion Tariff Refund Bonanza"); Seeking Alpha ("After the Supreme Court's tariff ruling, here's what could be next for stocks"); Reuters/TBS ("Business celebrates win over Trump tariffs, but refunds will take time")
