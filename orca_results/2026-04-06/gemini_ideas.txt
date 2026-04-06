@@ -1,0 +1,64 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: STX | Seagate Technology Holdings PLC | Bearish
+Catalyst: Strikes on Qatar's Ras Laffan complex and the closure of the Strait of Hormuz abruptly cut off roughly 30-38% of the global helium supply.
+Catalyst timing: 2026-03-02 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Breakdown below the $450 level as production halt concerns escalate.
+Invalidation condition: Qatar's Ras Laffan helium facility announces an imminent restart, or Seagate announces a massive alternative long-term helium supply.
+Target / repricing path: Retrace the recent rally back toward the $350-$370 pre-catalyst base as forward guidance is slashed due to high-margin drive production halts.
+Horizon / time stop: 2 to 4 weeks, or cover if the stock decisively breaks out above $475.
+Cleanest expression: Seagate is a pure-play hard disk drive manufacturer heavily dependent on helium-sealed HDD production, explicitly named in the evidence as having its high-capacity Exos models at risk.
+What already moved: Northeast Asia helium spot prices surged 40-100%, and the Strait of Hormuz is closed to Western commercial shipping.
+Evidence of lag: Seagate's stock surged 29.6% over the past month to $457.56 on April 6, 2026, pricing in HDD price hikes while demonstrably failing to reflect the imminent production halt caused by the helium cutoff.
+Thesis: Qatar's Ras Laffan facility shutdown and the Strait of Hormuz blockade have removed a third of the world's helium supply. Every hard drive of 10TB capacity and above uses helium as a non-substitutable sealed internal gas. While Seagate has fully allocated its 2026 production and raised prices, semiconductor and storage fabs typically hold only about a week of helium inventory. Without continuous inbound shipments, which are now blocked and expected to run out in Asian fabs by early April, Seagate cannot physically manufacture its highest-margin enterprise Exos drives. The market is bidding up STX on demand strength, leaving the imminent physical production crisis completely unpriced.
+Counter-thesis: The Fusion Worldwide report notes that high-capacity HDD prices have risen 20-50% since mid-2025, and Seagate's 2026 nearline production is fully allocated, which could drive enough margin expansion to offset temporary volume constraints.
+R2 flags: Verify alternative US/non-Qatari helium sourcing agreements, specific HDD inventory buffer levels, and short borrow availability.
+Key sources: Fusion Worldwide ("Helium Shortage 2026"); digitimes ("2026 Global Helium Crisis"); J2 Sourcing AB ("The Global Helium Crisis")
++2
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: DAL | Delta Air Lines Inc | Bearish
+Catalyst: The U.S.-Iran war and closure of the Strait of Hormuz caused a massive global energy supply shock, sending U.S. jet fuel spot prices surging nearly 100%.
+Catalyst timing: 2026-02-28 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Failed relative rally into the April 8 Q1 earnings release, or a breakdown below $65 support.
+Invalidation condition: The Strait of Hormuz reopens quickly leading to an immediate crash in crude and jet fuel, or management reveals a comprehensive 2026 fuel hedge that completely insulates cash flows.
+Target / repricing path: Gap down on an earnings guidance cut, targeting a catch-up to the downside capitulation already seen in peers facing massive operating cost spikes.
+Horizon / time stop: 1 to 3 weeks (post-earnings digestion), or stop out if the stock breaks above $70.
+Cleanest expression: Delta operates an extensive international and domestic network with massive exposure to spot jet fuel, making it highly sensitive to the energy shock, yet unlike its peers, its stock has not capitulated to the margin reality.
+What already moved: The average price for a gallon of U.S. jet fuel soared from $2.50 to $4.88. United Airlines (UAL) has already cited a $400 million addition to operating costs.
+Evidence of lag: Despite jet fuel costs nearly doubling, DAL shares are inexplicably up 12.9% over the past month to $66.65 as of April 6, 2026, with analysts still modeling 47.8% YoY quarterly EPS growth.
+Thesis: The escalation in the Middle East has functionally doubled jet fuel costs to $4.88 per gallon since late February, drastically inflating airlines' second-largest expense. While major airline peers like United have already cited hundreds of millions in added operating costs, DAL shares have perplexingly rallied nearly 13% over the past month as Wall Street ignores the margin destruction. With Q1 earnings scheduled for April 8, DAL's forward guidance must confront the new fuel reality, forcing a violent downward repricing to align with its peers.
+Counter-thesis: JetBlue and United Airlines both noted they are charging more for optional services (like raising checked bag fees by $10) to offset costs, a tactic Delta could also use to help preserve margins.
+R2 flags: Verify current fuel hedge book protection, pricing power on premium seats, and exact Q1 actual fuel consumption.
+Key sources: Argus Media (U.S. Jet Fuel Index); The Business Journal ("Checking a bag on United Airlines now costs $10 more as jet fuel costs soar"); Zacks Investment Research ("Delta Air Lines Reports Next Week")
++2
+
+IDEA #3
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: OWL | Blue Owl Capital Inc | Bearish
+Catalyst: Blue Owl was forced to cap redemptions at 5% on two of its major private credit funds after receiving massive withdrawal requests.
+Catalyst timing: 2026-04-02 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Stock breaks and holds below the April 2 intraday panic low of $8.05 on expanding volume.
+Invalidation condition: Q2 redemption requests plunge back to normal levels or the company secures a massive liquidity injection from a larger financial institution.
+Target / repricing path: Continued drift lower toward $6.50-$7.00 as analysts cut EPS targets due to structural AUM loss and a capped fee-generating base.
+Horizon / time stop: 3 to 6 weeks, or cover if the stock reclaims $9.00.
+Cleanest expression: Blue Owl is directly experiencing severe private credit stress, with specific numbers (40.7% withdrawal requests on its tech fund OTIC) highlighting a direct hit to its fee-generating AUM base.
+What already moved: Redemption requests surged past 40% on OTIC, triggering the 5% cap, and analysts at Goldman Sachs and UBS aggressively slashed their price targets on OWL by 13-27%.
+Evidence of lag: Despite news of a virtual "bank run" on its funds that will cripple future fee growth, OWL shares recovered from a 9% intraday plunge on April 2 to close down only 1.61% at $8.57, failing to structurally price the AUM damage.
+Thesis: Blue Owl Capital is facing acute private credit stress, highlighted by a staggering 41% redemption request rate on its $6B software loan fund (OTIC) and 22% on its $36B flagship fund (OCIC). The firm was forced to impose 5% withdrawal limits, signaling a loss of LP confidence. The resulting reputational hit and structural AUM bleed severely threaten its fee-based earnings model. Despite analysts slashing price targets and clear panic among its investors, the stock largely shrugged off the news, recovering most of its intraday losses to close down just 1.6%. The stock is drastically underpricing the fundamental impairment to its business.
+Counter-thesis: Management noted in the Semafor report that they believe the industry is in "peak redemption" mode and that they have enough cash on hand, including new inflows and loan repayments, to continue meeting the 5% quarterly withdrawals without forced asset sales.
+R2 flags: Verify exact uncalled capital reserves, specific software loan default rates in the OTIC portfolio, and any SEC scrutiny on non-traded BDC liquidity limits.
+Key sources: Semafor ("Blue Owl faces withdrawal flood"); Investing.com ("Blue Owl shares sink 9% as redemption requests hit 40%"); NYC Today ("Blue Owl Capital Shares Plummet to 12-Month Low")
++3
+
+Correlation note: STX and DAL share the late-February/March 2026 U.S.-Iran war and Strait of Hormuz closure as their root macro catalyst, though they trade on independent micro-transmission paths (helium supply cutoff and jet fuel margin destruction, respectively).

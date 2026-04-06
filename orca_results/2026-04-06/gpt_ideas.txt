@@ -1,0 +1,19 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built.
+Source quality: Mixed.
+Ticker | Company | Direction: FRO | Frontline plc | Bullish.
+Catalyst: Atlantic Basin crude rerouting is tightening U.S. Gulf tanker availability and lifting freight economics after the Iran war disrupted Middle East oil flows.
+Catalyst timing: 2026-04-06 | Status: Active.
+Repricing window: days to 3 weeks.
+Entry trigger: Data unavailable — verify in R2
+Invalidation condition: Data unavailable — verify in R2
+Target / repricing path: Data unavailable — verify in R2
+Horizon / time stop: Data unavailable — verify in R2
+Cleanest expression: Frontline is the cleaner listed crude-tanker expression because company materials describe it as a world leader in seaborne transport of crude oil and refined products with direct VLCC, Suezmax, and LR2/Aframax exposure, matching the vessel classes Reuters identified as tightening on the U.S. Gulf Coast.
+What already moved: Reuters reported WTI Midland cargo premiums to North Asia at $30-$40 per barrel over benchmarks, WTI to Europe about $15 over dated Brent, U.S. Gulf tanker availability down 41%, VLCC availability halved to 10 vessels, and Suezmax/Aframax earnings above $300,000 per day versus a recent $60,000 average.
+Evidence of lag: Frontline shares were down 0.3% on April 6 to $36.48 even as Reuters reported record U.S. crude premiums, tighter vessel availability, and higher freight rates.
+Thesis: The catalyst is live now, not theoretical: displaced Hormuz barrels are forcing Asian and European buyers into Atlantic Basin crude, and Reuters says that is already tightening tanker supply and raising freight rates. Frontline is a direct fleet-level expression of that squeeze rather than a diluted sector proxy, and its own February results said its business model is set to capitalize on volatile tanker markets. The stock's muted/down tape against today's rate and premium shock is enough to keep the thesis alive, but the execution map is not yet evidence-bound enough for Tier 1.
+Counter-thesis: Frontline disclosed that 92% of Q1 VLCC, 83% of Suezmax, and 67% of LR2/Aframax spot TCEs were already contracted, and it warned full-Q1 spot TCEs would be lower than currently contracted because of ballast days, so a brief freight spike may not flow through cleanly enough to justify immediate equity catch-up.
+R2 flags: Verify how much April-May exposure remains truly spot-sensitive after charter coverage; confirm that the partial Hormuz reopening for selected vessels does not unwind the rerouting squeeze; build a concrete trigger/invalidation map from price-volume levels.
+Key sources: Reuters, "US crude premiums climb to record levels as Asia, Europe compete for supply" (Apr. 6, 2026); Reuters, "US Gulf Coast tanker market tightens as Asia seeks to replace lost supply" (Apr. 1, 2026); Frontline, "About Frontline plc"; Frontline, "FRO – Fourth Quarter and Full Year 2025 Results"; Frontline financial calendar.
