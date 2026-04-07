@@ -1,0 +1,40 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Primary
+Ticker | Company | Direction: PSX | Phillips 66 | Bearish
+Catalyst: On April 6, 2026, Phillips 66 said Q1 results would be hit by nearly $900 million of pre-tax mark-to-market losses tied to a roughly 50 million-barrel net short derivatives position across crude, refined products, NGLs, and renewable feedstocks.
+Catalyst timing: April 6, 2026 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Bearish only if PSX breaks or closes back below today's intraday low of $172.29 while peers continue to hold up better, confirming the market is still digesting the filing rather than fully discounting it.
+Invalidation condition: Company clarification that materially shrinks the disclosed mark-to-market hit, or a close back above today's intraday high of $177.34.
+Target / repricing path: Further de-rating into Q1 earnings as investors price the disclosed derivatives loss more like a company-specific balance-sheet/positioning error than a generic refining-sector headline.
+Horizon / time stop: 1 to 2 weeks, or until the Q1 earnings release later this month, whichever comes first.
+Cleanest expression: Phillips 66 is the cleanest expression because the damage is not just "oil volatility hurts refiners"; it is explicitly tied to Phillips 66's own disclosed net short commodity derivatives book. That is a tighter and more company-specific chain than a sector short.
+What already moved: Brent rose 64% in March and WTI 52%; on April 7, Valero was up 2.4% and Marathon Petroleum up 1.4%, while PSX was down only about 1.5%.
+Evidence of lag: PSX's move looks small relative to the magnitude of a nearly $900 million pre-tax hit, especially against same-day positive moves in VLO and MPC.
+Thesis: The market already knows oil is higher; the fresher, more idiosyncratic fact is that Phillips 66 was positioned the wrong way through a very large net short derivatives book and pre-announced a substantial Q1 hit. That is a cleaner delayed-reaction setup than a generic refiner short because peers can still benefit from strong product markets while PSX has already admitted a specific loss bucket. The timing is tactical because the filing is new and the next earnings event should force fuller digestion.
+Counter-thesis: The disclosed losses are preliminary mark-to-market losses, not a confirmed collapse in underlying operating earnings, and they could shrink if commodity prices retrace before contracts settle or if other business lines offset more of the hit than the market currently assumes.
+R2 flags: Verify exact Q1 earnings date; check for any post-filing management color on position reduction or offsetting physical-margin benefits; confirm whether the derivatives exposure was quarter-end-only or persisted into April.
+Key sources: Reuters, "Phillips 66 faces $900 million loss as Iran crisis lifts oil prices" (April 6, 2026); LSEG/finance price data for PSX, VLO, and MPC on April 7, 2026.
+
+IDEA #2
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: RYAAY | Ryanair Holdings | Bearish
+Catalyst: On April 1, 2026, Ryanair's CEO said Europe could face a 10% to 20% jet-fuel supply disruption from June and that airlines may need to cancel flights if the Middle East war continues. On April 7, Reuters reported a temporary jet-fuel shortage at four Italian airports and broader tightening across Asia-Pacific fuel markets.
+Catalyst timing: April 1, 2026 and April 7, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Bearish only if further Europe-based airport shortages, schedule reductions, or explicit airline fuel-supply warnings appear without a confirmed Hormuz reopening.
+Invalidation condition: Clear reopening/normalization of Hormuz-linked flows or Ryanair/European airport operators explicitly confirming normal summer fuel supply.
+Target / repricing path: Re-rate lower if the market stops treating this as just an oil-price story and starts pricing it as a physical jet-fuel availability and schedule-risk story for summer Europe.
+Horizon / time stop: Through late April 2026, or until supply conditions visibly normalize.
+Cleanest expression: Ryanair is the cleanest airline expression because management itself framed the risk in operational terms—possible summer cancellations tied to fuel availability, not just higher input cost—and the name is a large, liquid listed carrier with direct exposure to Europe's short-haul summer schedule.
+What already moved: European jet fuel was near $226 a barrel on April 7, and airline stocks had previously been boosted by de-escalation hopes even as supply-risk headlines persisted.
+Evidence of lag: Pricing unverified — flag for R2
+Thesis: The clean read is that the market has been oscillating with oil headlines while a more specific risk is developing underneath: physical jet-fuel tightness and airport-level disruption. Ryanair's own CEO has already set the chain in motion by warning about June-to-summer cancellations if the conflict continues, and April 7 reporting showed real shortages are no longer hypothetical. This is Watchlist rather than Accepted because the lag proof versus the current stock move still needs a cleaner verification pass.
+Counter-thesis: Ryanair said it was not yet seeing much knock-on impact on fares and still expected April-to-June ticket prices to rise 3% to 4% with traffic up about 5%, while the Italian airport shortage was resolved by local suppliers and SAVE Group said it did not foresee short-term issues.
+R2 flags: Verify current relative stock performance versus European airline peers; check Ryanair's fuel-hedging coverage and airport exposure mix; confirm whether April 7 shortages remain isolated or begin spreading into core summer hubs.
+Key sources: Reuters, "Ryanair will consider cancelling flights if jet fuel supply disrupted" (April 1, 2026); Reuters, "Local suppliers avert jet fuel disruption at four Italian airports" (April 7, 2026); Reuters, "Asian airlines trim schedules and carry extra fuel as supplies tighten" (April 7, 2026).
+Correlation note: Both ideas share the same root catalyst—Hormuz-driven oil and refined-product dislocation—so they are not independent bets even though one is a company-specific balance-sheet/positioning short and the other is an operational jet-fuel availability short.

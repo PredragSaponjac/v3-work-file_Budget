@@ -1,0 +1,19 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Primary
+Ticker | Company | Direction: IVZ | Invesco Ltd | Bearish
+Catalyst: State Street filed paperwork on April 7 for a SPDR Nasdaq 100 ETF, one day after BlackRock filed for its iShares Nasdaq 100 ETF (IQQ). The two largest ETF issuers in the world are simultaneously targeting Invesco's near-exclusive U.S. Nasdaq 100 franchise, signaling a permanent structural break of the licensing monopoly that has sustained QQQ's ~99.5% market share.
+Catalyst timing: 2026-04-07 (State Street filing) following 2026-04-06 (BlackRock filing) | Status: Active
+Repricing window: days to 2 weeks
+Entry trigger: Fresh breakdown below Monday's $23.19 close on the State Street escalation, or failed relief rally attempt back toward pre-BlackRock levels near $24.30
+Invalidation condition: Nasdaq revokes or restricts the new licenses, both filings are withdrawn, or IVZ announces a preemptive fee restructuring that removes the competitive gap before material flow loss
+Target / repricing path: Repricing toward peer asset manager multiples stripped of the QQQ franchise premium; magnitude depends on analyst revision cycle — Data unavailable — verify in R2
+Horizon / time stop: 2 weeks, or earlier if IVZ stabilizes above pre-catalyst levels; review before April 28 earnings
+Cleanest expression: Invesco is the sole direct victim. QQQ ($376B) and QQQM ($70B) together represent roughly 20% of IVZ's total AUM and a disproportionately higher share of operating profit given passive ETF margin structure. No other listed name has this concentrated exposure to the Nasdaq 100 licensing franchise.
+What already moved: IVZ fell 5.2% on Monday April 6 — the largest single-day decline since October — immediately after BlackRock's SEC filing became public. Bloomberg, Reuters, and Seeking Alpha all attributed the move directly to the competitive threat.
+Evidence of lag: Pricing unverified — flag for R2
+Thesis: BlackRock's filing on April 6 broke a decades-old exclusivity structure in which Invesco controlled nearly 100% of U.S.-listed Nasdaq 100 index ETF assets. The market's initial 5% reaction priced one competitor. State Street's filing the very next day transforms this from a bilateral challenge into an industry-wide assault — the #1 and #3 ETF issuers are both now targeting the same franchise. BlackRock will almost certainly price IQQ at a fraction of QQQ's 0.20% expense ratio, consistent with its iShares pricing strategy. The compounding signal — two filings in 24 hours — suggests the Nasdaq licensing moat has cracked permanently, and the franchise premium embedded in IVZ's valuation has not yet been fully repriced.
+Counter-thesis: SPY has maintained over $600B in AUM for 30+ years despite IVV charging a fraction of the expense ratio. QQQ's massive options ecosystem, institutional liquidity, and trading infrastructure create switching costs that may protect the installed base even as marginal new flows divert. An Invesco spokesperson stated "There is only one QQQ," and the fund's entrenched position in trading desks and options market-making may prove more durable than the fee differential implies.
+R2 flags: Verify IVZ's today-session reaction to the State Street news. Confirm QQQ/QQQM revenue and profit contribution to IVZ from latest filings. Check short borrow conditions. Confirm IVZ earnings date (April 28) does not create dominant interference. Monitor whether additional issuers file. Verify whether Nasdaq's licensing terms include any volume protections or exclusivity tail for Invesco.
+Key sources: Bloomberg, "BlackRock, State Street File Nasdaq 100 ETF Plans to Challenge Invesco's QQQ," April 7, 2026; Reuters, "BlackRock files for Nasdaq-100 fund, expanding competition with Invesco," April 6, 2026; SEC filing for iShares Nasdaq-100 ETF (IQQ); Invesco press release confirming Q1 2026 earnings on April 28, 2026

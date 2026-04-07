@@ -1,0 +1,40 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: APD | Air Products and Chemicals, Inc. | Bullish
+Catalyst: Drone and missile strikes on Qatar's Ras Laffan Industrial City halted production, taking approximately 33% of global helium supply offline and stranding existing shipments due to the Strait of Hormuz closure.
+Catalyst timing: 2026-03-04 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock cleanly breaks and holds above the $280 resistance level or reclaims the 200-day moving average.
+Invalidation condition: QatarEnergy lifts force majeure and restarts production sooner than expected, or European spot helium prices materially retrace.
+Target / repricing path: Repricing catch-up toward the J.P. Morgan target of $310/share over the stated tactical window.
+Horizon / time stop: 2 to 4 weeks
+Cleanest expression: Air Products produces ~20-25% of U.S. domestic helium in the Midcontinent basin, insulating its supply from the Middle East logistics halt, and was explicitly identified by analysts as a primary beneficiary compared to competitors with smaller relative helium revenue share.
+What already moved: European spot helium prices have doubled to ~$450/Mcf, and J.P. Morgan issued an explicit analyst upgrade (raising target to $310) citing the helium price recovery.
+Evidence of lag: Despite the doubling of spot helium prices and the explicit analyst upgrade, APD stock fell 1.1% on the day of the upgrade and declined another 1.25% on April 6 despite an announced dividend hike, trading near $278.85 and failing to confirm the pricing tailwind.
+Thesis: A major geopolitical strike on Qatar's Ras Laffan complex has removed one-third of global helium from the market, doubling spot prices to $450/Mcf. Air Products is a top-tier helium supplier with substantial U.S. domestic production, allowing it to capture peak pricing without direct Gulf supply chain exposure. Despite formal analyst upgrades explicitly citing this exact catalyst, APD stock traded lower on the news and remains technically muted, offering a clean divergence before broader market recognition forces a valuation catch-up.
+Counter-thesis: APD derives 20-25% of its revenue from refining end markets; refineries may reduce utilization due to the recent spike in crude oil prices (now over $115/bbl), potentially offsetting the helium-driven earnings gains.
+R2 flags: Verify the exact spot versus contract pricing mix in APD's helium portfolio, short-term refining demand impact, and the potential for federal intervention or export controls on domestic U.S. helium.
+Key sources: Exiger (Iran War Disrupts One-Third of Global Helium Supply); Forbes (Helium Crisis Tightens Grip On Global Chip Supply Chain); Seeking Alpha (Air Products upgraded at J.P. Morgan on helium price recovery)
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: DAL | Delta Air Lines Inc | Bearish
+Catalyst: Global energy shock triggered by the Middle East conflict and Strait of Hormuz disruption, which violently spiked oil prices and jet fuel costs.
+Catalyst timing: 2026-02-28 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Short entry heading into the April 8, 2026 Q1 earnings and Q2 guidance release, breaking below near-term support.
+Invalidation condition: Global oil benchmark (Brent) rapidly collapses back below $80/barrel, or management reveals an unexpectedly massive Q2 fuel hedge that neutralizes the spot price spike.
+Target / repricing path: Repricing back toward the mid-March panic lows of $57-$59 as the reality of sustained $110+ Brent crude compresses 2026 EPS estimates.
+Horizon / time stop: 1 to 3 weeks (post-earnings absorption)
+Cleanest expression: DAL is a highly sensitive legacy carrier that explicitly cited "rising jet fuel costs" to hike bag fees and recorded an estimated $400 million unplanned fuel hit in March, providing a direct 1-hop economic linkage to the commodity shock.
+What already moved: Brent crude spiked from a $65-$70 range to over $115/bbl, and the broader energy sector ETF (XLE) surged 21.6% YTD.
+Evidence of lag: DAL initially fell to $57.94 in mid-March but rallied back to close at $65.96 on April 7, almost completely round-tripping to its pre-shock trading levels and ignoring the sustained doubling of its primary raw material input.
+Thesis: A structural energy shock has violently repriced oil higher, and the economic consequence is actively crushing airline margins. Gathered evidence explicitly notes Delta suffered a $400 million unplanned fuel expense in March alone and was forced to proactively raise checked bag fees by $10 to cope. Despite this direct fundamental hit, DAL equity rallied off its March lows to recover near its pre-war price as the broader market bought a geopolitical de-escalation narrative. The upcoming April 8 earnings report will act as the catalyst to break this divergence, forcing the market to reprice Q2 guidance against the mathematical reality of sustained $110+ Brent crude.
+Counter-thesis: The broader market's shift toward a "de-escalation narrative" and Delta's proactive approach to managing operational costs (including the newly announced $10 checked bag fee increase) could offset the fuel margin compression enough to protect near-term EPS targets.
+R2 flags: Verify the exact Q2 fuel hedge book, exact Q1 EPS estimates, and check the specific short borrow rate.
+Key sources: FinancialContent (Inflation Re-acceleration: Energy Shock...); GuruFocus (Delta Air Lines Increases Checked Bag Fees Amid Rising Fuel Costs); TIKR; Delta Air Lines Investor Relations
+Correlation note: Both ideas are inverse expressions of the same root geopolitical catalyst: the Iran conflict and subsequent Strait of Hormuz blockade. APD benefits from the collateral damage to Qatar's helium exports, while DAL suffers from the direct impact of the resulting global oil spike.
