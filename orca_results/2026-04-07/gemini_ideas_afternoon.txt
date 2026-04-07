@@ -1,0 +1,39 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: PRVA | Privia Health Group Inc | Bullish
+Catalyst: The Centers for Medicare & Medicaid Services (CMS) unexpectedly finalized a 2.48% payment rate increase for 2027 Medicare Advantage plans on April 6, 2026, reversing a highly scrutinized 0.09% initial proposal.
+Catalyst timing: April 6, 2026 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Stock clears and holds above its initial post-catalyst intraday high of $22.48 with expanding volume
+Invalidation condition: PRVA issues a downside margin pre-announcement, or pure-play VBC peer AGL completely retraces its jump
+Target / repricing path: 10-15% catch-up upside toward the $24.50-$25.50 level
+Horizon / time stop: 1 to 3 weeks
+Cleanest expression: Privia Health operates a capitated value-based care (VBC) network whose economics are tightly linked to Medicare Advantage capitation rates. The CMS boost directly relieves margin pressure on capitated physician contracts, making PRVA a direct 1-hop beneficiary.
+What already moved: Direct value-based care peer Agilon Health (AGL) surged 20.7% on April 7, and MA insurer Alignment Healthcare (ALHC) surged 17.4%.
+Evidence of lag: Despite the explosive 17-20% sector-wide surge in its direct peers, PRVA shares closed up a muted 3.3% (at $22.30) on April 7.
+Thesis: CMS unexpectedly saved 2027 Medicare Advantage margins with a 2.48% rate hike, sparking a massive relief rally across the sector on April 7. Direct insurers and pure-play value-based care (VBC) networks immediately repriced higher, with AGL and ALHC jumping roughly 20.7% and 17.4%, respectively. Privia Health (PRVA) shares the identical VBC capitation economic tailwind but has only nudged up 3.3%. As the market digests the capitation benefits flowing downstream to physician groups, PRVA should experience a delayed relative catch-up to its peer group.
+Counter-thesis: PRVA's revenue mix is more diversified across commercial and traditional fee-for-service lines than a pure-play Medicare Advantage peer like AGL, which mathematically dilutes its direct torque to the CMS MA rate hike and potentially justifies a smaller beta to the event.
+R2 flags: Verify the exact percentage of PRVA's capitated lives currently tied to Medicare Advantage, and check for any idiosyncratic physician-group churn.
+Key sources: Centers for Medicare & Medicaid Services (CMS) 2027 Rate Announcement; LSEG market data for PRVA, AGL, and ALHC
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: STNG | Scorpio Tankers Inc | Bullish
+Catalyst: The U.S. set a strict April 7 deadline for Iran to reopen the Strait of Hormuz, escalating blockade fears and driving a massive single-day spike in global crude oil.
+Catalyst timing: April 7, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: STNG reclaims and holds its previous closing level of $76.54 on expanding volume
+Invalidation condition: A diplomatic ceasefire is reached, reopening the Strait and collapsing the geopolitical premium in product tanker rates
+Target / repricing path: Repricing upside toward the recent late-March highs around $81.50 as the extended product tanker disruption is fully priced in
+Horizon / time stop: 2 to 4 weeks
+Cleanest expression: Scorpio Tankers operates a massive fleet of LR2 and MR product tankers. The prolonged Hormuz closure forces immediate rerouting, driving outsized ton-mile demand and elevating TCE rates for product transport.
+What already moved: WTI Crude Oil surged 3.5% to $116.36 per barrel on April 7 following the U.S. ultimatum.
+Evidence of lag: Despite the surging underlying commodity and escalated blockade timeline, STNG shares actually fell 2.3% to $74.79 on April 7.
+Thesis: The Strait of Hormuz remains closed, forcing global shipping to reroute and fundamentally tightening product tanker capacity. On April 7, a U.S. ultimatum escalated blockade fears, sending WTI crude surging 3.5% to over $116 per barrel as the market priced in extended disruption. However, STNG shares inexplicably dropped 2.3% on the day. The stock has demonstrably failed to price in the latest fundamental escalation and the resulting ton-mile demand boost, presenting a clear delayed-reaction setup.
+Counter-thesis: STNG recently announced the sale of two 2015-built MR product tankers and a $10M investment in a nuclear power venture. The market may be concerned that management is signaling a cycle peak by selling producing assets and redirecting capital into speculative alternative energy ventures, overriding the near-term rate tailwind.
+R2 flags: Verify the exact week-over-week change in spot TCE rates for LR2/MR tankers and monitor any short interest accumulation.
+Key sources: Marine Link; Lloyd's List; LSEG market data for STNG

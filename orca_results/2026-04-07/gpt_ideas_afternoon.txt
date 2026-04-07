@@ -1,0 +1,39 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: PSX | Phillips 66 | Bearish
+Catalyst: Phillips 66 said on April 6 that first-quarter results were hit by nearly $900 million of pre-tax mark-to-market losses from net short derivatives positions after the Iran-war commodity spike.
+Catalyst timing: 2026-04-06 | Status: Active.
+Repricing window: days to 3 weeks
+Entry trigger: Failed relief bounce after the April 6 disclosure, or renewed prompt-oil / refined-product stress without a commensurate reset lower in the shares.
+Invalidation condition: Clear de-escalation in Hormuz-related supply stress, or follow-up disclosure showing the preliminary mark-to-market hit will be materially smaller than currently indicated.
+Target / repricing path: Catch-up lower toward fuller recognition of the disclosed hit across refining, marketing and specialties, and renewable fuels.
+Horizon / time stop: Through 2026-04-28, ahead of the scheduled Q1 earnings call on 2026-04-29.
+Cleanest expression: This is the cleanest listed expression because the consequence is 0-hop and company-specific: the loss is disclosed by Phillips 66 itself and tied to its own net short commodity derivatives book, not inferred through generic refiner exposure.
+What already moved: Physical crude cargoes were trading near $150 a barrel on April 7, dated Brent was about $20 above June Brent futures, and refined-product prices were near records.
+Evidence of lag: Pricing unverified — flag for R2
+Thesis: The catalyst is fresh, direct, and already quantified by the company. The same physical commodity stress that produced the disclosed derivatives loss is still visible in crude and product markets, so this is a clean bearish single-name setup if the equity has not fully absorbed the earnings damage yet.
+Counter-thesis: The filing says Phillips 66 has not completed its financial closing procedures and that actual results could vary, so the preliminary hit may overstate the ultimate Q1 damage.
+R2 flags: Verify post-filing stock reaction versus the size of the disclosed hit, hedge-offset detail, and whether consensus already fully reflects the loss.
+Key sources: Reuters, April 6, 2026; Reuters, April 7, 2026; Phillips 66 Investor Relations earnings calendar.
+
+IDEA #2
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: TRP | TC Energy Corp. | Bullish
+Catalyst: TC Energy's CEO said on March 23 that the Iran war makes a second phase of LNG Canada more likely, and on March 25 TC Energy said Coastal GasLink signed commercial agreements with LNG Canada to advance Phase 2 toward front-end engineering, cost estimates, and eventual FID.
+Catalyst timing: 2026-03-25 | Status: Active.
+Repricing window: days to 3 weeks
+Entry trigger: Continued LNG-supply tightness or another project-advancing update tied to LNG Canada / Coastal GasLink Phase 2.
+Invalidation condition: Clear de-escalation that normalizes LNG urgency, or evidence that Phase 2 / FID momentum is stalling rather than advancing.
+Target / repricing path: Catch-up higher toward recognition of incremental brownfield pipeline-expansion optionality tied to Phase 2.
+Horizon / time stop: 2 to 3 weeks, or earlier if LNG-price stress normalizes.
+Cleanest expression: TC Energy is the cleanest listed expression because Coastal GasLink is the named pipeline asset with the signed commercial agreements and direct Phase 2 linkage; this is more specific than a broad "Canadian gas" or diversified LNG-equity thesis.
+What already moved: Asian LNG prices rose nearly 40% on March 3 and later were reported up 143% from the start of the war to $25.30/mmBtu, while LNG Canada ramped output to Asia as the conflict disrupted global gas supply.
+Evidence of lag: Pricing unverified — flag for R2
+Thesis: The commodity shock has already repriced LNG, and the project-level transmission path is no longer hypothetical because TC Energy now has named commercial agreements advancing Coastal GasLink Phase 2. If the equity has not yet capitalized the increased probability of expansion, TRP is the cleanest listed beneficiary because the value transfer runs through an identified owned pipeline asset rather than a loose macro gas narrative.
+Counter-thesis: Phase 2 still requires a final investment decision by LNG Canada and its joint-venture participants, along with approvals from Coastal GasLink, so the value may remain optional rather than near-term.
+R2 flags: Verify share-price lag versus other pipeline / LNG-linked names, confirm whether the Phase 2 probability shift is already embedded, and check any near-term corporate-event interference before entry.
+Key sources: Reuters, March 23, 2026; Reuters, March 25, 2026; Reuters, March 10, 2026; Reuters, March 26, 2026.
