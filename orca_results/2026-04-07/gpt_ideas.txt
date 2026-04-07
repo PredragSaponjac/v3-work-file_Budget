@@ -1,0 +1,19 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: REGN | Regeneron Pharmaceuticals | Bullish
+Catalyst: Regeneron said on April 2 that it expects to avoid the new U.S. branded-drug tariffs by announcing a pricing agreement with the administration "in the near future."
+Catalyst timing: 2026-04-02 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Formal announcement that Regeneron has signed the pricing deal or is expressly excluded from the tariff list, provided the stock has not already fully repriced the relief move.
+Invalidation condition: The administration does not exempt Regeneron, negotiations slip materially, or final terms still leave meaningful tariff exposure.
+Target / repricing path: Catch-up toward the tariff-relief reaction path previously seen when other large drugmakers removed the tariff overhang through signed agreements.
+Horizon / time stop: 1 to 2 weeks after a formal deal announcement, and no later than before Regeneron's April 29 earnings report.
+Cleanest expression: This is a 0-hop, company-specific setup because the catalyst is Regeneron's own near-term tariff-exemption path rather than a diluted sector read-through.
+What already moved: Reuters reported that when nine major drugmakers struck price-cut deals in December that removed the tariff threat, shares of most of them rose about 1% to 3%.
+Evidence of lag: Pricing unverified — flag for R2
+Thesis: Regeneron is the sole holdout among the 17 large drugmakers targeted by the administration, but it said on April 2 that it expects to announce a deal soon and avoid the new tariff regime. That makes REGN the cleanest remaining single-name expression of tariff-overhang removal. This is not Accepted because I do not yet have clean, explicit proof that REGN itself underreacted versus the prior relief reactions seen in peers.
+Counter-thesis: The market may be right to wait because Regeneron is still the only one of the 17 large drugmakers without a signed agreement, so the exemption is not final and the eventual pricing concessions could offset part of the tariff-relief benefit.
+R2 flags: Verify REGN's actual April 2-to-April 7 relative performance versus large-cap pharma peers, confirm final exemption terms, and monitor the April 29 earnings date as the next major company-specific event.
+Key sources: Reuters (April 2, 2026) "Regeneron says it expects to avoid new US pharma tariffs"; Reuters factbox (April 2, 2026) on drugmakers' pricing agreements; Reuters (December 19, 2025) on peers' share reactions after tariff-removal deals; Regeneron Investor Relations (March 25, 2026) Q1 2026 earnings date.
