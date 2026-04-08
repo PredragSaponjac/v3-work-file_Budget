@@ -7,4 +7,4 @@ ORCA's Second-Derivative Hunter is a multi-model AI war machine that systematica
 📊 All trades tracked live -- no backdating, no editing:
 https://docs.google.com/spreadsheets/d/1nKlWFb3nUn94bfMqm_WBo_DZLnMUrdCiDprAKpJb1F4
 
-⚠️ DISCLAIMER: This is quantitative research and market intelligence only. Not financial advice. Not a recommendation to buy, sell, or hold any security. Past performance does not guarantee future results. All ideas are research outputs from an AI system -- not trade signals. Always do your own due diligence and consult a licensed financial advisor before making any investment decisions.
+⚠️ DISCLAIMER: This is quantitative research and market intelligence only. Not financial advice.
