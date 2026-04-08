@@ -1,0 +1,19 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: VLO | Valero Energy Corporation | Bullish
+Catalyst: A provisional two-week US-Iran ceasefire announced on April 8, 2026, drove global crude oil prices down ~15%, while the IATA confirmed that Middle East refining disruptions will keep refined fuel prices elevated for months.
+Catalyst timing: 2026-04-08 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Stock stabilizes from the April 8 gap-down and reclaims the prior day's close, decoupling from the broader upstream energy sector sell-off
+Invalidation condition: The provisional two-week ceasefire collapses and crude snaps back above $110/bbl, or benchmark US crack spreads materially compress
+Target / repricing path: Rotation back toward pre-April 8 relative highs as the market prices in the crack spread expansion
+Horizon / time stop: 2 to 3 weeks
+Cleanest expression: Valero is a massive independent US refiner. Lacking upstream crude production, it avoids the direct revenue hit that integrated majors like Exxon face from falling crude, making it a pure-play beneficiary of falling input costs and elevated product margins.
+What already moved: Brent and WTI crude benchmarks plunged ~15% to below $100 per barrel on the ceasefire announcement, and upstream producers like Exxon (XOM) and Chevron (CVX) dropped ~5-6%. Shell updated Q1 guidance on April 8 indicating its indicative refining margins rose to $17/bbl due to market volatility.
+Evidence of lag: Gathered evidence shows VLO shares dropped 5.18% on April 8, falling to $238.44 in lockstep with the broader energy sector and upstream producers.
+Thesis: Independent refiners capture the margin spread between crude oil and refined products. The April 8 ceasefire caused crude prices to crash 15%, abruptly slashing refiners' primary input cost. Simultaneously, the IATA Director-General confirmed on April 8 that Middle East refining disruptions will keep global jet fuel and refined product prices elevated for months, keeping crack spreads high. Shell also confirmed a jump in indicative refining margins. Despite this powerful fundamental margin tailwind, the market underreacted by treating VLO as a generic energy proxy, algorithmically dragging it down 5.18% alongside upstream oil producers whose revenues are tied directly to crude. This mispricing creates a clear tactical window for VLO to reprice upward as the margin benefit is recognized.
+Counter-thesis: The ceasefire is explicitly a "provisional two-week agreement" with Iran; if negotiations fail and the Strait of Hormuz remains threatened, crude oil could violently snap back, erasing the input cost tailwind before VLO equities can rotate.
+R2 flags: Verify current US Gulf Coast crack spreads, VLO's near-term crude hedge positioning, and ETF-driven basket selling pressure.
+Key sources: Reuters / IATA Press Release (Jet fuel supply recovery to take months even if Hormuz reopened); Investing.com (Shell flags Q1 hit from Middle East conflict as refining margins rise); MarketBeat (Valero Energy stock data)

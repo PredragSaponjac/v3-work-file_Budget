@@ -1,0 +1,19 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: DAL | Delta Air Lines | Bearish
+Catalyst: The April 8 ceasefire-relief rally in airlines is colliding with company-disclosed evidence that the operational fuel shock is still severe: Reuters reported no immediate relief for airlines and Delta said Q2 all-in fuel is still expected around $4.30 per gallon.
+Catalyst timing: 2026-04-08 | Status: Active
+Repricing window: days to 3 weeks.
+Entry trigger: Bearish only if DAL fails to hold the April 8 relief-rally zone and post-open trading starts refocusing on management's Q2 fuel-cost and capacity-cut guidance rather than on the ceasefire headline.
+Invalidation condition: New follow-up disclosures or market developments that materially improve the current Q2 fuel outlook, materially lift Delta's recovery of fuel costs above the stated 40% to 50% range, or keep DAL firmly above the April 8 relief move despite no improvement in the underlying fuel/supply facts.
+Target / repricing path: Partial retrace of the ceasefire/earnings relief pop as the market re-prices "no immediate relief," Delta's more than $2 billion year-over-year fuel hit, and only partial cost recovery.
+Horizon / time stop: 1 to 2 weeks, or earlier if DAL continues to hold the relief rally after regular-session closes despite no improvement in fuel-market conditions.
+Cleanest expression: Delta is the cleanest listed expression in this evidence set because management itself quantified the Q2 fuel shock, capacity response, recovery rate, and refinery offset on the same day the stock rallied.
+What already moved: Reuters reported U.S. airline stocks gained more than 10% on ceasefire hopes, while crude dropped sharply as markets priced rapid relief.
+Evidence of lag: Delta jumped about 10% even after saying jet fuel had nearly doubled since late February, Q2 fuel would run around $4.30 per gallon, extra fuel expense would exceed $2 billion year over year, capacity growth would be scrapped, and only 40% to 50% of the added fuel cost could be recouped; Reuters separately said airline and travel industries see no immediate relief and that jet-fuel supply recovery could take months.
+Thesis: The market appears to have traded DAL as a fast-ceasefire beneficiary before the operational chain actually normalized. Delta's own release and Reuters reporting both point the other way: fuel remains extremely expensive, supply recovery is not immediate, and management is already cutting planned capacity while guiding to only partial recovery of the cost shock. If the next several sessions shift attention from the geopolitical headline back to the company's quantified Q2 economics, DAL has room to give back part of the relief move.
+Counter-thesis: Delta also said demand remains strong, earnings were more than 40% higher than a year earlier, and its refinery is expected to provide roughly $300 million of Q2 benefit, so investors may decide the company is strong enough to absorb the shock and that the rally is justified.
+R2 flags: Verify whether the April 8 rally holds on closing prices, whether jet-fuel spot and forward curves keep easing after the ceasefire, whether fare hikes and baggage-fee changes raise recovery above 50%, and whether any new geopolitical setback reverses the oil move again.
+Key sources: Reuters, "Airline and travel industries see no immediate relief from Iran ceasefire"; Reuters, "Delta scraps capacity growth plans as fuel price surge drives up costs"; Delta, March Quarter 2026 Financial Results; Delta Air Lines 2025 Form 10-K.
