@@ -1,0 +1,8 @@
+ORCA Intelligence System
+
+One curious human quant. Three top frontier AI models. Updated daily.
+
+ORCA's Second-Derivative Hunter is a multi-model AI war machine that systematically hunts the trades Wall Street hasn't priced yet -- the suppliers, customers, substitutes, and logistics plays that ripple out from every major catalyst while the rest of the market is still staring at the obvious name. It runs a brutal 7-gate screening pipeline with proxy kill filters, vol regime gates, and Rejection Immutability, cross-referenced against real-time unusual options flow forensics and dark pool block prints to confirm that smart money is already quietly building positions before the crowd arrives. The edge is enormous, structural, and -- critically -- it compounds over time: a nightly Teacher review layer scores every idea, grades each model's performance, tracks thesis outcomes, and feeds forensic post-mortems back into the system, meaning ORCA learns from every win, every miss, and every killed trade, relentlessly sharpening its filters and closing the gaps that produced yesterday's errors. While every other desk is crowding into the first-order headline trade, ORCA is already positioned in the second- and third-order beneficiaries -- validated by institutional flow footprints, OI buildups, and dark pool sweep activity -- with defined risk, asymmetric payoff, and a 1-2 week monetization window, and it gets deadlier with every single session it runs.
+
+All trades tracked live -- no backdating, no editing:
+https://docs.google.com/spreadsheets/d/1nKlWFb3nUn94bfMqm_WBo_DZLnMUrdCiDprAKpJb1F4
