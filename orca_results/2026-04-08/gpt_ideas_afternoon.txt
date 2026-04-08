@@ -1,0 +1,19 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: DAL | Delta Air Lines | Bearish
+Catalyst: Delta's same-day Q2 warning is colliding with a ceasefire relief rally that appears to be anchored to crude rather than to jet fuel. Reuters reported Delta guided Q2 EPS to $1.00-$1.50 versus a $1.41 analyst consensus, expects about $2 billion of extra June-quarter fuel costs, and cut planned capacity growth, while IATA said jet-fuel supply normalization could still take months.
+Catalyst timing: 2026-04-08 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Failed rebound that cannot reclaim the April 8 open near $73.00 after the post-call fade, with price staying below that relief-gap zone.
+Invalidation condition: Decisive reclaim above the April 8 intraday high near $74.70, or new evidence that jet-fuel normalization is arriving materially faster than Delta and IATA indicated.
+Target / repricing path: Initial unwind toward the prior-close area implied by today's quote, about $65.62, with additional downside only if persistent fuel-cost headlines keep eroding the ceasefire bounce.
+Horizon / time stop: 5 to 10 trading days, or exit sooner if the ceasefire stabilizes and fuel-disruption headlines materially improve.
+Cleanest expression: Delta is the cleanest listed expression in the gathered evidence because the Reuters evidence base is company-specific on Delta itself: quantified extra fuel costs, below-consensus Q2 guide, capacity cuts, fare/fee recapture plans, and a stated refinery offset. The same evidence set is less specific on other U.S. airlines.
+What already moved: European jet-fuel prices more than doubled after the Iran war, while ceasefire headlines pushed airline shares higher and crude sharply lower; Reuters said UAL, DAL, and AAL each gained over 7% earlier in the session and Brent fell to $90.40.
+Evidence of lag: Delta still finished materially above the prior close at $68.69 after opening at $73.00, even though Reuters simultaneously reported a below-consensus Q2 EPS range, about $2 billion of extra June-quarter fuel costs, and IATA's view that jet-fuel supply recovery could take months because refining capacity was damaged.
+Thesis: The market's ceasefire relief trade looks cleaner in crude than in airline economics. Reuters reported that jet-fuel disruption can persist for months, Delta itself quantified a very large near-term fuel hit, and U.S. fuel experts said airplane-ticket and refined-fuel pricing should stay elevated because the truce is fragile and inventories must still work through the system. If that gap between crude optimism and jet-fuel reality narrows over the next several sessions, Delta's relief rally can retrace.
+Counter-thesis: Delta is not a pure fuel beta. Reuters reported strong premium-travel demand, management's plan to recapture 40%-50% of added fuel expense through fares and baggage fees, an expected $300 million quarterly benefit from its Pennsylvania refinery, and Panmure Liberum's view that the ceasefire created a buying opportunity for quality airlines.
+R2 flags: Verify whether the ceasefire holds after Reuters reported cracks in the truce, track actual jet-fuel cracks rather than crude alone, confirm how quickly Delta's fare/fee actions offset fuel, and verify short-expression practicality before sizing.
+Key sources: Reuters, "Delta hits brakes on growth plans as fuel spike reshapes airline economics" (Apr. 8, 2026); Reuters, "Airline and travel industries see no immediate relief from Iran ceasefire" (Apr. 8, 2026); Reuters, "US pump prices to stay elevated despite US-Iran ceasefire deal, market observers say" (Apr. 8, 2026); Delta Air Lines Investor Relations, "Delta Air Lines 1Q 2026 Earnings Webcast" (Apr. 8, 2026).

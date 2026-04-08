@@ -1,0 +1,43 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: FRO | Frontline Plc | Bearish
+Catalyst: A U.S.-Iran ceasefire officially reopened the Strait of Hormuz to commercial shipping, ending a six-week blockade that caused massive supply chain disruptions.
+Catalyst timing: 2026-04-08 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Short entry on a breakdown below the $34.71 regular session open.
+Invalidation condition: The ceasefire collapses or shipowners refuse to transit the Strait due to a lack of security assurances, sustaining high ton-mile demand.
+Target / repricing path: Repricing downward toward the low $20s as spot VLCC rates collapse from current record highs back to historical norms.
+Horizon / time stop: 2 to 4 weeks.
+Cleanest expression: Frontline is a pure-play VLCC tanker operator that explicitly benefited from the crisis, booking 92% of its Q1 spot days at $107,100/day (highest since 2008), making it highly sensitive to spot rate normalization.
+What already moved: The underlying energy commodity aggressively priced in the Strait reopening, with WTI and Brent crude futures plunging over 16% back toward $90/barrel.
+Evidence of lag: Despite crude oil cratering on the ceasefire news, FRO shares completely ignored the de-escalation, actually closing up 3.3% at $36.14 on April 8.
+Thesis: The six-week closure of the Strait of Hormuz spiked tanker spot rates to 2008 highs, heavily benefiting Frontline. On April 8, a U.S.-Iran ceasefire reopened the Strait, prompting the commodity market to immediately price in normalization by sending crude oil plunging over 16%. However, equity investors in Frontline completely ignored the impending collapse in freight rates, bidding the stock up 3.3%. As the backlog of stranded vessels clears and spot rates crater, FRO faces a steep downside catch-up to align with the underlying physical market.
+Counter-thesis: Nigeria Info FM quotes a major shipping firm explicitly stating "There is no full maritime certainty," meaning charterers may still demand massive war-risk premiums or avoid the Strait, keeping FRO's realized rates elevated despite the political truce.
+R2 flags: Verify daily transit volumes through the Strait of Hormuz, monitor VLCC spot rate indices, and check short borrow costs.
+Key sources: Nigeria Info FM; The Times of India; Investing.com / Evercore ISI.
++2
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: XOM | Exxon Mobil Corp | Bearish
+Catalyst: A U.S.-Iran ceasefire officially reopened the Strait of Hormuz to commercial shipping, unwinding the geopolitical premium in global energy markets.
+Catalyst timing: 2026-04-08 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Short entry on a daily close below the $153.00 intraday support level.
+Invalidation condition: The ceasefire breaks down, closing the Strait of Hormuz and sending Brent crude back above $110/barrel.
+Target / repricing path: Gap fill lower toward pre-war valuation levels near $130-$140 as the market revises upstream margin expectations.
+Horizon / time stop: 2 to 4 weeks.
+Cleanest expression: Exxon Mobil is the largest U.S. oil major and a highly liquid, direct 1-hop proxy for global crude prices, making it the clearest institutional expression for fading the geopolitical oil premium.
+What already moved: The underlying commodity aggressively priced in the reopening, with WTI and Brent crude futures plunging over 16% back toward $90/barrel on April 8.
+Evidence of lag: While the underlying commodity plummeted ~17%, XOM shares exhibited a muted reaction, declining only 4.9% to close at $155.83 and retaining the vast majority of their recent geopolitical premium.
+Thesis: Exxon Mobil shares surged significantly during the March 2026 Iran war as the closure of the Strait of Hormuz spiked crude prices. The April 8 ceasefire announcement immediately stripped the war premium from the physical market, crashing WTI and Brent by over 16%. However, XOM shares exhibited a sluggish, delayed reaction, falling only 4.9% and remaining highly elevated. As equity analysts digest the ceasefire and lower their upstream revenue models for the remainder of Q2, XOM is structurally primed to catch down to the magnitude of the physical commodity's drop.
+Counter-thesis: The Times of India notes that "risks persist if tensions flare up again," indicating investors may be holding XOM as a continued geopolitical hedge against the peace talks collapsing, which would prevent a full mean reversion.
+R2 flags: Verify short borrow availability, monitor daily Brent/WTI crude action, and assess Q1 earnings momentum interference.
+Key sources: The Times of India; Wikipedia (2026 Iran war fuel crisis).
++2
+
+Correlation note: IDEA #1 and IDEA #2 share the same root catalyst (the April 8 U.S.-Iran ceasefire and subsequent reopening of the Strait of Hormuz). Both theses depend on the equity market's delayed reaction to the commodity market's swift repricing of geopolitical de-escalation.
