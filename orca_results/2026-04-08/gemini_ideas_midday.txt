@@ -1,0 +1,64 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: DAL | Delta Air Lines Inc | Bearish
+Catalyst: IATA Director General Willie Walsh explicitly warned that global jet fuel supplies will take "months" to recover due to Middle East refinery damage, despite the newly announced US-Iran ceasefire.
+Catalyst timing: 2026-04-08 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Breakdown below the April 8 $69.00 intraday support level or a daily close reversing the ceasefire-driven gap.
+Invalidation condition: Middle East refineries restart much faster than IATA anticipates, collapsing the jet fuel crack spread, or Delta successfully passes the entire cost to consumers via fare hikes without demand destruction.
+Target / repricing path: Gap fill down to the pre-ceasefire $65.00 level as the market prices in the stubborn $195/bbl jet fuel reality.
+Horizon / time stop: 2 to 4 weeks
+Cleanest expression: Delta is explicitly identified in the evidence base as not hedging its fuel costs, exposing it fully to the spot jet fuel price shock (and a projected $2 billion Q2 fuel headwind), unlike peers who retained hedging programs.
+What already moved: WTI and Brent crude oil futures plummeted approximately 15% on April 8 following the US-Iran two-week ceasefire announcement.
+Evidence of lag: DAL shares surged 5.53% to $69.25 on April 8 in a relief rally, blindly tracking the unrefined crude drop and completely ignoring the IATA's confirmation of the ongoing physical jet fuel bottleneck.
+Thesis: The US-Iran ceasefire crashed crude oil prices by 15%, triggering a broad airline relief rally on April 8. However, the physical jet fuel supply chain remains structurally broken due to Middle East refinery damage, with IATA explicitly warning that jet fuel recovery will take months. Delta Air Lines, which does not hedge fuel costs and faces a massive Q2 fuel headwind, is fully exposed to this $195/bbl spot market reality. The 5.5% surge in DAL shares is a mispricing that reflects the unrefined crude drop but ignores the stubborn jet fuel crack spread.
+Counter-thesis: Delta's own Trainer oil refinery in Pennsylvania could offset more costs than anticipated as domestic refining margins widen, and the airline intends to recover costs through increased checked-bag fees.
+R2 flags: Verify daily jet fuel spot prices versus crude, check short borrow availability, and monitor mid-quarter capacity updates from Delta.
+Key sources: Reuters; TradingView / Invezz; Kavout Market Lens
++2
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: ZIM | ZIM Integrated Shipping Services Ltd | Bullish
+Catalyst: The U.S., Israel, and Iran agreed to a two-week conditional ceasefire, significantly de-escalating the regional war that had threatened global shipping timelines and added massive operational costs.
+Catalyst timing: 2026-04-08 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Sustained break above the $27.00 resistance level on heavy volume, confirming arbitrageurs are re-entering the trade.
+Invalidation condition: The Israeli government formally invokes its "golden share" veto to block the Hapag-Lloyd acquisition, or Hapag-Lloyd signals a material delay to the late-2026 close.
+Target / repricing path: Sustained spread compression moving the stock into the low $30s toward the $35.00 cash buyout price.
+Horizon / time stop: 3 weeks
+Cleanest expression: ZIM is the direct target of a firm $35.00 per share cash acquisition by Hapag-Lloyd, making it the purest 0-hop expression of a merger arbitrage spread compressing after a major regional geopolitical risk is removed.
+What already moved: Global macro assets instantly priced in the geopolitical de-escalation on April 8, with the Dow Jones jumping 2.93% and crude oil plunging 15%.
+Evidence of lag: Despite the ceasefire eliminating a major macro headwind to the merger timeline, ZIM shares closed at $26.43 on April 8, up only 0.49%, leaving a massive ~$8.57 discount to the buyout price fully intact.
+Thesis: ZIM is currently the target of a $4.2 billion, $35.00 per share cash acquisition by Hapag-Lloyd. The stock has languished near $26 due to extreme market skepticism surrounding the US-Israel-Iran war, which disrupted shipping and threatened the deal's environment. The April 8 ceasefire directly reduces this geopolitical and operational overhang. While macro assets instantly priced in the de-escalation, ZIM's deal spread failed to compress at all on the day of the announcement, offering a clean, delayed-reaction arbitrage entry.
+Counter-thesis: The massive $8.57 deal spread may be driven entirely by the distinct political risk of the Israeli government's "golden share" veto regarding the transfer of ZIM's assets to "New ZIM" and FIMI Opportunity Funds, a local political hurdle that the ceasefire does not resolve.
+R2 flags: Verify Israeli government posture toward the Hapag-Lloyd merger and monitor FIMI Opportunity Funds' progress in establishing "New ZIM".
+Key sources: ZIM Investor Relations; Upply Market Insights; ClickOnDetroit
++3
+
+IDEA #3
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: FRO | Frontline Plc | Bearish
+Catalyst: The U.S., Israel, and Iran agreed to a two-week conditional ceasefire that includes the reopening of the Strait of Hormuz to commercial shipping.
+Catalyst timing: 2026-04-08 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Breakdown below the $34.50 structural support zone, or the first major shipping line formally announcing a resumption of regular Hormuz transit.
+Invalidation condition: The ceasefire collapses, Iranian forces attack a transiting vessel, or war-risk insurance premiums remain prohibitively high, preventing actual transit.
+Target / repricing path: Reversion toward pre-conflict baseline pricing as the Cape of Good Hope rerouting premium collapses and ton-mile demand normalizes.
+Horizon / time stop: 2 to 4 weeks
+Cleanest expression: Frontline operates one of the world's largest VLCC fleets directly exposed to Persian Gulf crude exports, making it a pure-play victim of normalizing ton-mile demand when the Strait reopens.
+What already moved: The broad market instantly priced in normalization on April 8, with WTI and Brent crude oil futures plunging 15% on the expectation of restored supply.
+Evidence of lag: Despite the massive energy-market repricing indicating a return of normalized flows, FRO shares actually gained 3.08% to close at $36.07 on April 8, completely ignoring the bearish implications for its own freight rates.
+Thesis: The Strait of Hormuz closure artificially constrained tanker supply by forcing long Cape of Good Hope reroutes, driving tanker spot rates to cyclical highs. The April 8 ceasefire directly reopens this logistical chokepoint. While crude oil instantly crashed 15% to price in the normalization of physical supply, tanker equities stubbornly lagged, participating in the broad market rally instead. Once vessel transits officially resume, the geopolitical ton-mile premium will evaporate, dragging FRO's elevated spot rates and valuation down with it.
+Counter-thesis: Shippers may refuse to use the Strait regardless of the ceasefire; as explicitly noted in the evidence base, Iran plans to maintain military management over the Strait and charge transit fees, which could keep the waterway economically unviable for tankers.
+R2 flags: Monitor daily Hormuz transit counts, VLCC spot rate updates, and war-risk insurance premium adjustments over the coming days.
+Key sources: KSAT News; ClickOnDetroit; UN News
++2
+
+Correlation note: All three ideas share the April 8, 2026 U.S.-Israel-Iran ceasefire as the root catalyst, representing independent, delayed expressions of the same geopolitical de-escalation event across different nodes of the global supply chain (jet fuel refining margins, shipping M&A arbitrage, and VLCC spot rates).
