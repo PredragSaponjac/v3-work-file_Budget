@@ -1,0 +1,19 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Secondary
+Ticker | Company | Direction: NVO | Novo Nordisk A/S ADR | Bearish
+Catalyst: Eli Lilly won U.S. FDA approval for Foundayo on April 1, 2026, adding a second oral obesity pill to the market and directly intensifying competition against Novo's oral Wegovy, which launched in January.
+Catalyst timing: 2026-04-01 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Bearish only while Novo ADRs remain comparatively muted versus Lilly's post-approval re-rating and the market keeps focusing on weekly new-patient starts after Foundayo's April 6 rollout.
+Invalidation condition: Evidence that Novo's first-mover oral Wegovy launch is holding share better than expected, or that Lilly's convenience advantage is not translating into stronger uptake after launch.
+Target / repricing path: Catch-up lower in Novo ADRs as investors price incremental pressure on patient starts and pricing from a rival oral GLP-1 that analysts describe as easier to use and potentially advantaged internationally.
+Horizon / time stop: 1 to 3 weeks from Foundayo launch, or earlier if prescription/uptake read-through stops favoring Lilly's pill.
+Cleanest expression: Novo is the direct listed incumbent on the losing side of the same oral-obesity-pill battleground: it already sells oral Wegovy in the U.S., so Lilly's approval and rollout hit Novo through a zero-hop competitive linkage rather than a sector inference.
+What already moved: Reuters reported Lilly shares climbed about 6% on the April 1 approval.
+Evidence of lag: The same Reuters report said U.S.-listed Novo shares fell only slightly on the approval day, even as analysts said Foundayo's no-food timing restriction, easier use, and manufacturing/scalability advantages could pressure Novo's patient starts and pricing.
+Thesis: This is a direct competitive catalyst, not a broad theme. Lilly's approval removed a major overhang, brought Foundayo to market on April 6, and gave the oral-obesity market a second entrant with attributes analysts say may make it the stronger pill option over time. Novo already has the most directly exposed competing product, yet the initial stock response was only slight versus Lilly's sharp re-rating, which supports a delayed-reaction bearish setup if near-term prescription and launch-readout attention keeps shifting toward Lilly.
+Counter-thesis: Novo has a real first-mover advantage: oral Wegovy launched in January, doctors told Reuters it has already appealed to first-time GLP-1 users, and analysts also warned Lilly's early uptake could be tempered by launch dynamics such as sampling, lower initial dosing, and pricing adjustments.
+R2 flags: Verify weekly new-patient starts and prescription trend for both pills; confirm whether Novo's January launch momentum remains strong; monitor pricing response; check for any near-term Novo-specific event that could dominate the thesis window.
+Key sources: Reuters Apr. 1, 2026 approval/market-reaction report; Reuters Apr. 1, 2026 pricing-and-availability report; Reuters Apr. 2, 2026 analyst-sales/launch-dynamics report; Reuters Apr. 6, 2026 doctor-demand/oral-uptake report.

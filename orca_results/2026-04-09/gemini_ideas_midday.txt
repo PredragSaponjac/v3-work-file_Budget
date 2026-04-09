@@ -1,0 +1,83 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: LNG | Cheniere Energy, Inc. | Bullish
+Catalyst: A US-Iran ceasefire triggered a massive unwinding of the energy "war premium," causing broad sector selloffs, despite new details emerging that Qatar's Ras Laffan LNG facility suffered long-term structural damage from earlier missile strikes.
+Catalyst timing: April 8, 2026 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Stock holds the $260 support level and reclaims the post-selloff level above $275 as the market digests the Qatari capacity loss
+Invalidation condition: QatarEnergy secures replacement gas turbines significantly faster than the projected 2-to-4 years, or global LNG demand drops materially
+Target / repricing path: Catch-up to the pre-ceasefire structural valuation near $284 as the market prices in the multi-year global supply gap
+Horizon / time stop: 3 to 4 weeks
+Cleanest expression: Cheniere is the premier US LNG exporter and the most direct listed beneficiary capable of backfilling the structural supply gap left by its primary global competitor, Qatar.
+What already moved: Brent crude crashed 16%, and the broad energy sector sold off sharply on the April 8 ceasefire news.
+Evidence of lag: Cheniere stock incorrectly dropped with the sector, falling to $263.20 on April 9, down 7.4% from its pre-ceasefire April 7 close of $284.27, failing to price in the multi-year structural advantage it gained.
+Thesis: The market treated Cheniere as a generic energy stock, selling it off alongside crude oil following the April 8 US-Iran ceasefire. This selloff fundamentally misprices Cheniere's company-specific reality: its largest competitor, Qatar's Ras Laffan, suffered structural missile damage to Trains 4 and 6 that removed 17% of Qatar's capacity for up to 5 years. The ceasefire does not repair destroyed gas turbines, leaving Cheniere with a massive, unpriced long-term competitive advantage that was completely ignored in the macro unwind.
+Counter-thesis: The ceasefire allows 14 trapped, laden LNG cargoes to immediately exit the Persian Gulf, which could provide a sudden influx of supply and pressure global gas prices in the immediate near-term.
+R2 flags: Verify the exact timeline for turbine replacements at Ras Laffan, the status of the trapped LNG cargoes, and Cheniere's available uncontracted capacity.
+Key sources: The National; Wood Mackenzie; Bloomberg News
+Correlation note: Shares the April 8 US-Iran ceasefire as a root macro event with IDEA #4. LNG is a bullish play on the market mispricing long-term Qatari facility damage amid the broader ceasefire-driven energy selloff, while FRO is a bearish play on the normalization of Strait of Hormuz shipping transit.
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: WW | WW International, Inc. | Bullish
+Catalyst: WW announced it will offer Eli Lilly's newly FDA-approved oral GLP-1 drug, Foundayo, to its Med+ clinical weight-loss members.
+Catalyst timing: April 9, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock reclaims the $11.50 level with above-average volume, confirming market recognition of the fundamental news
+Invalidation condition: Management signals low expected subscriber conversion for Foundayo, or the stock decisively breaks below the $11.00 support level
+Target / repricing path: Reversal of the recent decline, testing the 50-day moving average or recent swing highs as the market models the expanded total addressable market
+Horizon / time stop: 2 to 3 weeks
+Cleanest expression: WW is the most direct, listed telehealth and weight-loss platform that just explicitly added this specific drug, directly tying the macro GLP-1 theme to its subscription revenue.
+What already moved: Eli Lilly (LLY) shares gained upon the FDA approval of Foundayo.
+Evidence of lag: WW shares fell 2.75% to close at $11.30 on April 9 on lighter-than-normal volume (268k shares), indicating the market simply missed or has not yet digested this direct revenue-expanding partnership.
+Thesis: Eli Lilly recently received approval for Foundayo, a highly convenient oral GLP-1 pill that expands the obesity market by removing injection barriers and fasting restrictions. WW announced today (April 9) that it will offer Foundayo through its Med+ platform, which should significantly boost subscriber conversion. While LLY stock rallied on the approval, WW shares drifted lower on light volume, completely ignoring the fundamental addition of the new drug to its platform.
+Counter-thesis: The $149/month self-pay entry price for the lowest dose of Foundayo on WW's platform may prove too expensive for its target demographic, limiting actual subscriber conversion and revenue upside.
+R2 flags: Verify the economics of the Med+ partnership with Lilly, actual subscriber conversion rates, and the impact of the $149/month price point.
+Key sources: WW Corporate Press Release; StockTitan
+Correlation note: Shares a common root catalyst with IDEA #3 (the FDA approval and launch of Eli Lilly's Foundayo oral GLP-1). WW is the distribution winner experiencing a delayed positive reaction, while VKTX represents a competitive loser whose valuation has not yet negatively repriced the threat.
+
+IDEA #3
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: VKTX | Viking Therapeutics, Inc. | Bearish
+Catalyst: Eli Lilly received FDA expedited approval and began shipping Foundayo, a highly convenient, once-daily oral GLP-1 pill with no food or water restrictions.
+Catalyst timing: April 1, 2026 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Stock breaks below the $32.50 support zone as M&A hype fades and the market digests the structural threat to its oral pipeline
+Invalidation condition: Viking announces a buyout offer from a major pharma company, or releases new trial data showing massive efficacy superiority over Lilly's pill
+Target / repricing path: Compression of the M&A premium, returning toward the pre-rally $25-$28 range as terminal value estimates for its oral pipeline are slashed
+Horizon / time stop: 2 to 4 weeks
+Cleanest expression: VKTX's valuation is heavily dependent on its VK2735 dual-agonist obesity pipeline. Its oral phase 3 does not launch until Q3 2026, making it directly exposed to Lilly's newly launched oral moat.
+What already moved: Eli Lilly shares rallied on the approval, and the drug is already expanding consumer access via telehealth platforms at competitive prices.
+Evidence of lag: Despite the direct competitive threat to its core pipeline, VKTX shares have stubbornly held near $34.60-$35.00 through April 9, driven by M&A speculation, completely ignoring the structural damage to its future oral market share.
+Thesis: Eli Lilly has fundamentally altered the obesity market landscape by launching a cheap, highly convenient oral GLP-1 that requires no fasting. Viking Therapeutics is priced for perfection based on its VK2735 pipeline, but its own oral version is still years away from market. While Lilly is already capturing the oral market, VKTX shares have stubbornly drifted higher on retail M&A speculation. Once the market models the massive head start and competitive moat of Foundayo, Viking's standalone valuation should severely compress.
+Counter-thesis: Viking is widely viewed by traders as a prime acquisition target for Big Pharma companies seeking obesity assets, which could keep a hard floor under the stock regardless of immediate commercial competition.
+R2 flags: Verify institutional short availability, borrow costs, and the exact efficacy differential between VK2735 and Foundayo.
+Key sources: FDA Press Release; Robinhood Market Data; HCPLive
+Correlation note: Shares a common root catalyst with IDEA #2 (the FDA approval and launch of Eli Lilly's Foundayo oral GLP-1). VKTX represents a competitive loser whose valuation has not yet negatively repriced the threat, while WW is the distribution winner.
+
+IDEA #4
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: FRO | Frontline plc | Bearish
+Catalyst: The US and Iran agreed to a temporary two-week ceasefire, setting the stage for the Strait of Hormuz to reopen and restore normal transit routes.
+Catalyst timing: April 8, 2026 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Stock breaks below its recent April 8 risk-on closing level as tanker spot rates begin reflecting the restored capacity
+Invalidation condition: The ceasefire collapses within the two-week window, reinstating the Hormuz blockade and supply chain constraints
+Target / repricing path: Reprice lower toward pre-war valuations as the geopolitical risk premium in spot tanker freight rates unwinds
+Horizon / time stop: 2 to 3 weeks
+Cleanest expression: Frontline is a highly liquid pure-play tanker operator with massive spot market exposure, making its cash flows hypersensitive to a drop in spot freight rates.
+What already moved: Brent crude plunged approximately 16% on April 8 as the geopolitical war premium rapidly unwound.
+Evidence of lag: While a Strait reopening eases the disruptions that elevated tanker rates, Frontline shares actually gained +5.0% on April 8 to close at $36.15, lifted by the broader global risk-on equity rally rather than its own underlying freight fundamentals.
+Thesis: The prolonged closure of the Strait of Hormuz created severe supply disruptions that artificially inflated spot tanker freight rates by forcing ships to reroute. A newly announced two-week US-Iran ceasefire paves the way for the Strait to reopen, which would inject capacity back into the market and collapse the war premium on those rates. While underlying crude oil correctly plunged 16% on the news, spot-exposed tanker operators like Frontline mistakenly rallied in tandem with the broad S&P 500 risk-on surge. Once the market decouples Frontline from the macro relief rally and focuses on the localized collapse in VLCC spot rates, the stock should reprice lower.
+Counter-thesis: The ceasefire is fragile, and vessel owners remain cautious. If traffic does not meaningfully resume due to war-risk insurance premiums or lingering threats, effective shipping capacity will stay tight, keeping spot rates elevated.
+R2 flags: Verify current spot VLCC rate movements, monitor the daily status of actual Hormuz tanker transits, and track insurance premium levels.
+Key sources: The Guardian; Markets.com; Wood Mackenzie
+Correlation note: Shares the April 8 US-Iran ceasefire as a root macro event with IDEA #1. FRO is a bearish play on the normalization of Strait of Hormuz shipping transit, while LNG is a bullish play on the market mispricing long-term Qatari facility damage amid the broader ceasefire-driven energy selloff.

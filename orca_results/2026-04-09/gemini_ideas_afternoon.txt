@@ -1,0 +1,40 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: LNG | Cheniere Energy Inc | Bullish
+Catalyst: Abu Dhabi's oil chief confirmed the Strait of Hormuz is "not open" and the April 8 U.S.-Iran ceasefire is unraveling amid renewed strikes in Lebanon, sustaining a blockade on competing Middle East LNG exports.
+Catalyst timing: April 9, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock reclaims its April 8 close of $275.21 on volume, confirming it has decoupled from the broader market's risk-off sentiment.
+Invalidation condition: The ceasefire is permanently secured and the 1,400 ships currently anchored at the Strait of Hormuz are allowed to resume transit.
+Target / repricing path: Reversion to the pre-ceasefire highs near $284 and continuation toward $300 as the market recognizes the sustained structural tightness in global LNG supply.
+Horizon / time stop: 2 to 3 weeks (exit before the May 7, 2026 earnings release)
+Cleanest expression: Cheniere is the premier U.S. LNG export terminal operator, perfectly positioned to benefit from a structurally tight global LNG market and high European natural gas prices with zero Middle East transit risk.
+What already moved: Brent crude oil rebounded toward $100 a barrel and European natural gas futures surged to 46.5 euros a megawatt hour on Thursday, April 9.
+Evidence of lag: Digrin price data explicitly shows Cheniere's stock perversely dropped 3.7% intraday on April 9 to $265.54, drifting lower despite the renewed blockade and rebounding energy commodities.
+Thesis: A U.S.-Iran ceasefire announced on April 8 initially triggered a massive drop in energy commodities. However, by April 9, the ceasefire was already collapsing over strikes in Lebanon, and Abu Dhabi's oil chief confirmed the Strait of Hormuz remained closed to the 1,400 anchored ships. While Brent crude and European natural gas immediately rebounded to reflect the sustained supply shock, Cheniere's stock incorrectly dropped another 3.7%. As a U.S. exporter insulated from Middle East transit risk, Cheniere directly benefits from the constrained global LNG supply. The stock has been indiscriminately dragged down by broad market jitters, creating a clean delayed-reaction opportunity.
+Counter-thesis: The EIA Short-Term Energy Outlook notes that U.S. LNG export facilities are currently running at "near-peak capacity," meaning Cheniere may have limited physical flexibility to actually increase export volumes to capture the spot price upside.
+R2 flags: Verify Cheniere's exact uncontracted spot exposure versus locked-in long-term contracts, and monitor the daily transit status of the Strait of Hormuz.
+Key sources: The Guardian; Digrin; Zacks Investment Research; U.S. Energy Information Administration (EIA)
+
+IDEA #2
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: XOM | Exxon Mobil Corporation | Bullish
+Catalyst: Abu Dhabi's oil chief confirmed the Strait of Hormuz is "not open" and the April 8 U.S.-Iran ceasefire is unraveling amid strikes in Lebanon, renewing the Middle East oil supply shock.
+Catalyst timing: April 9, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock cleanly breaks above the $164 level, showing buyers have stepped in to erase the ceasefire-driven selloff.
+Invalidation condition: Diplomatic talks salvage the ceasefire and the Strait of Hormuz is verifiably cleared for commercial shipping.
+Target / repricing path: Re-test of the pre-ceasefire all-time high zone near $176 as the geopolitical premium is repriced.
+Horizon / time stop: 1 to 3 weeks
+Cleanest expression: XOM is a primary proxy for the global oil shock; Phemex analysis explicitly notes XOM's price action acts as a "canary in the oil mine" for trading the Iran supply shock.
+What already moved: Brent crude oil rebounded toward $100 a barrel on Thursday, April 9, reflecting the ceasefire's failure.
+Evidence of lag: Pricing unverified - flag for R2
+Thesis: News of a potential diplomatic shift and U.S.-Iran ceasefire sent Exxon Mobil plunging nearly 6% in after-hours trading on April 7, wiping out weeks of geopolitical premium. However, by April 9, the ceasefire was already collapsing over strikes in Lebanon, and Abu Dhabi's oil chief confirmed the Strait of Hormuz remains closed. While Brent crude immediately pushed toward $100 a barrel to reflect the renewed conflict, XOM's April 9 regular-session tape is unverified. If the stock has not yet reclaimed its pre-plunge $164 baseline, it offers a clean delayed-reaction setup to trade the failure of the ceasefire.
+Counter-thesis: Phemex analysis notes XOM's valuation is stretched with a P/E of 24.52 (trading at a premium to its five-year average), which could cap the stock's upside even if crude prices remain elevated.
+R2 flags: Verify XOM's intraday April 9 price action to ensure the gap-down hasn't already been filled, and check the exact date for its Q1 earnings to avoid binary risk.
+Key sources: The Guardian; Phemex
+Correlation note: Both IDEA #1 and IDEA #2 share a root catalyst (the failure of the April 8 U.S.-Iran ceasefire and continued closure of the Strait of Hormuz), approaching the geopolitical shock through different commodity channels (LNG vs. crude oil).
