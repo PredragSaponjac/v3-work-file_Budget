@@ -1,0 +1,60 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: AAL | American Airlines Group Inc | Bearish
+Catalyst: Jet fuel prices have doubled to >$200/bbl due to the ongoing Strait of Hormuz blockade, forcing thousands of flight cancellations. A fragile 2-week ceasefire announced on April 8 temporarily crashed crude oil, triggering a relief rally in airline stocks, but the ceasefire is already unraveling on April 9.
+Catalyst timing: 2026-04-09 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Breakdown and daily close below $11.00 as the market prices in the ceasefire failure
+Invalidation condition: The ceasefire holds and the Strait of Hormuz is functionally reopened, collapsing jet fuel prices back toward $100/bbl
+Target / repricing path: Reversion to the pre-ceasefire lows near $10.50, with further downside toward $9.00 if Q2 schedules are heavily cut
+Horizon / time stop: 2 to 3 weeks
+Cleanest expression: AAL is heavily indebted and highly sensitive to spot jet fuel prices, lacking the dedicated refinery hedge of Delta (Monroe Energy) or the balance sheet strength of United.
+What already moved: Crude oil prices rebounded on April 9 as the ceasefire showed signs of failing, and physical jet fuel remains elevated at $4.88/gallon.
+Evidence of lag: AAL surged 5.6% on the April 8 ceasefire news. Intraday on April 9, AAL is trading at $11.17, down only 2.09%, retaining the majority of its ceasefire-driven relief rally despite the underlying oil input reversing higher.
+Thesis: AAL rallied sharply on April 8 strictly because a sudden U.S.-Iran ceasefire crushed crude oil prices and raised hopes for lower jet fuel costs. However, on April 9, the ceasefire is incredibly fragile and oil is rebounding. More importantly, physical jet fuel remains above $200/bbl due to the ongoing Strait of Hormuz blockade. Because AAL is still clinging to its ceasefire-driven relief premium, it is fundamentally mispriced against its primary input cost, which has doubled year-over-year. AAL has no refinery hedge like Delta, making it a clean reversion short as the market realizes the jet fuel shock isn't over.
+Counter-thesis: Airlines are actively raising fares and trimming schedules (as seen with AirAsia and United Airlines cutting flights to Asia) to offset fuel costs, which may protect margins enough to prevent a full stock retracement even if oil remains elevated.
+R2 flags: Verify AAL's exact Q1 earnings date to avoid idiosyncratic interference, current fuel hedging percentages, and exact revenue exposure to international routes.
+Key sources: KSAT ("Oil prices rise again and world shares retreat on the fragile Iran ceasefire"); MiGFlug ("Jet Fuel Crisis"); Live and Let's Fly (Delta Air Lines Q1 2026 earnings); Air Traveler Club
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: VLO | Valero Energy Corp | Bullish
+Catalyst: The April 8 U.S.-Iran ceasefire caused a broad 16% drop in crude oil, triggering a sympathetic selloff in independent refiners despite jet fuel crack spreads remaining massively elevated.
+Catalyst timing: 2026-04-08 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Stock reclaims the $245 level with expanding volume, confirming the divergence from crude oil
+Invalidation condition: The Strait of Hormuz safely reopens to commercial traffic, eliminating the geopolitical premium and compressing global crack spreads
+Target / repricing path: Rapid recovery toward the pre-ceasefire $251+ level, potentially re-testing the 52-week high of $258.43 as earnings estimates are revised upward
+Horizon / time stop: 2 to 3 weeks (strict exit ahead of April 30 earnings)
+Cleanest expression: Valero is a pure-play independent refiner that directly captures the massive expansion in jet fuel crack spreads without the upstream exploration/production drag that integrated oil majors face when crude prices fall.
+What already moved: Jet fuel prices have doubled to >$200/bbl (reaching $4.88/gallon in the U.S.) due to the Strait of Hormuz blockade, massively expanding refining margins.
+Evidence of lag: VLO shares plummeted 4.71% to $239.64 on April 8 strictly because crude oil fell on the ceasefire news. On April 9, the stock is up ~2.14% to $244.77 but remains structurally undervalued relative to the ongoing jet fuel crack spread windfall.
+Thesis: The market dumped Valero stock on April 8 because WTI crude oil fell on ceasefire news, lazily trading VLO as a generic energy stock. However, a drop in crude oil combined with stubbornly high refined product prices (jet fuel is >$200/bbl) actually expands the crack spread, which is the primary driver of Valero's earnings. The physical shortage of jet fuel is unchanged by a fragile ceasefire. VLO's 4.7% drop was mathematically backward for a refiner, creating a clear upside mispricing as the market digests the margin expansion ahead of late April earnings.
+Counter-thesis: A sharp, sustained drop in global flight capacity (e.g., 7,049 canceled flights in a single day, or 14.6% of North American departures) could eventually destroy physical demand for jet fuel, compressing crack spreads before Valero can fully capitalize.
+R2 flags: Verify Valero's specific jet fuel yield percentage, monitor physical U.S. Gulf Coast crack spreads, and track any pre-announcement of Q1 margins.
+Key sources: MiGFlug ("Jet Fuel Crisis"); StockInvest.us (VLO market data); Live and Let's Fly (Delta Air Lines Q1 2026 earnings)
+
+IDEA #3
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: CF | CF Industries Holdings, Inc. | Bullish
+Catalyst: The U.S. and Iran announced a 2-week ceasefire on April 8, which caused a knee-jerk selloff in fertilizer stocks as traders anticipated a reopening of the Strait of Hormuz. On April 9, the truce is already unraveling.
+Catalyst timing: 2026-04-08 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock breaks out above the April 9 intraday high of $128.88
+Invalidation condition: Iran honors the ceasefire and safely reopens the Strait of Hormuz to commercial traffic, allowing delayed Middle Eastern fertilizer cargoes to flood the global market
+Target / repricing path: Reversal of the ceasefire-driven selloff, targeting a return to the pre-ceasefire $133-$136 range
+Horizon / time stop: 2 to 4 weeks
+Cleanest expression: CF Industries is a pure-play North American nitrogen producer with stable domestic natural gas costs, allowing it to capture peak global fertilizer margins without the direct Middle East exposure dragging down international peers.
+What already moved: WTI and Brent crude reversed their drop and pushed higher on April 9 as the fragile Iran ceasefire began to fail.
+Evidence of lag: CF shares plummeted 5.69% to $126.17 on April 8 and continued dropping another 1.93% to $123.71 intraday on April 9, completely failing to reverse with oil or reflect the persistence of the supply block.
+Thesis: CF Industries sold off heavily on the April 8 ceasefire because traders assumed the Strait of Hormuz would reopen and flood the market with delayed Middle Eastern fertilizer. On April 9, it became clear the truce is failing, with oil prices rising again and global shares retreating. While the macro complex is already repricing the ceasefire failure, CF stock continued to drop to $123.71. CF's windfall margins are fully intact as long as the Strait remains blocked, setting up a rapid upside repricing once the market digests the physical supply reality.
+Counter-thesis: Insider sentiment for CF Industries is notably negative, with key executives selling $81.9M worth of shares across 100 open-market transactions over the last year, which could cap near-term equity upside despite the fundamental macro tailwinds.
+R2 flags: Verify current U.S. domestic vs. international urea spot spreads, track daily vessel crossings through the Strait of Hormuz, and confirm CF's exact Q2 contract lock-in percentage.
+Key sources: KSAT ("Oil prices rise again and world shares retreat on the fragile Iran ceasefire"); Smartkarma (CF Industries market data); StockInvest.us (CF market data)
+Correlation note: IDEA #1, IDEA #2, and IDEA #3 share the April 8 U.S.-Iran ceasefire and the ongoing Strait of Hormuz blockade as the root catalyst. In all three cases, the market incorrectly priced these equities based on a temporary military headline rather than the underlying physical supply chain realities (jet fuel shortages for AAL/VLO, and fertilizer bottlenecks for CF).
