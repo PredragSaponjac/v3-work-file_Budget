@@ -1,0 +1,19 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: F | Ford Motor Co. | Bearish
+Catalyst: Ford remains exposed to an aluminium supply bottleneck after fires at Novelis' Oswego plant, while imported replacement aluminium is still subject to a 50% U.S. duty; the broader aluminium shock was reinforced when Iranian strikes hit two major Middle East smelters and pushed LME aluminium sharply higher.
+Catalyst timing: 2026-04-08 | Status: Active
+Repricing window: days to 3 weeks.
+Entry trigger: Bearish only on follow-through evidence that Ford is still managing the bottleneck without a tariff carve-out or a clean Oswego restart path, while the stock fails to stabilize on that headline set.
+Invalidation condition: Official tariff relief, a confirmed full-output restoration at Novelis' Oswego facility, or evidence that Ford's F-Series supply disruption is being materially reversed.
+Target / repricing path: Catch-down as the market prices a fuller near-term hit to F-Series mix, margins, and production flexibility from higher-cost replacement aluminium and the still-unresolved supplier disruption, ahead of Ford's April 29 earnings.
+Horizon / time stop: 5 to 10 trading days, or earlier if the thesis is disproven; do not carry through Ford's April 29, 2026 earnings event.
+Cleanest expression: Reuters identifies Ford as a major Novelis customer because the F-150 uses a largely aluminium body, and says Ford previously estimated up to a 100,000-unit F-Series production hit and up to $2 billion of cost impact, making it more directly exposed than the broader auto group.
+What already moved: LME aluminium jumped 6% to near a four-year high after the March 30 smelter strikes, while Ford's replacement imported metal remains exposed to a 50% duty.
+Evidence of lag: Pricing unverified - flag for R2
+Thesis: This is a clean catalyst-to-company chain: a visible aluminium shock has already hit the input market, and Ford has unusually direct dependence on aluminium-intensive F-Series production. The April 8 Reuters update keeps the bottleneck live by showing that replacement supply still carries a 50% duty, which can worsen an already disclosed supply problem. The setup is not Accepted because I do not yet have clean, explicit price/tape proof that Ford itself underreacted relative to the input move and the refreshed cost signal.
+Counter-thesis: Novelis has already been making up lost output with supply from South Korea and Europe, and Ford had already disclosed substantial fire-related cost damage earlier in 2026, so the April 8 development may be less incremental to valuation than it first appears.
+R2 flags: Verify Ford's actual post-2026-04-08 relative tape versus GM/STLA, confirm Oswego restart timing, monitor any tariff-relief change, and treat April 29 earnings as a hard interference risk.
+Key sources: Reuters, "Automakers did not strongly seek aluminium tariff relief, White House official says" (April 8, 2026); Reuters, "Iran blows hole in US aluminium supply chain with smelter strikes" (March 30, 2026); Ford IR, "Ford Motor Company First Quarter 2026 Earnings" (April 29, 2026).

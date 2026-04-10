@@ -1,0 +1,39 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: MU | Micron Technology, Inc. | Bullish
+Catalyst: Bernstein issued a major price-target upgrade ($1,250 with a $3,000 upside scenario) for direct peer SanDisk, confirming robust NAND/DRAM pricing and massive AI data-center demand well beyond 2026.
+Catalyst timing: April 9, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Reclaim of the $425 near-term resistance level
+Invalidation condition: Peer SNDK gives back its recent 20%+ surge, or spot memory prices officially roll over
+Target / repricing path: Reversal of the post-TurboQuant selloff, pathing back toward the $525 analyst consensus target
+Horizon / time stop: 2 to 3 weeks
+Cleanest expression: Micron is a direct, pure-play listed competitor to SanDisk with identical exposure to the physical NAND/DRAM pricing tailwinds and AI data-center demand cited in the upgrade.
+What already moved: Peer memory producer SanDisk (SNDK) surged over 21% to $860 on April 10 following the analyst upgrades and blowout Q2 earnings.
+Evidence of lag: Gathered market data explicitly shows Micron (MU) traded flat to slightly down (-0.15% at $420.88) during the exact same April 10 session where its closest peer surged.
+Thesis: The global memory shortage is visibly accelerating, with recent analyst upgrades driving peer SanDisk up over 21% to $860 on confirmed memory pricing strength and AI demand. Despite this massive fundamental validation, Micron suffered a selloff over theoretical fears that Google's "TurboQuant" algorithm might reduce future AI memory hardware needs. The confirmed physical memory shortage and skyrocketing peer price action prove the near-term hardware thesis remains fully intact, yet Micron completely failed to confirm the move on April 10, leaving a massive valuation disconnect.
+Counter-thesis: The recent selloff was specifically triggered by Google's TurboQuant algorithm, which threatens to use software compression to reduce the physical DRAM hardware needed by AI data centers. Because Micron relies more heavily on DRAM than SanDisk (which is NAND-dominant), the market may legitimately view TurboQuant as a greater structural threat to Micron.
+R2 flags: Verify the status of the TurboQuant presentation at ICLR, check Micron's specific DRAM vs NAND revenue mix relative to SanDisk, and confirm institutional options flow.
+Key sources: Morningstar; Investing.com; OptionCharts; The Motley Fool
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: IOVA | Iovance Biotherapeutics, Inc. | Bullish
+Catalyst: The FDA issued a Complete Response Letter (CRL) rejecting Replimune's lead drug candidate RP1 for advanced melanoma for a second time, citing insufficient efficacy data.
+Catalyst timing: April 10, 2026 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: IOVA holds the $3.60 intraday support level and reclaims the $4.00 pre-announcement zone as the market separates its fundamentals from the sympathy selloff
+Invalidation condition: IOVA breaks below its recent multi-week consolidation base at $3.25, or the broader biotech sector experiences a macro-driven technical breakdown
+Target / repricing path: Re-test of the April 10 intraday highs near $4.31, with a potential path toward $5.00+ as the market prices in the extended monopoly for its approved late-line melanoma therapy
+Horizon / time stop: 2 to 4 weeks
+Cleanest expression: Iovance markets Amtagvi, the primary approved cell therapy for late-line advanced melanoma. With Replimune's rejection, Iovance's market position is protected from its closest near-term threat, representing a direct 1-hop economic benefit.
+What already moved: Replimune (REPL) shares plunged 19.5% to $4.76 on April 10 following the FDA rejection.
+Evidence of lag: Gathered tape data shows IOVA shares inexplicably traded down 6.8% to $3.73 on April 10 alongside REPL, failing to price in the fundamental positive of its primary competitor being eliminated.
+Thesis: Replimune's RP1 therapy was rejected by the FDA for advanced melanoma, removing the closest near-term competitive threat to Iovance's approved Amtagvi therapy. Despite operating via a completely different mechanism and benefiting directly from the competitor's failure, IOVA stock traded down nearly 7% on the day of the news, likely due to algorithmic sympathy selling across the melanoma/biotech subsector. With analysts citing strong real-world Amtagvi data, IOVA should reprice higher as the sympathy dislocation unwinds and the value of its protected market share is recognized.
+Counter-thesis: A Jefferies analyst note on April 10 stated that the potential risk of competition to Amtagvi in second-line melanoma was "already accounted for in Street models," meaning the rejection may not generate material new fundamental upside, and IOVA's drop could instead reflect technical exhaustion after its massive 91% six-month run.
+R2 flags: Verify short interest, exact Amtagvi revenue momentum, and whether broader biotech ETF flows were driving the intraday weakness.
+Key sources: Dow Jones Newswires; Fierce Biotech; Investing.com; Seeking Alpha
