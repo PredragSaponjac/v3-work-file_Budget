@@ -1,0 +1,19 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: JBLU | JetBlue Airways | Bearish
+Catalyst: Persistent jet-fuel tightness despite the ceasefire relief trade; Reuters reported on April 8 that supply recovery could still take months, and on April 10 Europe's airport industry group warned of a systemic jet-fuel shortage within three weeks.
+Catalyst timing: 2026-04-08 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Relief-rally follow-through fails while Reuters-confirmed jet-fuel tightness remains unresolved; otherwise Data unavailable - verify in R2.
+Invalidation condition: Durable Strait of Hormuz reopening plus evidence that jet-fuel supply is normalizing rather than remaining tight for months.
+Target / repricing path: Retrace of the ceasefire-relief bid and renewed pressure on weaker low-cost airlines; otherwise Data unavailable - verify in R2.
+Horizon / time stop: 1 to 3 weeks, or earlier if supply-normalization evidence arrives.
+Cleanest expression: In this evidence set, JetBlue is the clearest weak-link U.S. airline because Reuters specifically flagged it as having no fuel hedges, expected cash burn in 2026 before breakeven in 2027, less premium revenue, and exposure to highly competitive domestic markets. Frontier is also pressured, but Reuters separately highlighted its newer fuel-efficient fleet, which makes JetBlue the cleaner pure stress expression here.
+What already moved: Reuters reported a ceasefire relief rally in airline equities while oil fell below $100; Delta rose about 6%-7% and other major carriers gained roughly 3%-11%. At the same time, jet fuel had already surged from roughly $85-$90 per barrel in February to around $209, and Europe's airport body warned of a systemic shortage risk within weeks.
+Evidence of lag: Pricing unverified - flag for R2
+Thesis: This is not a pure oil call; it is a jet-fuel-persistence call. Reuters' March 30 and March 6 reporting identified JetBlue as one of the carriers most exposed to a prolonged fuel shock because it lacks hedges, has less premium-revenue cushion, and is expected to burn cash this year. The April 8 to April 10 evidence chain suggests the ceasefire relief trade may be too quick because jet-fuel supply could stay tight for months and Europe could still face shortages within weeks. Because I do not yet have clean stock-specific lag proof for JBLU versus that evidence chain, this stays Watchlist rather than Accepted.
+Counter-thesis: Reuters also reported stronger-than-expected spring travel demand, ongoing fare increases, and JetBlue management saying demand had strengthened across peak and off-peak periods and across premium and core cabins, so revenue resilience plus ancillary fee hikes could offset more of the fuel shock than this setup assumes.
+R2 flags: Verify actual JBLU stock reaction versus the April 8 relief move, confirm no near-term idiosyncratic company event dominates the window, and verify borrow/liquidity before acting.
+Key sources: Reuters, "US airlines no longer hedge fuel costs. That could hurt margins if Iran conflict lingers" (March 6, 2026); Reuters, "US airlines face fuel-driven financial shakeout" (March 30, 2026); Reuters, "Airline and travel industries see no immediate relief from Iran ceasefire" (April 8, 2026); Reuters, "Europe could face jet fuel crunch within weeks, airports body warns" (April 10, 2026); Reuters, "Strong travel demand lifts US airlines despite fuel price surge" (March 17, 2026).

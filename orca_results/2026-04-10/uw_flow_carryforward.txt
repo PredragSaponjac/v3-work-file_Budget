@@ -1,0 +1,1459 @@
+===== AAL =====
+=== UW FLOW DATA: AAL ===
+
+--- MULTI-DAY FLOW ALERTS (9 sessions, 200 alerts) ---
+  Daily alert count: 04-01=20, 04-02=21, 04-06=24, 04-07=28, 04-08=36, 04-09=19, 04-10=3 (building)
+  Largest: $1.0M RepeatedHits CALL $11 exp 2026-04-10 | $0.8M RepeatedHits CALL $10.5 exp 2026-04-17 | $0.6M RepeatedHits CALL $11 exp 2026-04-24
+  Composition: 63% calls, 37% puts | 16 sweeps, 0 blocks
+  Side concentration: balanced
+  Total premium: $9.9M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 76,458 → 69,690 → 160,373 → 47,734 → 47,903 (stable)
+  Put volume: 51,709 → 126,780 → 79,192 → 53,443 → 7,439
+  Call/put ratio: 1.5 → 0.5 → 2.0 → 0.9 → 6.4 (bullish shift)
+  Ask-side share: 50% → 68% → 52% → 50% → 48% 
+  Net premium: positive 6 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $74.1M
+  Daily: 04-02 $15.2M, 04-06 $14.4M, 04-07 $11.2M, 04-08 $23.3M, 04-09 $10.1M
+  Price clustering: 66% of prints in $10.90-$11.43 range
+  Repeated levels: $11.4 (24x), $11.41 (24x), $11.39 (20x)
+
+--- LIT FLOW SUMMARY (5 sessions, 250 trades) ---
+  Total notional: $209.0M
+  Daily: 04-02 $56.7M, 04-06 $40.5M, 04-07 $49.2M, 04-08 $30.5M, 04-09 $32.2M
+  Sell-side: 72% (supply bias)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 2/6 contracts
+  Ask-heavy (accumulation): 4/6 contracts
+  Bid-heavy (distribution): 1/6 contracts
+  Execution intent: 2 accumulation, 2 distribution
+  Strongest build: 260410P00010000 — OI +1681%, ask-heavy, accumulation
+  Overall contract picture: inconclusive — check raw detail
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: AAL260410P00010000 | PUT $10.0 exp 2026-04-10 | OI: BUILDING (+1681%) | Side: ASK-HEAVY | Exec: Accumulation
+  Flow tape: 18 fills | ask 71% / bid 0% / mid 0% | sweeps: 0 | blocks: 0
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=51 | open_interest=64139 | last_price=0.01 | implied_volatility=1.9254 | nbbo_bid=0.0 | nbbo_ask=0.01 | bid_volume=0 | ask_volume=51 | total_premium=53 | trades=18
+    date=2026-04-09 | volume=262 | open_interest=64150 | last_price=0.01 | implied_volatility=1.1943 | nbbo_bid=0.0 | nbbo_ask=0.01 | bid_volume=0 | ask_volume=262 | total_premium=264 | trades=42
+    date=2026-04-08 | volume=6519 | open_interest=63239 | last_price=0.03 | implied_volatility=1.0123 | nbbo_bid=0.0 | nbbo_ask=0.01 | bid_volume=2890 | ask_volume=3545 | total_premium=6875 | trades=401
+    date=2026-04-07 | volume=65213 | open_interest=12606 | last_price=0.11 | implied_volatility=1.0081 | nbbo_bid=0.1 | nbbo_ask=0.11 | bid_volume=6281 | ask_volume=36702 | total_premium=824029 | trades=1680
+    date=2026-04-06 | volume=4282 | open_interest=11206 | last_price=0.07 | implied_volatility=0.8268 | nbbo_bid=0.07 | nbbo_ask=0.08 | bid_volume=2305 | ask_volume=1781 | total_premium=35221 | trades=483
+    date=2026-04-02 | volume=6878 | open_interest=5613 | last_price=0.1 | implied_volatility=0.6298 | nbbo_bid=0.1 | nbbo_ask=0.11 | bid_volume=4272 | ask_volume=2217 | total_premium=149674 | trades=520
+    date=2026-04-01 | volume=1068 | open_interest=5445 | last_price=0.1 | implied_volatility=0.7066 | nbbo_bid=0.1 | nbbo_ask=0.11 | bid_volume=623 | ask_volume=241 | total_premium=12254 | trades=208
+    date=2026-03-31 | volume=816 | open_interest=4941 | last_price=0.2 | implied_volatility=0.7253 | nbbo_bid=0.19 | nbbo_ask=0.23 | bid_volume=425 | ask_volume=255 | total_premium=22827 | trades=194
+    date=2026-03-30 | volume=1142 | open_interest=5156 | last_price=0.44 | implied_volatility=0.7144 | nbbo_bid=0.39 | nbbo_ask=0.45 | bid_volume=814 | ask_volume=180 | total_premium=46417 | trades=170
+    date=2026-03-27 | volume=1703 | open_interest=4624 | last_price=0.42 | implied_volatility=0.7123 | nbbo_bid=0.41 | nbbo_ask=0.44 | bid_volume=574 | ask_volume=650 | total_premium=63826 | trades=181
+
+  CONTRACT: AAL260410C00011500 | CALL $11.5 exp 2026-04-10 | OI: BUILDING (+5719%) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 100 fills | ask 2% / bid 78% / mid 2% | sweeps: 0 | blocks: 0 | fills: aggressive sell
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=7658 | open_interest=22055 | last_price=0.03 | implied_volatility=0.6199 | nbbo_bid=0.03 | nbbo_ask=0.04 | bid_volume=7246 | ask_volume=265 | total_premium=32906 | trades=218
+    date=2026-04-09 | volume=9152 | open_interest=18303 | last_price=0.07 | implied_volatility=0.5516 | nbbo_bid=0.07 | nbbo_ask=0.09 | bid_volume=1651 | ask_volume=7086 | total_premium=90227 | trades=645
+    date=2026-04-08 | volume=8224 | open_interest=21720 | last_price=0.19 | implied_volatility=0.6866 | nbbo_bid=0.18 | nbbo_ask=0.2 | bid_volume=4005 | ask_volume=3491 | total_premium=428595 | trades=674
+    date=2026-04-07 | volume=3996 | open_interest=21806 | last_price=0.12 | implied_volatility=0.903 | nbbo_bid=0.11 | nbbo_ask=0.12 | bid_volume=1723 | ask_volume=2080 | total_premium=38807 | trades=252
+    date=2026-04-06 | volume=9642 | open_interest=18072 | last_price=0.13 | implied_volatility=0.6869 | nbbo_bid=0.1 | nbbo_ask=0.14 | bid_volume=2422 | ask_volume=6693 | total_premium=127093 | trades=743
+    date=2026-04-02 | volume=6582 | open_interest=13246 | last_price=0.12 | implied_volatility=0.5481 | nbbo_bid=0.11 | nbbo_ask=0.12 | bid_volume=972 | ask_volume=4881 | total_premium=74792 | trades=243
+    date=2026-04-01 | volume=2479 | open_interest=13193 | last_price=0.26 | implied_volatility=0.5832 | nbbo_bid=0.25 | nbbo_ask=0.27 | bid_volume=924 | ask_volume=937 | total_premium=62343 | trades=302
+    date=2026-03-31 | volume=10209 | open_interest=7565 | last_price=0.19 | implied_volatility=0.6054 | nbbo_bid=0.16 | nbbo_ask=0.18 | bid_volume=2130 | ask_volume=6418 | total_premium=163855 | trades=380
+    date=2026-03-30 | volume=2277 | open_interest=6315 | last_price=0.1 | implied_volatility=0.6973 | nbbo_bid=0.1 | nbbo_ask=0.11 | bid_volume=954 | ask_volume=880 | total_premium=25190 | trades=174
+    date=2026-03-27 | volume=820 | open_interest=6121 | last_price=0.17 | implied_volatility=0.6592 | nbbo_bid=0.13 | nbbo_ask=0.19 | bid_volume=390 | ask_volume=182 | total_premium=14542 | trades=98
+
+  CONTRACT: AAL260515C00012000 | CALL $12.0 exp 2026-05-15 | OI: MIXED (+138%) | Side: ASK-HEAVY | Exec: Accumulation
+  Flow tape: 66 fills | ask 63% / bid 0% / mid 0% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=14826 | open_interest=7413 | last_price=0.52 | implied_volatility=0.5471 | nbbo_bid=0.51 | nbbo_ask=0.53 | bid_volume=145 | ask_volume=14607 | total_premium=829408 | trades=66
+    date=2026-04-09 | volume=505 | open_interest=7279 | last_price=0.54 | implied_volatility=0.556 | nbbo_bid=0.53 | nbbo_ask=0.55 | bid_volume=166 | ask_volume=241 | total_premium=26500 | trades=106
+    date=2026-04-08 | volume=3854 | open_interest=7520 | last_price=0.57 | implied_volatility=0.5554 | nbbo_bid=0.55 | nbbo_ask=0.58 | bid_volume=2106 | ask_volume=1371 | total_premium=298588 | trades=214
+    date=2026-04-07 | volume=1082 | open_interest=7292 | last_price=0.4 | implied_volatility=0.601 | nbbo_bid=0.39 | nbbo_ask=0.43 | bid_volume=657 | ask_volume=217 | total_premium=39585 | trades=96
+    date=2026-04-06 | volume=1777 | open_interest=6396 | last_price=0.41 | implied_volatility=0.5866 | nbbo_bid=0.41 | nbbo_ask=0.44 | bid_volume=180 | ask_volume=1402 | total_premium=73629 | trades=173
+    date=2026-04-02 | volume=381 | open_interest=6208 | last_price=0.41 | implied_volatility=0.5551 | nbbo_bid=0.38 | nbbo_ask=0.43 | bid_volume=63 | ask_volume=306 | total_premium=13387 | trades=65
+    date=2026-04-01 | volume=857 | open_interest=5965 | last_price=0.54 | implied_volatility=0.5656 | nbbo_bid=0.52 | nbbo_ask=0.55 | bid_volume=459 | ask_volume=300 | total_premium=45390 | trades=142
+    date=2026-03-31 | volume=876 | open_interest=6124 | last_price=0.46 | implied_volatility=0.6019 | nbbo_bid=0.44 | nbbo_ask=0.49 | bid_volume=178 | ask_volume=523 | total_premium=39136 | trades=115
+    date=2026-03-30 | volume=4602 | open_interest=7476 | last_price=0.32 | implied_volatility=0.6193 | nbbo_bid=0.32 | nbbo_ask=0.33 | bid_volume=262 | ask_volume=3399 | total_premium=143857 | trades=90
+    date=2026-03-27 | volume=518 | open_interest=7151 | last_price=0.37 | implied_volatility=0.6042 | nbbo_bid=0.35 | nbbo_ask=0.38 | bid_volume=108 | ask_volume=279 | total_premium=20944 | trades=49
+
+  CONTRACT: AAL260417P00010000 | PUT $10.0 exp 2026-04-17 | OI: MIXED (+11%) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 46 fills | ask 15% / bid 76% / mid 5% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=175 | open_interest=103344 | last_price=0.03 | implied_volatility=0.6569 | nbbo_bid=0.03 | nbbo_ask=0.04 | bid_volume=145 | ask_volume=25 | total_premium=697 | trades=46
+    date=2026-04-09 | volume=7488 | open_interest=103293 | last_price=0.04 | implied_volatility=0.6183 | nbbo_bid=0.03 | nbbo_ask=0.04 | bid_volume=7282 | ask_volume=141 | total_premium=30689 | trades=302
+    date=2026-04-08 | volume=1809 | open_interest=103090 | last_price=0.06 | implied_volatility=0.6945 | nbbo_bid=0.06 | nbbo_ask=0.07 | bid_volume=650 | ask_volume=1085 | total_premium=8123 | trades=363
+    date=2026-04-07 | volume=4943 | open_interest=102854 | last_price=0.21 | implied_volatility=0.7423 | nbbo_bid=0.2 | nbbo_ask=0.21 | bid_volume=1346 | ask_volume=996 | total_premium=109633 | trades=277
+    date=2026-04-06 | volume=1565 | open_interest=102794 | last_price=0.17 | implied_volatility=0.6921 | nbbo_bid=0.15 | nbbo_ask=0.17 | bid_volume=560 | ask_volume=856 | total_premium=26096 | trades=199
+    date=2026-04-02 | volume=2614 | open_interest=103857 | last_price=0.2 | implied_volatility=0.6169 | nbbo_bid=0.19 | nbbo_ask=0.22 | bid_volume=1525 | ask_volume=773 | total_premium=81703 | trades=294
+    date=2026-04-01 | volume=1431 | open_interest=103724 | last_price=0.19 | implied_volatility=0.6677 | nbbo_bid=0.18 | nbbo_ask=0.19 | bid_volume=743 | ask_volume=277 | total_premium=27246 | trades=243
+    date=2026-03-31 | volume=7178 | open_interest=103744 | last_price=0.31 | implied_volatility=0.684 | nbbo_bid=0.3 | nbbo_ask=0.32 | bid_volume=473 | ask_volume=6493 | total_premium=249897 | trades=1584
+    date=2026-03-30 | volume=3809 | open_interest=101759 | last_price=0.55 | implied_volatility=0.705 | nbbo_bid=0.53 | nbbo_ask=0.57 | bid_volume=515 | ask_volume=3069 | total_premium=193639 | trades=349
+    date=2026-03-27 | volume=3554 | open_interest=102379 | last_price=0.52 | implied_volatility=0.6815 | nbbo_bid=0.52 | nbbo_ask=0.54 | bid_volume=2192 | ask_volume=1009 | total_premium=164812 | trades=430
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: AAL ===
+
+===== CF =====
+=== UW FLOW DATA: CF ===
+
+--- MULTI-DAY FLOW ALERTS (15 sessions, 200 alerts) ---
+  Daily alert count: 04-01=7, 04-02=6, 04-06=4, 04-07=16, 04-08=40, 04-09=12, 04-10=8 (building)
+  Largest: $0.7M FloorTradeLargeCap CALL $135 exp 2026-04-17 | $0.3M RepeatedHits CALL $130 exp 2026-04-17 | $0.3M FloorTradeLargeCap CALL $145 exp 2026-05-15
+  Composition: 55% calls, 45% puts | 33 sweeps, 0 blocks
+  Side concentration: balanced
+  Total premium: $9.8M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 11,296 → 8,760 → 17,824 → 7,528 → 4,944 (0.3x, declining)
+  Put volume: 14,847 → 4,986 → 14,173 → 7,844 → 817
+  Call/put ratio: 0.8 → 1.8 → 1.3 → 1.0 → 6.1 (bullish shift)
+  Ask-side share: 48% → 64% → 56% → 49% → 50% 
+  Net premium: positive 4 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $135.4M
+  Daily: 04-02 $28.9M, 04-06 $18.1M, 04-07 $43.1M, 04-08 $9.6M, 04-09 $35.6M
+  Price clustering: 61% of prints in $122.58-$132.77 range
+  Repeated levels: $129.97 (18x), $133.78 (12x), $130.98 (11x)
+
+--- LIT FLOW SUMMARY (5 sessions, 92 trades) ---
+  Total notional: $15.9M
+  Daily: 04-02 $4.0M, 04-06 $1.8M, 04-07 $4.1M, 04-08 $3.4M, 04-09 $2.6M
+  Side: balanced (54% buy)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 0/6 contracts
+  Weakening / unwind: 2/6 contracts
+  Ask-heavy (accumulation): 2/6 contracts
+  Bid-heavy (distribution): 3/6 contracts
+  Execution intent: 2 accumulation, 2 distribution
+  Overall contract picture: net unwind — positioning weakening
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: CF260417C00125000 | CALL $125.0 exp 2026-04-17 | OI: UNWINDING (+37%) | Side: ASK-HEAVY | Exec: Accumulation
+  Flow tape: 4 fills | ask 74% / bid 13% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive buy
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=10 | open_interest=3020 | last_price=1.75 | implied_volatility=0.539 | nbbo_bid=1.55 | nbbo_ask=2.0 | bid_volume=2 | ask_volume=8 | total_premium=1835 | trades=4
+    date=2026-04-09 | volume=83 | open_interest=3022 | last_price=1.67 | implied_volatility=0.5394 | nbbo_bid=1.35 | nbbo_ask=1.95 | bid_volume=19 | ask_volume=62 | total_premium=21798 | trades=32
+    date=2026-04-08 | volume=931 | open_interest=2225 | last_price=5.0 | implied_volatility=0.5874 | nbbo_bid=5.0 | nbbo_ask=5.6 | bid_volume=530 | ask_volume=398 | total_premium=231258 | trades=35
+    date=2026-04-07 | volume=1065 | open_interest=2289 | last_price=11.75 | implied_volatility=0.6405 | nbbo_bid=9.6 | nbbo_ask=12.0 | bid_volume=3 | ask_volume=2 | total_premium=1511600 | trades=5
+    date=2026-04-06 | volume=96 | open_interest=2343 | last_price=8.6 | implied_volatility=0.625 | nbbo_bid=8.1 | nbbo_ask=9.4 | bid_volume=3 | ask_volume=56 | total_premium=87750 | trades=41
+    date=2026-04-02 | volume=68 | open_interest=2361 | last_price=9.15 | implied_volatility=0.5852 | nbbo_bid=8.2 | nbbo_ask=9.4 | bid_volume=30 | ask_volume=26 | total_premium=72557 | trades=18
+    date=2026-04-01 | volume=35 | open_interest=2353 | last_price=7.54 | implied_volatility=0.5526 | nbbo_bid=7.1 | nbbo_ask=7.9 | bid_volume=20 | ask_volume=14 | total_premium=21930 | trades=18
+    date=2026-03-31 | volume=81 | open_interest=2369 | last_price=8.78 | implied_volatility=0.5842 | nbbo_bid=8.5 | nbbo_ask=9.9 | bid_volume=17 | ask_volume=60 | total_premium=80267 | trades=26
+    date=2026-03-30 | volume=330 | open_interest=2651 | last_price=15.6 | implied_volatility=0.6489 | nbbo_bid=14.6 | nbbo_ask=16.1 | bid_volume=216 | ask_volume=112 | total_premium=535464 | trades=16
+    date=2026-03-27 | volume=118 | open_interest=2683 | last_price=14.55 | implied_volatility=0.5853 | nbbo_bid=14.0 | nbbo_ask=15.0 | bid_volume=28 | ask_volume=89 | total_premium=154440 | trades=40
+
+  CONTRACT: CF260417C00140000 | CALL $140.0 exp 2026-04-17 | OI: MIXED (-1%) | Side: BID-HEAVY | Exec: Accumulation
+  Flow tape: 2 fills | ask 56% / bid 22% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive buy
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=6 | open_interest=3317 | last_price=0.23 | implied_volatility=0.6545 | nbbo_bid=0.05 | nbbo_ask=0.3 | bid_volume=1 | ask_volume=5 | total_premium=151 | trades=2
+    date=2026-04-09 | volume=1014 | open_interest=2794 | last_price=0.43 | implied_volatility=0.7126 | nbbo_bid=0.0 | nbbo_ask=0.6 | bid_volume=25 | ask_volume=221 | total_premium=70648 | trades=38
+    date=2026-04-08 | volume=305 | open_interest=2822 | last_price=0.85 | implied_volatility=0.6124 | nbbo_bid=0.6 | nbbo_ask=1.05 | bid_volume=58 | ask_volume=239 | total_premium=10353 | trades=42
+    date=2026-04-07 | volume=347 | open_interest=2734 | last_price=3.2 | implied_volatility=0.6248 | nbbo_bid=2.7 | nbbo_ask=3.3 | bid_volume=130 | ask_volume=99 | total_premium=150058 | trades=111
+    date=2026-04-06 | volume=89 | open_interest=2723 | last_price=2.5 | implied_volatility=0.5853 | nbbo_bid=1.9 | nbbo_ask=2.35 | bid_volume=48 | ask_volume=36 | total_premium=25238 | trades=31
+    date=2026-04-02 | volume=38 | open_interest=2710 | last_price=2.4 | implied_volatility=0.5831 | nbbo_bid=2.35 | nbbo_ask=2.75 | bid_volume=12 | ask_volume=18 | total_premium=13712 | trades=26
+    date=2026-04-01 | volume=31 | open_interest=2717 | last_price=1.24 | implied_volatility=0.5385 | nbbo_bid=1.5 | nbbo_ask=2.3 | bid_volume=23 | ask_volume=5 | total_premium=5122 | trades=11
+    date=2026-03-31 | volume=230 | open_interest=2723 | last_price=2.83 | implied_volatility=0.5723 | nbbo_bid=2.5 | nbbo_ask=3.2 | bid_volume=93 | ask_volume=92 | total_premium=87528 | trades=70
+    date=2026-03-30 | volume=296 | open_interest=2823 | last_price=6.7 | implied_volatility=0.6477 | nbbo_bid=6.5 | nbbo_ask=7.1 | bid_volume=111 | ask_volume=149 | total_premium=205592 | trades=73
+    date=2026-03-27 | volume=385 | open_interest=2842 | last_price=6.2 | implied_volatility=0.6353 | nbbo_bid=6.3 | nbbo_ask=7.0 | bid_volume=185 | ask_volume=188 | total_premium=242482 | trades=54
+
+  CONTRACT: CF260417C00135000 | CALL $135.0 exp 2026-04-17 | OI: MIXED (+0%) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 3 fills | ask 3% / bid 95% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive sell
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=41 | open_interest=3032 | last_price=0.4 | implied_volatility=0.6314 | nbbo_bid=0.25 | nbbo_ask=0.55 | bid_volume=40 | ask_volume=1 | total_premium=1879 | trades=3
+    date=2026-04-09 | volume=716 | open_interest=2673 | last_price=0.6 | implied_volatility=0.6734 | nbbo_bid=0.25 | nbbo_ask=0.9 | bid_volume=463 | ask_volume=33 | total_premium=54270 | trades=111
+    date=2026-04-08 | volume=65 | open_interest=2679 | last_price=1.5 | implied_volatility=0.5614 | nbbo_bid=1.3 | nbbo_ask=1.9 | bid_volume=28 | ask_volume=24 | total_premium=5347 | trades=16
+    date=2026-04-07 | volume=1099 | open_interest=2698 | last_price=5.25 | implied_volatility=0.599 | nbbo_bid=4.6 | nbbo_ask=5.1 | bid_volume=31 | ask_volume=1049 | total_premium=742334 | trades=40
+    date=2026-04-06 | volume=40 | open_interest=2688 | last_price=3.6 | implied_volatility=0.5857 | nbbo_bid=3.3 | nbbo_ask=3.9 | bid_volume=22 | ask_volume=9 | total_premium=16316 | trades=28
+    date=2026-04-02 | volume=90 | open_interest=2656 | last_price=4.22 | implied_volatility=0.5871 | nbbo_bid=3.7 | nbbo_ask=4.4 | bid_volume=35 | ask_volume=48 | total_premium=49043 | trades=29
+    date=2026-04-01 | volume=206 | open_interest=2752 | last_price=3.08 | implied_volatility=0.5662 | nbbo_bid=3.2 | nbbo_ask=3.5 | bid_volume=152 | ask_volume=49 | total_premium=66959 | trades=35
+    date=2026-03-31 | volume=187 | open_interest=2704 | last_price=4.35 | implied_volatility=0.5823 | nbbo_bid=4.0 | nbbo_ask=4.8 | bid_volume=11 | ask_volume=126 | total_premium=84719 | trades=34
+    date=2026-03-30 | volume=157 | open_interest=2728 | last_price=9.5 | implied_volatility=0.6227 | nbbo_bid=8.6 | nbbo_ask=9.4 | bid_volume=107 | ask_volume=27 | total_premium=140134 | trades=42
+    date=2026-03-27 | volume=469 | open_interest=2950 | last_price=8.46 | implied_volatility=0.6245 | nbbo_bid=8.5 | nbbo_ask=9.1 | bid_volume=92 | ask_volume=291 | total_premium=347155 | trades=79
+
+  CONTRACT: CF260515C00145000 | CALL $145.0 exp 2026-05-15 | OI: MIXED (+160%) | Side: BID-HEAVY
+  Flow tape: 2 fills | ask 0% / bid 50% / mid 0% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=2002 | open_interest=3729 | last_price=1.6 | implied_volatility=0.5769 | nbbo_bid=1.2 | nbbo_ask=2.1 | bid_volume=2002 | ask_volume=0 | total_premium=320320 | trades=2
+    date=2026-04-09 | volume=3 | open_interest=3731 | last_price=1.89 | implied_volatility=0.5893 | nbbo_bid=1.6 | nbbo_ask=2.1 | bid_volume=3 | ask_volume=0 | total_premium=834 | trades=3
+    date=2026-04-08 | volume=62 | open_interest=3730 | last_price=3.08 | implied_volatility=0.5692 | nbbo_bid=2.6 | nbbo_ask=3.6 | bid_volume=5 | ask_volume=43 | total_premium=13178 | trades=23
+    date=2026-04-07 | volume=132 | open_interest=3638 | last_price=6.03 | implied_volatility=0.573 | nbbo_bid=5.4 | nbbo_ask=5.9 | bid_volume=9 | ask_volume=119 | total_premium=88887 | trades=25
+    date=2026-04-06 | volume=4141 | open_interest=1575 | last_price=4.96 | implied_volatility=0.5699 | nbbo_bid=4.6 | nbbo_ask=5.1 | bid_volume=2564 | ask_volume=1546 | total_premium=2071764 | trades=56
+    date=2026-04-02 | volume=39 | open_interest=1579 | last_price=5.03 | implied_volatility=0.5843 | nbbo_bid=4.8 | nbbo_ask=5.3 | bid_volume=17 | ask_volume=11 | total_premium=22782 | trades=19
+    date=2026-04-01 | volume=159 | open_interest=1559 | last_price=4.07 | implied_volatility=0.563 | nbbo_bid=4.0 | nbbo_ask=4.4 | bid_volume=41 | ask_volume=99 | total_premium=61357 | trades=56
+    date=2026-03-31 | volume=66 | open_interest=1579 | last_price=5.0 | implied_volatility=0.5803 | nbbo_bid=4.9 | nbbo_ask=5.5 | bid_volume=30 | ask_volume=24 | total_premium=37495 | trades=18
+    date=2026-03-30 | volume=44 | open_interest=1568 | last_price=8.8 | implied_volatility=0.611 | nbbo_bid=8.6 | nbbo_ask=9.3 | bid_volume=10 | ask_volume=25 | total_premium=44203 | trades=28
+    date=2026-03-27 | volume=219 | open_interest=1496 | last_price=8.05 | implied_volatility=0.605 | nbbo_bid=8.2 | nbbo_ask=9.0 | bid_volume=87 | ask_volume=130 | total_premium=159053 | trades=39
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: CF ===
+
+===== DAL =====
+=== UW FLOW DATA: DAL ===
+
+--- MULTI-DAY FLOW ALERTS (6 sessions, 200 alerts) ---
+  Daily alert count: 04-02=5, 04-06=30, 04-07=54, 04-08=78, 04-09=26, 04-10=7 (building)
+  Largest: $6.6M LowHistoricVolumeFloor CALL $70 exp 2026-04-17 | $0.3M FloorTradeLargeCap PUT $60 exp 2026-05-15 | $0.2M RepeatedHits PUT $70 exp 2026-04-24
+  Composition: 46% calls, 54% puts | 43 sweeps, 0 blocks
+  Side concentration: 72% bid-side (distribution bias)
+  Total premium: $14.6M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 32,342 → 192,758 → 99,714 → 40,988 → 8,240 (0.6x, declining)
+  Put volume: 40,639 → 56,541 → 68,631 → 37,500 → 6,174
+  Call/put ratio: 0.8 → 3.4 → 1.5 → 1.1 → 1.3 (bullish shift)
+  Ask-side share: 37% → 29% → 49% → 47% → 44% (distribution)
+  Net premium: positive 4 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $129.3M
+  Daily: 04-02 $16.4M, 04-06 $17.8M, 04-07 $37.1M, 04-08 $26.2M, 04-09 $31.8M
+  Price clustering: 67% of prints in $66.34-$68.17 range
+  Repeated levels: $67.83 (22x), $65.62 (22x), $66.78 (21x)
+
+--- LIT FLOW SUMMARY (5 sessions, 136 trades) ---
+  Total notional: $25.4M
+  Daily: 04-02 $3.0M, 04-06 $1.2M, 04-07 $10.0M, 04-08 $8.8M, 04-09 $2.3M
+  Side: balanced (55% buy)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 1/6 contracts
+  Ask-heavy (accumulation): 1/6 contracts
+  Bid-heavy (distribution): 3/6 contracts
+  Execution intent: 3 accumulation
+  Strongest build: 260417C00075000 — OI +8%, bid-heavy, accumulation
+  Overall contract picture: inconclusive — check raw detail
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: DAL260417C00075000 | CALL $75.0 exp 2026-04-17 | OI: BUILDING (+8%) | Side: BID-HEAVY | Exec: Accumulation
+  Flow tape: 14 fills | ask 63% / bid 12% / mid 15% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=72 | open_interest=19339 | last_price=0.08 | implied_volatility=0.4017 | nbbo_bid=0.06 | nbbo_ask=0.08 | bid_volume=20 | ask_volume=45 | total_premium=650 | trades=14
+    date=2026-04-09 | volume=466 | open_interest=19485 | last_price=0.15 | implied_volatility=0.4288 | nbbo_bid=0.06 | nbbo_ask=0.18 | bid_volume=196 | ask_volume=114 | total_premium=6294 | trades=103
+    date=2026-04-08 | volume=2596 | open_interest=19394 | last_price=0.22 | implied_volatility=0.4592 | nbbo_bid=0.2 | nbbo_ask=0.24 | bid_volume=1126 | ask_volume=1226 | total_premium=261492 | trades=251
+    date=2026-04-07 | volume=3149 | open_interest=17782 | last_price=0.29 | implied_volatility=0.6108 | nbbo_bid=0.2 | nbbo_ask=0.4 | bid_volume=2084 | ask_volume=1014 | total_premium=103214 | trades=205
+    date=2026-04-06 | volume=167 | open_interest=17762 | last_price=0.46 | implied_volatility=0.6106 | nbbo_bid=0.45 | nbbo_ask=0.62 | bid_volume=112 | ask_volume=54 | total_premium=9331 | trades=40
+    date=2026-04-02 | volume=101 | open_interest=17747 | last_price=0.64 | implied_volatility=0.5499 | nbbo_bid=0.56 | nbbo_ask=0.88 | bid_volume=27 | ask_volume=38 | total_premium=5483 | trades=27
+    date=2026-04-01 | volume=230 | open_interest=17703 | last_price=0.97 | implied_volatility=0.5702 | nbbo_bid=0.86 | nbbo_ask=0.96 | bid_volume=41 | ask_volume=185 | total_premium=23184 | trades=67
+    date=2026-03-31 | volume=46 | open_interest=17698 | last_price=0.8 | implied_volatility=0.5914 | nbbo_bid=0.76 | nbbo_ask=0.95 | bid_volume=3 | ask_volume=40 | total_premium=3379 | trades=15
+    date=2026-03-30 | volume=96 | open_interest=17731 | last_price=0.57 | implied_volatility=0.6381 | nbbo_bid=0.42 | nbbo_ask=0.59 | bid_volume=64 | ask_volume=24 | total_premium=5807 | trades=28
+    date=2026-03-27 | volume=89 | open_interest=17715 | last_price=0.89 | implied_volatility=0.6007 | nbbo_bid=0.75 | nbbo_ask=0.96 | bid_volume=65 | ask_volume=19 | total_premium=7752 | trades=23
+
+  CONTRACT: DAL260417C00080000 | CALL $80.0 exp 2026-04-17 | OI: MIXED (-69%) | Side: ASK-HEAVY | Exec: Accumulation
+  Flow tape: 4 fills | ask 100% / bid 0% / mid 0% | sweeps: 0 | blocks: 0
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=12 | open_interest=23349 | last_price=0.01 | implied_volatility=0.4298 | nbbo_bid=0.0 | nbbo_ask=0.01 | bid_volume=0 | ask_volume=12 | total_premium=12 | trades=4
+    date=2026-04-09 | volume=204 | open_interest=23444 | last_price=0.01 | implied_volatility=0.4415 | nbbo_bid=0.0 | nbbo_ask=0.02 | bid_volume=156 | ask_volume=31 | total_premium=312 | trades=40
+    date=2026-04-08 | volume=787 | open_interest=23499 | last_price=0.05 | implied_volatility=0.5235 | nbbo_bid=0.01 | nbbo_ask=0.1 | bid_volume=338 | ask_volume=365 | total_premium=18524 | trades=99
+    date=2026-04-07 | volume=73778 | open_interest=76392 | last_price=0.07 | implied_volatility=0.6286 | nbbo_bid=0.06 | nbbo_ask=0.2 | bid_volume=2313 | ask_volume=5870 | total_premium=834217 | trades=213
+    date=2026-04-06 | volume=2506 | open_interest=74387 | last_price=0.17 | implied_volatility=0.6004 | nbbo_bid=0.1 | nbbo_ask=0.17 | bid_volume=2042 | ask_volume=24 | total_premium=35382 | trades=109
+    date=2026-04-02 | volume=13 | open_interest=74389 | last_price=0.28 | implied_volatility=0.6155 | nbbo_bid=0.11 | nbbo_ask=0.54 | bid_volume=12 | ask_volume=0 | total_premium=311 | trades=4
+    date=2026-04-01 | volume=64 | open_interest=74420 | last_price=0.32 | implied_volatility=0.5451 | nbbo_bid=0.22 | nbbo_ask=0.36 | bid_volume=56 | ask_volume=5 | total_premium=2391 | trades=43
+    date=2026-03-31 | volume=31 | open_interest=74451 | last_price=0.45 | implied_volatility=0.6058 | nbbo_bid=0.21 | nbbo_ask=0.45 | bid_volume=7 | ask_volume=21 | total_premium=1387 | trades=5
+    date=2026-03-30 | volume=86 | open_interest=74444 | last_price=0.24 | implied_volatility=0.6607 | nbbo_bid=0.16 | nbbo_ask=0.31 | bid_volume=3 | ask_volume=53 | total_premium=2172 | trades=18
+    date=2026-03-27 | volume=10 | open_interest=74441 | last_price=0.33 | implied_volatility=0.6306 | nbbo_bid=0.23 | nbbo_ask=0.58 | bid_volume=8 | ask_volume=2 | total_premium=353 | trades=7
+
+  CONTRACT: DAL260515C00080000 | CALL $80.0 exp 2026-05-15 | OI: MIXED (+2%) | Side: BID-HEAVY | Exec: Accumulation
+  Flow tape: 9 fills | ask 93% / bid 6% / mid 0% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=62 | open_interest=16872 | last_price=0.42 | implied_volatility=0.3984 | nbbo_bid=0.39 | nbbo_ask=0.45 | bid_volume=5 | ask_volume=57 | total_premium=2766 | trades=9
+    date=2026-04-09 | volume=70 | open_interest=16859 | last_price=0.48 | implied_volatility=0.4163 | nbbo_bid=0.38 | nbbo_ask=0.58 | bid_volume=11 | ask_volume=36 | total_premium=3450 | trades=27
+    date=2026-04-08 | volume=1068 | open_interest=16852 | last_price=0.55 | implied_volatility=0.4251 | nbbo_bid=0.5 | nbbo_ask=0.66 | bid_volume=493 | ask_volume=469 | total_premium=111612 | trades=145
+    date=2026-04-07 | volume=205 | open_interest=16754 | last_price=0.44 | implied_volatility=0.4818 | nbbo_bid=0.31 | nbbo_ask=0.69 | bid_volume=40 | ask_volume=148 | total_premium=11309 | trades=56
+    date=2026-04-06 | volume=46 | open_interest=16746 | last_price=0.74 | implied_volatility=0.4885 | nbbo_bid=0.53 | nbbo_ask=0.8 | bid_volume=14 | ask_volume=27 | total_premium=3947 | trades=19
+    date=2026-04-02 | volume=6 | open_interest=16740 | last_price=0.71 | implied_volatility=0.4738 | nbbo_bid=0.71 | nbbo_ask=1.1 | bid_volume=0 | ask_volume=0 | total_premium=426 | trades=1
+    date=2026-04-01 | volume=21 | open_interest=16741 | last_price=0.95 | implied_volatility=0.4728 | nbbo_bid=0.87 | nbbo_ask=1.05 | bid_volume=10 | ask_volume=8 | total_premium=2217 | trades=17
+    date=2026-03-31 | volume=325 | open_interest=16733 | last_price=0.92 | implied_volatility=0.5058 | nbbo_bid=0.84 | nbbo_ask=1.06 | bid_volume=7 | ask_volume=312 | total_premium=34295 | trades=12
+    date=2026-03-30 | volume=219 | open_interest=16706 | last_price=0.78 | implied_volatility=0.5389 | nbbo_bid=0.61 | nbbo_ask=0.79 | bid_volume=101 | ask_volume=75 | total_premium=16299 | trades=24
+    date=2026-03-27 | volume=16 | open_interest=16710 | last_price=1.01 | implied_volatility=0.5207 | nbbo_bid=0.81 | nbbo_ask=1.06 | bid_volume=9 | ask_volume=5 | total_premium=1653 | trades=7
+
+  CONTRACT: DAL260417C00070000 | CALL $70.0 exp 2026-04-17 | OI: MIXED (-81%) | Side: BID-HEAVY
+  Flow tape: 64 fills | ask 46% / bid 35% / mid 4% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=274 | open_interest=14811 | last_price=0.97 | implied_volatility=0.4251 | nbbo_bid=0.94 | nbbo_ask=0.99 | bid_volume=107 | ask_volume=148 | total_premium=26735 | trades=64
+    date=2026-04-09 | volume=3999 | open_interest=14719 | last_price=0.93 | implied_volatility=0.4436 | nbbo_bid=0.89 | nbbo_ask=0.99 | bid_volume=1070 | ask_volume=1638 | total_premium=428700 | trades=399
+    date=2026-04-08 | volume=6647 | open_interest=16396 | last_price=1.27 | implied_volatility=0.4767 | nbbo_bid=1.18 | nbbo_ask=1.36 | bid_volume=2358 | ask_volume=4111 | total_premium=1987622 | trades=530
+    date=2026-04-07 | volume=74551 | open_interest=78441 | last_price=1.16 | implied_volatility=0.6306 | nbbo_bid=1.15 | nbbo_ask=1.2 | bid_volume=68293 | ask_volume=4378 | total_premium=8020361 | trades=433
+    date=2026-04-06 | volume=1595 | open_interest=78742 | last_price=1.66 | implied_volatility=0.6339 | nbbo_bid=1.55 | nbbo_ask=1.77 | bid_volume=835 | ask_volume=740 | total_premium=273883 | trades=208
+    date=2026-04-02 | volume=493 | open_interest=78842 | last_price=1.8 | implied_volatility=0.5868 | nbbo_bid=1.81 | nbbo_ask=1.92 | bid_volume=287 | ask_volume=161 | total_premium=87503 | trades=80
+    date=2026-04-01 | volume=1126 | open_interest=78733 | last_price=2.53 | implied_volatility=0.6086 | nbbo_bid=2.34 | nbbo_ask=2.54 | bid_volume=469 | ask_volume=429 | total_premium=283547 | trades=138
+    date=2026-03-31 | volume=1559 | open_interest=78901 | last_price=2.27 | implied_volatility=0.6339 | nbbo_bid=2.08 | nbbo_ask=2.31 | bid_volume=593 | ask_volume=792 | total_premium=341027 | trades=61
+    date=2026-03-30 | volume=140 | open_interest=78827 | last_price=1.29 | implied_volatility=0.6453 | nbbo_bid=1.26 | nbbo_ask=1.39 | bid_volume=31 | ask_volume=77 | total_premium=20083 | trades=40
+    date=2026-03-27 | volume=745 | open_interest=78841 | last_price=2.0 | implied_volatility=0.6296 | nbbo_bid=1.88 | nbbo_ask=2.16 | bid_volume=178 | ask_volume=537 | total_premium=154387 | trades=46
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: DAL ===
+
+===== HUM =====
+=== UW FLOW DATA: HUM ===
+
+--- MULTI-DAY FLOW ALERTS (22 sessions, 165 alerts) ---
+  Daily alert count: 04-01=7, 04-02=10, 04-06=8, 04-07=15, 04-08=2, 04-09=4, 04-10=1 (steady)
+  Largest: $0.3M RepeatedHitsDescendingFill CALL $192.5 exp 2026-04-17 | $0.2M RepeatedHits CALL $190 exp 2027-01-15 | $0.2M FloorTradeLargeCap CALL $180 exp 2026-04-10
+  Composition: 61% calls, 39% puts | 17 sweeps, 0 blocks
+  Side concentration: balanced
+  Total premium: $8.7M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 5,678 → 14,313 → 3,000 → 2,647 → 1,553 (0.1x, declining)
+  Put volume: 9,180 → 8,895 → 2,287 → 2,229 → 519
+  Call/put ratio: 0.6 → 1.6 → 1.3 → 1.2 → 3.0 (bullish shift)
+  Ask-side share: 44% → 52% → 56% → 43% → 67% (accumulation accelerating)
+  Net premium: positive 6 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $160.6M
+  Daily: 04-02 $18.5M, 04-06 $40.0M, 04-07 $68.3M, 04-08 $15.3M, 04-09 $18.5M
+  Price clustering: 66% of prints in $184.79-$203.32 range
+  Repeated levels: $197.32 (22x), $197.15 (16x), $198.39 (14x)
+
+--- LIT FLOW SUMMARY (5 sessions, 54 trades) ---
+  Total notional: $11.1M
+  Daily: 04-02 $1.9M, 04-06 $1.8M, 04-07 $6.3M, 04-08 $0.9M, 04-09 $0.2M
+  Side: balanced (48% buy)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 1/6 contracts
+  Weakening / unwind: 2/6 contracts
+  Ask-heavy (accumulation): 2/6 contracts
+  Bid-heavy (distribution): 3/6 contracts
+  Execution intent: 1 accumulation, 3 distribution
+  Strongest build: 260410C00200000 — OI +6983%, ask-heavy, distribution
+  Likely roll: PUT $190.0 04-10 → CALL $200.0 04-10
+  Overall contract picture: net unwind — positioning weakening
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: HUM260410C00200000 | CALL $200.0 exp 2026-04-10 | OI: BUILDING (+6983%) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 13 fills | ask 18% / bid 74% / mid 3% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=26 | open_interest=1700 | last_price=0.66 | implied_volatility=0.8245 | nbbo_bid=0.45 | nbbo_ask=1.1 | bid_volume=17 | ask_volume=8 | total_premium=2246 | trades=13
+    date=2026-04-09 | volume=81 | open_interest=1698 | last_price=1.5 | implied_volatility=0.501 | nbbo_bid=0.65 | nbbo_ask=1.5 | bid_volume=40 | ask_volume=40 | total_premium=14416 | trades=20
+    date=2026-04-08 | volume=225 | open_interest=1765 | last_price=2.79 | implied_volatility=0.5511 | nbbo_bid=2.2 | nbbo_ask=3.0 | bid_volume=93 | ask_volume=102 | total_premium=56842 | trades=61
+    date=2026-04-07 | volume=1208 | open_interest=1199 | last_price=3.37 | implied_volatility=0.6192 | nbbo_bid=2.9 | nbbo_ask=3.6 | bid_volume=410 | ask_volume=733 | total_premium=345447 | trades=227
+    date=2026-04-06 | volume=1440 | open_interest=168 | last_price=4.0 | implied_volatility=1.3297 | nbbo_bid=3.6 | nbbo_ask=4.3 | bid_volume=286 | ask_volume=637 | total_premium=571512 | trades=236
+    date=2026-04-02 | volume=124 | open_interest=77 | last_price=3.83 | implied_volatility=1.0079 | nbbo_bid=2.75 | nbbo_ask=4.1 | bid_volume=105 | ask_volume=17 | total_premium=45537 | trades=26
+    date=2026-04-01 | volume=16 | open_interest=61 | last_price=3.4 | implied_volatility=0.9642 | nbbo_bid=2.95 | nbbo_ask=3.9 | bid_volume=4 | ask_volume=11 | total_premium=5522 | trades=9
+    date=2026-03-31 | volume=19 | open_interest=42 | last_price=3.2 | implied_volatility=0.9649 | nbbo_bid=1.15 | nbbo_ask=3.5 | bid_volume=3 | ask_volume=15 | total_premium=4651 | trades=10
+    date=2026-03-30 | volume=5 | open_interest=37 | last_price=2.14 | implied_volatility=0.9418 | nbbo_bid=1.4 | nbbo_ask=2.5 | bid_volume=1 | ask_volume=3 | total_premium=1059 | trades=5
+    date=2026-03-27 | volume=4 | open_interest=33 | last_price=2.85 | implied_volatility=0.9065 | nbbo_bid=2.25 | nbbo_ask=3.6 | bid_volume=2 | ask_volume=2 | total_premium=1160 | trades=4
+
+  CONTRACT: HUM260515C00230000 | CALL $230.0 exp 2026-05-15 | OI: MIXED (+133%) | Side: BID-HEAVY | Exec: Accumulation
+  Flow tape: 6 fills | ask 81% / bid 19% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive buy
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=6 | open_interest=1340 | last_price=3.6 | implied_volatility=0.5283 | nbbo_bid=3.3 | nbbo_ask=3.7 | bid_volume=2 | ask_volume=4 | total_premium=2224 | trades=6
+    date=2026-04-09 | volume=37 | open_interest=1332 | last_price=4.0 | implied_volatility=0.5384 | nbbo_bid=3.4 | nbbo_ask=3.9 | bid_volume=14 | ask_volume=14 | total_premium=14781 | trades=9
+    date=2026-04-08 | volume=39 | open_interest=1318 | last_price=4.04 | implied_volatility=0.5608 | nbbo_bid=2.0 | nbbo_ask=5.0 | bid_volume=6 | ask_volume=32 | total_premium=16874 | trades=8
+    date=2026-04-07 | volume=17 | open_interest=1304 | last_price=4.7 | implied_volatility=0.5859 | nbbo_bid=2.45 | nbbo_ask=5.5 | bid_volume=13 | ask_volume=2 | total_premium=8421 | trades=9
+    date=2026-04-06 | volume=1 | open_interest=1303 | last_price=4.0 | implied_volatility=0.6899 | nbbo_bid=1.1 | nbbo_ask=4.5 | bid_volume=1 | ask_volume=0 | total_premium=400 | trades=1
+    date=2026-04-02 | volume=9 | open_interest=1294 | last_price=3.5 | implied_volatility=0.6881 | nbbo_bid=2.4 | nbbo_ask=6.7 | bid_volume=4 | ask_volume=5 | total_premium=3150 | trades=3
+    date=2026-04-01 | volume=366 | open_interest=1071 | last_price=3.3 | implied_volatility=0.6761 | nbbo_bid=2.9 | nbbo_ask=3.4 | bid_volume=77 | ask_volume=272 | total_premium=120410 | trades=58
+    date=2026-03-31 | volume=0 | open_interest=1071 | implied_volatility=0.7096 | nbbo_bid=2.65 | nbbo_ask=6.7 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-30 | volume=0 | open_interest=1071 | implied_volatility=0.7423 | nbbo_bid=2.25 | nbbo_ask=4.4 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-27 | volume=500 | open_interest=575 | last_price=3.0 | implied_volatility=0.7289 | nbbo_bid=2.25 | nbbo_ask=4.8 | bid_volume=500 | ask_volume=0 | total_premium=150000 | trades=1
+
+  CONTRACT: HUM260501C00235000 | CALL $235.0 exp 2026-05-01 | OI: UNWINDING (NEW) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 1 fills | ask 0% / bid 100% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive sell
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=1 | open_interest=1347 | last_price=1.8 | implied_volatility=0.6316 | nbbo_bid=1.4 | nbbo_ask=3.5 | bid_volume=1 | ask_volume=0 | total_premium=180 | trades=1
+    date=2026-04-09 | volume=42 | open_interest=1350 | last_price=2.2 | implied_volatility=0.6437 | nbbo_bid=1.9 | nbbo_ask=3.1 | bid_volume=7 | ask_volume=35 | total_premium=9085 | trades=11
+    date=2026-04-08 | volume=4 | open_interest=1352 | last_price=2.67 | implied_volatility=0.6534 | nbbo_bid=1.95 | nbbo_ask=3.5 | bid_volume=4 | ask_volume=0 | total_premium=882 | trades=4
+    date=2026-04-07 | volume=1519 | open_interest=0 | last_price=2.75 | implied_volatility=0.6635 | nbbo_bid=1.5 | nbbo_ask=4.0 | bid_volume=138 | ask_volume=1354 | total_premium=475444 | trades=172
+    date=2026-04-06 | volume=0 | open_interest=0 | implied_volatility=0.729 | nbbo_bid=0.05 | nbbo_ask=6.3 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-02 | volume=0 | open_interest=0 | implied_volatility=0.7574 | nbbo_bid=0.1 | nbbo_ask=6.1 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-01 | volume=0 | open_interest=0 | implied_volatility=0.6462 | nbbo_bid=0.0 | nbbo_ask=4.8 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-31 | volume=0 | open_interest=0 | implied_volatility=0.8315 | nbbo_bid=0.05 | nbbo_ask=6.1 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-30 | volume=0 | open_interest=0 | implied_volatility=0.8223 | nbbo_bid=0.05 | nbbo_ask=5.5 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-27 | volume=0 | open_interest=0 | implied_volatility=0.8285 | nbbo_bid=0.05 | nbbo_ask=6.2 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+
+  CONTRACT: HUM260410C00180000 | CALL $180.0 exp 2026-04-10 | OI: MIXED (+68%) | Side: BID-HEAVY
+  Flow tape: 1 fills | ask 0% / bid 50% / mid 0% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=2 | open_interest=911 | last_price=18.39 | implied_volatility=2.0573 | nbbo_bid=16.4 | nbbo_ask=20.4 | bid_volume=2 | ask_volume=0 | total_premium=3678 | trades=1
+    date=2026-04-09 | volume=10 | open_interest=915 | last_price=19.5 | implied_volatility=0.9975 | nbbo_bid=16.2 | nbbo_ask=20.5 | bid_volume=5 | ask_volume=2 | total_premium=18036 | trades=8
+    date=2026-04-08 | volume=5 | open_interest=918 | last_price=17.41 | implied_volatility=0.9086 | nbbo_bid=16.3 | nbbo_ask=20.3 | bid_volume=3 | ask_volume=2 | total_premium=8839 | trades=4
+    date=2026-04-07 | volume=101 | open_interest=1002 | last_price=17.8 | implied_volatility=0.9377 | nbbo_bid=16.0 | nbbo_ask=19.2 | bid_volume=66 | ask_volume=31 | total_premium=176355 | trades=20
+    date=2026-04-06 | volume=351 | open_interest=1029 | last_price=12.2 | implied_volatility=1.333 | nbbo_bid=10.5 | nbbo_ask=12.5 | bid_volume=250 | ask_volume=62 | total_premium=418287 | trades=107
+    date=2026-04-02 | volume=194 | open_interest=928 | last_price=9.38 | implied_volatility=0.9452 | nbbo_bid=8.4 | nbbo_ask=11.1 | bid_volume=85 | ask_volume=96 | total_premium=191714 | trades=39
+    date=2026-04-01 | volume=49 | open_interest=881 | last_price=10.0 | implied_volatility=0.9217 | nbbo_bid=8.1 | nbbo_ask=9.8 | bid_volume=4 | ask_volume=45 | total_premium=48408 | trades=7
+    date=2026-03-31 | volume=38 | open_interest=868 | last_price=7.5 | implied_volatility=0.9422 | nbbo_bid=6.6 | nbbo_ask=9.2 | bid_volume=8 | ask_volume=30 | total_premium=25286 | trades=11
+    date=2026-03-30 | volume=32 | open_interest=854 | last_price=5.98 | implied_volatility=0.9411 | nbbo_bid=5.2 | nbbo_ask=6.2 | bid_volume=4 | ask_volume=22 | total_premium=20016 | trades=21
+    date=2026-03-27 | volume=91 | open_interest=820 | last_price=6.5 | implied_volatility=0.9279 | nbbo_bid=7.0 | nbbo_ask=8.9 | bid_volume=49 | ask_volume=42 | total_premium=65210 | trades=13
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: HUM ===
+
+===== IVZ =====
+=== UW FLOW DATA: IVZ ===
+
+--- MULTI-DAY FLOW ALERTS (7 sessions, 31 alerts) ---
+  Daily alert count: 03-11=1, 03-17=2, 03-25=2, 03-27=1, 04-06=2, 04-07=17, 04-08=6 (building)
+  Largest: $1.7M LowHistoricVolumeFloor CALL $25 exp 2026-07-17 | $0.3M RepeatedHitsAscendingFill CALL $23 exp 2026-07-17 | $0.3M RepeatedHits CALL $23 exp 2026-07-17
+  Composition: 87% calls, 13% puts | 9 sweeps, 0 blocks
+  Side concentration: 77% ask-side (accumulation bias)
+  Total premium: $3.9M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 31,055 → 18,597 → 6,421 → 20,805 → 128 (0.1x, declining)
+  Put volume: 374 → 522 → 364 → 61 → 5
+  Call/put ratio: 83.0 → 35.6 → 17.6 → 341.1 → 25.6 (bullish shift)
+  Ask-side share: 98% → 57% → 25% → 29% → 52% 
+  Net premium: positive 4 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 151 prints) ---
+  Total notional: $79.2M
+  Daily: 04-02 $3.8M, 04-06 $29.1M, 04-07 $23.5M, 04-08 $10.6M, 04-09 $12.3M
+  Price clustering: 62% of prints in $22.70-$23.87 range
+  Repeated levels: $23.57 (14x), $24.21 (11x), $22.77 (11x)
+
+--- LIT FLOW SUMMARY (1 sessions, 1 trades) ---
+  Total notional: $0.2M
+  Daily: 04-09 $0.2M
+  Sell-side: 100% (supply bias)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 1/6 contracts
+  Weakening / unwind: 1/6 contracts
+  Ask-heavy (accumulation): 2/6 contracts
+  Bid-heavy (distribution): 3/6 contracts
+  Execution intent: 1 accumulation
+  Strongest build: 260515C00026000 — OI NEW (from zero), bid-heavy, accumulation
+  Likely roll: CALL $30.0 04-17 → CALL $26.0 05-15
+  Overall contract picture: inconclusive — check raw detail
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: IVZ260515C00026000 | CALL $26.0 exp 2026-05-15 | OI: BUILDING (NEW) | Side: BID-HEAVY | Exec: Accumulation
+  Flow tape: 1 fills | ask 100% / bid 0% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive buy
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=1 | open_interest=10355 | last_price=0.47 | implied_volatility=0.421 | nbbo_bid=0.35 | nbbo_ask=0.5 | bid_volume=0 | ask_volume=1 | total_premium=47 | trades=1
+    date=2026-04-09 | volume=10228 | open_interest=192 | last_price=0.45 | implied_volatility=0.3887 | nbbo_bid=0.3 | nbbo_ask=0.5 | bid_volume=191 | ask_volume=20 | total_premium=451771 | trades=25
+    date=2026-04-08 | volume=5 | open_interest=191 | last_price=0.62 | implied_volatility=0.3865 | nbbo_bid=0.5 | nbbo_ask=0.65 | bid_volume=4 | ask_volume=1 | total_premium=326 | trades=3
+    date=2026-04-07 | volume=4 | open_interest=189 | last_price=0.4 | implied_volatility=0.473 | nbbo_bid=0.35 | nbbo_ask=0.45 | bid_volume=0 | ask_volume=0 | total_premium=160 | trades=2
+    date=2026-04-06 | volume=7 | open_interest=186 | last_price=0.32 | implied_volatility=0.4409 | nbbo_bid=0.25 | nbbo_ask=0.45 | bid_volume=6 | ask_volume=0 | total_premium=270 | trades=6
+    date=2026-04-02 | volume=26 | open_interest=160 | last_price=0.68 | implied_volatility=0.3982 | nbbo_bid=0.6 | nbbo_ask=0.75 | bid_volume=26 | ask_volume=0 | total_premium=1943 | trades=2
+    date=2026-04-01 | volume=3 | open_interest=159 | last_price=0.9 | implied_volatility=0.4472 | nbbo_bid=0.75 | nbbo_ask=0.95 | bid_volume=1 | ask_volume=0 | total_premium=280 | trades=3
+    date=2026-03-31 | volume=19 | open_interest=146 | last_price=0.85 | implied_volatility=0.4456 | nbbo_bid=0.75 | nbbo_ask=0.95 | bid_volume=15 | ask_volume=0 | total_premium=1435 | trades=8
+    date=2026-03-30 | volume=105 | open_interest=48 | last_price=0.6 | implied_volatility=0.4617 | nbbo_bid=0.45 | nbbo_ask=0.7 | bid_volume=58 | ask_volume=18 | total_premium=7086 | trades=21
+    date=2026-03-27 | volume=40 | open_interest=23 | last_price=0.62 | implied_volatility=0.4633 | nbbo_bid=0.55 | nbbo_ask=0.7 | bid_volume=40 | ask_volume=0 | total_premium=2597 | trades=3
+
+  CONTRACT: IVZ260417C00025000 | CALL $25.0 exp 2026-04-17 | OI: MIXED (+2116%) | Side: ASK-HEAVY
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=0 | open_interest=16197 | implied_volatility=0.4577 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-09 | volume=6 | open_interest=16199 | last_price=0.15 | implied_volatility=0.4269 | nbbo_bid=0.1 | nbbo_ask=0.2 | bid_volume=0 | ask_volume=3 | total_premium=105 | trades=5
+    date=2026-04-08 | volume=150 | open_interest=16186 | last_price=0.3 | implied_volatility=0.3807 | nbbo_bid=0.25 | nbbo_ask=0.35 | bid_volume=87 | ask_volume=30 | total_premium=3412 | trades=52
+    date=2026-04-07 | volume=575 | open_interest=16236 | last_price=0.14 | implied_volatility=0.5216 | nbbo_bid=0.1 | nbbo_ask=0.2 | bid_volume=285 | ask_volume=248 | total_premium=5499 | trades=121
+    date=2026-04-06 | volume=15228 | open_interest=1296 | last_price=0.14 | implied_volatility=0.456 | nbbo_bid=0.1 | nbbo_ask=0.15 | bid_volume=195 | ask_volume=15023 | total_premium=221018 | trades=25
+    date=2026-04-02 | volume=21 | open_interest=1303 | last_price=0.5 | implied_volatility=0.4441 | nbbo_bid=0.35 | nbbo_ask=0.7 | bid_volume=2 | ask_volume=19 | total_premium=1006 | trades=4
+    date=2026-04-01 | volume=98 | open_interest=1318 | last_price=0.6 | implied_volatility=0.4377 | nbbo_bid=0.5 | nbbo_ask=0.7 | bid_volume=18 | ask_volume=69 | total_premium=6405 | trades=17
+    date=2026-03-31 | volume=35 | open_interest=1341 | last_price=0.65 | implied_volatility=0.4331 | nbbo_bid=0.5 | nbbo_ask=0.7 | bid_volume=13 | ask_volume=11 | total_premium=1972 | trades=15
+    date=2026-03-30 | volume=21 | open_interest=1348 | last_price=0.35 | implied_volatility=0.4413 | nbbo_bid=0.25 | nbbo_ask=0.45 | bid_volume=9 | ask_volume=6 | total_premium=779 | trades=10
+    date=2026-03-27 | volume=55 | open_interest=1383 | last_price=0.42 | implied_volatility=0.4762 | nbbo_bid=0.35 | nbbo_ask=0.5 | bid_volume=47 | ask_volume=3 | total_premium=2304 | trades=23
+
+  CONTRACT: IVZ260417C00024000 | CALL $24.0 exp 2026-04-17 | OI: MIXED (NEW) | Side: ASK-HEAVY
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=0 | open_interest=19302 | implied_volatility=0.3482 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-09 | volume=24 | open_interest=19326 | last_price=0.5 | implied_volatility=0.4003 | nbbo_bid=0.3 | nbbo_ask=0.45 | bid_volume=20 | ask_volume=0 | total_premium=1200 | trades=4
+    date=2026-04-08 | volume=4377 | open_interest=15302 | last_price=0.8 | implied_volatility=0.4032 | nbbo_bid=0.7 | nbbo_ask=1.15 | bid_volume=3107 | ask_volume=1049 | total_premium=304244 | trades=293
+    date=2026-04-07 | volume=194 | open_interest=15246 | last_price=0.32 | implied_volatility=0.5002 | nbbo_bid=0.25 | nbbo_ask=0.35 | bid_volume=78 | ask_volume=106 | total_premium=5109 | trades=35
+    date=2026-04-06 | volume=15261 | open_interest=171 | last_price=0.29 | implied_volatility=0.4479 | nbbo_bid=0.25 | nbbo_ask=0.35 | bid_volume=74 | ask_volume=15120 | total_premium=526010 | trades=62
+    date=2026-04-02 | volume=17 | open_interest=165 | last_price=0.95 | implied_volatility=0.4084 | nbbo_bid=0.8 | nbbo_ask=1.0 | bid_volume=10 | ask_volume=7 | total_premium=1521 | trades=10
+    date=2026-04-01 | volume=151 | open_interest=210 | last_price=1.2 | implied_volatility=0.4756 | nbbo_bid=1.0 | nbbo_ask=1.25 | bid_volume=12 | ask_volume=115 | total_premium=18120 | trades=6
+    date=2026-03-31 | volume=2 | open_interest=210 | last_price=0.85 | implied_volatility=0.4521 | nbbo_bid=0.9 | nbbo_ask=1.3 | bid_volume=2 | ask_volume=0 | total_premium=165 | trades=2
+    date=2026-03-30 | volume=23 | open_interest=218 | last_price=0.65 | implied_volatility=0.4289 | nbbo_bid=0.5 | nbbo_ask=0.75 | bid_volume=11 | ask_volume=12 | total_premium=1662 | trades=7
+    date=2026-03-27 | volume=1 | open_interest=217 | last_price=0.85 | implied_volatility=0.4777 | nbbo_bid=0.65 | nbbo_ask=0.8 | bid_volume=1 | ask_volume=0 | total_premium=85 | trades=1
+
+  CONTRACT: IVZ260515C00024000 | CALL $24.0 exp 2026-05-15 | OI: MIXED (NEW) | Side: BID-HEAVY
+  Flow tape: 10 fills | ask 22% / bid 19% / mid 59% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=40 | open_interest=10320 | last_price=1.1 | implied_volatility=0.4323 | nbbo_bid=1.1 | nbbo_ask=1.15 | bid_volume=13 | ask_volume=9 | total_premium=4392 | trades=10
+    date=2026-04-09 | volume=10347 | open_interest=67 | last_price=1.25 | implied_volatility=0.4371 | nbbo_bid=1.0 | nbbo_ask=1.2 | bid_volume=106 | ask_volume=81 | total_premium=1213586 | trades=69
+    date=2026-04-08 | volume=16 | open_interest=55 | last_price=1.37 | implied_volatility=0.4206 | nbbo_bid=1.35 | nbbo_ask=1.55 | bid_volume=11 | ask_volume=4 | total_premium=2174 | trades=7
+    date=2026-04-07 | volume=22 | open_interest=37 | last_price=1.05 | implied_volatility=0.4823 | nbbo_bid=0.8 | nbbo_ask=0.95 | bid_volume=17 | ask_volume=4 | total_premium=1741 | trades=9
+    date=2026-04-06 | volume=47 | open_interest=26 | last_price=0.85 | implied_volatility=0.4496 | nbbo_bid=0.75 | nbbo_ask=1.0 | bid_volume=24 | ask_volume=14 | total_premium=4227 | trades=24
+    date=2026-04-02 | volume=1 | open_interest=25 | last_price=1.55 | implied_volatility=0.3977 | nbbo_bid=1.3 | nbbo_ask=1.65 | bid_volume=1 | ask_volume=0 | total_premium=155 | trades=1
+    date=2026-04-01 | volume=2 | open_interest=23 | last_price=1.7 | implied_volatility=0.4675 | nbbo_bid=1.6 | nbbo_ask=1.85 | bid_volume=2 | ask_volume=0 | total_premium=340 | trades=1
+    date=2026-03-31 | volume=0 | open_interest=23 | implied_volatility=0.4714 | nbbo_bid=1.6 | nbbo_ask=1.85 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-30 | volume=4 | open_interest=19 | last_price=1.45 | implied_volatility=0.4604 | nbbo_bid=1.05 | nbbo_ask=1.35 | bid_volume=4 | ask_volume=0 | total_premium=580 | trades=3
+    date=2026-03-27 | volume=0 | open_interest=19 | implied_volatility=0.4847 | nbbo_bid=1.2 | nbbo_ask=1.4 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: IVZ ===
+
+===== JBLU =====
+=== UW FLOW DATA: JBLU ===
+
+--- MULTI-DAY FLOW ALERTS (19 sessions, 74 alerts) ---
+  Daily alert count: 03-30=1, 03-31=1, 04-01=1, 04-06=1, 04-07=2, 04-08=16, 04-10=1 (building)
+  Largest: $0.5M FloorTradeSmallCap CALL $7 exp 2028-12-15 | $0.1M RepeatedHits CALL $7 exp 2028-12-15 | $0.1M RepeatedHits CALL $6 exp 2026-06-18
+  Composition: 65% calls, 35% puts | 10 sweeps, 0 blocks
+  Side concentration: balanced
+  Total premium: $2.4M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 7,892 → 5,192 → 61,672 → 14,770 → 4,011 (0.3x, declining)
+  Put volume: 4,523 → 7,949 → 16,101 → 5,423 → 797
+  Call/put ratio: 1.7 → 0.7 → 3.8 → 2.7 → 5.0 (bullish shift)
+  Ask-side share: 48% → 46% → 65% → 55% → 60% (accumulation accelerating)
+  Net premium: positive 5 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 134 prints) ---
+  Total notional: $37.2M
+  Daily: 04-02 $4.4M, 04-06 $6.4M, 04-07 $4.5M, 04-08 $15.0M, 04-09 $6.8M
+  Price clustering: 62% of prints in $4.52-$5.05 range
+  Repeated levels: $5.04 (12x), $5.05 (8x), $5.0 (7x)
+
+--- LIT FLOW SUMMARY (5 sessions, 80 trades) ---
+  Total notional: $62.7M
+  Daily: 04-02 $6.2M, 04-06 $12.6M, 04-07 $5.9M, 04-08 $27.4M, 04-09 $10.5M
+  Sell-side: 63% (supply bias)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 2/6 contracts
+  Weakening / unwind: 1/6 contracts
+  Ask-heavy (accumulation): 3/6 contracts
+  Bid-heavy (distribution): 2/6 contracts
+  Execution intent: 4 distribution
+  Strongest build: 260410C00005000 — OI +3388%, ask-heavy, distribution
+  Likely roll: CALL $7.0 04-17 → CALL $6.0 05-15
+  Overall contract picture: distribution-dominant — likely selling
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: JBLU260410C00005000 | CALL $5.0 exp 2026-04-10 | OI: BUILDING (+3388%) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 31 fills | ask 24% / bid 71% / mid 1% | sweeps: 0 | blocks: 0 | fills: aggressive sell
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=380 | open_interest=12557 | last_price=0.02 | implied_volatility=1.2803 | nbbo_bid=0.01 | nbbo_ask=0.02 | bid_volume=314 | ask_volume=64 | total_premium=503 | trades=31
+    date=2026-04-09 | volume=10706 | open_interest=7524 | last_price=0.05 | implied_volatility=0.7227 | nbbo_bid=0.03 | nbbo_ask=0.05 | bid_volume=4675 | ask_volume=5473 | total_premium=66133 | trades=233
+    date=2026-04-08 | volume=7088 | open_interest=3045 | last_price=0.15 | implied_volatility=0.6883 | nbbo_bid=0.12 | nbbo_ask=0.15 | bid_volume=920 | ask_volume=6073 | total_premium=110575 | trades=254
+    date=2026-04-07 | volume=317 | open_interest=2954 | last_price=0.03 | implied_volatility=0.8625 | nbbo_bid=0.02 | nbbo_ask=0.03 | bid_volume=158 | ask_volume=98 | total_premium=698 | trades=43
+    date=2026-04-06 | volume=366 | open_interest=2858 | last_price=0.03 | implied_volatility=0.8702 | nbbo_bid=0.02 | nbbo_ask=0.04 | bid_volume=195 | ask_volume=121 | total_premium=1169 | trades=70
+    date=2026-04-02 | volume=318 | open_interest=2777 | last_price=0.04 | implied_volatility=0.693 | nbbo_bid=0.04 | nbbo_ask=0.05 | bid_volume=167 | ask_volume=78 | total_premium=1348 | trades=74
+    date=2026-04-01 | volume=687 | open_interest=2582 | last_price=0.07 | implied_volatility=0.7289 | nbbo_bid=0.06 | nbbo_ask=0.08 | bid_volume=110 | ask_volume=547 | total_premium=5943 | trades=64
+    date=2026-03-31 | volume=2528 | open_interest=588 | last_price=0.06 | implied_volatility=0.7753 | nbbo_bid=0.04 | nbbo_ask=0.07 | bid_volume=383 | ask_volume=2037 | total_premium=15067 | trades=124
+    date=2026-03-30 | volume=79 | open_interest=585 | last_price=0.04 | implied_volatility=0.8699 | nbbo_bid=0.03 | nbbo_ask=0.04 | bid_volume=38 | ask_volume=34 | total_premium=336 | trades=25
+    date=2026-03-27 | volume=78 | open_interest=573 | last_price=0.05 | implied_volatility=0.9077 | nbbo_bid=0.05 | nbbo_ask=0.1 | bid_volume=36 | ask_volume=17 | total_premium=639 | trades=13
+
+  CONTRACT: JBLU260515C00006000 | CALL $6.0 exp 2026-05-15 | OI: BUILDING (NEW) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 7 fills | ask 0% / bid 90% / mid 10% | sweeps: 0 | blocks: 0 | fills: aggressive sell
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=32 | open_interest=20291 | last_price=0.14 | implied_volatility=0.7706 | nbbo_bid=0.1 | nbbo_ask=0.17 | bid_volume=30 | ask_volume=0 | total_premium=457 | trades=7
+    date=2026-04-09 | volume=224 | open_interest=20188 | last_price=0.15 | implied_volatility=0.7775 | nbbo_bid=0.15 | nbbo_ask=0.17 | bid_volume=121 | ask_volume=49 | total_premium=3906 | trades=50
+    date=2026-04-08 | volume=20877 | open_interest=394 | last_price=0.21 | implied_volatility=0.8077 | nbbo_bid=0.2 | nbbo_ask=0.22 | bid_volume=5122 | ask_volume=15456 | total_premium=393632 | trades=461
+    date=2026-04-07 | volume=37 | open_interest=373 | last_price=0.08 | implied_volatility=0.7591 | nbbo_bid=0.06 | nbbo_ask=0.1 | bid_volume=15 | ask_volume=2 | total_premium=309 | trades=5
+    date=2026-04-06 | volume=27 | open_interest=366 | last_price=0.09 | implied_volatility=0.7264 | nbbo_bid=0.07 | nbbo_ask=0.1 | bid_volume=24 | ask_volume=3 | total_premium=279 | trades=5
+    date=2026-04-02 | volume=18 | open_interest=356 | last_price=0.07 | implied_volatility=0.69 | nbbo_bid=0.06 | nbbo_ask=0.1 | bid_volume=15 | ask_volume=0 | total_premium=137 | trades=5
+    date=2026-04-01 | volume=11 | open_interest=346 | last_price=0.09 | implied_volatility=0.7357 | nbbo_bid=0.09 | nbbo_ask=0.11 | bid_volume=1 | ask_volume=10 | total_premium=128 | trades=4
+    date=2026-03-31 | volume=13 | open_interest=344 | last_price=0.1 | implied_volatility=0.763 | nbbo_bid=0.08 | nbbo_ask=0.11 | bid_volume=12 | ask_volume=1 | total_premium=110 | trades=3
+    date=2026-03-30 | volume=11 | open_interest=344 | last_price=0.1 | implied_volatility=0.9185 | nbbo_bid=0.07 | nbbo_ask=0.13 | bid_volume=10 | ask_volume=0 | total_premium=110 | trades=2
+    date=2026-03-27 | volume=72 | open_interest=403 | last_price=0.11 | implied_volatility=0.8595 | nbbo_bid=0.1 | nbbo_ask=0.11 | bid_volume=71 | ask_volume=1 | total_premium=857 | trades=5
+
+  CONTRACT: JBLU260417C00005000 | CALL $5.0 exp 2026-04-17 | OI: MIXED (+20%) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 29 fills | ask 24% / bid 63% / mid 4% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=210 | open_interest=12412 | last_price=0.12 | implied_volatility=0.6647 | nbbo_bid=0.11 | nbbo_ask=0.13 | bid_volume=149 | ask_volume=49 | total_premium=2966 | trades=29
+    date=2026-04-09 | volume=222 | open_interest=12303 | last_price=0.16 | implied_volatility=0.682 | nbbo_bid=0.13 | nbbo_ask=0.19 | bid_volume=85 | ask_volume=89 | total_premium=3940 | trades=55
+    date=2026-04-08 | volume=2225 | open_interest=12565 | last_price=0.25 | implied_volatility=0.6733 | nbbo_bid=0.25 | nbbo_ask=0.29 | bid_volume=262 | ask_volume=891 | total_premium=60066 | trades=139
+    date=2026-04-07 | volume=192 | open_interest=12540 | last_price=0.09 | implied_volatility=0.7714 | nbbo_bid=0.08 | nbbo_ask=0.09 | bid_volume=92 | ask_volume=59 | total_premium=1323 | trades=39
+    date=2026-04-06 | volume=277 | open_interest=12352 | last_price=0.08 | implied_volatility=0.7062 | nbbo_bid=0.07 | nbbo_ask=0.11 | bid_volume=85 | ask_volume=140 | total_premium=2494 | trades=54
+    date=2026-04-02 | volume=430 | open_interest=12077 | last_price=0.11 | implied_volatility=0.7229 | nbbo_bid=0.09 | nbbo_ask=0.14 | bid_volume=127 | ask_volume=297 | total_premium=4289 | trades=31
+    date=2026-04-01 | volume=217 | open_interest=12034 | last_price=0.12 | implied_volatility=0.6924 | nbbo_bid=0.1 | nbbo_ask=0.14 | bid_volume=20 | ask_volume=139 | total_premium=2994 | trades=38
+    date=2026-03-31 | volume=1002 | open_interest=11690 | last_price=0.13 | implied_volatility=0.7736 | nbbo_bid=0.1 | nbbo_ask=0.14 | bid_volume=482 | ask_volume=364 | total_premium=8383 | trades=39
+    date=2026-03-30 | volume=325 | open_interest=11717 | last_price=0.08 | implied_volatility=0.8543 | nbbo_bid=0.06 | nbbo_ask=0.08 | bid_volume=137 | ask_volume=169 | total_premium=2762 | trades=36
+    date=2026-03-27 | volume=561 | open_interest=11754 | last_price=0.1 | implied_volatility=0.8472 | nbbo_bid=0.1 | nbbo_ask=0.12 | bid_volume=455 | ask_volume=17 | total_premium=5957 | trades=33
+
+  CONTRACT: JBLU260410C00004500 | CALL $4.5 exp 2026-04-10 | OI: MIXED (+21%) | Side: BID-HEAVY
+  Flow tape: 46 fills | ask 46% / bid 4% / mid 1% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=667 | open_interest=13770 | last_price=0.38 | implied_volatility=2.417 | nbbo_bid=0.34 | nbbo_ask=0.4 | bid_volume=89 | ask_volume=565 | total_premium=25637 | trades=46
+    date=2026-04-09 | volume=264 | open_interest=13930 | last_price=0.41 | implied_volatility=1.4465 | nbbo_bid=0.41 | nbbo_ask=0.59 | bid_volume=114 | ask_volume=108 | total_premium=11088 | trades=34
+    date=2026-04-08 | volume=1223 | open_interest=14394 | last_price=0.6 | implied_volatility=0.9201 | nbbo_bid=0.54 | nbbo_ask=0.63 | bid_volume=727 | ask_volume=342 | total_premium=70504 | trades=97
+    date=2026-04-07 | volume=2215 | open_interest=13489 | last_price=0.18 | implied_volatility=0.9704 | nbbo_bid=0.16 | nbbo_ask=0.21 | bid_volume=1494 | ask_volume=646 | total_premium=33426 | trades=98
+    date=2026-04-06 | volume=1541 | open_interest=13275 | last_price=0.19 | implied_volatility=0.8699 | nbbo_bid=0.19 | nbbo_ask=0.22 | bid_volume=856 | ask_volume=658 | total_premium=27300 | trades=109
+    date=2026-04-02 | volume=750 | open_interest=12699 | last_price=0.19 | implied_volatility=0.6273 | nbbo_bid=0.17 | nbbo_ask=0.22 | bid_volume=505 | ask_volume=228 | total_premium=13727 | trades=71
+    date=2026-04-01 | volume=1379 | open_interest=11655 | last_price=0.24 | implied_volatility=0.6914 | nbbo_bid=0.21 | nbbo_ask=0.28 | bid_volume=1138 | ask_volume=203 | total_premium=36199 | trades=126
+    date=2026-03-31 | volume=411 | open_interest=11386 | last_price=0.21 | implied_volatility=0.8013 | nbbo_bid=0.2 | nbbo_ask=0.24 | bid_volume=191 | ask_volume=187 | total_premium=7871 | trades=68
+    date=2026-03-30 | volume=205 | open_interest=11251 | last_price=0.1 | implied_volatility=0.8539 | nbbo_bid=0.1 | nbbo_ask=0.12 | bid_volume=100 | ask_volume=66 | total_premium=2551 | trades=44
+    date=2026-03-27 | volume=326 | open_interest=11275 | last_price=0.19 | implied_volatility=0.8366 | nbbo_bid=0.15 | nbbo_ask=0.19 | bid_volume=68 | ask_volume=239 | total_premium=7358 | trades=30
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: JBLU ===
+
+===== LNG =====
+=== UW FLOW DATA: LNG ===
+
+--- MULTI-DAY FLOW ALERTS (20 sessions, 134 alerts) ---
+  Daily alert count: 03-31=5, 04-01=11, 04-02=1, 04-06=3, 04-07=3, 04-08=7, 04-09=1 (fading)
+  Largest: $1.1M RepeatedHits CALL $290 exp 2027-01-15 | $0.7M RepeatedHits CALL $250 exp 2026-04-17 | $0.5M RepeatedHits CALL $305 exp 2026-04-02
+  Composition: 60% calls, 40% puts | 15 sweeps, 0 blocks
+  Side concentration: 57% ask-side (accumulation bias)
+  Total premium: $18.8M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 6,277 → 8,207 → 13,315 → 10,458 → 1,500 (0.1x, declining)
+  Put volume: 4,534 → 3,720 → 7,823 → 4,825 → 429
+  Call/put ratio: 1.4 → 2.2 → 1.7 → 2.2 → 3.5 (bullish shift)
+  Ask-side share: 60% → 50% → 54% → 57% → 35% (distribution)
+  Net premium: positive 9 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $97.8M
+  Daily: 04-02 $30.3M, 04-06 $12.1M, 04-07 $15.2M, 04-08 $21.6M, 04-09 $18.7M
+  Price clustering: 78% of prints in $270.28-$284.37 range
+  Repeated levels: $265.77 (19x), $275.21 (17x), $284.27 (14x)
+
+--- LIT FLOW SUMMARY (5 sessions, 179 trades) ---
+  Total notional: $32.7M
+  Daily: 04-02 $7.5M, 04-06 $4.1M, 04-07 $5.2M, 04-08 $7.8M, 04-09 $8.1M
+  Side: balanced (50% buy)
+
+--- CONTRACT SUMMARY (6 lines tracked, 14 sessions) ---
+  Rising OI: 2/6 contracts
+  Weakening / unwind: 1/6 contracts
+  Ask-heavy (accumulation): 3/6 contracts
+  Bid-heavy (distribution): 1/6 contracts
+  Execution intent: 2 accumulation, 1 distribution
+  Strongest build: 260417C00295000 — OI NEW (from zero), ask-heavy
+  Overall contract picture: inconclusive — check raw detail
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: LNG260417C00295000 | CALL $295.0 exp 2026-04-17 | OI: BUILDING (NEW) | Side: ASK-HEAVY
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=0 | open_interest=6335 | implied_volatility=0.549 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-09 | volume=24 | open_interest=6337 | last_price=1.07 | implied_volatility=0.4956 | nbbo_bid=0.45 | nbbo_ask=1.55 | bid_volume=22 | ask_volume=1 | total_premium=3584 | trades=7
+    date=2026-04-08 | volume=2881 | open_interest=3583 | last_price=1.46 | implied_volatility=0.4187 | nbbo_bid=1.25 | nbbo_ask=1.9 | bid_volume=964 | ask_volume=1909 | total_premium=329015 | trades=117
+    date=2026-04-07 | volume=60 | open_interest=3571 | last_price=3.8 | implied_volatility=0.4294 | nbbo_bid=3.8 | nbbo_ask=4.4 | bid_volume=28 | ask_volume=21 | total_premium=30202 | trades=36
+    date=2026-04-06 | volume=832 | open_interest=2927 | last_price=4.4 | implied_volatility=0.4361 | nbbo_bid=4.0 | nbbo_ask=4.9 | bid_volume=164 | ask_volume=647 | total_premium=363516 | trades=47
+    date=2026-04-02 | volume=121 | open_interest=2900 | last_price=4.86 | implied_volatility=0.4102 | nbbo_bid=4.1 | nbbo_ask=5.0 | bid_volume=61 | ask_volume=55 | total_premium=77838 | trades=24
+    date=2026-04-01 | volume=875 | open_interest=2075 | last_price=3.05 | implied_volatility=0.4129 | nbbo_bid=2.6 | nbbo_ask=3.5 | bid_volume=43 | ask_volume=824 | total_premium=283013 | trades=39
+    date=2026-03-31 | volume=85 | open_interest=2042 | last_price=5.61 | implied_volatility=0.3926 | nbbo_bid=4.8 | nbbo_ask=6.1 | bid_volume=20 | ask_volume=54 | total_premium=45887 | trades=21
+    date=2026-03-30 | volume=44 | open_interest=2036 | last_price=11.3 | implied_volatility=0.4535 | nbbo_bid=10.1 | nbbo_ask=12.4 | bid_volume=23 | ask_volume=9 | total_premium=56066 | trades=22
+    date=2026-03-27 | volume=32 | open_interest=2045 | last_price=14.0 | implied_volatility=0.4568 | nbbo_bid=13.3 | nbbo_ask=15.0 | bid_volume=8 | ask_volume=20 | total_premium=44390 | trades=20
+
+  CONTRACT: LNG260515C00310000 | CALL $310.0 exp 2026-05-15 | OI: BUILDING (NEW) | Side: BID-HEAVY | Exec: Accumulation
+  Flow tape: 1 fills | ask 100% / bid 0% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive buy
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=1 | open_interest=3476 | last_price=1.8 | implied_volatility=0.3938 | nbbo_bid=1.3 | nbbo_ask=2.15 | bid_volume=0 | ask_volume=1 | total_premium=180 | trades=1
+    date=2026-04-09 | volume=33 | open_interest=3493 | last_price=2.12 | implied_volatility=0.401 | nbbo_bid=1.7 | nbbo_ask=2.25 | bid_volume=1 | ask_volume=28 | total_premium=8235 | trades=7
+    date=2026-04-08 | volume=88 | open_interest=3484 | last_price=3.69 | implied_volatility=0.4079 | nbbo_bid=3.4 | nbbo_ask=3.9 | bid_volume=64 | ask_volume=16 | total_premium=25039 | trades=23
+    date=2026-04-07 | volume=2171 | open_interest=1481 | last_price=5.89 | implied_volatility=0.4084 | nbbo_bid=5.8 | nbbo_ask=6.5 | bid_volume=114 | ask_volume=56 | total_premium=1602948 | trades=31
+    date=2026-04-06 | volume=37 | open_interest=1484 | last_price=6.18 | implied_volatility=0.4083 | nbbo_bid=5.9 | nbbo_ask=6.4 | bid_volume=24 | ask_volume=6 | total_premium=21946 | trades=21
+    date=2026-04-02 | volume=1088 | open_interest=441 | last_price=5.98 | implied_volatility=0.4096 | nbbo_bid=5.9 | nbbo_ask=6.6 | bid_volume=1026 | ask_volume=15 | total_premium=659244 | trades=32
+    date=2026-04-01 | volume=126 | open_interest=393 | last_price=4.8 | implied_volatility=0.412 | nbbo_bid=4.5 | nbbo_ask=5.2 | bid_volume=64 | ask_volume=49 | total_premium=56567 | trades=30
+    date=2026-03-31 | volume=78 | open_interest=389 | last_price=6.99 | implied_volatility=0.4122 | nbbo_bid=6.7 | nbbo_ask=7.5 | bid_volume=18 | ask_volume=56 | total_premium=54601 | trades=26
+    date=2026-03-30 | volume=128 | open_interest=319 | last_price=11.08 | implied_volatility=0.4302 | nbbo_bid=10.8 | nbbo_ask=11.6 | bid_volume=63 | ask_volume=61 | total_premium=161758 | trades=50
+    date=2026-03-27 | volume=60 | open_interest=305 | last_price=13.0 | implied_volatility=0.4157 | nbbo_bid=12.4 | nbbo_ask=13.3 | bid_volume=31 | ask_volume=29 | total_premium=77480 | trades=20
+
+  CONTRACT: LNG260417P00250000 | PUT $250.0 exp 2026-04-17 | OI: MIXED (+16%) | Side: BALANCED | Exec: Accumulation
+  Flow tape: 1 fills | ask 100% / bid 0% / mid 0% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=3 | open_interest=6006 | last_price=1.57 | implied_volatility=0.429 | nbbo_bid=0.8 | nbbo_ask=2.2 | bid_volume=0 | ask_volume=3 | total_premium=471 | trades=1
+    date=2026-04-09 | volume=27 | open_interest=6012 | last_price=1.7 | implied_volatility=0.4338 | nbbo_bid=1.2 | nbbo_ask=2.4 | bid_volume=13 | ask_volume=12 | total_premium=3861 | trades=8
+    date=2026-04-08 | volume=1058 | open_interest=6104 | last_price=1.05 | implied_volatility=0.5047 | nbbo_bid=0.05 | nbbo_ask=1.35 | bid_volume=16 | ask_volume=1040 | total_premium=235963 | trades=20
+    date=2026-04-07 | volume=8 | open_interest=6106 | last_price=0.88 | implied_volatility=0.5836 | nbbo_bid=0.7 | nbbo_ask=1.45 | bid_volume=3 | ask_volume=5 | total_premium=609 | trades=7
+    date=2026-04-06 | volume=13 | open_interest=6111 | last_price=0.9 | implied_volatility=0.5254 | nbbo_bid=0.5 | nbbo_ask=0.95 | bid_volume=9 | ask_volume=3 | total_premium=1485 | trades=8
+    date=2026-04-02 | volume=67 | open_interest=6151 | last_price=1.75 | implied_volatility=0.5013 | nbbo_bid=0.8 | nbbo_ask=1.95 | bid_volume=54 | ask_volume=12 | total_premium=10224 | trades=15
+    date=2026-04-01 | volume=31 | open_interest=6138 | last_price=1.92 | implied_volatility=0.4608 | nbbo_bid=0.9 | nbbo_ask=2.4 | bid_volume=24 | ask_volume=5 | total_premium=6128 | trades=15
+    date=2026-03-31 | volume=889 | open_interest=6090 | last_price=1.55 | implied_volatility=0.484 | nbbo_bid=1.4 | nbbo_ask=1.65 | bid_volume=171 | ask_volume=706 | total_premium=137493 | trades=164
+    date=2026-03-30 | volume=1035 | open_interest=5681 | last_price=1.0 | implied_volatility=0.4806 | nbbo_bid=0.65 | nbbo_ask=1.3 | bid_volume=844 | ask_volume=6 | total_premium=79923 | trades=203
+    date=2026-03-27 | volume=10 | open_interest=5683 | last_price=1.15 | implied_volatility=0.5041 | nbbo_bid=1.05 | nbbo_ask=1.3 | bid_volume=5 | ask_volume=1 | total_premium=1038 | trades=9
+
+  CONTRACT: LNG260417P00280000 | PUT $280.0 exp 2026-04-17 | OI: MIXED (+528%) | Side: ASK-HEAVY
+  Flow tape: 2 fills | ask 17% / bid 0% / mid 33% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=2 | open_interest=4337 | last_price=17.29 | implied_volatility=0.4464 | nbbo_bid=16.3 | nbbo_ask=18.2 | bid_volume=0 | ask_volume=1 | total_premium=3429 | trades=2
+    date=2026-04-09 | volume=3046 | open_interest=5230 | last_price=15.48 | implied_volatility=0.3535 | nbbo_bid=15.2 | nbbo_ask=16.2 | bid_volume=836 | ask_volume=2145 | total_premium=5055749 | trades=90
+    date=2026-04-08 | volume=34 | open_interest=5246 | last_price=13.1 | implied_volatility=0.384 | nbbo_bid=9.2 | nbbo_ask=9.8 | bid_volume=25 | ask_volume=9 | total_premium=55730 | trades=10
+    date=2026-04-07 | volume=1031 | open_interest=6095 | last_price=5.46 | implied_volatility=0.4208 | nbbo_bid=5.7 | nbbo_ask=6.1 | bid_volume=11 | ask_volume=1020 | total_premium=545285 | trades=13
+    date=2026-04-06 | volume=1036 | open_interest=5182 | last_price=6.83 | implied_volatility=0.42 | nbbo_bid=5.9 | nbbo_ask=6.6 | bid_volume=32 | ask_volume=985 | total_premium=724701 | trades=60
+    date=2026-04-02 | volume=22 | open_interest=5187 | last_price=8.9 | implied_volatility=0.4146 | nbbo_bid=7.5 | nbbo_ask=9.8 | bid_volume=7 | ask_volume=15 | total_premium=19088 | trades=8
+    date=2026-04-01 | volume=38 | open_interest=5179 | last_price=11.34 | implied_volatility=0.365 | nbbo_bid=10.7 | nbbo_ask=11.7 | bid_volume=19 | ask_volume=16 | total_premium=44368 | trades=18
+    date=2026-03-31 | volume=867 | open_interest=5248 | last_price=9.3 | implied_volatility=0.4199 | nbbo_bid=7.9 | nbbo_ask=8.6 | bid_volume=34 | ask_volume=760 | total_premium=837179 | trades=171
+    date=2026-03-30 | volume=135 | open_interest=5234 | last_price=5.6 | implied_volatility=0.4255 | nbbo_bid=5.2 | nbbo_ask=5.8 | bid_volume=100 | ask_volume=34 | total_premium=66950 | trades=9
+    date=2026-03-27 | volume=3785 | open_interest=4597 | last_price=5.39 | implied_volatility=0.4399 | nbbo_bid=5.0 | nbbo_ask=5.9 | bid_volume=3571 | ask_volume=121 | total_premium=2085562 | trades=120
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: LNG ===
+
+===== LYB =====
+=== UW FLOW DATA: LYB ===
+
+--- MULTI-DAY FLOW ALERTS (21 sessions, 197 alerts) ---
+  Daily alert count: 03-31=7, 04-01=6, 04-02=8, 04-06=1, 04-07=12, 04-08=23, 04-09=13 (steady)
+  Largest: $2.6M LowHistoricVolumeFloor PUT $70 exp 2026-05-15 | $2.5M FloorTradeLargeCap PUT $70 exp 2026-04-17 | $1.9M LowHistoricVolumeFloor PUT $70 exp 2026-04-17
+  Composition: 62% calls, 38% puts | 13 sweeps, 0 blocks
+  Side concentration: balanced
+  Total premium: $21.6M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 1,822 → 8,397 → 14,198 → 6,649 → 433 (0.1x, declining)
+  Put volume: 5,585 → 3,337 → 47,956 → 18,571 → 4,244
+  Call/put ratio: 0.3 → 2.5 → 0.3 → 0.4 → 0.1 (bearish shift)
+  Ask-side share: 54% → 50% → 66% → 37% → 38% (distribution)
+  Net premium: positive 6 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $136.5M
+  Daily: 04-02 $13.4M, 04-06 $56.1M, 04-07 $36.3M, 04-08 $12.1M, 04-09 $18.5M
+  Price clustering: 52% of prints in $73.27-$80.09 range
+  Repeated levels: $80.26 (15x), $78.62 (10x), $79.6 (8x)
+
+--- LIT FLOW SUMMARY (4 sessions, 61 trades) ---
+  Total notional: $10.3M
+  Daily: 04-02 $3.2M, 04-07 $1.0M, 04-08 $2.6M, 04-09 $3.5M
+  Sell-side: 61% (supply bias)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 0/6 contracts
+  Ask-heavy (accumulation): 3/6 contracts
+  Bid-heavy (distribution): 1/6 contracts
+  Execution intent: 3 accumulation, 1 distribution
+  Overall contract picture: inconclusive — check raw detail
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: LYB260417P00065000 | PUT $65.0 exp 2026-04-17 | OI: MIXED (-24%) | Side: ASK-HEAVY | Exec: Accumulation
+  Flow tape: 3 fills | ask 100% / bid 0% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive buy
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=25 | open_interest=5847 | last_price=0.25 | implied_volatility=0.6539 | nbbo_bid=0.25 | nbbo_ask=0.3 | bid_volume=0 | ask_volume=25 | total_premium=635 | trades=3
+    date=2026-04-09 | volume=190 | open_interest=5802 | last_price=0.33 | implied_volatility=0.6064 | nbbo_bid=0.3 | nbbo_ask=0.4 | bid_volume=28 | ask_volume=131 | total_premium=6703 | trades=15
+    date=2026-04-08 | volume=196 | open_interest=5702 | last_price=0.45 | implied_volatility=0.7092 | nbbo_bid=0.25 | nbbo_ask=0.65 | bid_volume=22 | ask_volume=161 | total_premium=15490 | trades=44
+    date=2026-04-07 | volume=102 | open_interest=5711 | last_price=0.2 | implied_volatility=0.7797 | nbbo_bid=0.15 | nbbo_ask=0.25 | bid_volume=51 | ask_volume=3 | total_premium=1800 | trades=21
+    date=2026-04-06 | volume=11 | open_interest=5712 | last_price=0.27 | implied_volatility=0.7366 | nbbo_bid=0.2 | nbbo_ask=0.3 | bid_volume=11 | ask_volume=0 | total_premium=295 | trades=3
+    date=2026-04-02 | volume=262 | open_interest=5959 | last_price=0.28 | implied_volatility=0.6548 | nbbo_bid=0.2 | nbbo_ask=0.3 | bid_volume=98 | ask_volume=14 | total_premium=6891 | trades=16
+    date=2026-04-01 | volume=115 | open_interest=5966 | last_price=0.4 | implied_volatility=0.6078 | nbbo_bid=0.35 | nbbo_ask=0.5 | bid_volume=41 | ask_volume=28 | total_premium=5550 | trades=32
+    date=2026-03-31 | volume=11 | open_interest=5966 | last_price=0.37 | implied_volatility=0.6864 | nbbo_bid=0.25 | nbbo_ask=0.45 | bid_volume=6 | ask_volume=3 | total_premium=357 | trades=8
+    date=2026-03-30 | volume=95 | open_interest=6041 | last_price=0.35 | implied_volatility=0.7193 | nbbo_bid=0.25 | nbbo_ask=0.45 | bid_volume=12 | ask_volume=75 | total_premium=3202 | trades=26
+    date=2026-03-27 | volume=336 | open_interest=5955 | last_price=0.44 | implied_volatility=0.645 | nbbo_bid=0.3 | nbbo_ask=0.5 | bid_volume=66 | ask_volume=270 | total_premium=16519 | trades=47
+
+  CONTRACT: LYB260515P00070000 | PUT $70.0 exp 2026-05-15 | OI: MIXED (+4848%) | Side: ASK-HEAVY
+  Flow tape: 100 fills | ask 48% / bid 2% / mid 1% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=1513 | open_interest=2771 | last_price=3.41 | implied_volatility=0.5171 | nbbo_bid=3.2 | nbbo_ask=3.5 | bid_volume=59 | ask_volume=1425 | total_premium=514207 | trades=500
+    date=2026-04-09 | volume=40 | open_interest=2765 | last_price=3.68 | implied_volatility=0.5514 | nbbo_bid=3.6 | nbbo_ask=4.1 | bid_volume=15 | ask_volume=17 | total_premium=14400 | trades=15
+    date=2026-04-08 | volume=7816 | open_interest=8795 | last_price=3.9 | implied_volatility=0.568 | nbbo_bid=3.1 | nbbo_ask=3.5 | bid_volume=1788 | ask_volume=6013 | total_premium=3903270 | trades=393
+    date=2026-04-07 | volume=543 | open_interest=7963 | last_price=1.86 | implied_volatility=0.5764 | nbbo_bid=1.7 | nbbo_ask=2.1 | bid_volume=134 | ask_volume=53 | total_premium=104627 | trades=126
+    date=2026-04-06 | volume=2215 | open_interest=6060 | last_price=2.16 | implied_volatility=0.5537 | nbbo_bid=2.05 | nbbo_ask=2.3 | bid_volume=2 | ask_volume=2211 | total_premium=530636 | trades=8
+    date=2026-04-02 | volume=20 | open_interest=5475 | last_price=2.2 | implied_volatility=0.5495 | nbbo_bid=1.95 | nbbo_ask=2.2 | bid_volume=9 | ask_volume=2 | total_premium=4288 | trades=11
+    date=2026-04-01 | volume=6083 | open_interest=69 | last_price=2.69 | implied_volatility=0.525 | nbbo_bid=2.5 | nbbo_ask=2.8 | bid_volume=36 | ask_volume=5043 | total_premium=1675521 | trades=34
+    date=2026-03-31 | volume=3 | open_interest=72 | last_price=2.3 | implied_volatility=0.5585 | nbbo_bid=2.0 | nbbo_ask=2.2 | bid_volume=1 | ask_volume=2 | total_premium=585 | trades=3
+    date=2026-03-30 | volume=22 | open_interest=58 | last_price=2.13 | implied_volatility=0.5963 | nbbo_bid=1.95 | nbbo_ask=2.2 | bid_volume=0 | ask_volume=22 | total_premium=4513 | trades=7
+    date=2026-03-27 | volume=28 | open_interest=80 | last_price=2.51 | implied_volatility=0.5844 | nbbo_bid=2.3 | nbbo_ask=2.55 | bid_volume=27 | ask_volume=1 | total_premium=7124 | trades=3
+
+  CONTRACT: LYB260417P00070000 | PUT $70.0 exp 2026-04-17 | OI: MIXED (-5%) | Side: BID-HEAVY | Exec: Accumulation
+  Flow tape: 6 fills | ask 84% / bid 16% / mid 0% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=14 | open_interest=12775 | last_price=0.89 | implied_volatility=0.524 | nbbo_bid=0.8 | nbbo_ask=0.95 | bid_volume=1 | ask_volume=13 | total_premium=1291 | trades=6
+    date=2026-04-09 | volume=837 | open_interest=12955 | last_price=1.35 | implied_volatility=0.5402 | nbbo_bid=1.2 | nbbo_ask=1.4 | bid_volume=292 | ask_volume=347 | total_premium=108980 | trades=243
+    date=2026-04-08 | volume=15579 | open_interest=14677 | last_price=1.0 | implied_volatility=0.5796 | nbbo_bid=0.9 | nbbo_ask=1.15 | bid_volume=3006 | ask_volume=12435 | total_premium=3107180 | trades=336
+    date=2026-04-07 | volume=28 | open_interest=14695 | last_price=0.45 | implied_volatility=0.676 | nbbo_bid=0.35 | nbbo_ask=0.55 | bid_volume=20 | ask_volume=3 | total_premium=1217 | trades=12
+    date=2026-04-06 | volume=40 | open_interest=14707 | last_price=0.58 | implied_volatility=0.5936 | nbbo_bid=0.45 | nbbo_ask=0.6 | bid_volume=14 | ask_volume=25 | total_premium=2661 | trades=14
+    date=2026-04-02 | volume=463 | open_interest=15075 | last_price=0.6 | implied_volatility=0.5704 | nbbo_bid=0.5 | nbbo_ask=0.65 | bid_volume=49 | ask_volume=2 | total_premium=30160 | trades=12
+    date=2026-04-01 | volume=8691 | open_interest=21194 | last_price=1.0 | implied_volatility=0.5359 | nbbo_bid=0.9 | nbbo_ask=1.05 | bid_volume=7927 | ask_volume=712 | total_premium=829722 | trades=138
+    date=2026-03-31 | volume=86 | open_interest=21160 | last_price=0.75 | implied_volatility=0.6141 | nbbo_bid=0.5 | nbbo_ask=0.85 | bid_volume=17 | ask_volume=67 | total_premium=6434 | trades=23
+    date=2026-03-30 | volume=147 | open_interest=21111 | last_price=0.7 | implied_volatility=0.6433 | nbbo_bid=0.4 | nbbo_ask=0.95 | bid_volume=126 | ask_volume=9 | total_premium=9793 | trades=41
+    date=2026-03-27 | volume=206 | open_interest=21157 | last_price=0.95 | implied_volatility=0.6053 | nbbo_bid=0.85 | nbbo_ask=1.15 | bid_volume=145 | ask_volume=59 | total_premium=21129 | trades=33
+
+  CONTRACT: LYB260515P00065000 | PUT $65.0 exp 2026-05-15 | OI: MIXED (+2772%) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 2 fills | ask 0% / bid 67% / mid 33% | sweeps: 0 | blocks: 0 | fills: aggressive sell
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=2 | open_interest=5255 | last_price=1.85 | implied_volatility=0.5525 | nbbo_bid=1.7 | nbbo_ask=2.0 | bid_volume=1 | ask_volume=0 | total_premium=355 | trades=2
+    date=2026-04-09 | volume=311 | open_interest=5241 | last_price=2.0 | implied_volatility=0.5612 | nbbo_bid=1.9 | nbbo_ask=2.15 | bid_volume=273 | ask_volume=26 | total_premium=48935 | trades=61
+    date=2026-04-08 | volume=5288 | open_interest=206 | last_price=1.8 | implied_volatility=0.5841 | nbbo_bid=1.65 | nbbo_ask=1.85 | bid_volume=172 | ask_volume=5063 | total_premium=1502016 | trades=39
+    date=2026-04-07 | volume=0 | open_interest=206 | implied_volatility=0.6231 | nbbo_bid=0.85 | nbbo_ask=1.55 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-06 | volume=16 | open_interest=208 | last_price=1.4 | implied_volatility=0.5886 | nbbo_bid=1.0 | nbbo_ask=1.3 | bid_volume=15 | ask_volume=0 | total_premium=2160 | trades=4
+    date=2026-04-02 | volume=19 | open_interest=203 | last_price=1.17 | implied_volatility=0.582 | nbbo_bid=1.05 | nbbo_ask=1.3 | bid_volume=7 | ask_volume=12 | total_premium=2392 | trades=7
+    date=2026-04-01 | volume=33 | open_interest=185 | last_price=1.79 | implied_volatility=0.5509 | nbbo_bid=1.35 | nbbo_ask=1.65 | bid_volume=7 | ask_volume=26 | total_premium=5112 | trades=12
+    date=2026-03-31 | volume=41 | open_interest=157 | last_price=1.28 | implied_volatility=0.6054 | nbbo_bid=1.2 | nbbo_ask=1.3 | bid_volume=3 | ask_volume=36 | total_premium=5226 | trades=10
+    date=2026-03-30 | volume=41 | open_interest=154 | last_price=1.45 | implied_volatility=0.6537 | nbbo_bid=1.1 | nbbo_ask=1.7 | bid_volume=38 | ask_volume=0 | total_premium=5171 | trades=5
+    date=2026-03-27 | volume=32 | open_interest=162 | last_price=1.4 | implied_volatility=0.5889 | nbbo_bid=1.15 | nbbo_ask=1.5 | bid_volume=4 | ask_volume=26 | total_premium=5069 | trades=8
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: LYB ===
+
+===== NVO =====
+=== UW FLOW DATA: NVO ===
+
+--- MULTI-DAY FLOW ALERTS (10 sessions, 200 alerts) ---
+  Daily alert count: 04-01=33, 04-02=37, 04-06=11, 04-07=14, 04-08=24, 04-09=8, 04-10=27 (fading)
+  Largest: $0.2M RepeatedHits CALL $40 exp 2026-05-15 | $0.2M RepeatedHits PUT $35 exp 2026-09-18 | $0.2M RepeatedHits PUT $35 exp 2026-09-18
+  Composition: 60% calls, 40% puts | 27 sweeps, 0 blocks
+  Side concentration: balanced
+  Total premium: $6.9M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 22,366 → 24,266 → 38,510 → 26,900 → 22,682 (0.4x, declining)
+  Put volume: 12,042 → 15,031 → 51,913 → 27,717 → 14,552
+  Call/put ratio: 1.9 → 1.6 → 0.7 → 1.0 → 1.6 
+  Ask-side share: 49% → 56% → 55% → 54% → 46% 
+  Net premium: positive 4 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $94.4M
+  Daily: 04-02 $15.3M, 04-06 $13.2M, 04-07 $12.7M, 04-08 $21.7M, 04-09 $31.4M
+  Price clustering: 53% of prints in $36.70-$37.41 range
+  Repeated levels: $36.91 (17x), $36.84 (15x), $36.67 (14x)
+
+--- LIT FLOW SUMMARY (5 sessions, 48 trades) ---
+  Total notional: $11.5M
+  Daily: 04-02 $1.6M, 04-06 $1.4M, 04-07 $3.7M, 04-08 $4.0M, 04-09 $0.7M
+  Buy-side: 58% (demand bias)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 4/6 contracts
+  Weakening / unwind: 1/6 contracts
+  Ask-heavy (accumulation): 3/6 contracts
+  Bid-heavy (distribution): 2/6 contracts
+  Execution intent: 1 accumulation, 3 distribution
+  Strongest build: 260424P00035500 — OI NEW (from zero), ask-heavy, distribution
+  Likely roll: CALL $50.0 04-17 → CALL $45.0 05-15
+  Overall contract picture: supportive build, not churn
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: NVO260424P00035500 | PUT $35.5 exp 2026-04-24 | OI: BUILDING (NEW) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 2 fills | ask 0% / bid 100% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive sell
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=2 | open_interest=18868 | last_price=0.36 | implied_volatility=0.411 | nbbo_bid=0.34 | nbbo_ask=0.43 | bid_volume=2 | ask_volume=0 | total_premium=72 | trades=2
+    date=2026-04-09 | volume=4536 | open_interest=14380 | last_price=0.49 | implied_volatility=0.4243 | nbbo_bid=0.38 | nbbo_ask=0.54 | bid_volume=30 | ask_volume=4506 | total_premium=249664 | trades=12
+    date=2026-04-08 | volume=14377 | open_interest=29 | last_price=0.52 | implied_volatility=0.4365 | nbbo_bid=0.41 | nbbo_ask=0.59 | bid_volume=12 | ask_volume=14365 | total_premium=723625 | trades=13
+    date=2026-04-07 | volume=39 | open_interest=20 | last_price=0.78 | implied_volatility=0.4387 | nbbo_bid=0.63 | nbbo_ask=0.83 | bid_volume=11 | ask_volume=28 | total_premium=3340 | trades=26
+    date=2026-04-06 | volume=20 | open_interest=0 | last_price=0.89 | implied_volatility=0.4327 | nbbo_bid=0.82 | nbbo_ask=0.97 | bid_volume=1 | ask_volume=4 | total_premium=1751 | trades=5
+
+  CONTRACT: NVO260515P00035000 | PUT $35.0 exp 2026-05-15 | OI: BUILDING (+14%) | Side: ASK-HEAVY | Exec: Accumulation
+  Flow tape: 58 fills | ask 67% / bid 28% / mid 1% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=340 | open_interest=23503 | last_price=1.08 | implied_volatility=0.4745 | nbbo_bid=1.04 | nbbo_ask=1.08 | bid_volume=111 | ask_volume=227 | total_premium=35668 | trades=58
+    date=2026-04-09 | volume=252 | open_interest=23458 | last_price=1.2 | implied_volatility=0.485 | nbbo_bid=1.18 | nbbo_ask=1.22 | bid_volume=91 | ask_volume=58 | total_premium=32400 | trades=76
+    date=2026-04-08 | volume=1079 | open_interest=22995 | last_price=1.24 | implied_volatility=0.4944 | nbbo_bid=1.16 | nbbo_ask=1.24 | bid_volume=331 | ask_volume=692 | total_premium=126870 | trades=151
+    date=2026-04-07 | volume=167 | open_interest=22913 | last_price=1.52 | implied_volatility=0.5075 | nbbo_bid=1.47 | nbbo_ask=1.55 | bid_volume=111 | ask_volume=55 | total_premium=27699 | trades=59
+    date=2026-04-06 | volume=267 | open_interest=22764 | last_price=1.63 | implied_volatility=0.504 | nbbo_bid=1.59 | nbbo_ask=1.63 | bid_volume=199 | ask_volume=58 | total_premium=41956 | trades=105
+    date=2026-04-02 | volume=470 | open_interest=22719 | last_price=1.6 | implied_volatility=0.4932 | nbbo_bid=1.57 | nbbo_ask=1.62 | bid_volume=296 | ask_volume=151 | total_premium=87535 | trades=93
+    date=2026-04-01 | volume=1307 | open_interest=21646 | last_price=1.78 | implied_volatility=0.4854 | nbbo_bid=1.68 | nbbo_ask=1.8 | bid_volume=183 | ask_volume=1115 | total_premium=228756 | trades=123
+    date=2026-03-31 | volume=1202 | open_interest=21593 | last_price=1.78 | implied_volatility=0.485 | nbbo_bid=1.59 | nbbo_ask=1.75 | bid_volume=607 | ask_volume=564 | total_premium=241490 | trades=309
+    date=2026-03-30 | volume=502 | open_interest=21318 | last_price=2.37 | implied_volatility=0.5071 | nbbo_bid=2.33 | nbbo_ask=2.41 | bid_volume=287 | ask_volume=177 | total_premium=116583 | trades=106
+    date=2026-03-27 | volume=205 | open_interest=21220 | last_price=2.5 | implied_volatility=0.5788 | nbbo_bid=2.51 | nbbo_ask=2.55 | bid_volume=91 | ask_volume=92 | total_premium=50897 | trades=93
+
+  CONTRACT: NVO260515C00040000 | CALL $40.0 exp 2026-05-15 | OI: BUILDING (+49%) | Side: BID-HEAVY | Exec: Distribution
+  Flow tape: 100 fills | ask 35% / bid 62% / mid 2% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=8743 | open_interest=22964 | last_price=1.27 | implied_volatility=0.4673 | nbbo_bid=1.27 | nbbo_ask=1.3 | bid_volume=5370 | ask_volume=3051 | total_premium=1201206 | trades=383
+    date=2026-04-09 | volume=493 | open_interest=22693 | last_price=1.26 | implied_volatility=0.4769 | nbbo_bid=1.24 | nbbo_ask=1.3 | bid_volume=141 | ask_volume=245 | total_premium=57820 | trades=109
+    date=2026-04-08 | volume=2057 | open_interest=23167 | last_price=1.39 | implied_volatility=0.4816 | nbbo_bid=1.33 | nbbo_ask=1.41 | bid_volume=923 | ask_volume=1033 | total_premium=297942 | trades=221
+    date=2026-04-07 | volume=1621 | open_interest=22070 | last_price=1.27 | implied_volatility=0.4904 | nbbo_bid=1.16 | nbbo_ask=1.28 | bid_volume=374 | ask_volume=1172 | total_premium=203721 | trades=153
+    date=2026-04-06 | volume=840 | open_interest=21536 | last_price=1.17 | implied_volatility=0.5048 | nbbo_bid=1.16 | nbbo_ask=1.22 | bid_volume=589 | ask_volume=229 | total_premium=112375 | trades=124
+    date=2026-04-02 | volume=1037 | open_interest=20782 | last_price=1.35 | implied_volatility=0.4909 | nbbo_bid=1.35 | nbbo_ask=1.38 | bid_volume=380 | ask_volume=421 | total_premium=124967 | trades=235
+    date=2026-04-01 | volume=2459 | open_interest=20522 | last_price=1.19 | implied_volatility=0.4954 | nbbo_bid=1.19 | nbbo_ask=1.26 | bid_volume=1149 | ask_volume=1123 | total_premium=304939 | trades=250
+    date=2026-03-31 | volume=1057 | open_interest=20291 | last_price=1.35 | implied_volatility=0.5026 | nbbo_bid=1.34 | nbbo_ask=1.4 | bid_volume=269 | ask_volume=691 | total_premium=128718 | trades=215
+    date=2026-03-30 | volume=889 | open_interest=20201 | last_price=1.05 | implied_volatility=0.5229 | nbbo_bid=1.02 | nbbo_ask=1.07 | bid_volume=440 | ask_volume=348 | total_premium=93716 | trades=192
+    date=2026-03-27 | volume=3206 | open_interest=18082 | last_price=1.08 | implied_volatility=0.4663 | nbbo_bid=1.05 | nbbo_ask=1.09 | bid_volume=2029 | ask_volume=693 | total_premium=363150 | trades=318
+
+  CONTRACT: NVO260515C00045000 | CALL $45.0 exp 2026-05-15 | OI: BUILDING (+28%) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 45 fills | ask 34% / bid 63% / mid 2% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=200 | open_interest=13849 | last_price=0.35 | implied_volatility=0.4773 | nbbo_bid=0.33 | nbbo_ask=0.35 | bid_volume=114 | ask_volume=72 | total_premium=7929 | trades=45
+    date=2026-04-09 | volume=1083 | open_interest=12844 | last_price=0.36 | implied_volatility=0.4758 | nbbo_bid=0.33 | nbbo_ask=0.37 | bid_volume=41 | ask_volume=30 | total_premium=39855 | trades=34
+    date=2026-04-08 | volume=425 | open_interest=12879 | last_price=0.38 | implied_volatility=0.4881 | nbbo_bid=0.38 | nbbo_ask=0.42 | bid_volume=295 | ask_volume=100 | total_premium=18357 | trades=81
+    date=2026-04-07 | volume=297 | open_interest=12841 | last_price=0.38 | implied_volatility=0.4962 | nbbo_bid=0.33 | nbbo_ask=0.4 | bid_volume=205 | ask_volume=82 | total_premium=10180 | trades=74
+    date=2026-04-06 | volume=322 | open_interest=12749 | last_price=0.35 | implied_volatility=0.5061 | nbbo_bid=0.34 | nbbo_ask=0.36 | bid_volume=182 | ask_volume=79 | total_premium=12840 | trades=56
+    date=2026-04-02 | volume=435 | open_interest=12462 | last_price=0.4 | implied_volatility=0.4933 | nbbo_bid=0.4 | nbbo_ask=0.41 | bid_volume=85 | ask_volume=305 | total_premium=16891 | trades=88
+    date=2026-04-01 | volume=447 | open_interest=12313 | last_price=0.38 | implied_volatility=0.4939 | nbbo_bid=0.32 | nbbo_ask=0.41 | bid_volume=196 | ask_volume=206 | total_premium=17097 | trades=81
+    date=2026-03-31 | volume=954 | open_interest=11829 | last_price=0.44 | implied_volatility=0.4943 | nbbo_bid=0.41 | nbbo_ask=0.44 | bid_volume=256 | ask_volume=596 | total_premium=38832 | trades=121
+    date=2026-03-30 | volume=655 | open_interest=11957 | last_price=0.35 | implied_volatility=0.5318 | nbbo_bid=0.33 | nbbo_ask=0.36 | bid_volume=120 | ask_volume=512 | total_premium=23237 | trades=88
+    date=2026-03-27 | volume=639 | open_interest=11610 | last_price=0.4 | implied_volatility=0.5005 | nbbo_bid=0.37 | nbbo_ask=0.43 | bid_volume=205 | ask_volume=321 | total_premium=27372 | trades=61
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: NVO ===
+
+===== OWL =====
+=== UW FLOW DATA: OWL ===
+
+--- MULTI-DAY FLOW ALERTS (22 sessions, 195 alerts) ---
+  Daily alert count: 04-01=1, 04-02=7, 04-06=4, 04-07=4, 04-08=5, 04-09=1, 04-10=1 (fading)
+  Largest: $1.5M FloorTradeMidCap CALL $10 exp 2026-08-21 | $0.6M RepeatedHits PUT $9 exp 2026-05-15 | $0.5M RepeatedHits PUT $9 exp 2026-05-15
+  Composition: 13% calls, 87% puts | 22 sweeps, 0 blocks
+  Side concentration: 78% bid-side (distribution bias)
+  Total premium: $14.0M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 7,272 → 13,128 → 24,163 → 8,722 → 3,821 (0.3x, declining)
+  Put volume: 10,455 → 6,227 → 48,238 → 13,316 → 3,141
+  Call/put ratio: 0.7 → 2.1 → 0.5 → 0.7 → 1.2 (bullish shift)
+  Ask-side share: 37% → 45% → 23% → 45% → 53% 
+  Net premium: positive 2 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 210 prints) ---
+  Total notional: $78.0M
+  Daily: 04-02 $16.4M, 04-06 $30.3M, 04-07 $4.4M, 04-08 $17.2M, 04-09 $9.7M
+  Price clustering: 70% of prints in $8.29-$8.50 range
+  Repeated levels: $8.32 (20x), $8.46 (13x), $8.47 (12x)
+
+--- LIT FLOW SUMMARY (4 sessions, 18 trades) ---
+  Total notional: $4.5M
+  Daily: 04-02 $3.1M, 04-06 $1.1M, 04-08 $0.2M, 04-09 $0.1M
+  Sell-side: 66% (supply bias)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 2/6 contracts
+  Weakening / unwind: 3/6 contracts
+  Bid-heavy (distribution): 6/6 contracts
+  Execution intent: 2 accumulation, 3 distribution
+  Strongest build: 260417P00008000 — OI +54%, bid-heavy, accumulation
+  Likely roll: PUT $10.0 04-17 → PUT $9.0 05-15
+  Overall contract picture: net unwind — positioning weakening
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: OWL260417P00008000 | PUT $8.0 exp 2026-04-17 | OI: BUILDING (+54%) | Side: BID-HEAVY | Exec: Accumulation
+  Flow tape: 28 fills | ask 95% / bid 5% / mid 0% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=728 | open_interest=144751 | last_price=0.17 | implied_volatility=0.5366 | nbbo_bid=0.15 | nbbo_ask=0.2 | bid_volume=89 | ask_volume=638 | total_premium=13820 | trades=28
+    date=2026-04-09 | volume=5441 | open_interest=144809 | last_price=0.15 | implied_volatility=0.5084 | nbbo_bid=0.1 | nbbo_ask=0.15 | bid_volume=3575 | ask_volume=1547 | total_premium=82041 | trades=143
+    date=2026-04-08 | volume=13362 | open_interest=145195 | last_price=0.19 | implied_volatility=0.6088 | nbbo_bid=0.15 | nbbo_ask=0.2 | bid_volume=11139 | ask_volume=34 | total_premium=105145 | trades=56
+    date=2026-04-07 | volume=283 | open_interest=145182 | last_price=0.18 | implied_volatility=0.6648 | nbbo_bid=0.15 | nbbo_ask=0.2 | bid_volume=190 | ask_volume=78 | total_premium=4915 | trades=25
+    date=2026-04-06 | volume=231 | open_interest=145171 | last_price=0.18 | implied_volatility=0.6079 | nbbo_bid=0.15 | nbbo_ask=0.2 | bid_volume=135 | ask_volume=72 | total_premium=3827 | trades=68
+    date=2026-04-02 | volume=3399 | open_interest=144163 | last_price=0.15 | implied_volatility=0.5614 | nbbo_bid=0.15 | nbbo_ask=0.2 | bid_volume=1680 | ask_volume=1033 | total_premium=90839 | trades=310
+    date=2026-04-01 | volume=77 | open_interest=144137 | last_price=0.15 | implied_volatility=0.5963 | nbbo_bid=0.1 | nbbo_ask=0.2 | bid_volume=11 | ask_volume=65 | total_premium=1080 | trades=12
+    date=2026-03-31 | volume=2084 | open_interest=143912 | last_price=0.1 | implied_volatility=0.6713 | nbbo_bid=0.1 | nbbo_ask=0.15 | bid_volume=1409 | ask_volume=130 | total_premium=24063 | trades=82
+    date=2026-03-30 | volume=185 | open_interest=143839 | last_price=0.12 | implied_volatility=0.64 | nbbo_bid=0.1 | nbbo_ask=0.15 | bid_volume=139 | ask_volume=26 | total_premium=2436 | trades=29
+    date=2026-03-27 | volume=70 | open_interest=143817 | last_price=0.18 | implied_volatility=0.5836 | nbbo_bid=0.15 | nbbo_ask=0.2 | bid_volume=30 | ask_volume=40 | total_premium=1251 | trades=14
+
+  CONTRACT: OWL260515P00009000 | PUT $9.0 exp 2026-05-15 | OI: BUILDING (+5%) | Side: BID-HEAVY | Exec: Accumulation
+  Flow tape: 10 fills | ask 55% / bid 4% / mid 11% | sweeps: 0 | blocks: 0 | fills: aggressive buy
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=21 | open_interest=43578 | last_price=1.15 | implied_volatility=0.5982 | nbbo_bid=1.1 | nbbo_ask=1.15 | bid_volume=1 | ask_volume=18 | total_premium=2413 | trades=10
+    date=2026-04-09 | volume=285 | open_interest=43471 | last_price=1.07 | implied_volatility=0.6331 | nbbo_bid=0.95 | nbbo_ask=1.15 | bid_volume=123 | ask_volume=83 | total_premium=30295 | trades=62
+    date=2026-04-08 | volume=60 | open_interest=43491 | last_price=1.05 | implied_volatility=0.5649 | nbbo_bid=1.0 | nbbo_ask=1.1 | bid_volume=8 | ask_volume=50 | total_premium=5912 | trades=14
+    date=2026-04-07 | volume=511 | open_interest=43473 | last_price=1.0 | implied_volatility=0.6104 | nbbo_bid=0.95 | nbbo_ask=1.05 | bid_volume=15 | ask_volume=479 | total_premium=50332 | trades=27
+    date=2026-04-06 | volume=246 | open_interest=43378 | last_price=1.03 | implied_volatility=0.5915 | nbbo_bid=0.95 | nbbo_ask=1.05 | bid_volume=162 | ask_volume=62 | total_premium=25250 | trades=64
+    date=2026-04-02 | volume=458 | open_interest=43268 | last_price=1.05 | implied_volatility=0.6239 | nbbo_bid=0.95 | nbbo_ask=1.05 | bid_volume=299 | ask_volume=112 | total_premium=46609 | trades=64
+    date=2026-04-01 | volume=217 | open_interest=43290 | last_price=0.9 | implied_volatility=0.6008 | nbbo_bid=0.85 | nbbo_ask=0.95 | bid_volume=80 | ask_volume=91 | total_premium=16862 | trades=53
+    date=2026-03-31 | volume=198 | open_interest=43253 | last_price=0.72 | implied_volatility=0.6351 | nbbo_bid=0.7 | nbbo_ask=0.8 | bid_volume=174 | ask_volume=20 | total_premium=14676 | trades=19
+    date=2026-03-30 | volume=1783 | open_interest=42285 | last_price=0.82 | implied_volatility=0.6485 | nbbo_bid=0.75 | nbbo_ask=0.85 | bid_volume=459 | ask_volume=1158 | total_premium=146480 | trades=163
+    date=2026-03-27 | volume=724 | open_interest=42114 | last_price=0.87 | implied_volatility=0.6013 | nbbo_bid=0.85 | nbbo_ask=0.95 | bid_volume=576 | ask_volume=29 | total_premium=60203 | trades=73
+
+  CONTRACT: OWL260417P00010000 | PUT $10.0 exp 2026-04-17 | OI: UNWINDING (-42%) | Side: BID-HEAVY
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=0 | open_interest=46328 | implied_volatility=0.569 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-09 | volume=70 | open_interest=46464 | last_price=1.7 | implied_volatility=0.6233 | nbbo_bid=1.65 | nbbo_ask=1.8 | bid_volume=47 | ask_volume=17 | total_premium=12365 | trades=55
+    date=2026-04-08 | volume=18 | open_interest=46656 | last_price=1.65 | implied_volatility=0.3566 | nbbo_bid=1.6 | nbbo_ask=1.7 | bid_volume=2 | ask_volume=8 | total_premium=2823 | trades=8
+    date=2026-04-07 | volume=40 | open_interest=46979 | last_price=1.58 | implied_volatility=0.7905 | nbbo_bid=1.5 | nbbo_ask=1.7 | bid_volume=5 | ask_volume=35 | total_premium=6352 | trades=12
+    date=2026-04-06 | volume=58 | open_interest=46999 | last_price=1.57 | implied_volatility=0.5119 | nbbo_bid=1.5 | nbbo_ask=1.7 | bid_volume=27 | ask_volume=31 | total_premium=9032 | trades=38
+    date=2026-04-02 | volume=351 | open_interest=47163 | last_price=1.52 | implied_volatility=0.6868 | nbbo_bid=1.4 | nbbo_ask=1.55 | bid_volume=236 | ask_volume=110 | total_premium=60124 | trades=42
+    date=2026-04-01 | volume=29 | open_interest=47175 | last_price=1.36 | implied_volatility=0.5517 | nbbo_bid=1.25 | nbbo_ask=1.45 | bid_volume=9 | ask_volume=16 | total_premium=3155 | trades=12
+    date=2026-03-31 | volume=2076 | open_interest=49075 | last_price=0.95 | implied_volatility=0.5286 | nbbo_bid=0.95 | nbbo_ask=1.1 | bid_volume=2004 | ask_volume=69 | total_premium=217657 | trades=45
+    date=2026-03-30 | volume=2769 | open_interest=51120 | last_price=1.14 | implied_volatility=0.5763 | nbbo_bid=1.0 | nbbo_ask=1.2 | bid_volume=1991 | ask_volume=604 | total_premium=317963 | trades=87
+    date=2026-03-27 | volume=1553 | open_interest=57543 | last_price=1.17 | implied_volatility=0.4629 | nbbo_bid=1.15 | nbbo_ask=1.3 | bid_volume=1441 | ask_volume=110 | total_premium=181177 | trades=46
+
+  CONTRACT: OWL260515P00010000 | PUT $10.0 exp 2026-05-15 | OI: MIXED (+1%) | Side: BID-HEAVY | Exec: Distribution
+  Flow tape: 15 fills | ask 18% / bid 69% / mid 5% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=125 | open_interest=53874 | last_price=2.0 | implied_volatility=0.6649 | nbbo_bid=2.0 | nbbo_ask=2.2 | bid_volume=90 | ask_volume=26 | total_premium=24995 | trades=15
+    date=2026-04-09 | volume=103 | open_interest=53901 | last_price=1.89 | implied_volatility=0.5905 | nbbo_bid=1.75 | nbbo_ask=1.95 | bid_volume=41 | ask_volume=13 | total_premium=19950 | trades=13
+    date=2026-04-08 | volume=60 | open_interest=53902 | last_price=1.77 | implied_volatility=0.5522 | nbbo_bid=1.65 | nbbo_ask=1.95 | bid_volume=53 | ask_volume=6 | total_premium=8733 | trades=12
+    date=2026-04-07 | volume=829 | open_interest=53890 | last_price=1.7 | implied_volatility=0.5985 | nbbo_bid=1.65 | nbbo_ask=1.8 | bid_volume=585 | ask_volume=221 | total_premium=147999 | trades=30
+    date=2026-04-06 | volume=16 | open_interest=53881 | last_price=1.72 | implied_volatility=0.5451 | nbbo_bid=1.6 | nbbo_ask=1.85 | bid_volume=12 | ask_volume=3 | total_premium=2767 | trades=4
+    date=2026-04-02 | volume=253 | open_interest=53875 | last_price=1.7 | implied_volatility=0.6568 | nbbo_bid=1.65 | nbbo_ask=1.75 | bid_volume=52 | ask_volume=35 | total_premium=47223 | trades=27
+    date=2026-04-01 | volume=48 | open_interest=53878 | last_price=1.6 | implied_volatility=0.6218 | nbbo_bid=1.5 | nbbo_ask=1.7 | bid_volume=9 | ask_volume=39 | total_premium=7512 | trades=16
+    date=2026-03-31 | volume=2237 | open_interest=54685 | last_price=1.26 | implied_volatility=0.5601 | nbbo_bid=1.25 | nbbo_ask=1.35 | bid_volume=1100 | ask_volume=1134 | total_premium=303140 | trades=243
+    date=2026-03-30 | volume=86 | open_interest=54627 | last_price=1.45 | implied_volatility=0.5697 | nbbo_bid=1.3 | nbbo_ask=1.5 | bid_volume=5 | ask_volume=50 | total_premium=12161 | trades=10
+    date=2026-03-27 | volume=40 | open_interest=54611 | last_price=1.48 | implied_volatility=0.5986 | nbbo_bid=1.5 | nbbo_ask=1.85 | bid_volume=7 | ask_volume=33 | total_premium=6027 | trades=9
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: OWL ===
+
+===== VKTX =====
+=== UW FLOW DATA: VKTX ===
+
+--- MULTI-DAY FLOW ALERTS (14 sessions, 45 alerts) ---
+  Daily alert count: 03-25=4, 03-26=2, 03-30=4, 03-31=1, 04-01=1, 04-02=3, 04-09=13 (building)
+  Largest: $0.3M RepeatedHits CALL $34 exp 2026-04-02 | $0.2M RepeatedHits CALL $45 exp 2028-01-21 | $0.1M RepeatedHits CALL $45 exp 2028-01-21
+  Composition: 84% calls, 16% puts | 6 sweeps, 0 blocks
+  Side concentration: 69% ask-side (accumulation bias)
+  Total premium: $1.5M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 5,558 → 3,095 → 4,898 → 12,175 → 2,006 (0.3x, declining)
+  Put volume: 1,903 → 958 → 593 → 2,454 → 212
+  Call/put ratio: 2.9 → 3.2 → 8.3 → 5.0 → 9.5 (bullish shift)
+  Ask-side share: 49% → 47% → 51% → 54% → 44% (distribution)
+  Net premium: positive 5 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 171 prints) ---
+  Total notional: $34.7M
+  Daily: 04-02 $7.8M, 04-06 $7.8M, 04-07 $4.0M, 04-08 $6.9M, 04-09 $8.2M
+  Price clustering: 61% of prints in $33.54-$34.75 range
+  Repeated levels: $34.8 (8x), $33.55 (5x), $34.95 (4x)
+
+--- LIT FLOW SUMMARY (5 sessions, 126 trades) ---
+  Total notional: $74.8M
+  Daily: 04-02 $26.2M, 04-06 $15.8M, 04-07 $6.3M, 04-08 $13.0M, 04-09 $13.6M
+  Sell-side: 74% (supply bias)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 3/6 contracts
+  Ask-heavy (accumulation): 2/6 contracts
+  Bid-heavy (distribution): 2/6 contracts
+  Execution intent: 2 accumulation, 2 distribution
+  Strongest build: 260417C00035000 — OI +396%, ask-heavy
+  Overall contract picture: mixed build — some lines supportive, some fading
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: VKTX260417C00035000 | CALL $35.0 exp 2026-04-17 | OI: BUILDING (+396%) | Side: ASK-HEAVY
+  Flow tape: 24 fills | ask 42% / bid 7% / mid 13% | sweeps: 0 | blocks: 0 | fills: aggressive buy
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=176 | open_interest=2424 | last_price=1.24 | implied_volatility=0.6756 | nbbo_bid=1.16 | nbbo_ask=1.34 | bid_volume=35 | ask_volume=121 | total_premium=24873 | trades=24
+    date=2026-04-09 | volume=522 | open_interest=2341 | last_price=1.5 | implied_volatility=0.693 | nbbo_bid=1.21 | nbbo_ask=1.79 | bid_volume=230 | ask_volume=241 | total_premium=64129 | trades=91
+    date=2026-04-08 | volume=292 | open_interest=2332 | last_price=0.88 | implied_volatility=0.6151 | nbbo_bid=0.61 | nbbo_ask=1.0 | bid_volume=193 | ask_volume=61 | total_premium=26527 | trades=33
+    date=2026-04-07 | volume=133 | open_interest=2335 | last_price=1.0 | implied_volatility=0.6279 | nbbo_bid=0.8 | nbbo_ask=1.15 | bid_volume=41 | ask_volume=81 | total_premium=12160 | trades=35
+    date=2026-04-06 | volume=151 | open_interest=2311 | last_price=1.37 | implied_volatility=0.7485 | nbbo_bid=1.1 | nbbo_ask=1.61 | bid_volume=90 | ask_volume=41 | total_premium=24370 | trades=38
+    date=2026-04-02 | volume=501 | open_interest=2098 | last_price=2.0 | implied_volatility=0.7526 | nbbo_bid=1.63 | nbbo_ask=2.24 | bid_volume=85 | ask_volume=372 | total_premium=84391 | trades=56
+    date=2026-04-01 | volume=387 | open_interest=2163 | last_price=1.19 | implied_volatility=0.6917 | nbbo_bid=1.1 | nbbo_ask=1.32 | bid_volume=248 | ask_volume=135 | total_premium=54638 | trades=70
+    date=2026-03-31 | volume=131 | open_interest=2083 | last_price=1.1 | implied_volatility=0.7082 | nbbo_bid=1.0 | nbbo_ask=1.15 | bid_volume=9 | ask_volume=120 | total_premium=13499 | trades=47
+    date=2026-03-30 | volume=296 | open_interest=2025 | last_price=0.66 | implied_volatility=0.6941 | nbbo_bid=0.17 | nbbo_ask=0.82 | bid_volume=173 | ask_volume=92 | total_premium=28070 | trades=71
+    date=2026-03-27 | volume=244 | open_interest=2031 | last_price=1.4 | implied_volatility=0.7834 | nbbo_bid=1.4 | nbbo_ask=1.56 | bid_volume=206 | ask_volume=16 | total_premium=36808 | trades=37
+
+  CONTRACT: VKTX260515C00050000 | CALL $50.0 exp 2026-05-15 | OI: BUILDING (+16%) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 5 fills | ask 0% / bid 78% / mid 22% | sweeps: 0 | blocks: 0 | fills: aggressive sell
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=41 | open_interest=4688 | last_price=0.4 | implied_volatility=0.8085 | nbbo_bid=0.25 | nbbo_ask=0.4 | bid_volume=26 | ask_volume=0 | total_premium=1685 | trades=5
+    date=2026-04-09 | volume=52 | open_interest=4650 | last_price=0.45 | implied_volatility=0.8421 | nbbo_bid=0.4 | nbbo_ask=0.49 | bid_volume=11 | ask_volume=40 | total_premium=1902 | trades=11
+    date=2026-04-08 | volume=49 | open_interest=4648 | last_price=0.35 | implied_volatility=0.8882 | nbbo_bid=0.06 | nbbo_ask=0.7 | bid_volume=40 | ask_volume=9 | total_premium=1910 | trades=4
+    date=2026-04-07 | volume=38 | open_interest=4611 | last_price=0.44 | implied_volatility=0.8844 | nbbo_bid=0.35 | nbbo_ask=0.44 | bid_volume=14 | ask_volume=24 | total_premium=1616 | trades=6
+    date=2026-04-06 | volume=45 | open_interest=4577 | last_price=0.45 | implied_volatility=0.8625 | nbbo_bid=0.4 | nbbo_ask=0.54 | bid_volume=39 | ask_volume=6 | total_premium=2395 | trades=10
+    date=2026-04-02 | volume=49 | open_interest=4553 | last_price=0.58 | implied_volatility=0.8192 | nbbo_bid=0.5 | nbbo_ask=0.59 | bid_volume=16 | ask_volume=33 | total_premium=2518 | trades=14
+    date=2026-04-01 | volume=60 | open_interest=4536 | last_price=0.4 | implied_volatility=0.8465 | nbbo_bid=0.35 | nbbo_ask=0.48 | bid_volume=31 | ask_volume=28 | total_premium=2862 | trades=9
+    date=2026-03-31 | volume=29 | open_interest=4523 | last_price=0.4 | implied_volatility=0.8724 | nbbo_bid=0.38 | nbbo_ask=0.5 | bid_volume=27 | ask_volume=1 | total_premium=1299 | trades=12
+    date=2026-03-30 | volume=240 | open_interest=4598 | last_price=0.37 | implied_volatility=0.9438 | nbbo_bid=0.33 | nbbo_ask=0.38 | bid_volume=12 | ask_volume=228 | total_premium=8935 | trades=13
+    date=2026-03-27 | volume=103 | open_interest=4524 | last_price=0.53 | implied_volatility=0.8802 | nbbo_bid=0.52 | nbbo_ask=0.65 | bid_volume=27 | ask_volume=45 | total_premium=5911 | trades=22
+
+  CONTRACT: VKTX260515C00040000 | CALL $40.0 exp 2026-05-15 | OI: BUILDING (+47%) | Side: BALANCED | Exec: Distribution
+  Flow tape: 38 fills | ask 17% / bid 63% / mid 2% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=165 | open_interest=6199 | last_price=1.57 | implied_volatility=0.7868 | nbbo_bid=1.5 | nbbo_ask=1.71 | bid_volume=131 | ask_volume=28 | total_premium=27409 | trades=38
+    date=2026-04-09 | volume=3502 | open_interest=4241 | last_price=1.73 | implied_volatility=0.7853 | nbbo_bid=1.61 | nbbo_ask=1.82 | bid_volume=2095 | ask_volume=1003 | total_premium=548578 | trades=559
+    date=2026-04-08 | volume=82 | open_interest=4220 | last_price=1.27 | implied_volatility=0.7896 | nbbo_bid=1.3 | nbbo_ask=1.4 | bid_volume=28 | ask_volume=54 | total_premium=10834 | trades=35
+    date=2026-04-07 | volume=187 | open_interest=4250 | last_price=1.37 | implied_volatility=0.7947 | nbbo_bid=1.35 | nbbo_ask=1.5 | bid_volume=135 | ask_volume=49 | total_premium=24038 | trades=29
+    date=2026-04-06 | volume=88 | open_interest=4224 | last_price=1.69 | implied_volatility=0.8042 | nbbo_bid=1.35 | nbbo_ask=1.75 | bid_volume=41 | ask_volume=35 | total_premium=16125 | trades=17
+    date=2026-04-02 | volume=362 | open_interest=4027 | last_price=1.95 | implied_volatility=0.7866 | nbbo_bid=1.85 | nbbo_ask=2.05 | bid_volume=40 | ask_volume=307 | total_premium=65823 | trades=62
+    date=2026-04-01 | volume=26 | open_interest=4015 | last_price=1.44 | implied_volatility=0.8065 | nbbo_bid=1.4 | nbbo_ask=1.54 | bid_volume=13 | ask_volume=11 | total_premium=3965 | trades=15
+    date=2026-03-31 | volume=64 | open_interest=3999 | last_price=1.36 | implied_volatility=0.7849 | nbbo_bid=1.26 | nbbo_ask=1.4 | bid_volume=29 | ask_volume=31 | total_premium=8770 | trades=33
+    date=2026-03-30 | volume=1168 | open_interest=4388 | last_price=1.05 | implied_volatility=0.8748 | nbbo_bid=0.85 | nbbo_ask=1.6 | bid_volume=171 | ask_volume=958 | total_premium=123060 | trades=76
+    date=2026-03-27 | volume=76 | open_interest=4371 | last_price=1.55 | implied_volatility=0.8096 | nbbo_bid=1.45 | nbbo_ask=1.68 | bid_volume=45 | ask_volume=10 | total_premium=12383 | trades=19
+
+  CONTRACT: VKTX260417C00040000 | CALL $40.0 exp 2026-04-17 | OI: MIXED (+38%) | Side: BID-HEAVY | Exec: Accumulation
+  Flow tape: 6 fills | ask 79% / bid 21% / mid 0% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=10 | open_interest=3093 | last_price=0.18 | implied_volatility=0.7815 | nbbo_bid=0.15 | nbbo_ask=0.19 | bid_volume=2 | ask_volume=8 | total_premium=178 | trades=6
+    date=2026-04-09 | volume=1058 | open_interest=2380 | last_price=0.2 | implied_volatility=0.7226 | nbbo_bid=0.16 | nbbo_ask=0.25 | bid_volume=241 | ask_volume=597 | total_premium=17837 | trades=109
+    date=2026-04-08 | volume=693 | open_interest=2418 | last_price=0.17 | implied_volatility=0.8084 | nbbo_bid=0.11 | nbbo_ask=0.25 | bid_volume=521 | ask_volume=156 | total_premium=9900 | trades=40
+    date=2026-04-07 | volume=302 | open_interest=2308 | last_price=0.23 | implied_volatility=0.8115 | nbbo_bid=0.18 | nbbo_ask=0.26 | bid_volume=162 | ask_volume=137 | total_premium=6170 | trades=46
+    date=2026-04-06 | volume=609 | open_interest=2343 | last_price=0.28 | implied_volatility=0.7915 | nbbo_bid=0.27 | nbbo_ask=0.3 | bid_volume=348 | ask_volume=257 | total_premium=25773 | trades=65
+    date=2026-04-02 | volume=2375 | open_interest=2635 | last_price=0.57 | implied_volatility=0.7539 | nbbo_bid=0.55 | nbbo_ask=0.63 | bid_volume=1039 | ask_volume=1024 | total_premium=103334 | trades=167
+    date=2026-04-01 | volume=381 | open_interest=2696 | last_price=0.33 | implied_volatility=0.7643 | nbbo_bid=0.1 | nbbo_ask=0.34 | bid_volume=331 | ask_volume=33 | total_premium=15029 | trades=21
+    date=2026-03-31 | volume=282 | open_interest=2678 | last_price=0.34 | implied_volatility=0.8115 | nbbo_bid=0.25 | nbbo_ask=0.37 | bid_volume=66 | ask_volume=208 | total_premium=8967 | trades=35
+    date=2026-03-30 | volume=182 | open_interest=2721 | last_price=0.22 | implied_volatility=0.9408 | nbbo_bid=0.17 | nbbo_ask=0.41 | bid_volume=179 | ask_volume=3 | total_premium=4177 | trades=28
+    date=2026-03-27 | volume=314 | open_interest=2717 | last_price=0.47 | implied_volatility=0.826 | nbbo_bid=0.45 | nbbo_ask=0.69 | bid_volume=183 | ask_volume=92 | total_premium=16871 | trades=27
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: VKTX ===
+
+===== VLO =====
+=== UW FLOW DATA: VLO ===
+
+--- MULTI-DAY FLOW ALERTS (21 sessions, 87 alerts) ---
+  Daily alert count: 04-01=3, 04-02=2, 04-06=3, 04-07=2, 04-08=2, 04-09=6, 04-10=1 (fading)
+  Largest: $1.8M RepeatedHits CALL $210 exp 2026-03-20 | $0.5M RepeatedHitsAscendingFill CALL $250 exp 2026-05-15 | $0.4M RepeatedHitsDescendingFill CALL $330 exp 2026-12-18
+  Composition: 51% calls, 49% puts | 29 sweeps, 0 blocks
+  Side concentration: balanced
+  Total premium: $12.4M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 2,278 → 3,489 → 4,588 → 4,795 → 6,706 (stable)
+  Put volume: 2,762 → 3,216 → 3,690 → 2,879 → 732
+  Call/put ratio: 0.8 → 1.1 → 1.2 → 1.7 → 9.2 (bullish shift)
+  Ask-side share: 48% → 45% → 49% → 46% → 51% 
+  Net premium: positive 7 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $150.8M
+  Daily: 04-02 $13.5M, 04-06 $27.9M, 04-07 $42.2M, 04-08 $14.3M, 04-09 $52.9M
+  Price clustering: 62% of prints in $237.33-$247.92 range
+  Repeated levels: $235.1 (35x), $239.64 (24x), $251.49 (23x)
+
+--- LIT FLOW SUMMARY (5 sessions, 129 trades) ---
+  Total notional: $21.3M
+  Daily: 04-02 $3.8M, 04-06 $1.4M, 04-07 $4.4M, 04-08 $9.4M, 04-09 $2.3M
+  Buy-side: 56% (demand bias)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 0/6 contracts
+  Weakening / unwind: 2/6 contracts
+  Bid-heavy (distribution): 5/6 contracts
+  Execution intent: 1 accumulation, 2 distribution
+  Overall contract picture: net unwind — positioning weakening
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: VLO260417P00225000 | PUT $225.0 exp 2026-04-17 | OI: MIXED (NEW) | Side: BID-HEAVY | Exec: Accumulation
+  Flow tape: 25 fills | ask 87% / bid 7% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive buy
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=114 | open_interest=2560 | last_price=2.6 | implied_volatility=0.3957 | nbbo_bid=2.15 | nbbo_ask=2.8 | bid_volume=6 | ask_volume=108 | total_premium=31113 | trades=25
+    date=2026-04-09 | volume=103 | open_interest=2559 | last_price=1.98 | implied_volatility=0.4208 | nbbo_bid=1.75 | nbbo_ask=2.35 | bid_volume=0 | ask_volume=63 | total_premium=22011 | trades=8
+    date=2026-04-08 | volume=17 | open_interest=2556 | last_price=1.45 | implied_volatility=0.4502 | nbbo_bid=1.25 | nbbo_ask=1.85 | bid_volume=7 | ask_volume=5 | total_premium=3088 | trades=9
+    date=2026-04-07 | volume=17 | open_interest=2556 | last_price=1.02 | implied_volatility=0.5354 | nbbo_bid=0.85 | nbbo_ask=1.25 | bid_volume=14 | ask_volume=1 | total_premium=2064 | trades=6
+    date=2026-04-06 | volume=260 | open_interest=2512 | last_price=1.75 | implied_volatility=0.4795 | nbbo_bid=1.2 | nbbo_ask=1.8 | bid_volume=229 | ask_volume=2 | total_premium=52071 | trades=34
+    date=2026-04-02 | volume=24 | open_interest=2511 | last_price=2.3 | implied_volatility=0.4569 | nbbo_bid=1.95 | nbbo_ask=2.5 | bid_volume=3 | ask_volume=21 | total_premium=5364 | trades=5
+    date=2026-04-01 | volume=0 | open_interest=2511 | implied_volatility=0.449 | nbbo_bid=2.65 | nbbo_ask=3.1 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-31 | volume=2509 | open_interest=16 | last_price=2.52 | implied_volatility=0.4725 | nbbo_bid=2.1 | nbbo_ask=2.52 | bid_volume=1682 | ask_volume=591 | total_premium=703337 | trades=676
+    date=2026-03-30 | volume=0 | open_interest=16 | implied_volatility=0.4985 | nbbo_bid=1.93 | nbbo_ask=2.9 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-27 | volume=12 | open_interest=4 | last_price=2.29 | implied_volatility=0.4922 | nbbo_bid=1.87 | nbbo_ask=2.62 | bid_volume=12 | ask_volume=0 | total_premium=2732 | trades=8
+
+  CONTRACT: VLO260417C00300000 | CALL $300.0 exp 2026-04-17 | OI: MIXED (+2754%) | Side: BID-HEAVY
+  Flow tape: 2 fills | ask 44% / bid 11% / mid 0% | sweeps: 0 | blocks: 0
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=3 | open_interest=1313 | last_price=0.05 | implied_volatility=0.6095 | nbbo_bid=0.0 | nbbo_ask=0.7 | bid_volume=1 | ask_volume=2 | total_premium=131 | trades=2
+    date=2026-04-09 | volume=2 | open_interest=1313 | last_price=0.08 | implied_volatility=0.6654 | nbbo_bid=0.0 | nbbo_ask=1.65 | bid_volume=2 | ask_volume=0 | total_premium=16 | trades=1
+    date=2026-04-08 | volume=0 | open_interest=1313 | implied_volatility=0.5196 | nbbo_bid=0.0 | nbbo_ask=0.35 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-07 | volume=18 | open_interest=1300 | last_price=0.3 | implied_volatility=0.5264 | nbbo_bid=0.0 | nbbo_ask=0.6 | bid_volume=18 | ask_volume=0 | total_premium=655 | trades=7
+    date=2026-04-06 | volume=4 | open_interest=1298 | last_price=0.05 | implied_volatility=0.5058 | nbbo_bid=0.0 | nbbo_ask=0.3 | bid_volume=0 | ask_volume=4 | total_premium=80 | trades=2
+    date=2026-04-02 | volume=12 | open_interest=1308 | last_price=0.3 | implied_volatility=0.4972 | nbbo_bid=0.0 | nbbo_ask=0.45 | bid_volume=10 | ask_volume=2 | total_premium=434 | trades=3
+    date=2026-04-01 | volume=10 | open_interest=1308 | last_price=0.2 | implied_volatility=0.5018 | nbbo_bid=0.0 | nbbo_ask=0.5 | bid_volume=0 | ask_volume=10 | total_premium=200 | trades=1
+    date=2026-03-31 | volume=5 | open_interest=1308 | last_price=0.76 | implied_volatility=0.5563 | nbbo_bid=0.0 | nbbo_ask=1.34 | bid_volume=3 | ask_volume=2 | total_premium=245 | trades=2
+    date=2026-03-30 | volume=9 | open_interest=1309 | last_price=0.94 | implied_volatility=0.5185 | nbbo_bid=0.59 | nbbo_ask=0.94 | bid_volume=6 | ask_volume=3 | total_premium=888 | trades=6
+    date=2026-03-27 | volume=1265 | open_interest=51 | last_price=1.06 | implied_volatility=0.4484 | nbbo_bid=0.65 | nbbo_ask=1.15 | bid_volume=1264 | ask_volume=1 | total_premium=82373 | trades=4
+
+  CONTRACT: VLO260515C00250000 | CALL $250.0 exp 2026-05-15 | OI: MIXED (+228%) | Side: BID-HEAVY
+  Flow tape: 4 fills | ask 0% / bid 33% / mid 33% | sweeps: 0 | blocks: 0 | fills: aggressive sell
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=4 | open_interest=1441 | last_price=5.9 | implied_volatility=0.426 | nbbo_bid=5.6 | nbbo_ask=6.1 | bid_volume=2 | ask_volume=0 | total_premium=2325 | trades=4
+    date=2026-04-09 | volume=634 | open_interest=928 | last_price=6.68 | implied_volatility=0.4227 | nbbo_bid=6.4 | nbbo_ask=7.0 | bid_volume=542 | ask_volume=35 | total_premium=532674 | trades=76
+    date=2026-04-08 | volume=283 | open_interest=770 | last_price=9.7 | implied_volatility=0.4336 | nbbo_bid=8.6 | nbbo_ask=9.4 | bid_volume=90 | ask_volume=170 | total_premium=244368 | trades=64
+    date=2026-04-07 | volume=64 | open_interest=779 | last_price=15.9 | implied_volatility=0.4696 | nbbo_bid=15.5 | nbbo_ask=16.6 | bid_volume=58 | ask_volume=4 | total_premium=103501 | trades=20
+    date=2026-04-06 | volume=442 | open_interest=487 | last_price=12.0 | implied_volatility=0.4493 | nbbo_bid=12.0 | nbbo_ask=12.7 | bid_volume=413 | ask_volume=18 | total_premium=491252 | trades=55
+    date=2026-04-02 | volume=119 | open_interest=477 | last_price=12.3 | implied_volatility=0.4433 | nbbo_bid=12.0 | nbbo_ask=12.5 | bid_volume=88 | ask_volume=30 | total_premium=151195 | trades=42
+    date=2026-04-01 | volume=48 | open_interest=454 | last_price=11.5 | implied_volatility=0.456 | nbbo_bid=11.3 | nbbo_ask=12.0 | bid_volume=34 | ask_volume=7 | total_premium=52038 | trades=20
+    date=2026-03-31 | volume=219 | open_interest=634 | last_price=13.9 | implied_volatility=0.4635 | nbbo_bid=14.35 | nbbo_ask=15.0 | bid_volume=213 | ask_volume=6 | total_premium=306084 | trades=39
+    date=2026-03-30 | volume=17 | open_interest=638 | last_price=17.5 | implied_volatility=0.487 | nbbo_bid=17.2 | nbbo_ask=17.85 | bid_volume=8 | ask_volume=9 | total_premium=31856 | trades=13
+    date=2026-03-27 | volume=57 | open_interest=671 | last_price=20.17 | implied_volatility=0.4898 | nbbo_bid=19.8 | nbbo_ask=20.75 | bid_volume=12 | ask_volume=41 | total_premium=104829 | trades=43
+
+  CONTRACT: VLO260417P00200000 | PUT $200.0 exp 2026-04-17 | OI: UNWINDING (-2%) | Side: BALANCED | Exec: Distribution
+  Flow tape: 2 fills | ask 20% / bid 80% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive buy
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=3 | open_interest=2750 | last_price=0.15 | implied_volatility=0.5963 | nbbo_bid=0.15 | nbbo_ask=0.3 | bid_volume=2 | ask_volume=1 | total_premium=59 | trades=2
+    date=2026-04-09 | volume=18 | open_interest=2758 | last_price=0.14 | implied_volatility=0.5587 | nbbo_bid=0.0 | nbbo_ask=0.45 | bid_volume=10 | ask_volume=8 | total_premium=308 | trades=2
+    date=2026-04-08 | volume=20 | open_interest=2771 | last_price=0.13 | implied_volatility=0.5675 | nbbo_bid=0.1 | nbbo_ask=0.2 | bid_volume=16 | ask_volume=2 | total_premium=377 | trades=8
+    date=2026-04-07 | volume=4 | open_interest=2771 | last_price=0.17 | implied_volatility=0.7104 | nbbo_bid=0.05 | nbbo_ask=0.7 | bid_volume=2 | ask_volume=2 | total_premium=62 | trades=4
+    date=2026-04-06 | volume=19 | open_interest=2776 | last_price=0.17 | implied_volatility=0.5983 | nbbo_bid=0.1 | nbbo_ask=1.3 | bid_volume=18 | ask_volume=0 | total_premium=581 | trades=5
+    date=2026-04-02 | volume=10 | open_interest=2776 | last_price=0.42 | implied_volatility=0.5592 | nbbo_bid=0.35 | nbbo_ask=0.9 | bid_volume=10 | ask_volume=0 | total_premium=468 | trades=2
+    date=2026-04-01 | volume=78 | open_interest=2786 | last_price=0.8 | implied_volatility=0.5542 | nbbo_bid=0.35 | nbbo_ask=0.9 | bid_volume=77 | ask_volume=1 | total_premium=4900 | trades=5
+    date=2026-03-31 | volume=11 | open_interest=2780 | last_price=0.48 | implied_volatility=0.5689 | nbbo_bid=0.35 | nbbo_ask=0.62 | bid_volume=11 | ask_volume=0 | total_premium=525 | trades=8
+    date=2026-03-30 | volume=1 | open_interest=2779 | last_price=0.37 | implied_volatility=0.582 | nbbo_bid=0.36 | nbbo_ask=0.85 | bid_volume=0 | ask_volume=1 | total_premium=37 | trades=1
+    date=2026-03-27 | volume=24 | open_interest=2796 | last_price=0.44 | implied_volatility=0.5562 | nbbo_bid=0.34 | nbbo_ask=0.57 | bid_volume=21 | ask_volume=3 | total_premium=1249 | trades=5
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: VLO ===
+
+===== WW =====
+=== UW FLOW DATA: WW ===
+
+--- MULTI-DAY FLOW ALERTS (1 sessions, 3 alerts) ---
+  Daily alert count: 03-13=3 (limited data)
+  Largest: $0.0M RepeatedHitsAscendingFill CALL $20 exp 2026-03-20 | $0.0M RepeatedHits CALL $22.5 exp 2026-03-20 | $0.0M RepeatedHits CALL $20 exp 2026-03-20
+  Composition: 100% calls, 0% puts | 1 sweeps, 0 blocks
+  Side concentration: 68% bid-side (distribution bias)
+  Total premium: $0.0M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 269 → 365 → 54 → 596 → 20 (0.1x, declining)
+  Put volume: 88 → 210 → 90 → 25 → 1
+  Call/put ratio: 3.1 → 1.7 → 0.6 → 23.8 → 20.0 (bullish shift)
+  Ask-side share: 30% → 79% → 45% → 35% → 60% (accumulation accelerating)
+  Net premium: positive 3 of 10 sessions
+
+--- DARK POOL STRUCTURE (1 sessions, 1 prints) ---
+  Total notional: $0.1M
+  Daily: 04-06 $0.1M
+
+--- LIT FLOW SUMMARY (5 sessions, 6 trades) ---
+  Total notional: $1.2M
+  Daily: 04-02 $0.2M, 04-06 $0.2M, 04-07 $0.4M, 04-08 $0.2M, 04-09 $0.2M
+  Sell-side: 66% (supply bias)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 0/6 contracts
+  Weakening / unwind: 6/6 contracts
+  Ask-heavy (accumulation): 1/6 contracts
+  Bid-heavy (distribution): 4/6 contracts
+  Execution intent: 1 accumulation, 1 distribution
+  Overall contract picture: net unwind — positioning weakening
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: WW260515C00035000 | CALL $35.0 exp 2026-05-15 | OI: UNWINDING (+4%) | Side: ASK-HEAVY
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=0 | open_interest=545 | implied_volatility=1.6757 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-09 | volume=0 | open_interest=545 | implied_volatility=1.4654 | nbbo_bid=0.0 | nbbo_ask=0.2 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-08 | volume=0 | open_interest=545 | implied_volatility=1.5113 | nbbo_bid=0.0 | nbbo_ask=0.2 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-07 | volume=0 | open_interest=545 | implied_volatility=1.8514 | nbbo_bid=0.0 | nbbo_ask=0.25 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-06 | volume=0 | open_interest=545 | implied_volatility=1.3184 | nbbo_bid=0.0 | nbbo_ask=0.15 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-02 | volume=1 | open_interest=546 | last_price=0.1 | implied_volatility=1.3162 | nbbo_bid=0.0 | nbbo_ask=0.3 | bid_volume=1 | ask_volume=0 | total_premium=10 | trades=1
+    date=2026-04-01 | volume=0 | open_interest=546 | implied_volatility=0.9899 | nbbo_bid=0.0 | nbbo_ask=0.25 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-31 | volume=0 | open_interest=546 | implied_volatility=1.3554 | nbbo_bid=0.0 | nbbo_ask=0.35 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-30 | volume=0 | open_interest=546 | implied_volatility=1.4707 | nbbo_bid=0.0 | nbbo_ask=0.4 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-27 | volume=0 | open_interest=546 | implied_volatility=1.437 | nbbo_bid=0.05 | nbbo_ask=0.45 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+
+  CONTRACT: WW260515C00012500 | CALL $12.5 exp 2026-05-15 | OI: UNWINDING (+7075%) | Side: BID-HEAVY | Exec: Accumulation
+  Flow tape: 1 fills | ask 100% / bid 0% / mid 0% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=1 | open_interest=287 | last_price=1.15 | implied_volatility=1.258 | nbbo_bid=0.8 | nbbo_ask=1.45 | bid_volume=0 | ask_volume=1 | total_premium=115 | trades=1
+    date=2026-04-09 | volume=0 | open_interest=287 | implied_volatility=1.1108 | nbbo_bid=0.6 | nbbo_ask=1.7 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-08 | volume=35 | open_interest=289 | last_price=1.5 | implied_volatility=1.1006 | nbbo_bid=0.7 | nbbo_ask=1.5 | bid_volume=33 | ask_volume=0 | total_premium=5330 | trades=5
+    date=2026-04-07 | volume=164 | open_interest=125 | last_price=1.3 | implied_volatility=0.7946 | nbbo_bid=0.65 | nbbo_ask=1.8 | bid_volume=4 | ask_volume=3 | total_premium=21550 | trades=6
+    date=2026-04-06 | volume=183 | open_interest=4 | last_price=1.75 | implied_volatility=1.1954 | nbbo_bid=0.7 | nbbo_ask=2.05 | bid_volume=163 | ask_volume=20 | total_premium=33529 | trades=10
+    date=2026-04-02 | volume=0 | open_interest=4 | implied_volatility=1.007 | nbbo_bid=1.25 | nbbo_ask=3.8 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-01 | volume=3 | open_interest=4 | last_price=2.7 | implied_volatility=1.2157 | nbbo_bid=2.0 | nbbo_ask=4.2 | bid_volume=3 | ask_volume=0 | total_premium=810 | trades=1
+    date=2026-03-31 | volume=0 | open_interest=4 | implied_volatility=0.9861 | nbbo_bid=1.35 | nbbo_ask=3.6 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-30 | volume=1 | open_interest=4 | last_price=2.6 | implied_volatility=1.1249 | nbbo_bid=2.0 | nbbo_ask=2.95 | bid_volume=1 | ask_volume=0 | total_premium=260 | trades=1
+    date=2026-03-27 | volume=0 | open_interest=4 | implied_volatility=1.196 | nbbo_bid=2.75 | nbbo_ask=3.9 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+
+  CONTRACT: WW260515C00045000 | CALL $45.0 exp 2026-05-15 | OI: UNWINDING (+41%) | Side: BID-HEAVY
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=0 | open_interest=1405 | implied_volatility=1.6839 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-09 | volume=0 | open_interest=1405 | implied_volatility=1.4534 | nbbo_bid=0.0 | nbbo_ask=0.2 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-08 | volume=0 | open_interest=1405 | implied_volatility=1.5113 | nbbo_bid=0.0 | nbbo_ask=0.2 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-07 | volume=0 | open_interest=1405 | implied_volatility=1.8878 | nbbo_bid=0.0 | nbbo_ask=0.25 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-06 | volume=0 | open_interest=1405 | implied_volatility=1.3184 | nbbo_bid=0.0 | nbbo_ask=0.1 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-02 | volume=0 | open_interest=1405 | implied_volatility=1.3162 | nbbo_bid=0.0 | nbbo_ask=0.3 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-01 | volume=0 | open_interest=1405 | implied_volatility=0.9899 | nbbo_bid=0.0 | nbbo_ask=0.2 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-31 | volume=0 | open_interest=1405 | implied_volatility=1.3537 | nbbo_bid=0.0 | nbbo_ask=0.25 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-30 | volume=0 | open_interest=1405 | implied_volatility=1.585 | nbbo_bid=0.0 | nbbo_ask=0.3 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-27 | volume=0 | open_interest=1405 | implied_volatility=1.4925 | nbbo_bid=0.0 | nbbo_ask=0.35 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+
+  CONTRACT: WW260417C00015000 | CALL $15.0 exp 2026-04-17 | OI: UNWINDING (NEW) | Side: BID-HEAVY
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=0 | open_interest=323 | implied_volatility=2.4692 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-09 | volume=327 | open_interest=7 | last_price=0.2 | implied_volatility=1.3496 | nbbo_bid=0.0 | nbbo_ask=0.4 | bid_volume=217 | ask_volume=109 | total_premium=8663 | trades=19
+    date=2026-04-08 | volume=0 | open_interest=7 | implied_volatility=1.7395 | nbbo_bid=0.0 | nbbo_ask=1.0 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-07 | volume=5 | open_interest=4 | last_price=0.17 | implied_volatility=1.0302 | nbbo_bid=0.0 | nbbo_ask=0.25 | bid_volume=0 | ask_volume=5 | total_premium=77 | trades=2
+    date=2026-04-06 | volume=3 | open_interest=1 | last_price=0.3 | implied_volatility=1.4154 | nbbo_bid=0.0 | nbbo_ask=1.1 | bid_volume=2 | ask_volume=1 | total_premium=180 | trades=2
+    date=2026-04-02 | volume=1 | open_interest=1 | last_price=0.95 | implied_volatility=1.4333 | nbbo_bid=0.55 | nbbo_ask=2.0 | bid_volume=0 | ask_volume=0 | total_premium=95 | trades=1
+    date=2026-04-01 | volume=1 | open_interest=0 | last_price=0.85 | implied_volatility=1.0654 | nbbo_bid=0.3 | nbbo_ask=1.5 | bid_volume=1 | ask_volume=0 | total_premium=85 | trades=1
+    date=2026-03-31 | volume=0 | open_interest=0 | implied_volatility=0.5832 | nbbo_bid=0.0 | nbbo_ask=1.0 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-30 | volume=0 | open_interest=0 | implied_volatility=1.084 | nbbo_bid=0.0 | nbbo_ask=2.7 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-27 | volume=0 | open_interest=0 | implied_volatility=1.5678 | nbbo_bid=0.45 | nbbo_ask=3.2 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: WW ===
+
+===== XOM =====
+=== UW FLOW DATA: XOM ===
+
+--- MULTI-DAY FLOW ALERTS (20 sessions, 200 alerts) ---
+  Daily alert count: 04-01=9, 04-02=25, 04-06=2, 04-07=10, 04-08=10, 04-09=11, 04-10=1 (building)
+  Largest: $4.9M RepeatedHitsDescendingFill CALL $165 exp 2026-05-15 | $1.7M RepeatedHitsAscendingFill CALL $165 exp 2026-05-15 | $1.5M RepeatedHitsAscendingFill CALL $165 exp 2026-05-15
+  Composition: 76% calls, 24% puts | 27 sweeps, 0 blocks
+  Side concentration: 59% ask-side (accumulation bias)
+  Total premium: $59.0M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 51,299 → 56,887 → 138,121 → 87,048 → 19,959 (0.1x, declining)
+  Put volume: 18,520 → 30,410 → 51,180 → 38,119 → 13,437
+  Call/put ratio: 2.8 → 1.9 → 2.7 → 2.3 → 1.5 (bearish shift)
+  Ask-side share: 47% → 52% → 57% → 46% → 56% (accumulation accelerating)
+  Net premium: positive 5 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 250 prints) ---
+  Total notional: $1227.1M
+  Daily: 04-02 $258.0M, 04-06 $178.2M, 04-07 $176.0M, 04-08 $49.2M, 04-09 $565.7M
+  Price clustering: 63% of prints in $154.81-$162.04 range
+  Repeated levels: $155.04 (43x), $156.22 (41x), $163.37 (41x)
+
+--- LIT FLOW SUMMARY (5 sessions, 250 trades) ---
+  Total notional: $50.7M
+  Daily: 04-02 $11.1M, 04-06 $9.6M, 04-07 $11.1M, 04-08 $7.9M, 04-09 $11.0M
+  Buy-side: 58% (demand bias)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 0/6 contracts
+  Weakening / unwind: 2/6 contracts
+  Ask-heavy (accumulation): 4/6 contracts
+  Bid-heavy (distribution): 2/6 contracts
+  Execution intent: 1 accumulation, 1 distribution
+  Overall contract picture: net unwind — positioning weakening
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: XOM260515C00165000 | CALL $165.0 exp 2026-05-15 | OI: MIXED (-40%) | Side: ASK-HEAVY
+  Flow tape: 38 fills | ask 32% / bid 33% / mid 14% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=103 | open_interest=13200 | last_price=1.95 | implied_volatility=0.318 | nbbo_bid=1.91 | nbbo_ask=2.01 | bid_volume=46 | ask_volume=46 | total_premium=19426 | trades=38
+    date=2026-04-09 | volume=1085 | open_interest=13310 | last_price=2.55 | implied_volatility=0.3234 | nbbo_bid=2.54 | nbbo_ask=2.7 | bid_volume=549 | ask_volume=460 | total_premium=313785 | trades=214
+    date=2026-04-08 | volume=1578 | open_interest=13237 | last_price=3.25 | implied_volatility=0.3306 | nbbo_bid=3.15 | nbbo_ask=3.3 | bid_volume=824 | ask_volume=501 | total_premium=390397 | trades=383
+    date=2026-04-07 | volume=684 | open_interest=13086 | last_price=6.6 | implied_volatility=0.3447 | nbbo_bid=6.45 | nbbo_ask=6.95 | bid_volume=226 | ask_volume=391 | total_premium=491295 | trades=201
+    date=2026-04-06 | volume=561 | open_interest=32883 | last_price=6.45 | implied_volatility=0.3447 | nbbo_bid=6.45 | nbbo_ask=6.7 | bid_volume=223 | ask_volume=304 | total_premium=333903 | trades=205
+    date=2026-04-02 | volume=21967 | open_interest=22023 | last_price=5.71 | implied_volatility=0.3453 | nbbo_bid=5.65 | nbbo_ask=5.75 | bid_volume=5098 | ask_volume=16264 | total_premium=12882034 | trades=571
+    date=2026-04-01 | volume=660 | open_interest=21920 | last_price=5.7 | implied_volatility=0.3331 | nbbo_bid=5.45 | nbbo_ask=5.8 | bid_volume=322 | ask_volume=301 | total_premium=416285 | trades=191
+    date=2026-03-31 | volume=363 | open_interest=21951 | last_price=10.85 | implied_volatility=0.355 | nbbo_bid=10.65 | nbbo_ask=11.0 | bid_volume=133 | ask_volume=204 | total_premium=420381 | trades=124
+    date=2026-03-30 | volume=428 | open_interest=22160 | last_price=12.5 | implied_volatility=0.3833 | nbbo_bid=12.2 | nbbo_ask=13.05 | bid_volume=197 | ask_volume=169 | total_premium=607100 | trades=121
+    date=2026-03-27 | volume=394 | open_interest=22227 | last_price=12.1 | implied_volatility=0.3597 | nbbo_bid=11.95 | nbbo_ask=12.4 | bid_volume=224 | ask_volume=161 | total_premium=433007 | trades=123
+
+  CONTRACT: XOM260417C00165000 | CALL $165.0 exp 2026-04-17 | OI: MIXED (+93%) | Side: ASK-HEAVY
+  Flow tape: 83 fills | ask 21% / bid 46% / mid 13% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=479 | open_interest=9849 | last_price=0.34 | implied_volatility=0.3978 | nbbo_bid=0.33 | nbbo_ask=0.34 | bid_volume=264 | ask_volume=122 | total_premium=17348 | trades=83
+    date=2026-04-09 | volume=3806 | open_interest=7869 | last_price=0.58 | implied_volatility=0.3714 | nbbo_bid=0.54 | nbbo_ask=0.58 | bid_volume=1109 | ask_volume=2472 | total_premium=341555 | trades=688
+    date=2026-04-08 | volume=2454 | open_interest=7470 | last_price=0.87 | implied_volatility=0.3651 | nbbo_bid=0.84 | nbbo_ask=0.87 | bid_volume=868 | ask_volume=1235 | total_premium=129509 | trades=585
+    date=2026-04-07 | volume=2722 | open_interest=7753 | last_price=3.6 | implied_volatility=0.3753 | nbbo_bid=3.4 | nbbo_ask=3.7 | bid_volume=921 | ask_volume=1618 | total_premium=1022073 | trades=461
+    date=2026-04-06 | volume=1758 | open_interest=7171 | last_price=3.4 | implied_volatility=0.359 | nbbo_bid=3.2 | nbbo_ask=3.45 | bid_volume=834 | ask_volume=772 | total_premium=475482 | trades=374
+    date=2026-04-02 | volume=1951 | open_interest=7038 | last_price=2.7 | implied_volatility=0.3468 | nbbo_bid=2.66 | nbbo_ask=2.85 | bid_volume=700 | ask_volume=1102 | total_premium=732544 | trades=526
+    date=2026-04-01 | volume=1878 | open_interest=6554 | last_price=2.85 | implied_volatility=0.3347 | nbbo_bid=2.75 | nbbo_ask=2.94 | bid_volume=586 | ask_volume=1110 | total_premium=632775 | trades=365
+    date=2026-03-31 | volume=273 | open_interest=6637 | last_price=7.9 | implied_volatility=0.357 | nbbo_bid=7.5 | nbbo_ask=8.3 | bid_volume=100 | ask_volume=147 | total_premium=230370 | trades=89
+    date=2026-03-30 | volume=435 | open_interest=6785 | last_price=9.9 | implied_volatility=0.4181 | nbbo_bid=9.5 | nbbo_ask=9.9 | bid_volume=172 | ask_volume=252 | total_premium=498724 | trades=120
+    date=2026-03-27 | volume=1054 | open_interest=6967 | last_price=9.43 | implied_volatility=0.3704 | nbbo_bid=9.15 | nbbo_ask=9.5 | bid_volume=207 | ask_volume=811 | total_premium=895684 | trades=204
+
+  CONTRACT: XOM260417C00180000 | CALL $180.0 exp 2026-04-17 | OI: MIXED (-23%) | Side: ASK-HEAVY
+  Flow tape: 27 fills | ask 9% / bid 52% / mid 38% | sweeps: 0 | blocks: 0 | fills: aggressive sell
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=347 | open_interest=10705 | last_price=0.09 | implied_volatility=0.5662 | nbbo_bid=0.08 | nbbo_ask=0.12 | bid_volume=146 | ask_volume=35 | total_premium=2924 | trades=27
+    date=2026-04-09 | volume=643 | open_interest=10415 | last_price=0.13 | implied_volatility=0.5436 | nbbo_bid=0.13 | nbbo_ask=0.18 | bid_volume=243 | ask_volume=310 | total_premium=10360 | trades=101
+    date=2026-04-08 | volume=13576 | open_interest=19570 | last_price=0.16 | implied_volatility=0.466 | nbbo_bid=0.14 | nbbo_ask=0.16 | bid_volume=374 | ask_volume=13094 | total_premium=95620 | trades=172
+    date=2026-04-07 | volume=695 | open_interest=19540 | last_price=0.44 | implied_volatility=0.4114 | nbbo_bid=0.37 | nbbo_ask=0.49 | bid_volume=292 | ask_volume=341 | total_premium=32536 | trades=173
+    date=2026-04-06 | volume=889 | open_interest=19489 | last_price=0.4 | implied_volatility=0.3929 | nbbo_bid=0.4 | nbbo_ask=0.45 | bid_volume=486 | ask_volume=267 | total_premium=32374 | trades=151
+    date=2026-04-02 | volume=2167 | open_interest=19079 | last_price=0.43 | implied_volatility=0.384 | nbbo_bid=0.4 | nbbo_ask=0.44 | bid_volume=1185 | ask_volume=753 | total_premium=140366 | trades=297
+    date=2026-04-01 | volume=1189 | open_interest=19195 | last_price=0.45 | implied_volatility=0.3757 | nbbo_bid=0.42 | nbbo_ask=0.5 | bid_volume=700 | ask_volume=405 | total_premium=67915 | trades=221
+    date=2026-03-31 | volume=2322 | open_interest=19289 | last_price=1.59 | implied_volatility=0.3419 | nbbo_bid=1.48 | nbbo_ask=1.67 | bid_volume=1153 | ask_volume=1098 | total_premium=512985 | trades=356
+    date=2026-03-30 | volume=2645 | open_interest=19096 | last_price=2.51 | implied_volatility=0.3722 | nbbo_bid=2.41 | nbbo_ask=2.55 | bid_volume=1803 | ask_volume=703 | total_premium=817030 | trades=646
+    date=2026-03-27 | volume=5610 | open_interest=16989 | last_price=2.29 | implied_volatility=0.3359 | nbbo_bid=2.21 | nbbo_ask=2.28 | bid_volume=1811 | ask_volume=3574 | total_premium=945141 | trades=593
+
+  CONTRACT: XOM260417C00160000 | CALL $160.0 exp 2026-04-17 | OI: MIXED (-12%) | Side: BID-HEAVY | Exec: Distribution
+  Flow tape: 100 fills | ask 34% / bid 58% / mid 3% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=1032 | open_interest=17061 | last_price=0.7 | implied_volatility=0.3466 | nbbo_bid=0.67 | nbbo_ask=0.74 | bid_volume=583 | ask_volume=403 | total_premium=84236 | trades=231
+    date=2026-04-09 | volume=6468 | open_interest=14046 | last_price=1.28 | implied_volatility=0.3405 | nbbo_bid=1.21 | nbbo_ask=1.35 | bid_volume=4185 | ask_volume=1923 | total_premium=1229485 | trades=947
+    date=2026-04-08 | volume=9898 | open_interest=16468 | last_price=2.04 | implied_volatility=0.358 | nbbo_bid=1.89 | nbbo_ask=2.04 | bid_volume=5092 | ask_volume=3828 | total_premium=1294421 | trades=853
+    date=2026-04-07 | volume=3104 | open_interest=18495 | last_price=6.34 | implied_volatility=0.3903 | nbbo_bid=6.0 | nbbo_ask=6.75 | bid_volume=1380 | ask_volume=1718 | total_premium=2328612 | trades=161
+    date=2026-04-06 | volume=744 | open_interest=18579 | last_price=6.0 | implied_volatility=0.3704 | nbbo_bid=5.8 | nbbo_ask=6.2 | bid_volume=284 | ask_volume=360 | total_premium=382569 | trades=214
+    date=2026-04-02 | volume=1391 | open_interest=18465 | last_price=5.1 | implied_volatility=0.3536 | nbbo_bid=4.8 | nbbo_ask=5.1 | bid_volume=357 | ask_volume=878 | total_premium=762099 | trades=308
+    date=2026-04-01 | volume=1528 | open_interest=19413 | last_price=5.22 | implied_volatility=0.3491 | nbbo_bid=5.0 | nbbo_ask=5.2 | bid_volume=925 | ask_volume=523 | total_premium=837102 | trades=222
+    date=2026-03-31 | volume=1160 | open_interest=19363 | last_price=11.61 | implied_volatility=0.3624 | nbbo_bid=11.1 | nbbo_ask=12.05 | bid_volume=392 | ask_volume=727 | total_premium=1499179 | trades=199
+    date=2026-03-30 | volume=532 | open_interest=19550 | last_price=13.5 | implied_volatility=0.4169 | nbbo_bid=13.25 | nbbo_ask=13.6 | bid_volume=237 | ask_volume=288 | total_premium=806542 | trades=129
+    date=2026-03-27 | volume=767 | open_interest=19714 | last_price=13.12 | implied_volatility=0.3811 | nbbo_bid=12.85 | nbbo_ask=13.25 | bid_volume=351 | ask_volume=366 | total_premium=919300 | trades=211
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: XOM ===
+
+===== ZIM =====
+=== UW FLOW DATA: ZIM ===
+
+--- MULTI-DAY FLOW ALERTS (11 sessions, 64 alerts) ---
+  Daily alert count: 03-19=48, 03-24=2, 03-26=1, 03-30=1, 04-02=2, 04-06=1, 04-08=1 (fading)
+  Largest: $0.3M FloorTradeMidCap CALL $23 exp 2026-04-17 | $0.3M FloorTradeMidCap CALL $24 exp 2026-04-17 | $0.2M FloorTradeMidCap CALL $23 exp 2026-04-17
+  Composition: 89% calls, 11% puts | 3 sweeps, 0 blocks
+  Side concentration: 56% bid-side (distribution bias)
+  Total premium: $9.7M
+
+--- DAILY OPTIONS VOLUME TREND (10 sessions) ---
+  Call volume: 1,409 → 1,454 → 2,214 → 2,206 → 2,004 (2.2x increase)
+  Put volume: 1,043 → 376 → 846 → 439 → 246
+  Call/put ratio: 1.4 → 3.9 → 2.6 → 5.0 → 8.1 (bullish shift)
+  Ask-side share: 34% → 65% → 60% → 58% → 60% (accumulation accelerating)
+  Net premium: positive 8 of 10 sessions
+
+--- DARK POOL STRUCTURE (5 sessions, 63 prints) ---
+  Total notional: $10.5M
+  Daily: 04-02 $2.0M, 04-06 $2.9M, 04-07 $1.8M, 04-08 $2.4M, 04-09 $1.4M
+  Price clustering: 59% of prints in $26.10-$26.48 range
+  Repeated levels: $26.4 (4x), $26.05 (4x), $26.22 (3x)
+
+--- CONTRACT SUMMARY (6 lines tracked, 15 sessions) ---
+  Rising OI: 1/6 contracts
+  Weakening / unwind: 3/6 contracts
+  Ask-heavy (accumulation): 3/6 contracts
+  Bid-heavy (distribution): 1/6 contracts
+  Execution intent: 5 distribution
+  Strongest build: 260417C00027000 — OI +37%, ask-heavy, distribution
+  Likely roll: CALL $29.0 04-17 → CALL $27.0 04-17
+  Overall contract picture: net unwind — positioning weakening
+
+--- CONTRACT DETAIL (top 4 by relevance, 2 summary-only, 10d shown) ---
+
+  CONTRACT: ZIM260417C00027000 | CALL $27.0 exp 2026-04-17 | OI: BUILDING (+37%) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 3 fills | ask 4% / bid 93% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive sell
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=10 | open_interest=3611 | last_price=0.26 | implied_volatility=0.3166 | nbbo_bid=0.16 | nbbo_ask=0.3 | bid_volume=9 | ask_volume=1 | total_premium=256 | trades=3
+    date=2026-04-09 | volume=18 | open_interest=3616 | last_price=0.3 | implied_volatility=0.4042 | nbbo_bid=0.25 | nbbo_ask=0.45 | bid_volume=12 | ask_volume=4 | total_premium=630 | trades=8
+    date=2026-04-08 | volume=120 | open_interest=3500 | last_price=0.44 | implied_volatility=0.3777 | nbbo_bid=0.25 | nbbo_ask=0.5 | bid_volume=109 | ask_volume=11 | total_premium=4992 | trades=12
+    date=2026-04-07 | volume=9 | open_interest=3491 | last_price=0.35 | implied_volatility=0.3323 | nbbo_bid=0.25 | nbbo_ask=0.45 | bid_volume=0 | ask_volume=9 | total_premium=353 | trades=4
+    date=2026-04-06 | volume=24 | open_interest=3483 | last_price=0.26 | implied_volatility=0.301 | nbbo_bid=0.26 | nbbo_ask=0.51 | bid_volume=2 | ask_volume=18 | total_premium=1206 | trades=7
+    date=2026-04-02 | volume=95 | open_interest=3413 | last_price=0.43 | implied_volatility=0.3369 | nbbo_bid=0.25 | nbbo_ask=0.6 | bid_volume=10 | ask_volume=81 | total_premium=4707 | trades=12
+    date=2026-04-01 | volume=77 | open_interest=3397 | last_price=0.48 | implied_volatility=0.3764 | nbbo_bid=0.25 | nbbo_ask=0.6 | bid_volume=16 | ask_volume=49 | total_premium=4434 | trades=12
+    date=2026-03-31 | volume=222 | open_interest=3176 | last_price=0.65 | implied_volatility=0.3989 | nbbo_bid=0.5 | nbbo_ask=0.74 | bid_volume=45 | ask_volume=177 | total_premium=13913 | trades=14
+    date=2026-03-30 | volume=272 | open_interest=2916 | last_price=0.42 | implied_volatility=0.3902 | nbbo_bid=0.25 | nbbo_ask=0.64 | bid_volume=100 | ask_volume=160 | total_premium=14377 | trades=50
+    date=2026-03-27 | volume=62 | open_interest=2885 | last_price=0.55 | implied_volatility=0.3775 | nbbo_bid=0.52 | nbbo_ask=1.2 | bid_volume=45 | ask_volume=4 | total_premium=3552 | trades=9
+
+  CONTRACT: ZIM260417P00020000 | PUT $20.0 exp 2026-04-17 | OI: UNWINDING (-0%) | Side: ASK-HEAVY
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=0 | open_interest=9009 | implied_volatility=0.8869 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-09 | volume=0 | open_interest=9009 | implied_volatility=0.8697 | nbbo_bid=0.01 | nbbo_ask=0.03 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-08 | volume=0 | open_interest=9009 | implied_volatility=0.8374 | nbbo_bid=0.01 | nbbo_ask=0.03 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-07 | volume=0 | open_interest=9009 | implied_volatility=0.8862 | nbbo_bid=0.01 | nbbo_ask=0.06 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-06 | volume=62 | open_interest=9009 | last_price=0.05 | implied_volatility=0.8575 | nbbo_bid=0.01 | nbbo_ask=0.06 | bid_volume=2 | ask_volume=60 | total_premium=310 | trades=3
+    date=2026-04-02 | volume=215 | open_interest=9109 | last_price=0.07 | implied_volatility=0.7994 | nbbo_bid=0.05 | nbbo_ask=0.13 | bid_volume=0 | ask_volume=215 | total_premium=1505 | trades=22
+    date=2026-04-01 | volume=5 | open_interest=9104 | last_price=0.07 | implied_volatility=0.7395 | nbbo_bid=0.05 | nbbo_ask=0.08 | bid_volume=5 | ask_volume=0 | total_premium=35 | trades=1
+    date=2026-03-31 | volume=0 | open_interest=9104 | implied_volatility=0.7382 | nbbo_bid=0.02 | nbbo_ask=0.09 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-03-30 | volume=15 | open_interest=9104 | last_price=0.09 | implied_volatility=0.7305 | nbbo_bid=0.02 | nbbo_ask=0.11 | bid_volume=0 | ask_volume=15 | total_premium=135 | trades=1
+    date=2026-03-27 | volume=28 | open_interest=9079 | last_price=0.14 | implied_volatility=0.7661 | nbbo_bid=0.13 | nbbo_ask=0.14 | bid_volume=22 | ask_volume=6 | total_premium=358 | trades=9
+
+  CONTRACT: ZIM260417C00028000 | CALL $28.0 exp 2026-04-17 | OI: MIXED (+19%) | Side: ASK-HEAVY | Exec: Distribution
+  Flow tape: 4 fills | ask 8% / bid 92% / mid 0% | sweeps: 0 | blocks: 0 | fills: aggressive sell
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=86 | open_interest=3951 | last_price=0.05 | implied_volatility=0.336 | nbbo_bid=0.0 | nbbo_ask=0.05 | bid_volume=67 | ask_volume=19 | total_premium=430 | trades=4
+    date=2026-04-09 | volume=103 | open_interest=3951 | last_price=0.12 | implied_volatility=0.3409 | nbbo_bid=0.05 | nbbo_ask=0.13 | bid_volume=2 | ask_volume=101 | total_premium=1232 | trades=3
+    date=2026-04-08 | volume=186 | open_interest=3908 | last_price=0.16 | implied_volatility=0.3691 | nbbo_bid=0.1 | nbbo_ask=0.18 | bid_volume=24 | ask_volume=162 | total_premium=3576 | trades=19
+    date=2026-04-07 | volume=31 | open_interest=3882 | last_price=0.19 | implied_volatility=0.3495 | nbbo_bid=0.15 | nbbo_ask=0.2 | bid_volume=3 | ask_volume=3 | total_premium=470 | trades=7
+    date=2026-04-06 | volume=66 | open_interest=3833 | last_price=0.14 | implied_volatility=0.3752 | nbbo_bid=0.12 | nbbo_ask=0.41 | bid_volume=17 | ask_volume=39 | total_premium=963 | trades=29
+    date=2026-04-02 | volume=5 | open_interest=3832 | last_price=0.25 | implied_volatility=0.3666 | nbbo_bid=0.14 | nbbo_ask=0.36 | bid_volume=2 | ask_volume=2 | total_premium=107 | trades=3
+    date=2026-04-01 | volume=2 | open_interest=3830 | last_price=0.21 | implied_volatility=0.3532 | nbbo_bid=0.12 | nbbo_ask=0.2 | bid_volume=0 | ask_volume=2 | total_premium=47 | trades=2
+    date=2026-03-31 | volume=393 | open_interest=3468 | last_price=0.23 | implied_volatility=0.3016 | nbbo_bid=0.1 | nbbo_ask=0.36 | bid_volume=162 | ask_volume=231 | total_premium=10354 | trades=36
+    date=2026-03-30 | volume=466 | open_interest=3458 | last_price=0.19 | implied_volatility=0.3303 | nbbo_bid=0.1 | nbbo_ask=0.22 | bid_volume=36 | ask_volume=423 | total_premium=11478 | trades=37
+    date=2026-03-27 | volume=97 | open_interest=3371 | last_price=0.29 | implied_volatility=0.3788 | nbbo_bid=0.25 | nbbo_ask=0.46 | bid_volume=28 | ask_volume=68 | total_premium=3097 | trades=37
+
+  CONTRACT: ZIM260417C00030000 | CALL $30.0 exp 2026-04-17 | OI: MIXED (+3%) | Side: BID-HEAVY | Exec: Distribution
+  Flow tape: 2 fills | ask 33% / bid 67% / mid 0% | sweeps: 0 | blocks: 0 | fills: neutral
+  Day-by-day (newest first):
+    date=2026-04-10 | volume=2 | open_interest=10523 | last_price=0.02 | implied_volatility=0.469 | nbbo_bid=0.01 | nbbo_ask=0.02 | bid_volume=1 | ask_volume=1 | total_premium=4 | trades=2
+    date=2026-04-09 | volume=0 | open_interest=10523 | implied_volatility=0.494 | nbbo_bid=0.02 | nbbo_ask=0.04 | bid_volume=0 | ask_volume=0 | total_premium=0 | trades=0
+    date=2026-04-08 | volume=110 | open_interest=10527 | last_price=0.04 | implied_volatility=0.4486 | nbbo_bid=0.02 | nbbo_ask=0.04 | bid_volume=102 | ask_volume=8 | total_premium=237 | trades=15
+    date=2026-04-07 | volume=557 | open_interest=10526 | last_price=0.04 | implied_volatility=0.4526 | nbbo_bid=0.03 | nbbo_ask=0.04 | bid_volume=51 | ask_volume=323 | total_premium=1722 | trades=15
+    date=2026-04-06 | volume=37 | open_interest=10532 | last_price=0.02 | implied_volatility=0.4223 | nbbo_bid=0.02 | nbbo_ask=0.03 | bid_volume=34 | ask_volume=2 | total_premium=99 | trades=16
+    date=2026-04-02 | volume=519 | open_interest=10427 | last_price=0.04 | implied_volatility=0.3824 | nbbo_bid=0.03 | nbbo_ask=0.04 | bid_volume=363 | ask_volume=2 | total_premium=2059 | trades=13
+    date=2026-04-01 | volume=54 | open_interest=10430 | last_price=0.05 | implied_volatility=0.4134 | nbbo_bid=0.04 | nbbo_ask=0.05 | bid_volume=4 | ask_volume=50 | total_premium=292 | trades=6
+    date=2026-03-31 | volume=9 | open_interest=10423 | last_price=0.08 | implied_volatility=0.3647 | nbbo_bid=0.04 | nbbo_ask=0.08 | bid_volume=7 | ask_volume=2 | total_premium=60 | trades=4
+    date=2026-03-30 | volume=13 | open_interest=10422 | last_price=0.04 | implied_volatility=0.3938 | nbbo_bid=0.04 | nbbo_ask=0.07 | bid_volume=12 | ask_volume=0 | total_premium=79 | trades=4
+    date=2026-03-27 | volume=13 | open_interest=10422 | last_price=0.07 | implied_volatility=0.3879 | nbbo_bid=0.07 | nbbo_ask=0.1 | bid_volume=0 | ask_volume=0 | total_premium=91 | trades=1
+
+  Note: 2 additional contract(s) tracked in summary above but raw detail omitted for prompt balance.
+
+=== END UW FLOW DATA: ZIM ===

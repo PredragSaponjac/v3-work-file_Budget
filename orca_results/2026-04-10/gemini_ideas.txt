@@ -1,0 +1,60 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: AAL | American Airlines Group Inc | Bearish
+Catalyst: Doubts emerged over the April 8 U.S.-Iran ceasefire, with the Strait of Hormuz effectively remaining closed and fueling a sharp rebound in energy costs.
+Catalyst timing: April 9, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Breakdown below the April 8 close ($11.41) while crude oil sustains above $95/bbl
+Invalidation condition: The ceasefire solidifies, Iran fully opens the Strait of Hormuz to commercial shipping, and WTI crude plummets back below $90/bbl
+Target / repricing path: Reversal of the April 8 "peace dividend" gap, targeting the $10.80 pre-ceasefire level
+Horizon / time stop: 1 to 2 weeks
+Cleanest expression: AAL is heavily indebted, highly fuel-sensitive, and lacks the refinery hedge of peer Delta Air Lines, making it highly vulnerable to sustained jet fuel cost spikes.
+What already moved: WTI crude oil surged 6.8% to over $100 per barrel on April 9 as the market priced in the fragility of the ceasefire and the continued Strait of Hormuz closure.
+Evidence of lag: Gathered tape data shows AAL shares closed at $11.37 on April 9, remaining essentially flat and entirely holding onto their 5.5% April 8 relief rally while completely failing to reprice the violent April 9 rebound in crude oil costs.
+Thesis: On April 8, AAL shares surged 5.5% purely as a macro relief trade on the U.S.-Iran ceasefire and plunging oil prices. However, by April 9, the ceasefire proved precarious, the Strait of Hormuz remained de facto closed, and crude oil surged 6.8% back toward $100/bbl. While the commodity market quickly repriced the renewed geopolitical and supply risks, AAL shares stubbornly held their ceasefire-driven highs. As a highly leveraged and unhedged carrier, AAL should rapidly give back its premature relief rally to reflect the reality that fuel costs remain elevated.
+Counter-thesis: Strong summer travel demand and robust Q1 earnings from peer Delta Air Lines could create sustained sector-wide momentum that temporarily masks AAL's specific fuel-cost vulnerabilities.
+R2 flags: Verify AAL's Q2 fuel guidance updates, short borrow feasibility, and weekend developments in Middle East transit negotiations.
+Key sources: Associated Press; The Motley Fool; MarketBeat
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: CF | CF Industries Holdings, Inc. | Bullish
+Catalyst: The U.S.-Iran ceasefire is failing to normalize Middle East transit, keeping the Strait of Hormuz blocked and maintaining the supply shock on global nitrogen fertilizers.
+Catalyst timing: April 9, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock reclaims the $126.00 level on volume, confirming a reversal of the knee-jerk ceasefire selloff
+Invalidation condition: A permanent peace agreement is reached and major shipping lines formally resume regular transits through the Strait of Hormuz, crashing the fertilizer supply premium
+Target / repricing path: Reversal of the ceasefire-driven selloff, targeting a return to the pre-ceasefire $133.00 level
+Horizon / time stop: 2 to 3 weeks
+Cleanest expression: CF is a premier North American nitrogen producer uniquely positioned to capture massive margins from global supply shortages, as its domestic footprint insulates it from the localized Middle East transit risks crippling international competitors.
+What already moved: WTI crude oil rebounded 6.8% to over $100 per barrel on April 9, reflecting the commodity market's immediate recognition that the ceasefire is fragile and supply bottlenecks remain active.
+Evidence of lag: Despite the commodity market violently reversing its post-ceasefire drop on April 9, CF shares continued to sell off, falling to $122.88 intraday and completely ignoring the renewed geopolitical risk premium.
+Thesis: On April 8, CF Industries tanked as a U.S.-Iran ceasefire erased the geopolitical risk premium that had previously trapped fertilizer exports in the Middle East. However, within 24 hours, the ceasefire looked precarious, the Strait of Hormuz remained closed, and crude oil surged 6.8% as traders realized the supply threat remained. CF's stock has continued to slide, completely lagging the broader commodity market's recognition that the transit disruptions are still active. Once equity investors digest that the fertilizer supply shock is not over, CF should violently reverse its knee-jerk drop.
+Counter-thesis: The U.S. spring planting season is already underway, meaning peak domestic demand for nitrogen application may have passed, potentially capping CF's pricing power regardless of overseas supply constraints.
+R2 flags: Verify current domestic UAN/urea spot prices, track daily Strait of Hormuz vessel transits, and monitor institutional put options activity.
+Key sources: Associated Press; Perplexity Finance; Tickeron
+
+IDEA #3
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: STM | STMicroelectronics NV | Bearish
+Catalyst: Weiss Ratings downgraded STM to Sell, citing thin profitability and supply chain disruptions from new U.S. Section 232 tariffs on metal derivatives.
+Catalyst timing: April 8, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Breakdown below the $39.00 support level as the macro euphoria fades; otherwise Data unavailable - verify in R2
+Invalidation condition: U.S. trade tariff policy is officially reversed or STM issues a margin-accretive earnings pre-announcement; otherwise Data unavailable - verify in R2
+Target / repricing path: Catch-up lower toward the pre-downgrade $34-$35 range; otherwise Data unavailable - verify in R2
+Horizon / time stop: 2 to 3 weeks; otherwise Data unavailable - verify in R2
+Cleanest expression: STM is the direct, named target of the April 8 Weiss Ratings Sell downgrade.
+What already moved: New, fully-valued 25-50% Section 232 tariffs on metal derivative imports officially took effect on April 6, structurally increasing hardware supply chain costs.
+Evidence of lag: Pricing unverified - flag for R2
+Thesis: On April 8, STM received a rare Sell downgrade from Weiss Ratings, which cited thin margins and concrete supply chain exposure to the new Section 232 tariffs that took effect April 6. However, on the exact same day, broader markets staged a massive "peace dividend" relief rally on news of a U.S.-Iran ceasefire. STM was swept up in this macro tide, surging over 6% on April 8 and climbing to $39.14 by April 9, completely masking the fundamental deterioration flagged by the downgrade. As the ceasefire narrative proves precarious and the macro tide recedes, STM is exposed to a sharp downward repricing to reflect its downgraded reality. This requires R2 verification of peer semiconductor tape data to confirm the relative lag.
+Counter-thesis: Divergent views on the pace of end-market recovery exist, with other analysts like Morgan Stanley recently upgrading STM to Overweight, which could overpower the Weiss downgrade if broader tech momentum continues.
+R2 flags: Verify actual U.S. tariff exposure percentage for STM, peer semiconductor relative performance on April 8-9, and short borrow feasibility.
+Key sources: Capital.com; MarketBeat; Morningstar
+Correlation note: IDEA #1 and IDEA #2 share a common root catalyst (the April 2026 U.S.-Iran ceasefire timeline and its subsequent fragility) but represent opposite sides of the delayed-reaction trade, with AAL incorrectly holding a bearish relief rally and CF incorrectly continuing a bullish war-premium selloff.
