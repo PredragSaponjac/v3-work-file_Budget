@@ -1,0 +1,60 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Primary
+Ticker | Company | Direction: CENX | Century Aluminum Co | Bullish
+Catalyst: The White House issued a presidential proclamation modifying Section 232 tariffs, applying a 50% tariff on the full customs value of imported aluminum but dropping it to 10% for derivative products made with U.S.-smelted metal.
+Catalyst timing: April 2, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Daily close above the $68.22 post-tariff high with expanding volume confirming accumulation
+Invalidation condition: A federal court injunction blocks the Section 232 tariff modifications, or U.S. Midwest Premium physical aluminum prices fail to rise
+Target / repricing path: Catch-up toward the low $70s to match the ~7% repricing magnitude seen in other domestic metals producers
+Horizon / time stop: 2 to 3 weeks (exiting ahead of potential early May earnings)
+Cleanest expression: Century Aluminum is explicitly highlighted in the White House Fact Sheet and company releases as an unhedged pure-play domestic aluminum producer expanding U.S. capacity to directly benefit from these exact tariffs.
+What already moved: Domestic steel producer Nucor (NUE) moved up 7.1% (from $173.72 on April 1 to $186.12 on April 10) following the tariff shock.
+Evidence of lag: The gathered evidence explicitly states that CENX shares only moved from $63.51 on April 1 to $66.96 on April 10, a gain of 5.4%, trailing the broader domestic metals repricing.
+Thesis: The April 2 Section 232 tariff modifications create a powerful structural advantage for U.S.-smelted aluminum by heavily penalizing foreign derivative products unless they use domestic metal. While related domestic metals peers like Nucor have repriced over 7% higher in response to the same tariff framework, the explicitly named aluminum pure-play (CENX) has only moved 5.4%. The stock has demonstrably underreacted to the margin expansion these tariffs will force, creating a clean tactical window to capture the delayed catch-up.
+Counter-thesis: The market may be intentionally capping CENX's near-term upside due to the massive capital expenditures required to fund its newly announced domestic smelter expansions, which could weigh on free cash flow despite the favorable tariff environment.
+R2 flags: Verify current physical aluminum Midwest Premium pricing, check the CapEx timeline for the new smelters, and assess options liquidity.
+Key sources: The White House (Section 232 Proclamations); Market Chameleon; Macrotrends historical pricing
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: HIMS | Hims & Hers Health Inc | Bearish
+Catalyst: Eli Lilly received FDA approval for Foundayo, a once-daily oral GLP-1 weight-loss pill priced at just $149/month for self-pay patients, drastically undercutting the cost of compounded injectable GLP-1s.
+Catalyst timing: April 1, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Breakdown and daily close below the recent consolidation support at $19.00 on elevated volume
+Invalidation condition: HIMS announces a new distribution partnership to prescribe Foundayo that fully preserves its legacy compounding profit margins, or the stock reclaims $20.50
+Target / repricing path: Re-test of the $14.50 to $15.50 late February support zone as the market prices in terminal margin erosion for its compounded weight-loss segment
+Horizon / time stop: 2 to 4 weeks
+Cleanest expression: HIMS is a pure-play telehealth provider whose recent explosive growth was heavily reliant on selling high-margin compounded GLP-1 injections during branded drug shortages, making it highly vulnerable to a cheap, widely available, branded pill alternative.
+What already moved: LifeMD (LFMD), a smaller telehealth peer, announced its integration to sell Foundayo on April 10, immediately jumping over 8% intraday, signaling the market's aggressive rotation toward the new oral pill channel.
+Evidence of lag: From April 1 (the FDA approval date) to April 10, HIMS shares only drifted from $19.84 to $19.43 (-2.0%), explicitly failing to aggressively reprice the structural destruction of its compounding value proposition.
+Thesis: Eli Lilly's newly approved $149/month oral GLP-1 pill, Foundayo, structurally destroys the value proposition of compounded GLP-1 injections - the primary growth engine for Hims & Hers Health. While peers like LifeMD have already rushed to integrate the new pill (causing an 8% intraday spike on April 10), HIMS remains tethered to a compounding model that is now obsolete and actively under legal attack by Novo Nordisk. HIMS shares have drifted down a mere 2% since the approval, failing to reflect the imminent collapse of its highest-margin revenue stream.
+Counter-thesis: HIMS has a massive active subscriber base and has been expanding into new personalized dermatology and mental health verticals, which investors may believe will offset the GLP-1 compounding hit.
+R2 flags: Verify the exact percentage of HIMS' total revenue derived from compounded GLP-1s, check short borrow availability, and monitor Q1 earnings scheduled for early May.
+Key sources: BioSpace (Foundayo Approval and LifeMD Integration); Slepkow Law (Ozempic Litigation); Macrotrends historical pricing
+
+IDEA #3
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Primary
+Ticker | Company | Direction: LFMD | LifeMD Inc | Bullish
+Catalyst: LifeMD officially announced it is directly offering Eli Lilly's newly FDA-approved $149/month oral GLP-1 weight-loss pill, Foundayo, through an integration with LillyDirect.
+Catalyst timing: April 10, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Sustained break above the April 10 intraday high of $3.71; otherwise Data unavailable - verify in R2
+Invalidation condition: Breakdown below the recent $3.40 support floor; otherwise Data unavailable - verify in R2
+Target / repricing path: Re-rating toward the early 2026 highs above $4.50; otherwise Data unavailable - verify in R2
+Horizon / time stop: 2 to 3 weeks unless invalidated sooner by price action
+Cleanest expression: LifeMD explicitly announced on April 10, 2026, its direct integration with LillyDirect to prescribe and fulfill Foundayo, creating a direct 1-hop economic linkage to the new drug's rollout.
+What already moved: The stock spiked over 8% intraday on the April 10 announcement (hitting $3.71) as the market instantly validated the economic link to Foundayo.
+Evidence of lag: Pricing unverified - flag for R2
+Thesis: Foundayo's FDA approval introduces a highly accessible, $149-per-month oral GLP-1 alternative into the massive obesity market. LifeMD formally announced its integration to prescribe this exact drug today (April 10, 2026). While the stock spiked 8% intraday in immediate response, it faded to close up only 2% at $3.47. This integration materially expands LifeMD's addressable market beyond expensive injectables. The stock remains depressed, but requires R2 verification to confirm whether the intraday fade represents genuine underreaction before committing to a full tactical entry.
+Counter-thesis: LifeMD operates with negative operating margins, and the highly accessible $149 self-pay price for Foundayo may yield structurally thinner distribution margins for telehealth platforms compared to high-ticket injectable therapies.
+R2 flags: Verify the stock's relative volume during the April 10 fade, assess specific distribution margins on Foundayo vs. injectables, and evaluate short interest.
+Key sources: GlobeNewswire (LifeMD April 10 Press Release); Intelligent Investor (LFMD Share Price History)
+Correlation note: IDEA #2 and IDEA #3 share the same root catalyst (the FDA approval and commercial rollout of Eli Lilly's Foundayo oral GLP-1 pill). LifeMD is a bullish long expression capturing the new distribution channel, while HIMS is a bearish short expression targeting the structural destruction of the legacy compounded injectable model.
