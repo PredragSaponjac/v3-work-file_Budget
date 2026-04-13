@@ -1,0 +1,39 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: EFX | Equifax Inc | Bullish
+Catalyst: A Senate investigation was launched by Senator Josh Hawley into FICO's high credit score pricing for mortgage originations, accelerating a market shift toward the cheaper VantageScore 4.0 alternative.
+Catalyst timing: April 10, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock reclaims the $181.84 recent high on expanding volume, confirming the market is rotating out of FICO and into VantageScore backers.
+Invalidation condition: The Senate investigation formally expands to explicitly target the broader credit bureau duopoly/triopoly (including Equifax) for their own underlying data pricing.
+Target / repricing path: Reprice higher toward the $200 level as analysts upgrade EFX based on VantageScore's accelerating mortgage market share gains.
+Horizon / time stop: 1 week (strict tactical exit ahead of the scheduled April 21, 2026 Q1 earnings report to avoid binary event interference).
+Cleanest expression: Equifax is one of the three major credit bureaus that directly back VantageScore. As the Federal Housing Finance Agency (FHFA) permits VantageScore 4.0 in mortgages, Equifax is the direct 1-hop beneficiary of FICO's regulatory pain and market share erosion.
+What already moved: FICO shares violently repriced this competitive threat, crashing 13.5% to hit a 52-week low of $966.64 on the news.
+Evidence of lag: According to the gathered intelligence packet, Equifax shares mistakenly declined in sympathy with FICO during the initial regulatory shock. Today (April 13), EFX is trading at $180.12, recovering only a modest 1.2% and languishing near its 52-week lows, failing to price in the massive competitive windfall.
+Thesis: FICO's historically dominant credit scoring monopoly is under severe attack from a Senate investigation into its pricing and a structural regulatory push toward VantageScore. FICO shares aggressively priced in this threat by plunging 13.5%. However, the market mistakenly sold off Equifax in sympathy due to general sector fear. Because Equifax is a primary backer of VantageScore, FICO's lost market share is Equifax's direct gain. EFX shares have not yet decoupled from the sector selloff to reflect this structural competitive victory, presenting a glaring relative-value mispricing.
+Counter-thesis: The market may be correctly predicting that Senator Hawley's investigation into credit score pricing affordability will inevitably broaden to include the major credit bureaus like Equifax, compressing margins across the entire credit data industry regardless of whether FICO or VantageScore wins the market share war.
+R2 flags: Verify the exact equity ownership stake Equifax holds in VantageScore, confirm short interest levels, and strictly monitor the April 21 earnings date.
+Key sources: Investing.com (FICO stock hits 52-week low); TradingKey (FICO Moved Down by 13.51%); Perplexity Financial Data
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: NEM | Newmont Corporation | Bullish
+Catalyst: A collapse in US-Iran peace talks and a subsequent naval blockade of the Strait of Hormuz triggered a massive spike in global safe-haven demand, sending physical gold to historical highs.
+Catalyst timing: April 13, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Sustained regular-session break above the April 13 high of $119.99 to confirm institutional buyers are stepping back in to close the divergence.
+Invalidation condition: A sudden de-escalation in the Middle East conflict successfully reopens the Strait of Hormuz, causing the geopolitical risk premium in gold to collapse back below $4,600.
+Target / repricing path: Re-test of the $130 to $134 resistance zone, moving back toward its 52-week high of $134.88 as earnings models adjust to the $4,700+ spot environment.
+Horizon / time stop: 2 to 3 weeks
+Cleanest expression: Newmont is the premier, highly liquid US-listed gold miner, providing direct 1-hop exposure to physical gold prices without the extreme sovereign risk profile of emerging-market miners.
+What already moved: Gold futures broke out to historic highs on April 13, surging 1.2% to $4,749.70 per ounce.
+Evidence of lag: Despite the underlying physical commodity breaking out to historic highs, Newmont stock inexplicably dropped 2.91% to close at $117.31 on April 13, moving in the exact opposite direction of its primary revenue driver.
+Thesis: The breakdown of US-Iran diplomacy and a subsequent Hormuz blockade have triggered a violent flight to safety, driving gold prices to an unprecedented $4,749/oz. While the physical commodity has aggressively repriced this geopolitical reality, Newmont shares inexplicably sold off nearly 3% during the April 13 session. As a premier gold producer, Newmont's fundamental margins are directly levered to the spot price of gold, creating a glaring dislocation between the soaring commodity and the lagging equity that should violently close as Wall Street updates its cash flow models.
+Counter-thesis: The broader market is facing a massive inflation scare from the simultaneous oil price shock (Brent above $100), which may force the Federal Reserve to hold interest rates steady or hike them. Higher interest rates increase the opportunity cost of holding non-yielding gold, which could cap the gold miner rally despite the current geopolitical fear premium.
+R2 flags: Verify if Newmont traded ex-dividend on April 13 (which would artificially account for the 2.9% drop), check forward operating costs impacted by the oil spike, and monitor Fed commentary.
+Key sources: FinancialContent (Gold's Historic Flight April 2026); Investing.com (Gold Futures Historical Prices); AP News (US-Iran talks and inflation)
