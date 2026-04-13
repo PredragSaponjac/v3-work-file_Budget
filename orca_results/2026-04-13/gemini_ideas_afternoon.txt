@@ -1,0 +1,60 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: FANG | Diamondback Energy Inc | Bullish
+Catalyst: The U.S. announced a blockade of the Strait of Hormuz after weekend peace talks with Iran ended without a deal, causing an immediate global oil supply shock.
+Catalyst timing: April 13, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock breaks out above the $192.02 intraday high as the tender offer settlement clears and the market refocuses on the commodity tailwind
+Invalidation condition: The U.S. and Iran agree to a diplomatic breakthrough that reopens the Strait, sending oil prices back down
+Target / repricing path: Reversal toward the 52-week high of $204.90 as the market prices in the higher crude deck
+Horizon / time stop: 2 to 3 weeks
+Cleanest expression: Diamondback is a pure-play upstream domestic oil producer operating in the Permian Basin, making it a direct unhedged beneficiary of higher crude prices without bearing Middle East geopolitical or shipping risk.
+What already moved: West Texas Intermediate (WTI) crude oil jumped 7% to above $104 per barrel immediately following the blockade announcement on April 13.
+Evidence of lag: FANG shares closed slightly down (-0.17% to $187.88) on April 13, completely failing to confirm the massive 7% commodity surge.
+Thesis: The sudden U.S. naval blockade of the Strait of Hormuz drove global crude prices up 7% to over $104 per barrel. Despite having direct leverage to higher oil prices as a major domestic Permian producer, FANG shares closed down slightly on the day of the shock. This underreaction is a mechanical distortion: market attention and trading flows were temporarily absorbed by FANG's concurrent April 13 cash tender offer settlement for $776.8 million of its 2051 and 2052 senior notes, masking the fundamental commodity tailwind.
+Counter-thesis: The debt tender offer requires significant immediate cash outflows ($776.8 million settling on April 13), which legitimately constrains near-term free cash flow available for equity distributions or buybacks despite the oil rally.
+R2 flags: Verify the exact near-term cash impact on Q2 distributions, company unhedged production exposure, and technical execution levels post-settlement.
+Key sources: BNN Bloomberg; StockTitan; NYSE Market Data
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: NAT | Nordic American Tankers Ltd | Bullish
+Catalyst: U.S. Central Command announced a blockade of maritime traffic in and out of Iran's ports at 10 a.m. ET, forcing disruptions to global shipping routes.
+Catalyst timing: April 13, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock clears the $6.00 intraday high as the market rotates out of macro panic and into direct supply-chain beneficiaries
+Invalidation condition: The U.S. modifies the blockade to allow normalized oil tanker transit without extensive detours, collapsing the spot rate premium
+Target / repricing path: Swift repricing through the 52-week high of $6.34 as the market digests the sustained duration of tanker detours
+Horizon / time stop: 2 to 3 weeks
+Cleanest expression: NAT operates a homogenous fleet of Suezmax tankers and explicitly published a corporate PR on April 13 confirming the chaotic shipping conditions immediately create more transportation work for them.
+What already moved: WTI crude oil jumped 7% above $104 per barrel as the blockade was announced, signaling the immediate disruption to seaborne energy flows.
+Evidence of lag: Despite the company's explicit press release confirming the fundamental business windfall, NAT shares were up only 2.27% (closing at $5.85) on April 13, severely muted by the broader market selloff.
+Thesis: The U.S. Navy's April 13 blockade of the Strait of Hormuz is a generational catalyst for oil tanker day rates, forcing detours and tightening fleet supply. Management explicitly confirmed the operational windfall in a same-day press release. However, the stock rose a meager 2.27%, its reaction heavily suppressed by the panicky broad-market selloff.
+Counter-thesis: The U.S. Central Command specified it will not block vessels using the strait to get to non-Iranian ports, meaning the total volume of detoured ships might be smaller than a complete shutdown.
+R2 flags: Verify the exact spot vs. time-charter exposure of NAT's fleet in Q2 2026, and track whether allied tanker traffic successfully navigates the strait.
+Key sources: NAT Corporate PR (April 13); BNN Bloomberg; NYSE Market Data
+
+IDEA #3
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: CCL | Carnival Corp | Bearish
+Catalyst: The U.S. blockade of the Strait of Hormuz sent WTI crude oil surging 7% to over $104 per barrel, triggering a massive spike in marine fuel costs.
+Catalyst timing: April 13, 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Breakdown and daily close below the $26.83 intraday low
+Invalidation condition: Oil prices rapidly retrace the $104/bbl spike, or Carnival preannounces that its fuel hedges fully insulate operating margins
+Target / repricing path: Catch-up lower toward the $25.00 support level as forward EPS estimates are slashed
+Horizon / time stop: 2 to 3 weeks
+Cleanest expression: Cruise lines are highly sensitive to marine fuel costs, and Carnival is a major global operator whose operating margins are directly exposed to the massive oil shock.
+What already moved: WTI crude jumped 7% to over $104 per barrel on the day of the blockade announcement.
+Evidence of lag: Carnival shares fell only 1.6% to $27.53 on April 13, showing a highly muted relative reaction compared to the 7% surge in its underlying fuel input cost.
+Thesis: The breakdown of US-Iran negotiations and the resulting U.S. Navy blockade caused WTI crude to gap up 7% in a single session. Despite the structural jump in its primary operating expense, CCL shares were down just 1.6%.
+Counter-thesis: Carnival recently posted a strong Q1 earnings beat with record customer deposits of nearly $8 billion.
+R2 flags: Verify marine fuel hedging ratios, precise options liquidity for short execution, and technical breakdown levels.
+Key sources: BNN Bloomberg; INDmoney; NYSE Market Data
+Correlation note: IDEA #1, IDEA #2, and IDEA #3 share the same root catalyst: the April 13 U.S. Navy blockade of the Strait of Hormuz.
