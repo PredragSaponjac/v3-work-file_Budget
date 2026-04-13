@@ -1,0 +1,60 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: EXPE | Expedia Group Inc. | Bearish
+Catalyst: The collapse of U.S.-Iran peace talks and the resulting U.S. naval blockade of the Strait of Hormuz have locked in a severe fuel price shock for the travel industry.
+Catalyst timing: 2026-04-13 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock breaks back below its April 10 closing level ($228.09), confirming the exhaustion of the divergent April 13 rally
+Invalidation condition: The Strait of Hormuz reopens, or the stock decisively closes above its April 13 intraday high ($238.66)
+Target / repricing path: Retracement of the divergent April 13 rally, targeting a return to the pre-rally $225-$228 baseline or lower as capacity cuts hit booking volumes
+Horizon / time stop: 1 to 3 weeks, exiting strictly before its expected early-May earnings event to avoid binary interference
+Cleanest expression: As an online travel aggregator, Expedia's revenue is heavily levered to discretionary travel volumes, which are directly threatened by airline capacity cuts and aggressive fuel surcharges, yet it lacks the physical fuel-hedging buffers that airlines might employ.
+What already moved: On April 13, physical travel operators repriced lower on the failed talks: United Airlines (UAL) fell 1.28%, Delta Air Lines (DAL) fell 1.40%, and Carnival Corp (CCL) fell 1.84% as crude prices spiked.
+Evidence of lag: Despite its travel peers and physical suppliers falling on the macro fuel shock, Expedia (EXPE) inexplicably surged 4.3% on April 13 to close at $237.91.
+Thesis: The collapse of the U.S.-Iran peace talks ensures the Strait of Hormuz remains closed, cementing severe energy costs. Physical carriers like Delta and United are already trimming capacity and hiking baggage fees to survive. As flights become significantly more expensive and less available, discretionary travel booking volumes will drop. Expedia's revenue depends heavily on these volumes, yet its stock surged 4.3% on the first trading day after the talks collapsed, completely ignoring the downside tape of its physical travel suppliers.
+Counter-thesis: United Airlines CEO Scott Kirby noted that fares may have to increase by 20%; because Expedia's commissions are tied to total booking values, if fares rise 20% and volume drops by a smaller percentage, Expedia's net revenues could theoretically be insulated from the capacity shock.
+R2 flags: Verify exact revenue sensitivity to volume versus ticket price, check short borrow costs, and review recent insider trading ahead of Q1 earnings.
+Key sources: Security National Bank Outlook April 2026; Investing.com; Stock Analysis market data
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: CCL | Carnival Corporation | Bearish
+Catalyst: U.S.-Iran ceasefire talks collapsed over the weekend, prompting a U.S. naval blockade of the Strait of Hormuz and a massive spike in global crude oil prices.
+Catalyst timing: 2026-04-13 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Breakdown below the April 13 intraday low ($26.83) as the market digests the reality of sustained high fuel costs
+Invalidation condition: A sudden diplomatic breakthrough reinstates the ceasefire, or WTI crude oil rapidly reverses back below $95/bbl
+Target / repricing path: Complete retracement of the April 8 relief rally, targeting the pre-ceasefire support level around $25.20
+Horizon / time stop: 1 to 3 weeks
+Cleanest expression: Carnival operates with lighter fuel hedges compared to many airlines, making its operating margins highly vulnerable to sudden, sustained spikes in spot crude prices.
+What already moved: Following the ceasefire collapse, crude oil futures surged roughly 8% on April 13 (with Brent and WTI crossing $100/bbl), and major energy equities rallied.
+Evidence of lag: Carnival shares surged over 11% to ~$28.00 on April 8 when the temporary ceasefire crashed oil prices. However, on April 13, despite the ceasefire failing and oil spiking back to pre-truce highs, CCL shares fell only 1.84% to close at $27.46.
+Thesis: Carnival enjoyed a massive 11% relief rally last week when a fragile U.S.-Iran ceasefire temporarily crashed oil prices and eased fears over Middle East cruise route closures. Today, that ceasefire is officially dead, a U.S. naval blockade of the Strait of Hormuz is active, and crude has spiked back above $100/bbl. The fundamental backdrop has reverted to its worst-case scenario, yet CCL has only given back a fraction of its unfounded relief rally.
+Counter-thesis: Carnival recently reported a strong Q1 earnings beat with record customer deposits of nearly $8 billion, which could provide enough structural demand-side support to offset the fuel-driven bearishness.
+R2 flags: Verify Carnival's exact current fuel hedge percentages, check borrow costs for shorting, and monitor any immediate itinerary cancellation announcements.
+Key sources: TIKR.com; The Guardian; Perplexity Finance; MarketBeat
+
+IDEA #3
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: ZIM | ZIM Integrated Shipping Services Ltd. | Bullish
+Catalyst: The U.S. naval blockade of the Strait of Hormuz has paralyzed Middle East shipping, driving up freight rates and creating a robust standalone valuation floor for ZIM ahead of its April 30 shareholder vote on a $35/share buyout.
+Catalyst timing: 2026-04-13 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Accumulate at current levels while the stock trades below $28.00
+Invalidation condition: The Israeli government explicitly exercises its Golden Share to veto the Hapag-Lloyd acquisition AND the Strait of Hormuz reopens, collapsing freight rates
+Target / repricing path: Repricing toward the $35.00 all-cash acquisition offer as the April 30 shareholder vote approaches and deal certainty improves
+Horizon / time stop: 2 to 3 weeks, culminating around the April 30 shareholder meeting
+Cleanest expression: ZIM is the direct target of the $35-per-share all-cash acquisition by Hapag-Lloyd and a pure-play ocean carrier whose alternative standalone value is surging due to the ongoing maritime crisis.
+What already moved: The acquisition offer is locked at $35/share, and major competitors like Maersk have already introduced emergency fuel surcharges as the Hormuz crisis drains Suez Canal traffic and spikes shipping costs.
+Evidence of lag: ZIM shares are trading near $26.40, a roughly 25% discount to the $35 buyout price, because the market is heavily discounting the deal due to Israeli regulatory risk while failing to price in the surging standalone value.
+Thesis: ZIM is the target of a definitive $35/share all-cash buyout by Hapag-Lloyd, yet it trades near $26.40 due to fears that Israel's Golden Share will block the deal. However, the market is mispricing the downside protection: the U.S. blockade of the Strait of Hormuz has severely disrupted global shipping, causing competitors to hike surcharges and driving up freight rates. This macro shock dramatically improves ZIM's standalone profitability if the deal breaks.
+Counter-thesis: ZIM's CEO recently sold 87% of his holdings at $28-$29 per share, suggesting insider skepticism that the $35 deal will close, which could mean the regulatory hurdles are insurmountable regardless of the freight environment.
+R2 flags: Verify the latest Israeli government statements regarding the Golden Share, monitor current trans-Pacific container spot rates, and review the proxy materials for the April 30 meeting.
+Key sources: Calcalistech; Investing.com; DredgeWire; Report.az
+Correlation note: IDEA #1, IDEA #2, and IDEA #3 share the U.S.-Iran conflict and Strait of Hormuz blockade as their root macro catalyst.

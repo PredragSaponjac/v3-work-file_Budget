@@ -1,0 +1,19 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: DAL | Delta Air Lines | Bullish
+Catalyst: The U.S. blockade of Iranian ports and renewed Hormuz disruption have pushed Brent back above $100, sent jet fuel sharply higher, and revived the airline fuel-cost shock; Delta is the only major U.S. airline with a refinery hedge that Reuters says should save about $300 million this quarter.
+Catalyst timing: 2026-04-13 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: DAL holds above the April 13 open at 66.60 after testing the 65.81 intraday low, confirming buyers are defending the blockade-day selloff.
+Invalidation condition: Daily close below 65.81, or new company-specific evidence that the refinery hedge is not offsetting the fuel spike as management indicated.
+Target / repricing path: Relative catch-up versus UAL, AAL, and LUV as the market re-prices Delta's refinery advantage and the stated $300 million quarterly savings instead of treating DAL like an unhedged airline peer.
+Horizon / time stop: 5 to 10 trading days, or earlier if DAL closes the relative-performance gap versus major U.S. airline peers.
+Cleanest expression: Delta is the cleanest listed airline expression because Reuters explicitly identifies its Monroe refinery as a unique hedge against widening jet-fuel cracks, while United and American are described as facing steeper fuel bills.
+What already moved: Reuters reported jet fuel jumped from roughly $85-$90 per barrel in February to about $209 by April 7, Brent moved back above $100, and travel stocks were pressured again as the blockade was imposed.
+Evidence of lag: DAL was down 1.40% on April 13, versus UAL down 1.15%, AAL down 1.15%, and LUV down 1.01%, even though Reuters says Delta's refinery covers most of its fuel needs and should save about $300 million this quarter.
+Thesis: The catalyst is live now: the blockade has re-tightened the same fuel chain that already drove jet fuel sharply higher. Delta is not a generic airline expression here; Reuters explicitly ties it to a refinery hedge that should cushion the shock while peers remain more exposed to open-market fuel costs. Today's tape still treated DAL roughly like or slightly worse than peers, which is the underreaction. That gives a short tactical window for a relative and potentially absolute re-rating as investors re-focus on the hedge economics.
+Counter-thesis: Delta itself said on April 8 that Q2 fuel costs could rise by more than $2 billion, its Q2 EPS guide of $1.00 to $1.50 was below the $1.41 analyst consensus, and the refinery savings are only about $300 million, so the market may be correctly focusing on the much larger residual fuel hit rather than mispricing the hedge.
+R2 flags: Verify refinery throughput and hedge capture after the blockade, confirm no new operational issues at Monroe, and check whether another abrupt ceasefire or crude reversal erases the relative thesis.
+Key sources: Reuters (April 13, 2026); Reuters (March 25, 2026); Reuters (April 8, 2026); live price tape for DAL/UAL/AAL/LUV.
