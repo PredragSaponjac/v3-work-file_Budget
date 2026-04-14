@@ -1,0 +1,79 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Primary
+Ticker | Company | Direction: GSAT | Globalstar, Inc. | Bullish
+Catalyst: Amazon announced a definitive agreement to acquire Globalstar for $90.00 per share in cash, or 0.3210 Amazon shares, as filed in an April 14, 2026 8-K.
+Catalyst timing: 2026-04-14 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Purchase at current discounted levels to capture the arbitrage spread, with a hard stop if the deal officially breaks
+Invalidation condition: The deal is blocked by antitrust regulators, or shareholders reject the merger
+Target / repricing path: Rapid convergence toward the $90.00 cash offer price as the initial shock digests and institutional arbitrageurs close the gap
+Horizon / time stop: 2 to 4 weeks
+Cleanest expression: Globalstar is the direct acquisition target receiving the $90 cash offer.
+What already moved: Amazon and Globalstar announced the definitive merger agreement, and Amazon filed an 8-K detailing the $90/share cash consideration.
+Evidence of lag: Despite the definitive $90.00 cash offer, GSAT stock closed at $79.96 on April 14, trading at an 11% discount to the deal price.
+Thesis: On April 14, 2026, Amazon announced a definitive agreement to acquire Globalstar for $90.00 per share in cash (with a stock consideration option) to expand its Amazon Leo satellite network. An 8-K was filed confirming the terms. Despite this definitive cash offer, GSAT shares are currently trading at $79.96. This represents a massive 11% arbitrage spread, likely driven by initial market inefficiency on the day of the announcement or fears of regulatory scrutiny over satellite spectrum consolidation. As institutional arbitrageurs step in, the gap should close rapidly.
+Counter-thesis: The acquisition folds Globalstar's spectrum into Amazon's Leo network, which may trigger severe antitrust scrutiny or FCC pushback, putting the deal completion at risk.
+R2 flags: Verify FCC spectrum transfer rules, Amazon's breakup fee in the merger agreement, and any immediate regulatory objections.
+Key sources: Amazon SEC Form 8-K (April 14, 2026); Halper Sadeh LLC Investigation Notice; StockInvest GSAT Market Data
+
+IDEA #2
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Primary
+Ticker | Company | Direction: ZIM | ZIM Integrated Shipping Services Ltd | Bullish
+Catalyst: ZIM signed a definitive agreement to be acquired by Hapag-Lloyd for $35.00 per share in cash. The special shareholder meeting to vote on the merger is scheduled for April 30, 2026.
+Catalyst timing: 2026-04-30 | Status: Near-Term
+Repricing window: days to 3 weeks
+Entry trigger: Purchase at current discounted levels to capture the arbitrage spread, with a hard stop if the deal officially breaks
+Invalidation condition: The April 30 shareholder vote fails, the Israeli government blocks the Golden Share transfer, or Hapag-Lloyd walks away due to the Middle East war
+Target / repricing path: Rapid convergence toward the $35.00 cash offer price as the shareholder vote passes and regulatory clearance visibility improves
+Horizon / time stop: 2 to 4 weeks (post-April 30 vote)
+Cleanest expression: ZIM is the direct target of the acquisition and the standalone asset receiving the $35 cash offer.
+What already moved: Hapag-Lloyd and ZIM's boards definitively agreed to the $35.00 per share cash valuation, and proxy materials have been distributed for the April 30 vote.
+Evidence of lag: ZIM shares traded at $26.50 on April 14, 2026, representing a massive ~32% discount (or ~$8.50 spread) to the definitive $35.00 cash offer, highlighting severe market skepticism.
+Thesis: Hapag-Lloyd has signed a definitive agreement to acquire ZIM for $35.00 per share in cash. Despite the definitive agreement, ZIM's stock is languishing at $26.50 as of mid-April. This extraordinarily wide 32% arbitrage spread is driven by wartime geopolitical risk (the active Middle East conflict) and fears surrounding the Israeli government's Golden Share approval. With the critical shareholder vote scheduled for April 30, 2026, a successful passage should compress the excessive deal-break risk premium rapidly.
+Counter-thesis: ZIM is an Israeli shipping company operating in a live war zone; the ongoing regional conflict could trigger a Material Adverse Effect (MAE) clause allowing Hapag-Lloyd to walk away, or the Israeli government could block the transaction for national security reasons.
+R2 flags: Verify the exact wording of the MAE clause regarding war escalation, and the status of the Israeli Golden Share regulatory approvals.
+Key sources: ZIM Investor Relations FAQs (Proposed Merger with Hapag-Lloyd); ZIM Press Release (February 16, 2026); Digrin ZIM Stock Data
+
+IDEA #3
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Primary
+Ticker | Company | Direction: LGND | Ligand Pharmaceuticals Inc | Bullish
+Catalyst: Travere Therapeutics received full FDA approval on April 13/14, 2026, for FILSPARI in focal segmental glomerulosclerosis (FSGS), expanding its label to a second rare kidney disease.
+Catalyst timing: 2026-04-14 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: LGND breaks above its current $234 intraday resistance as analysts update sum-of-the-parts valuation models; otherwise Data unavailable - verify in R2
+Invalidation condition: TVTX reports sluggish initial FSGS uptake, or the broader market undergoes a severe biotechnology sector selloff; otherwise Data unavailable - verify in R2
+Target / repricing path: Repricing toward the $250+ level to reflect the 9% flow-through from the expanded addressable market; otherwise Data unavailable - verify in R2
+Horizon / time stop: 2 to 4 weeks
+Cleanest expression: Ligand holds a direct 9% royalty on worldwide net sales of FILSPARI, providing a clean 1-hop economic linkage to the FDA approval without the operational and commercialization risks of marketing the drug.
+What already moved: Partner Travere Therapeutics (TVTX) shares surged 33.8% to $41.09 on April 14 to price in the milestone.
+Evidence of lag: LGND shares moved up only 8.8% to $232.34 on April 14, significantly lagging the 33.8% surge of its partner TVTX.
+Thesis: Travere Therapeutics secured a major FDA approval on April 14, 2026, expanding FILSPARI's indication into FSGS and dramatically increasing its addressable patient population by >30,000 U.S. patients. Ligand Pharmaceuticals holds a 9% royalty on FILSPARI sales, providing direct, high-margin exposure to this TAM expansion. While TVTX shares immediately surged 33.8% to price in the milestone, LGND moved only 8.8%. As an operational-risk-free derivative play, LGND typically sees delayed institutional repricing as analysts slowly update their sum-of-the-parts royalty models.
+Counter-thesis: Because LGND has a diversified portfolio of royalty streams, the incremental value of the FILSPARI FSGS approval is diluted across its broader revenue base, meaning the 8.8% move might perfectly reflect its fair share of the upside.
+R2 flags: Verify LGND's exact concentration of FILSPARI within its overall royalty revenue mix, and check for upcoming earnings interference risk.
+Key sources: Travere Therapeutics PR (April 13, 2026); Ligand Pharmaceuticals PR (April 14, 2026); StockTitan LGND Market Data
+
+IDEA #4
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: WDC | Western Digital Corp | Bearish
+Catalyst: A major helium supply shock has hit the tech hardware sector due to the shutdown of Qatar's Ras Laffan complex and the Strait of Hormuz closure. Asian fabs run out of working inventory in early April 2026.
+Catalyst timing: April 2026 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Breakdown below recent consolidation support near $340; otherwise Data unavailable - verify in R2
+Invalidation condition: Qatar restores helium exports via alternative logistics or fab inventories prove deeper than 1 month; otherwise Data unavailable - verify in R2
+Target / repricing path: Data unavailable - verify in R2
+Horizon / time stop: Data unavailable - verify in R2
+Cleanest expression: Western Digital's high-capacity enterprise HDDs (10TB+) are completely dependent on helium. With 95% of 2026 production allocated, they face an immediate volume constraint.
+What already moved: WDC and STX announced 20-30% price hikes, and WDC shares surged 28% over the past month.
+Evidence of lag: Pricing unverified - flag for R2
+Thesis: A massive global helium shortage is cascading toward the tech hardware sector, with Asian fab working inventories exhausting in early April 2026. Western Digital's high-capacity enterprise HDDs are entirely dependent on helium. WDC shares have surged 28% over the past month on AI enthusiasm and the resulting price hikes, but the market has completely ignored the impending hard-stop in production volumes when the gas runs out.
+Counter-thesis: WDC's recent 20-30% price increases for high-capacity HDDs may be sufficient to financially offset near-term volume constraints, causing the market to rightfully look past the production pause.
+R2 flags: Verify WDC's exact on-site helium inventory buffers, short availability, and specific volume loss estimates.
+Key sources: Fusion Worldwide (Helium Shortage 2026); J2 Sourcing (The Global Helium Crisis); INDmoney WDC Market Data

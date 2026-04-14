@@ -1,0 +1,19 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: IOVA | Iovance Biotherapeutics | Bullish
+Catalyst: The FDA declined Replimune's Tudriqev for advanced melanoma on April 10, 2026, and Reuters reported Jefferies viewed that as "one less competitor" in the near term for Iovance's Amtagvi, which Reuters notes was approved in 2024 for the same condition.
+Catalyst timing: 2026-04-10 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Data unavailable - verify in R2
+Invalidation condition: Data unavailable - verify in R2
+Target / repricing path: Data unavailable - verify in R2
+Horizon / time stop: Data unavailable - verify in R2
+Cleanest expression: Iovance is the direct listed read-through because Reuters ties Replimune's setback specifically to reduced near-term competition for Amtagvi in advanced melanoma.
+What already moved: Replimune fell 58% after the FDA complete response letter.
+Evidence of lag: Reuters quote pages showed IOVA around $3.68 on April 9 and around $3.76 on April 13, only a modest move despite the same-indication competitor shock.
+Thesis: The catalyst is real and recent, and the linkage is unusually direct: the failed competitor targeted the same advanced melanoma setting, while Iovance already owns the approved product. The market clearly repriced the loser, but the winner's read-through was muted, leaving a plausible delayed-reaction setup. This remains Watchlist rather than Accepted because the evidence base is sufficient to flag the lag, but not sufficient to ground a disciplined execution plan yet.
+Counter-thesis: Reuters' 2024 approval coverage notes Amtagvi carries a boxed warning and still requires confirmatory data for traditional approval, so the market may be discounting the competitive benefit because commercial adoption and risk-adjusted value remain constrained.
+R2 flags: Verify regular-session tape after April 10, any near-term company-specific calendar risk, early Amtagvi launch traction, payer/center adoption, and whether Replimune's setback materially changes near-term revenue expectations.
+Key sources: Reuters, "Replimune's drug for advanced skin cancer fails to win FDA nod again" (April 10, 2026); Reuters delayed IOVA quote pages showing April 9 and April 13 pricing; Reuters, "US FDA grants accelerated approval for Iovance's skin cancer cell therapy" (February 16, 2024).
