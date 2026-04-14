@@ -1,0 +1,19 @@
+IDEA #1
+Tier: R2 Verification Watchlist
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: LYB | LyondellBasell Industries | Bullish
+Catalyst: US naval blockade of Iranian ports declared April 13 after Pakistan peace talks collapsed, extending and re-escalating the Strait of Hormuz disruption that has removed over 50% of global polyethylene export capacity. ICIS estimates 12-18 months for Middle East PE exports to recover even after the strait reopens.
+Catalyst timing: 2026-04-13 | Status: Active
+Repricing window: days to 3 weeks
+Entry trigger: Stock reclaims $75 and holds above the post-ceasefire-pullback zone, confirming the market is re-pricing extended disruption rather than continued ceasefire hope - otherwise Data unavailable - verify in R2
+Invalidation condition: A genuine, durable Hormuz reopening with resumed commercial shipping and insurance reinstatement, or US PE spot prices declining below $0.50/lb, which would signal demand destruction is overwhelming the supply advantage
+Target / repricing path: Recovery toward the pre-ceasefire-pullback area of $80-$84, which the stock reached when the disruption was last priced as extended - Data unavailable - verify in R2 for precise levels
+Horizon / time stop: 1 to 2 weeks, reviewed or closed before Q1 earnings on May 1 to avoid binary event overlap
+Cleanest expression: LYB is the world's largest polypropylene producer and a major polyethylene producer with well over half its production in North America using ethane-based feedstock, giving it the widest cost advantage over naphtha-dependent Asian and European competitors in over a decade. Unlike Dow, which had to suspend its Sadara JV in Saudi Arabia due to the crisis, LYB's NA operations are structurally insulated.
+What already moved: US spot PE railcar prices doubled from the $0.30s/lb in January to the $0.60-$0.70s/lb range as of mid-April per ICIS and Syntex. Dow implemented a $0.30/lb price increase effective April 1; LYB itself is seeking cumulative increases of $0.35/lb through May. Asian petrochemical producers have declared 31+ force majeures. Oil surged 7%+ on the April 13 blockade announcement.
+Evidence of lag: Pricing unverified - flag for R2
+Thesis: The ceasefire-hope pullback in LYB shares (down 9.2% in the week ending April 11 per Simply Wall St) was predicated on the prospect of near-term Hormuz reopening. That premise was invalidated over the weekend when Pakistan-mediated talks collapsed and the US declared a naval blockade of Iranian ports. PE spot prices remain at record levels, Asian competitors remain offline, and ICIS projects 12-18 months for Middle East PE recovery. LYB's ethane-based North American production base and 90%+ utilization position it as the direct beneficiary of a structurally extended disruption. Multiple analysts upgraded the stock on the dip: Alembic Global moved to Overweight with a $100 target; RBC raised its target to $91.
+Counter-thesis: Active US-Iran diplomatic channels remain open. A rapid resolution restoring Hormuz transit would immediately collapse the PE price premium and reverse the operating-rate tailwind. The stock's 66% YTD gain already embeds significant disruption premium that could unwind faster than the fundamentals normalize.
+R2 flags: Q1 earnings on May 1 fall inside the repricing window. Verify precise stock reaction to the April 13 blockade re-escalation in regular session. Verify LYB's specific Q1 production volumes and margin capture vs. spot PE. Confirm that the dividend cut (halved in February) does not signal balance-sheet stress.
+Key sources: EIA quarterly petroleum update (April 7, 2026); S&P Global World Petrochemical Conference coverage via C&EN (late March 2026); Syntex America Iran blockade polymer analysis (April 13, 2026); Simply Wall St LYB analysis (April 11, 2026); Alembic Global upgrade report via TipRanks

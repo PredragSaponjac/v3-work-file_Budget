@@ -1,0 +1,19 @@
+IDEA #1
+Tier: Accepted ORCA Candidate
+Packet origin: HUNT-built
+Source quality: Mixed
+Ticker | Company | Direction: IOVA | Iovance Biotherapeutics | Bullish
+Catalyst: The FDA rejected Replimune's Tudriqev for advanced melanoma on April 10, 2026, and Reuters reported Jefferies viewed that as "one less competitor" in the near term for Iovance's already approved Amtagvi.
+Catalyst timing: 2026-04-10 | Status: Recently Triggered
+Repricing window: days to 3 weeks
+Entry trigger: Reclaim and hold above the April 10 open at $3.99 / the April 9 close at $4.01, which would begin filling the post-catalyst reversal gap.
+Invalidation condition: Loss of the April 10 low at $3.63, or new evidence that Replimune's setback does not improve Amtagvi's near-term competitive position.
+Target / repricing path: Partial catch-up back toward the April 10 intraday high at $4.31, with first objective a return to the pre-rejection area around $4.00-$4.01.
+Horizon / time stop: 1 to 3 weeks, before the estimated early-to-mid May earnings window.
+Cleanest expression: Iovance is the cleanest listed expression because Reuters tied Replimune's melanoma CRL specifically to reduced near-term competition for Amtagvi, while larger oncology names such as Bristol Myers are far more diversified and dilute the read-through.
+What already moved: Replimune fell 58% in extended trading after the FDA rejection.
+Evidence of lag: Iovance fell 7.73% on April 10, closing at $3.70 after opening at $3.99, even though Reuters framed the same event as favorable for Amtagvi's competitive position.
+Thesis: This is a fresh, direct competitor-removal catalyst in the exact indication where Iovance already has an FDA-approved product. Reuters explicitly linked the Replimune rejection to a better near-term competitive setup for Amtagvi, while Iovance's own February update said Amtagvi demand drove roughly 30% quarterly revenue growth and improving gross margin. The stock's immediate downside reversal after a nominally positive read-through creates the underreaction setup. A move back into the April 9-10 gap zone would be the simplest tactical catch-up path.
+Counter-thesis: Iovance had already rallied 15.56% on April 9 before the FDA decision, so some of the read-through may already have been anticipated, and the company is still early in commercialization despite the strong fourth-quarter update.
+R2 flags: Verify the exact earnings date, current Amtagvi launch trajectory through April, whether April 9 already priced much of the competitor-failure setup, and whether any follow-up commentary changes the competitive significance of Replimune's CRL.
+Key sources: Reuters on Replimune's April 10 CRL and Iovance read-through; Iovance February 24, 2026 business update; Yahoo Finance historical prices for April 9-14, 2026.
